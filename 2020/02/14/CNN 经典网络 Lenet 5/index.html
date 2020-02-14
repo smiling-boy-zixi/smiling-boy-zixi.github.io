@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”. 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。 LeNet-5第一层：卷积层C1C1层是卷积层，形成6个特征图谱。卷积的输入区域">
+  <meta name="description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。 LeNet-5第一层：卷积层C1C1层是卷积层，形成6个特征图谱。卷积的输入区域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CNN 经典网络 Lenet 5">
 <meta property="og:url" content="http://yoursite.com/2020/02/14/CNN%20%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9C%20Lenet%205/index.html">
 <meta property="og:site_name" content="王子晰&#39;s blog">
-<meta property="og:description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”. 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。 LeNet-5第一层：卷积层C1C1层是卷积层，形成6个特征图谱。卷积的输入区域">
+<meta property="og:description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。 LeNet-5第一层：卷积层C1C1层是卷积层，形成6个特征图谱。卷积的输入区域">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="https://img-blog.csdn.net/20171018154917808?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20171018155923735?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="https://img-blog.csdn.net/20171018160214082?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="article:published_time" content="2020-02-14T13:10:29.088Z">
-<meta property="article:modified_time" content="2020-02-14T14:23:49.185Z">
+<meta property="article:modified_time" content="2020-02-14T14:28:08.955Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
@@ -177,7 +177,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-14 21:10:29 / 修改时间：22:23:49" itemprop="dateCreated datePublished" datetime="2020-02-14T21:10:29+08:00">2020-02-14</time>
+              <time title="创建时间：2020-02-14 21:10:29 / 修改时间：22:28:08" itemprop="dateCreated datePublished" datetime="2020-02-14T21:10:29+08:00">2020-02-14</time>
             </span>
 
           
@@ -191,7 +191,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”.</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。</p>
 <h3 id="网络分析"><a href="#网络分析" class="headerlink" title="网络分析"></a>网络分析</h3><p><img src="https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="LeNet5"></p>
 <p>Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。</p>
 <h4 id="LeNet-5第一层：卷积层C1"><a href="#LeNet-5第一层：卷积层C1" class="headerlink" title="LeNet-5第一层：卷积层C1"></a>LeNet-5第一层：卷积层C1</h4><p>C1层是卷积层，形成6个特征图谱。卷积的输入区域大小是5x5，每个特征图谱内参数共享，即每个特征图谱内只使用一个共同卷积核，卷积核有5x5个连接参数加上1个偏置共26个参数。卷积区域每次滑动一个像素，这样卷积层形成的每个特征图谱大小是(32-5)/1+1=28x28。C1层共有26x6=156个训练参数，有(5x5+1)x28x28x6=122304个连接。C1层的连接结构如下所示。</p>
