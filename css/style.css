@@ -201,6 +201,7 @@ img.thumbnail {
   margin-bottom: 0.5rem !important;
 }
 .article .content {
+  letter-spacing: 0.08rem;
   font-size: 1.1rem;
 }
 .article .content blockquote.pullquote {
