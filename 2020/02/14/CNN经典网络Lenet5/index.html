@@ -10,15 +10,15 @@
 <title>CNN经典网络Lenet5 - 星空小屋</title>
 
 
-    <meta name="description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。 LeNet-5第一层：卷积层C1C1层是卷积层，形成6个特征图谱。卷积的输入区域">
+    <meta name="description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CNN经典网络Lenet5">
 <meta property="og:url" content="http://yoursite.com/2020/02/14/CNN%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9CLenet5/index.html">
 <meta property="og:site_name" content="星空小屋">
-<meta property="og:description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。 LeNet-5第一层：卷积层C1C1层是卷积层，形成6个特征图谱。卷积的输入区域">
+<meta property="og:description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta property="article:published_time" content="2020-02-14T13:10:29.088Z">
-<meta property="article:modified_time" content="2020-02-15T06:46:41.024Z">
+<meta property="article:modified_time" content="2020-02-15T11:53:21.323Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -118,7 +118,7 @@
                 
                 
                 
-                <a class="navbar-item search" title="Search" href="javascript:;">
+                <a class="navbar-item search" title="Buscar" href="javascript:;">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -143,7 +143,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 minutes read (About 1007 words)
+                    7 minutes leer (Acerca de 1008 palabras)
                 </span>
                 
                 
@@ -157,6 +157,7 @@
         </h1>
         <div class="content">
             <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。</p>
+<a id="more"></a>
 <h3 id="网络分析"><a href="#网络分析" class="headerlink" title="网络分析"></a>网络分析</h3><p><img src="https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="LeNet5"></p>
 <p>Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。</p>
 <h4 id="LeNet-5第一层：卷积层C1"><a href="#LeNet-5第一层：卷积层C1" class="headerlink" title="LeNet-5第一层：卷积层C1"></a>LeNet-5第一层：卷积层C1</h4><p>C1层是卷积层，形成6个特征图谱。卷积的输入区域大小是5x5，每个特征图谱内参数共享，即每个特征图谱内只使用一个共同卷积核，卷积核有5x5个连接参数加上1个偏置共26个参数。卷积区域每次滑动一个像素，这样卷积层形成的每个特征图谱大小是(32-5)/1+1=28x28。C1层共有26x6=156个训练参数，有(5x5+1)x28x28x6=122304个连接。C1层的连接结构如下所示。</p>
@@ -182,7 +183,7 @@
 
 <div class="card">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <h3 class="menu-label has-text-centered">Suka dengan artikel ini? Bantu penulis dengan donasi melalui</h3>
         <div class="buttons is-centered">
             
                 
@@ -279,7 +280,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Articles
+                        Entradas
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
@@ -291,7 +292,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Catégories
+                        Categorías
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
@@ -303,7 +304,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Etiquetas
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
@@ -316,7 +317,7 @@
         
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">
-                SUIVRE</a>
+                SEGUIR</a>
         </div>
         
         
@@ -362,7 +363,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Liens
+            Enlaces
         </h3>
         <ul class="menu-list">
         
@@ -399,7 +400,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catégories
+                Categorías
             </h3>
             <ul class="menu-list">
             
@@ -416,7 +417,7 @@
             <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recientes
         </h3>
         
         <article class="media">
@@ -483,7 +484,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -507,7 +508,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -530,7 +531,7 @@
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recientes
         </h3>
         
         <article class="media">
@@ -597,7 +598,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -621,7 +622,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -765,7 +766,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -789,7 +790,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Teclea algo..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -801,11 +802,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Articles',
-                PAGES: 'Pages',
-                CATEGORIES: 'Catégories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: 'Entradas',
+                PAGES: 'Páginas',
+                CATEGORIES: 'Categorías',
+                TAGS: 'Etiquetas',
+                UNTITLED: '(Sin título)',
             },
             CONTENT_URL: '/content.json',
         };
