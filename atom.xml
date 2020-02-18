@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-17T12:17:52.297Z</updated>
+  <updated>2020-02-18T12:22:00.241Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ch2-2</title>
+    <link href="http://yoursite.com/2020/02/18/ch2-2/"/>
+    <id>http://yoursite.com/2020/02/18/ch2-2/</id>
+    <published>2020-02-18T12:24:40.334Z</published>
+    <updated>2020-02-18T12:22:00.241Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="同相比例放大器"><a href="#同相比例放大器" class="headerlink" title="同相比例放大器"></a>同相比例放大器</h4><blockquote><p>根据理想运放传输特性，当增益Auo很大时，需要保证运放差模输入电压趋近于0，同相端输入，反相端要进行一个负反馈，使得反相端输入电压随同相端输入电压保持动态平衡，满足运放差模输入电压趋近于0。</p></blockquote><blockquote><p>那么为了保证运放差模输入电压趋近于0，同相端电压和反相端电压要相等（<strong><em>虚短路</em></strong>），反相端电压又等于输出端电压的分压（<strong><em>没有图，公式记在脑子里</em></strong>）带入闭环增益（输出电压比上输入的运放差模输入电压），约掉输出电压得到：<br>$$A=\cfrac{Uo}{Ui}=1+\cfrac{R2}{R1}$$<br>注意这里R2是反馈网络的负载，R1是反相输入端口的负载，要注意是，这里反相输入端口也是接地了的。(<strong><em>图记在脑子里啊</em></strong> )</p></blockquote><h4 id="反相比例放大器"><a href="#反相比例放大器" class="headerlink" title="反相比例放大器"></a>反相比例放大器</h4><blockquote><p>和上面相似，同相端接地，反相端输入端。不同的是反馈端接到反相输入端，因为同相端接地，为0，反相端增加，输出电压减小，反馈给反相端口，就趋近于0.(那么这里反相输入端就可以近似看做是地，叫做<strong><em>虚地</em></strong>)</p></blockquote><p>这里上课讲一个分压比，得到反相输入端的电压和运放差模输入电压以及输出电压的关系(<strong><em>这里不理解？？</em></strong>)</p><blockquote><p>由所推出来的式子得到<br>$$Uo=-\cfrac{R2}{R1}Ui$$<br>$$A = \cfrac{Uo}{Ui} = -\cfrac{R2}{R1}$$</p></blockquote><h4 id="反相比例放大器的输入电阻"><a href="#反相比例放大器的输入电阻" class="headerlink" title="反相比例放大器的输入电阻"></a>反相比例放大器的输入电阻</h4><blockquote><p>同相比例放大器的输入电阻是无穷大,反相比例放大器不是这个情况。需要考虑R2（反馈网络上的负载）对输入端的影响，通过密勒原理（<strong><em>不明白，感觉是电路欠下的债？？</em></strong>）在输入端等效出密勒等效电阻，得出密勒等效电阻趋于0（Auo在分母，趋于无穷大，结果趋于0），得出输入电阻趋于R1.</p></blockquote><h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>共模输入：大小和相位基本相同，叫做共模信号</p><p>虚短路：$Ui+ = Ui-\not={0}$</p><p>虚断路：$Ui+ = Ui-=0$</p><p>2020.2.18</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;同相比例放大器&quot;&gt;&lt;a href=&quot;#同相比例放大器&quot; class=&quot;headerlink&quot; title=&quot;同相比例放大器&quot;&gt;&lt;/a&gt;同相比例放大器&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;根据理想运放传输特性，当增益Auo很大时，需要保证运放差模输入电压趋近于0
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch2-1</title>
+    <link href="http://yoursite.com/2020/02/18/ch2-1/"/>
+    <id>http://yoursite.com/2020/02/18/ch2-1/</id>
+    <published>2020-02-18T12:24:40.330Z</published>
+    <updated>2020-02-18T12:21:59.461Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="toc：true"><a href="#toc：true" class="headerlink" title="toc：true"></a>toc：true</h2><h3 id="集成运算放大器"><a href="#集成运算放大器" class="headerlink" title="集成运算放大器"></a>集成运算放大器</h3><h4 id="符号："><a href="#符号：" class="headerlink" title="符号："></a>符号：</h4><ol><li>三角表示，上下端口–电源</li><li>同相输入端：输入输出信号相位相同</li><li>反相输入端：反之，相位相反</li><li>输出信号和两个输入信号之差成正比：<h3 id="模型："><a href="#模型：" class="headerlink" title="模型："></a>模型：</h3></li></ol><h4 id="受控源模型"><a href="#受控源模型" class="headerlink" title="受控源模型"></a>受控源模型</h4><ol><li>上式中的Auo–运放开环放大倍数（开环增益）</li><li>运放差模输入电压：输入端电压之差<h4 id="理想受控源模型"><a href="#理想受控源模型" class="headerlink" title="理想受控源模型"></a>理想受控源模型</h4></li><li>虚断路：输入电阻无限接近于0，输入部分电流也就趋近于0，所以说输入部分“虚断路”</li><li>理想运放条件：输入电阻趋近无穷大（保证全部分压给运放），输入偏流趋近0，输出电阻趋近0，开环增益趋近无穷大，上限频率趋近无穷大……<h3 id="传输特性"><a href="#传输特性" class="headerlink" title="传输特性"></a>传输特性</h3><h4 id="集成运放电压传输特性"><a href="#集成运放电压传输特性" class="headerlink" title="集成运放电压传输特性"></a>集成运放电压传输特性</h4></li><li>由于电源电压有限，所以输出电压随输入电压会有限制，输出电压和输入电压变化关系分成线性区（输入输出电压成线性关系）和限幅区。<h4 id="理想集成运放电压传输特性"><a href="#理想集成运放电压传输特性" class="headerlink" title="理想集成运放电压传输特性"></a>理想集成运放电压传输特性</h4></li><li>因为Auo–&gt;无穷大，所以线性放大区———&gt;0，则同相端电压和反相端电压相等，输出电阻为0（没有电阻，只有导线，自然可视为“虚短路”），开环运放是无法作为线性放大器（<strong><em>开环指的是输出只受输入控制，没有反馈系统</em></strong>）</li></ol><hr><p>差模输入电压这里应该也是可以不为0，只是因为限幅，这个和趋近于0，所产生的输出电压几乎没有区别。</p><hr><h4 id="反相电压传输特性"><a href="#反相电压传输特性" class="headerlink" title="反相电压传输特性"></a>反相电压传输特性</h4><p>只是Auo &lt; 0 。传输特性图像水平翻转。</p><p>2020.2.18</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;toc：true&quot;&gt;&lt;a href=&quot;#toc：true&quot; class=&quot;headerlink&quot; title=&quot;toc：true&quot;&gt;&lt;/a&gt;toc：true&lt;/h2&gt;&lt;h3 id=&quot;集成运算放大器&quot;&gt;&lt;a href=&quot;#集成运算放大器&quot; class=&quot;header
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>ch1-2</title>
     <link href="http://yoursite.com/2020/02/17/ch1-2/"/>
     <id>http://yoursite.com/2020/02/17/ch1-2/</id>
     <published>2020-02-17T12:18:27.025Z</published>
-    <updated>2020-02-17T12:17:52.297Z</updated>
+    <updated>2020-02-18T12:21:57.915Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="什么是放大器？"><a href="#什么是放大器？" class="headerlink" title="什么是放大器？"></a>什么是放大器？</h3><ol><li>概念：功率放大倍数 大于 1 （变压器不是放大器）</li><li>同向放大器：输入输出信号相位相同</li><li>反向放大器：输入输出信号相位相反</li><li>放大器有两正负两极，作用同上，称为同向输入端和反向输入端<a id="more"></a><h4 id="放大器性能指标"><a href="#放大器性能指标" class="headerlink" title="放大器性能指标"></a>放大器性能指标</h4></li><li>可等效为一个有源二端口网络（一个输入端–接信号源，一个输出端–接负载）</li><li>放大器结构是两个电阻（一个输入电阻一个输出电阻），再加上一个受控源（放大倍数）</li><li>放大器参数就是上面的放大倍数A，加上输入输出电阻阻值，以及频率响应与带宽（<strong><em>？？？</em></strong>），总谐波失真系数（非线性失真系数）THD（<strong><em>？？？</em></strong>）</li><li>放大倍数A：（也称增益）输入量和输出量的比值，电压，电流增益（<strong><em>无量纲</em></strong> ），互阻，互导增益</li><li>输入电阻：Ri决定了放大器从电压源处分到的电压值。</li><li>输出电阻：对负载而言，放大器相当于信号源，R0是信号源内阻，则其阻值表达了其的带载能力。</li><li>频率特性:放大器中存在电容（<strong><em>放大器前面是输入输出电阻加上受控源，现在又有电容，所以到底放大器内部是什么结构？？</em></strong>）频率大，容抗小，反之，频率小，容抗就大，那么容抗会对增益有影响（<strong><em>怎么影响是没有说的</em></strong>）</li><li>放大器的截止频率和通频带：频率分低频区，中频区，高频区。频率过高或过低，增益绝对值都会下降。截止频率为0.707增益，高频区为上限截止频率，低频区为下限截止频率。两个截止频率之间为通频带。（记图像）</li><li>失真：相位失真（各波形相位不同，则叠加波形会错位，），频率失真（两个频率不同的波形叠加放大，因为频率不同，所以两个波形增益不一样，那放大后波形就会失真）<blockquote><p>关于相位失真，好奇这个相位怎么样才能移位呢？？？</p></blockquote></li><li>非线性失真系数（THD）：放大器本身是非线性器件晶体管组成，所以，本身输出会产生非线性失真。有个非线性失真系数，不写了。</li><li>放大器的输出动态范围：就是避免放大器的非线性失真，不失真的电压有个范围，最大值叫做放大器的输出动态范围。</li><li>放大器传输特性：随着输入电压的变化，输出电压线性变化叫做线性输入范围，非线性临界点叫做非线性限幅。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc:true"></a>toc:true</h2><h3 id="什么是放大器？"><a href="#什么是放大器？" class="headerlink" title="什么是放大器？"></a>什么是放大器？</h3><ol><li>概念：功率放大倍数 大于 1 （变压器不是放大器）</li><li>同向放大器：输入输出信号相位相同</li><li>反向放大器：输入输出信号相位相反</li><li>放大器有两正负两极，作用同上，称为同向输入端和反向输入端<a id="more"></a><h4 id="放大器性能指标"><a href="#放大器性能指标" class="headerlink" title="放大器性能指标"></a>放大器性能指标</h4></li><li>可等效为一个有源二端口网络（一个输入端–接信号源，一个输出端–接负载）</li><li>放大器结构是两个电阻（一个输入电阻一个输出电阻），再加上一个受控源（放大倍数）</li><li>放大器参数就是上面的放大倍数A，加上输入输出电阻阻值，以及频率响应与带宽（<strong><em>？？？</em></strong>），总谐波失真系数（非线性失真系数）THD（<strong><em>？？？</em></strong>）</li><li>放大倍数A：（也称增益）输入量和输出量的比值，电压，电流增益（<strong><em>无量纲</em></strong> ），互阻，互导增益</li><li>输入电阻：Ri决定了放大器从电压源处分到的电压值。</li><li>输出电阻：对负载而言，放大器相当于信号源，R0是信号源内阻，则其阻值表达了其的带载能力。</li><li>频率特性:放大器中存在电容（<strong><em>放大器前面是输入输出电阻加上受控源，现在又有电容，所以到底放大器内部是什么结构？？</em></strong>）频率大，容抗小，反之，频率小，容抗就大，那么容抗会对增益有影响（<strong><em>怎么影响是没有说的</em></strong>）</li><li>放大器的截止频率和通频带：频率分低频区，中频区，高频区。频率过高或过低，增益绝对值都会下降。截止频率为0.707增益，高频区为上限截止频率，低频区为下限截止频率。两个截止频率之间为通频带。（记图像）</li><li>失真：相位失真（各波形相位不同，则叠加波形会错位，），频率失真（两个频率不同的波形叠加放大，因为频率不同，所以两个波形增益不一样，那放大后波形就会失真）<blockquote><p>关于相位失真，好奇这个相位怎么样才能移位呢？？？</p></blockquote></li><li>非线性失真系数（THD）：放大器本身是非线性器件晶体管组成，所以，本身输出会产生非线性失真。有个非线性失真系数，不写了。</li><li>放大器的输出动态范围：就是避免放大器的非线性失真，不失真的电压有个范围，最大值叫做放大器的输出动态范围。</li><li>放大器传输特性：随着输入电压的变化，输出电压线性变化叫做线性输入范围，非线性临界点叫做非线性限幅。</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;什么是放大器？&quot;&gt;&lt;a href=&quot;#什么是放大器？&quot; class=&quot;headerlink&quot; title=&quot;什么是放大器？&quot;&gt;&lt;/a&gt;什么是放大器？&lt;/h3&gt;&lt;ol&gt;
+      &lt;h2 id=&quot;toc-true&quot;&gt;&lt;a href=&quot;#toc-true&quot; class=&quot;headerlink&quot; title=&quot;toc:true&quot;&gt;&lt;/a&gt;toc:true&lt;/h2&gt;&lt;h3 id=&quot;什么是放大器？&quot;&gt;&lt;a href=&quot;#什么是放大器？&quot; class=&quot;headerlink&quot; title=&quot;什么是放大器？&quot;&gt;&lt;/a&gt;什么是放大器？&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;概念：功率放大倍数 大于 1 （变压器不是放大器）&lt;/li&gt;
 &lt;li&gt;同向放大器：输入输出信号相位相同&lt;/li&gt;
 &lt;li&gt;反向放大器：输入输出信号相位相反&lt;/li&gt;
@@ -44,13 +89,13 @@
     <link href="http://yoursite.com/2020/02/17/ch1-1/"/>
     <id>http://yoursite.com/2020/02/17/ch1-1/</id>
     <published>2020-02-17T12:18:27.021Z</published>
-    <updated>2020-02-17T12:17:49.511Z</updated>
+    <updated>2020-02-18T12:21:55.863Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="为什么学？"><a href="#为什么学？" class="headerlink" title="为什么学？"></a>为什么学？</h3><h4 id="模电："><a href="#模电：" class="headerlink" title="模电："></a>模电：</h4><ol><li>发展-&gt;高频/数电/微电子/电力电子</li><li>可直接解决工程问题：（温度……——&gt;传感器——&gt;电信号） /  数字信号——&gt;模拟电路——&gt;模拟信号</li><li>时间和幅度连续变化<a id="more"></a><h3 id="学什么？"><a href="#学什么？" class="headerlink" title="学什么？"></a>学什么？</h3><h4 id="电子器件"><a href="#电子器件" class="headerlink" title="电子器件"></a>电子器件</h4></li><li>电阻：耗能元件 / 电容：储能元件（有损耗） /电感 变压器 / 受控源 /非线性器件……<h4 id="物理非线性器件的探索："><a href="#物理非线性器件的探索：" class="headerlink" title="物理非线性器件的探索："></a>物理非线性器件的探索：</h4></li><li>1904年–伦敦大学–弗莱明–发明电子管（电流电压非线性/有结构脆弱等缺点）</li><li>1947年–贝尔实验室–威廉，肖克利等三位科学家发明–晶体三极管（半导体器件）</li><li>1952年–英国皇家雷达研究所–提出”集成电路”概念</li><li>1958年–美国德州仪器公司–Jack S.Kilby–发明第一片集成电路</li><li>现代–系统集成（SOC）–&gt;集成度高<h4 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h4></li><li>器件：晶体管，场效应管</li><li>放大器：顾名思义，放大小信号 <strong><em>且不失真</em></strong></li><li>滤波器：给输入信号去除噪声</li><li>振荡器：上电即可发出脉冲（如三角波，方波，正弦波……如555振荡器）</li><li>电源：输入交流——&gt;输出稳定直流电<h4 id="模电难点-amp-解决方案"><a href="#模电难点-amp-解决方案" class="headerlink" title="模电难点&amp;解决方案"></a>模电难点&amp;解决方案</h4></li><li>敏感性：器件非线性，RC数值，温度，频率（<strong><em>这里的频率指的是什么频率？只是输入信号吗？</em></strong>），噪声/干扰，电源电压……</li><li>解决方案：1.提高器件性能 2.引入负反馈<blockquote><p>针对负反馈，这里咱多写两句，这里和何凯明同学提出的残差网络（Resnet）很相似（其实何凯明同学也是借鉴了电路中的负反馈）只是神经网络中，他是将输出通过负反馈与前者相比较，取loss的优质带入下一层网络，而这里是将放大器倍数增大，增益只取决于F（反馈）这很有意思，但还有一些不太明白：<strong><em>这里F有些抽象，不明白这是怎么工作的，是什么器件来反馈 ?</em></strong></p></blockquote></li></ol><h4 id="重要思想……（贯彻全书？）"><a href="#重要思想……（贯彻全书？）" class="headerlink" title="重要思想……（贯彻全书？）"></a>重要思想……（贯彻全书？）</h4><p>$\cfrac{A}{1+AF}$ $\thickapprox$ $\cfrac{1}{F}$</p><p> 相减和高倍放大器集成==&gt;运算放大器（operational Amplifier）<br> 所以：运放+反馈 = …………电路</p><p>2020.2.17</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc:true"></a>toc:true</h2><h3 id="为什么学？"><a href="#为什么学？" class="headerlink" title="为什么学？"></a>为什么学？</h3><h4 id="模电："><a href="#模电：" class="headerlink" title="模电："></a>模电：</h4><ol><li>发展-&gt;高频/数电/微电子/电力电子</li><li>可直接解决工程问题：（温度……——&gt;传感器——&gt;电信号） /  数字信号——&gt;模拟电路——&gt;模拟信号</li><li>时间和幅度连续变化<a id="more"></a><h3 id="学什么？"><a href="#学什么？" class="headerlink" title="学什么？"></a>学什么？</h3><h4 id="电子器件"><a href="#电子器件" class="headerlink" title="电子器件"></a>电子器件</h4></li><li>电阻：耗能元件 / 电容：储能元件（有损耗） /电感 变压器 / 受控源 /非线性器件……<h4 id="物理非线性器件的探索："><a href="#物理非线性器件的探索：" class="headerlink" title="物理非线性器件的探索："></a>物理非线性器件的探索：</h4></li><li>1904年–伦敦大学–弗莱明–发明电子管（电流电压非线性/有结构脆弱等缺点）</li><li>1947年–贝尔实验室–威廉，肖克利等三位科学家发明–晶体三极管（半导体器件）</li><li>1952年–英国皇家雷达研究所–提出”集成电路”概念</li><li>1958年–美国德州仪器公司–Jack S.Kilby–发明第一片集成电路</li><li>现代–系统集成（SOC）–&gt;集成度高<h4 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h4></li><li>器件：晶体管，场效应管</li><li>放大器：顾名思义，放大小信号 <strong><em>且不失真</em></strong></li><li>滤波器：给输入信号去除噪声</li><li>振荡器：上电即可发出脉冲（如三角波，方波，正弦波……如555振荡器）</li><li>电源：输入交流——&gt;输出稳定直流电<h4 id="模电难点-amp-解决方案"><a href="#模电难点-amp-解决方案" class="headerlink" title="模电难点&amp;解决方案"></a>模电难点&amp;解决方案</h4></li><li>敏感性：器件非线性，RC数值，温度，频率（<strong><em>这里的频率指的是什么频率？只是输入信号吗？</em></strong>），噪声/干扰，电源电压……</li><li>解决方案：1.提高器件性能 2.引入负反馈<blockquote><p>针对负反馈，这里咱多写两句，这里和何凯明同学提出的残差网络（Resnet）很相似（其实何凯明同学也是借鉴了电路中的负反馈）只是神经网络中，他是将输出通过负反馈与前者相比较，取loss的优质带入下一层网络，而这里是将放大器倍数增大，增益只取决于F（反馈）这很有意思，但还有一些不太明白：<strong><em>这里F有些抽象，不明白这是怎么工作的，是什么器件来反馈 ?</em></strong></p></blockquote></li></ol><h4 id="重要思想……（贯彻全书？）"><a href="#重要思想……（贯彻全书？）" class="headerlink" title="重要思想……（贯彻全书？）"></a>重要思想……（贯彻全书？）</h4><p>$\cfrac{A}{1+AF}$ $\thickapprox$ $\cfrac{1}{F}$</p><p> 相减和高倍放大器集成==&gt;运算放大器（operational Amplifier）<br> 所以：运放+反馈 = …………电路</p><p>2020.2.17</p>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;为什么学？&quot;&gt;&lt;a href=&quot;#为什么学？&quot; class=&quot;headerlink&quot; title=&quot;为什么学？&quot;&gt;&lt;/a&gt;为什么学？&lt;/h3&gt;&lt;h4 id=&quot;模电：&quot;&gt;&lt;a href=&quot;#模电：&quot; class=&quot;headerlink&quot; title=&quot;模电：&quot;&gt;&lt;/a&gt;模电：&lt;/h4&gt;&lt;ol&gt;
+      &lt;h2 id=&quot;toc-true&quot;&gt;&lt;a href=&quot;#toc-true&quot; class=&quot;headerlink&quot; title=&quot;toc:true&quot;&gt;&lt;/a&gt;toc:true&lt;/h2&gt;&lt;h3 id=&quot;为什么学？&quot;&gt;&lt;a href=&quot;#为什么学？&quot; class=&quot;headerlink&quot; title=&quot;为什么学？&quot;&gt;&lt;/a&gt;为什么学？&lt;/h3&gt;&lt;h4 id=&quot;模电：&quot;&gt;&lt;a href=&quot;#模电：&quot; class=&quot;headerlink&quot; title=&quot;模电：&quot;&gt;&lt;/a&gt;模电：&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;发展-&amp;gt;高频/数电/微电子/电力电子&lt;/li&gt;
 &lt;li&gt;可直接解决工程问题：（温度……——&amp;gt;传感器——&amp;gt;电信号） /  数字信号——&amp;gt;模拟电路——&amp;gt;模拟信号&lt;/li&gt;
 &lt;li&gt;时间和幅度连续变化

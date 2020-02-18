@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Git远程管理Github仓库&amp;遇到的问题 - 仰望星空</title>
+<title>ch2-1 - 仰望星空</title>
 
 
-    <meta name="description" content="前言一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。 git上传代码流程 $ git clone将github上download处的https地址复制，在电脑本地创建git.文件夹。 $ git add.将本地文件保存到暂存区 $ git commit -m文件提交到本地仓库 $ git push将文件上传到远程仓库 $ git pull拉取&#x2F;">
+    <meta name="description" content="toc：true集成运算放大器符号： 三角表示，上下端口–电源 同相输入端：输入输出信号相位相同 反相输入端：反之，相位相反 输出信号和两个输入信号之差成正比：模型：  受控源模型 上式中的Auo–运放开环放大倍数（开环增益） 运放差模输入电压：输入端电压之差理想受控源模型 虚断路：输入电阻无限接近于0，输入部分电流也就趋近于0，所以说输入部分“虚断路” 理想运放条件：输入电阻趋近无穷大（保证全部">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git远程管理Github仓库&amp;遇到的问题">
-<meta property="og:url" content="http://yoursite.com/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="ch2-1">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/ch2-1/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="前言一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。 git上传代码流程 $ git clone将github上download处的https地址复制，在电脑本地创建git.文件夹。 $ git add.将本地文件保存到暂存区 $ git commit -m文件提交到本地仓库 $ git push将文件上传到远程仓库 $ git pull拉取&#x2F;">
+<meta property="og:description" content="toc：true集成运算放大器符号： 三角表示，上下端口–电源 同相输入端：输入输出信号相位相同 反相输入端：反之，相位相反 输出信号和两个输入信号之差成正比：模型：  受控源模型 上式中的Auo–运放开环放大倍数（开环增益） 运放差模输入电压：输入端电压之差理想受控源模型 虚断路：输入电阻无限接近于0，输入部分电流也就趋近于0，所以说输入部分“虚断路” 理想运放条件：输入电阻趋近无穷大（保证全部">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-16T12:43:29.958Z">
-<meta property="article:modified_time" content="2020-02-16T13:45:11.880Z">
+<meta property="article:published_time" content="2020-02-18T12:24:40.330Z">
+<meta property="article:modified_time" content="2020-02-18T12:21:59.461Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="Git远程管理Github仓库&amp;遇到的问题" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch2-1" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="Git远程管理Github仓库&amp;遇到的问题" height="28">
+                <img src="/images/logo_2.png" alt="ch2-1" height="28">
             
             </a>
         </div>
@@ -139,13 +139,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-16T12:43:29.958Z">2020-02-16</time>
+                <time class="level-item has-text-grey" datetime="2020-02-18T12:24:40.330Z">2020-02-18</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 311 个字)
+                    3 分钟 读完 (大约 474 个字)
                 </span>
                 
                 
@@ -154,18 +154,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Git远程管理Github仓库&amp;遇到的问题
+                ch2-1
             
         </h1>
         <div class="content">
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。</p>
-<h3 id="git上传代码流程"><a href="#git上传代码流程" class="headerlink" title="git上传代码流程"></a>git上传代码流程</h3><ol>
-<li>$ git clone<br>将github上download处的https地址复制，在电脑本地创建git.文件夹。</li>
-<li>$ git add.<br>将本地文件保存到暂存区</li>
-<li>$ git commit -m<br>文件提交到本地仓库</li>
-<li>$ git push<br>将文件上传到远程仓库</li>
-<li>$ git pull<br>拉取/同步远程仓库的代码到本地，<br>每次开始开发和提交前都要记得pull一下，以免提交发生冲突。<h3 id="git上传遇到的问题"><a href="#git上传遇到的问题" class="headerlink" title="git上传遇到的问题"></a>git上传遇到的问题</h3><h4 id="1-The-remote-end-hung-up-unexpectedly"><a href="#1-The-remote-end-hung-up-unexpectedly" class="headerlink" title="1.The remote end hung up unexpectedly"></a>1.The remote end hung up unexpectedly</h4>这个挺头疼的，在Stack Overflow上面找了几种方法，有人说的网络的问题，有人说是暂缓区不足，有人说是网络的问题，也有说关掉防火墙和杀毒软件会OK，还去调节参数。。。因为时间的原因，我暂时还没有试过每一种方法，目前尝试的几种方法是不成功的。git push完后会等待很长时间然后报错，/呜呜呜。。</li>
+            <h2 id="toc：true"><a href="#toc：true" class="headerlink" title="toc：true"></a>toc：true</h2><h3 id="集成运算放大器"><a href="#集成运算放大器" class="headerlink" title="集成运算放大器"></a>集成运算放大器</h3><h4 id="符号："><a href="#符号：" class="headerlink" title="符号："></a>符号：</h4><ol>
+<li>三角表示，上下端口–电源</li>
+<li>同相输入端：输入输出信号相位相同</li>
+<li>反相输入端：反之，相位相反</li>
+<li>输出信号和两个输入信号之差成正比：<h3 id="模型："><a href="#模型：" class="headerlink" title="模型："></a>模型：</h3></li>
 </ol>
+<h4 id="受控源模型"><a href="#受控源模型" class="headerlink" title="受控源模型"></a>受控源模型</h4><ol>
+<li>上式中的Auo–运放开环放大倍数（开环增益）</li>
+<li>运放差模输入电压：输入端电压之差<h4 id="理想受控源模型"><a href="#理想受控源模型" class="headerlink" title="理想受控源模型"></a>理想受控源模型</h4></li>
+<li>虚断路：输入电阻无限接近于0，输入部分电流也就趋近于0，所以说输入部分“虚断路”</li>
+<li>理想运放条件：输入电阻趋近无穷大（保证全部分压给运放），输入偏流趋近0，输出电阻趋近0，开环增益趋近无穷大，上限频率趋近无穷大……<h3 id="传输特性"><a href="#传输特性" class="headerlink" title="传输特性"></a>传输特性</h3><h4 id="集成运放电压传输特性"><a href="#集成运放电压传输特性" class="headerlink" title="集成运放电压传输特性"></a>集成运放电压传输特性</h4></li>
+<li>由于电源电压有限，所以输出电压随输入电压会有限制，输出电压和输入电压变化关系分成线性区（输入输出电压成线性关系）和限幅区。<h4 id="理想集成运放电压传输特性"><a href="#理想集成运放电压传输特性" class="headerlink" title="理想集成运放电压传输特性"></a>理想集成运放电压传输特性</h4></li>
+<li>因为Auo–&gt;无穷大，所以线性放大区———&gt;0，则同相端电压和反相端电压相等，输出电阻为0（没有电阻，只有导线，自然可视为“虚短路”），开环运放是无法作为线性放大器（<strong><em>开环指的是输出只受输入控制，没有反馈系统</em></strong>）</li>
+</ol>
+<hr>
+<p>差模输入电压这里应该也是可以不为0，只是因为限幅，这个和趋近于0，所产生的输出电压几乎没有区别。</p>
+<hr>
+<h4 id="反相电压传输特性"><a href="#反相电压传输特性" class="headerlink" title="反相电压传输特性"></a>反相电压传输特性</h4><p>只是Auo &lt; 0 。传输特性图像水平翻转。</p>
+<p>2020.2.18</p>
 
         </div>
         
@@ -211,16 +222,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/17/ch1-1/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/18/ch2-2/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch1-1</span>
+                <span class="level-item">ch2-2</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/15/icarus%20%E7%BE%8E%E5%8C%96%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9D%91/">
-                <span class="level-item">icarus 美化主题的坑</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/17/ch1-2/">
+                <span class="level-item">ch1-2</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -366,7 +377,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="Git远程管理Github仓库&amp;遇到的问题" height="28">
+                    <img src="/images/logo_2.png" alt="ch2-1" height="28">
                 
                 </a>
                 <p class="is-size-7">
