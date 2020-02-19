@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>CNN经典网络Lenet5 - 仰望星空</title>
+<title>ch2-4 相减器 - 仰望星空</title>
 
 
-    <meta name="description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。">
+    <meta name="description" content="toc:true相减器目标：使输入的两个信号相减输出$$Uo &#x3D; a Ui1 - b Ui2$$  那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CNN经典网络Lenet5">
-<meta property="og:url" content="http://yoursite.com/2020/02/14/CNN%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9CLenet5/index.html">
+<meta property="og:title" content="ch2-4 相减器">
+<meta property="og:url" content="http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="前言在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。 网络分析 Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。">
+<meta property="og:description" content="toc:true相减器目标：使输入的两个信号相减输出$$Uo &#x3D; a Ui1 - b Ui2$$  那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-14T13:10:29.088Z">
-<meta property="article:modified_time" content="2020-02-19T13:51:20.863Z">
+<meta property="article:published_time" content="2020-02-19T13:46:17.617Z">
+<meta property="article:modified_time" content="2020-02-19T13:51:15.527Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="CNN经典网络Lenet5" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch2-4 相减器" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="CNN经典网络Lenet5" height="28">
+                <img src="/images/logo_2.png" alt="ch2-4 相减器" height="28">
             
             </a>
         </div>
@@ -119,10 +119,6 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -143,13 +139,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-14T13:10:29.088Z">2020-02-14</time>
+                <time class="level-item has-text-grey" datetime="2020-02-19T13:46:17.617Z">2020-02-19</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 1008 个字)
+                    3 分钟 读完 (大约 396 个字)
                 </span>
                 
                 
@@ -158,26 +154,44 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                CNN经典网络Lenet5
+                ch2-4 相减器
             
         </h1>
         <div class="content">
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。</p>
-<h3 id="网络分析"><a href="#网络分析" class="headerlink" title="网络分析"></a>网络分析</h3><p><img src="https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="LeNet5"></p>
-<p>Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。</p>
+            <h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc:true"></a>toc:true</h2><h3 id="相减器"><a href="#相减器" class="headerlink" title="相减器"></a>相减器</h3><p>目标：使输入的两个信号相减输出<br>$$Uo = a Ui1 - b Ui2$$</p>
+<blockquote>
+<p>那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可</p>
+</blockquote>
 <a id="more"></a>
-
-<h4 id="LeNet-5第一层：卷积层C1"><a href="#LeNet-5第一层：卷积层C1" class="headerlink" title="LeNet-5第一层：卷积层C1"></a>LeNet-5第一层：卷积层C1</h4><p>C1层是卷积层，形成6个特征图谱。卷积的输入区域大小是5x5，每个特征图谱内参数共享，即每个特征图谱内只使用一个共同卷积核，卷积核有5x5个连接参数加上1个偏置共26个参数。卷积区域每次滑动一个像素，这样卷积层形成的每个特征图谱大小是(32-5)/1+1=28x28。C1层共有26x6=156个训练参数，有(5x5+1)x28x28x6=122304个连接。C1层的连接结构如下所示。</p>
-<p><img src="https://img-blog.csdn.net/20171018154917808?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<h4 id="LeNet-5第二层：池化层S2"><a href="#LeNet-5第二层：池化层S2" class="headerlink" title="LeNet-5第二层：池化层S2"></a>LeNet-5第二层：池化层S2</h4><p>S2层是一个下采样层（为什么是下采样？利用图像局部相关性的原理，对图像进行子抽样，可以减少数据处理量同时保留有用信息）。C1层的6个28x28的特征图谱分别进行以2x2为单位的下抽样得到6个14x14（（28-2）/2+1）的图。每个特征图谱使用一个下抽样核。5x14x14x6=5880个连接。S2层的网络连接结构如下图</p>
-<p><img src="https://img-blog.csdn.net/20171018155110551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<h4 id="LeNet-5第三层：卷积层C3"><a href="#LeNet-5第三层：卷积层C3" class="headerlink" title="LeNet-5第三层：卷积层C3"></a>LeNet-5第三层：卷积层C3</h4><p>C3层是一个卷积层，卷积和和C1相同，不同的是C3的每个节点与S2中的多个图相连。C3层有16个10x10（14-5+1）的图，每个图与S2层的连接的方式如下表 所示。C3与S2中前3个图相连的卷积结构见下图.这种不对称的组合连接的方式有利于提取多种组合特征。该层有(5x5x3+1)x6 + (5x5x4 + 1) x 3 + (5x5x4 +1)x6 + (5x5x6+1)x1 = 1516个训练参数，共有1516x10x10=151600个连接。</p>
-<p><img src="https://img-blog.csdn.net/20171018155242912?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<h4 id="LeNet-5第四层：池化层S4"><a href="#LeNet-5第四层：池化层S4" class="headerlink" title="LeNet-5第四层：池化层S4"></a>LeNet-5第四层：池化层S4</h4><p>S4是一个下采样层。C3层的16个10x10的图分别进行以2x2为单位的下抽样得到16个5x5的图。5x5x5x16=2000个连接。连接的方式与S2层类似，如下所示。<br><img src="https://img-blog.csdn.net/20171018155446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<h4 id="LeNet-5第五层：全连接层C5"><a href="#LeNet-5第五层：全连接层C5" class="headerlink" title="LeNet-5第五层：全连接层C5"></a>LeNet-5第五层：全连接层C5</h4><p>C5层是一个全连接层。由于S4层的16个图的大小为5x5，与卷积核的大小相同，所以卷积后形成的图的大小为1x1。这里形成120个卷积结果。每个都与上一层的16个图相连。所以共有(5x5x16+1)x120 = 48120个参数，同样有48120个连接。C5层的网络结构如下所示。<br><img src="https://img-blog.csdn.net/20171018155558086?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<h4 id="LeNet-5第六层：全连接层F6"><a href="#LeNet-5第六层：全连接层F6" class="headerlink" title="LeNet-5第六层：全连接层F6"></a>LeNet-5第六层：全连接层F6</h4><p>F6层是全连接层。F6层有84个节点，对应于一个7x12的比特图，该层的训练参数和连接数都是(120 + 1)x84=10164.<br><img src="https://img-blog.csdn.net/20171018155923735?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<h4 id="LeNet-5第七层：全连接层Output"><a href="#LeNet-5第七层：全连接层Output" class="headerlink" title="LeNet-5第七层：全连接层Output"></a>LeNet-5第七层：全连接层Output</h4><p>略<br><img src="https://img-blog.csdn.net/20171018160214082?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>1.<a href="https://blog.csdn.net/happyorg/article/details/78274066">https://blog.csdn.net/happyorg/article/details/78274066</a></p>
+<h4 id="a-b-1"><a href="#a-b-1" class="headerlink" title="$a = b + 1$ :"></a>$a = b + 1$ :</h4><blockquote>
+<p>将Ui1和Ui2分别接地，可得到同相比例和反相比例放大器的 Uo，然后叠加原理，相加即是输出电压</p>
+</blockquote>
+<p>推导一下：</p>
+<blockquote>
+<p>令Ui2 接地,则为同相比例放大器<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1$$<br>令Ui1接地，则为反相比例放大器<br>$$Uo = -\cfrac{Rf}{R2}Ui2$$<br>用叠加定理合起来就是<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p>
+</blockquote>
+<h4 id="a-lt-b-1"><a href="#a-lt-b-1" class="headerlink" title="a &lt; b + 1"></a>a &lt; b + 1</h4><blockquote>
+<p>要减小a，减小同相输入端的电压（分压即可）</p>
+</blockquote>
+<p>在U+处接上一个电阻，这个电阻接地即可<br>$$Uo = (1 + \cfrac{Rf}{R2})(\cfrac{R4}{R1+R4})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p>
+<h4 id="a-gt-b-1"><a href="#a-gt-b-1" class="headerlink" title="a &gt; b + 1"></a>a &gt; b + 1</h4><blockquote>
+<p>同理增加a，减小Ui2的放大倍数就可以了，Rf不变，增加分母上的值即可，即，在R2上面并联一个电阻即可<br>$$Uo = (1+\cfrac{Rf}{R2+R})Ui1-\cfrac{Rf}{R2}Ui2$$<br>由于虚断的原因，在反相比例放大器的情况下，R两端电压都是0，所以R不起作用</p>
+</blockquote>
+<h4 id="a-b-k"><a href="#a-b-k" class="headerlink" title="a = b = k"></a>a = b = k</h4><blockquote>
+<p>常用的模型是使R2 = R1，Rf = R3 ，就可以满足 a = b = k</p>
+</blockquote>
+<p>则：<br>$$Uo = \cfrac{R3}{R2}(Ui1-Ui2) = \cfrac{Rf}{R2}(Ui1-Ui2)$$</p>
+<h4 id="相减器设计实例"><a href="#相减器设计实例" class="headerlink" title="相减器设计实例"></a>相减器设计实例</h4><ol>
+<li>实现：Uo = 5 ( Ui1 - Ui2 )<blockquote>
+<p>放大倍数相同，说明Rf = R4，R1 = R2，……</p>
+</blockquote>
+</li>
+<li>实现：Uo = 5 Ui1 - 8 Ui2<blockquote>
+<p>写出 a &lt; b 的情况（公式）</p>
+</blockquote>
+</li>
+<li>实现：Uo = 8 Ui1 - 5 Ui2</li>
+</ol>
 
         </div>
         
@@ -222,17 +236,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/15/hexo%20%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">hexo 操作注意</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/13/hello-world/">
-                <span class="level-item">Hello World</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/">
+                <span class="level-item">ch2-3 相加器</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -360,58 +367,6 @@
 </div>
     
         
-
-    <div class="card widget" id="toc">
-        <div class="card-content">
-            <div class="menu">
-                <h3 class="menu-label">
-                    目录
-                </h3>
-                <ul class="menu-list"><li>
-        <a class="is-flex" href="#前言">
-        <span class="has-mr-6">1</span>
-        <span>前言</span>
-        </a></li><li>
-        <a class="is-flex" href="#网络分析">
-        <span class="has-mr-6">2</span>
-        <span>网络分析</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#LeNet-5第一层：卷积层C1">
-        <span class="has-mr-6">2.1</span>
-        <span>LeNet-5第一层：卷积层C1</span>
-        </a></li><li>
-        <a class="is-flex" href="#LeNet-5第二层：池化层S2">
-        <span class="has-mr-6">2.2</span>
-        <span>LeNet-5第二层：池化层S2</span>
-        </a></li><li>
-        <a class="is-flex" href="#LeNet-5第三层：卷积层C3">
-        <span class="has-mr-6">2.3</span>
-        <span>LeNet-5第三层：卷积层C3</span>
-        </a></li><li>
-        <a class="is-flex" href="#LeNet-5第四层：池化层S4">
-        <span class="has-mr-6">2.4</span>
-        <span>LeNet-5第四层：池化层S4</span>
-        </a></li><li>
-        <a class="is-flex" href="#LeNet-5第五层：全连接层C5">
-        <span class="has-mr-6">2.5</span>
-        <span>LeNet-5第五层：全连接层C5</span>
-        </a></li><li>
-        <a class="is-flex" href="#LeNet-5第六层：全连接层F6">
-        <span class="has-mr-6">2.6</span>
-        <span>LeNet-5第六层：全连接层F6</span>
-        </a></li><li>
-        <a class="is-flex" href="#LeNet-5第七层：全连接层Output">
-        <span class="has-mr-6">2.7</span>
-        <span>LeNet-5第七层：全连接层Output</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#参考文献">
-        <span class="has-mr-6">3</span>
-        <span>参考文献</span>
-        </a></li></ul>
-            </div>
-        </div>
-    </div>
-
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -430,7 +385,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="CNN经典网络Lenet5" height="28">
+                    <img src="/images/logo_2.png" alt="ch2-4 相减器" height="28">
                 
                 </a>
                 <p class="is-size-7">

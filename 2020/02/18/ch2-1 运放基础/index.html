@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch1-2 - 仰望星空</title>
+<title>ch2-1 运放基础 - 仰望星空</title>
 
 
-    <meta name="description" content="toc:true什么是放大器？ 概念：功率放大倍数 大于 1 （变压器不是放大器） 同向放大器：输入输出信号相位相同 反向放大器：输入输出信号相位相反 放大器有两正负两极，作用同上，称为同向输入端和反向输入端">
+    <meta name="description" content="toc：true集成运算放大器符号： 三角表示，上下端口–电源 同相输入端：输入输出信号相位相同 反相输入端：反之，相位相反 输出信号和两个输入信号之差成正比：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch1-2">
-<meta property="og:url" content="http://yoursite.com/2020/02/17/ch1-2/index.html">
+<meta property="og:title" content="ch2-1 运放基础">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/ch2-1%20%E8%BF%90%E6%94%BE%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="toc:true什么是放大器？ 概念：功率放大倍数 大于 1 （变压器不是放大器） 同向放大器：输入输出信号相位相同 反向放大器：输入输出信号相位相反 放大器有两正负两极，作用同上，称为同向输入端和反向输入端">
+<meta property="og:description" content="toc：true集成运算放大器符号： 三角表示，上下端口–电源 同相输入端：输入输出信号相位相同 反相输入端：反之，相位相反 输出信号和两个输入信号之差成正比：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-17T12:18:27.025Z">
-<meta property="article:modified_time" content="2020-02-18T12:21:57.915Z">
+<meta property="article:published_time" content="2020-02-18T12:24:40.330Z">
+<meta property="article:modified_time" content="2020-02-19T13:51:25.306Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch1-2" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch2-1 运放基础" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch1-2" height="28">
+                <img src="/images/logo_2.png" alt="ch2-1 运放基础" height="28">
             
             </a>
         </div>
@@ -139,13 +139,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-17T12:18:27.025Z">2020-02-17</time>
+                <time class="level-item has-text-grey" datetime="2020-02-18T12:24:40.330Z">2020-02-18</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 794 个字)
+                    3 分钟 读完 (大约 475 个字)
                 </span>
                 
                 
@@ -154,32 +154,30 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch1-2
+                ch2-1 运放基础
             
         </h1>
         <div class="content">
-            <h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc:true"></a>toc:true</h2><h3 id="什么是放大器？"><a href="#什么是放大器？" class="headerlink" title="什么是放大器？"></a>什么是放大器？</h3><ol>
-<li>概念：功率放大倍数 大于 1 （变压器不是放大器）</li>
-<li>同向放大器：输入输出信号相位相同</li>
-<li>反向放大器：输入输出信号相位相反</li>
-<li>放大器有两正负两极，作用同上，称为同向输入端和反向输入端<a id="more"></a>
-<h4 id="放大器性能指标"><a href="#放大器性能指标" class="headerlink" title="放大器性能指标"></a>放大器性能指标</h4></li>
-<li>可等效为一个有源二端口网络（一个输入端–接信号源，一个输出端–接负载）</li>
-<li>放大器结构是两个电阻（一个输入电阻一个输出电阻），再加上一个受控源（放大倍数）</li>
-<li>放大器参数就是上面的放大倍数A，加上输入输出电阻阻值，以及频率响应与带宽（<strong><em>？？？</em></strong>），总谐波失真系数（非线性失真系数）THD（<strong><em>？？？</em></strong>）</li>
-<li>放大倍数A：（也称增益）输入量和输出量的比值，电压，电流增益（<strong><em>无量纲</em></strong> ），互阻，互导增益</li>
-<li>输入电阻：Ri决定了放大器从电压源处分到的电压值。</li>
-<li>输出电阻：对负载而言，放大器相当于信号源，R0是信号源内阻，则其阻值表达了其的带载能力。</li>
-<li>频率特性:放大器中存在电容（<strong><em>放大器前面是输入输出电阻加上受控源，现在又有电容，所以到底放大器内部是什么结构？？</em></strong>）频率大，容抗小，反之，频率小，容抗就大，那么容抗会对增益有影响（<strong><em>怎么影响是没有说的</em></strong>）</li>
-<li>放大器的截止频率和通频带：频率分低频区，中频区，高频区。频率过高或过低，增益绝对值都会下降。截止频率为0.707增益，高频区为上限截止频率，低频区为下限截止频率。两个截止频率之间为通频带。（记图像）</li>
-<li>失真：相位失真（各波形相位不同，则叠加波形会错位，），频率失真（两个频率不同的波形叠加放大，因为频率不同，所以两个波形增益不一样，那放大后波形就会失真）<blockquote>
-<p>关于相位失真，好奇这个相位怎么样才能移位呢？？？</p>
-</blockquote>
-</li>
-<li>非线性失真系数（THD）：放大器本身是非线性器件晶体管组成，所以，本身输出会产生非线性失真。有个非线性失真系数，不写了。</li>
-<li>放大器的输出动态范围：就是避免放大器的非线性失真，不失真的电压有个范围，最大值叫做放大器的输出动态范围。</li>
-<li>放大器传输特性：随着输入电压的变化，输出电压线性变化叫做线性输入范围，非线性临界点叫做非线性限幅。</li>
+            <h2 id="toc：true"><a href="#toc：true" class="headerlink" title="toc：true"></a>toc：true</h2><h3 id="集成运算放大器"><a href="#集成运算放大器" class="headerlink" title="集成运算放大器"></a>集成运算放大器</h3><h4 id="符号："><a href="#符号：" class="headerlink" title="符号："></a>符号：</h4><ol>
+<li>三角表示，上下端口–电源</li>
+<li>同相输入端：输入输出信号相位相同</li>
+<li>反相输入端：反之，相位相反</li>
+<li>输出信号和两个输入信号之差成正比：<a id="more"></a>
+<h3 id="模型："><a href="#模型：" class="headerlink" title="模型："></a>模型：</h3></li>
 </ol>
+<h4 id="受控源模型"><a href="#受控源模型" class="headerlink" title="受控源模型"></a>受控源模型</h4><ol>
+<li>上式中的Auo–运放开环放大倍数（开环增益）</li>
+<li>运放差模输入电压：输入端电压之差<h4 id="理想受控源模型"><a href="#理想受控源模型" class="headerlink" title="理想受控源模型"></a>理想受控源模型</h4></li>
+<li>虚断路：输入电阻无限接近于0，输入部分电流也就趋近于0，所以说输入部分“虚断路”</li>
+<li>理想运放条件：输入电阻趋近无穷大（保证全部分压给运放），输入偏流趋近0，输出电阻趋近0，开环增益趋近无穷大，上限频率趋近无穷大……<h3 id="传输特性"><a href="#传输特性" class="headerlink" title="传输特性"></a>传输特性</h3><h4 id="集成运放电压传输特性"><a href="#集成运放电压传输特性" class="headerlink" title="集成运放电压传输特性"></a>集成运放电压传输特性</h4></li>
+<li>由于电源电压有限，所以输出电压随输入电压会有限制，输出电压和输入电压变化关系分成线性区（输入输出电压成线性关系）和限幅区。<h4 id="理想集成运放电压传输特性"><a href="#理想集成运放电压传输特性" class="headerlink" title="理想集成运放电压传输特性"></a>理想集成运放电压传输特性</h4></li>
+<li>因为Auo–&gt;无穷大，所以线性放大区———&gt;0，则同相端电压和反相端电压相等，输出电阻为0（没有电阻，只有导线，自然可视为“虚短路”），开环运放是无法作为线性放大器（<strong><em>开环指的是输出只受输入控制，没有反馈系统</em></strong>）</li>
+</ol>
+<hr>
+<p>差模输入电压这里应该也是可以不为0，只是因为限幅，这个和趋近于0，所产生的输出电压几乎没有区别。</p>
+<hr>
+<h4 id="反相电压传输特性"><a href="#反相电压传输特性" class="headerlink" title="反相电压传输特性"></a>反相电压传输特性</h4><p>只是Auo &lt; 0 。传输特性图像水平翻转。</p>
+<p>2020.2.18</p>
 
         </div>
         
@@ -225,16 +223,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/18/ch2-1/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/18/ch2-2%20%E5%90%8C%E7%9B%B8%E4%BB%A5%E5%8F%8A%E5%8F%8D%E7%9B%B8%E6%AF%94%E4%BE%8B%E6%94%BE%E5%A4%A7%E5%99%A8/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch2-1</span>
+                <span class="level-item">ch2-2 同相以及反相比例放大器</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/17/ch1-1/">
-                <span class="level-item">ch1-1</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/17/ch1-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E4%B8%BB%E8%A6%81%E6%8C%87%E6%A0%87/">
+                <span class="level-item">ch1-2 放大器主要指标</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -288,7 +286,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            9
+                            11
                         </p>
                     </a>
                 </div>
@@ -380,7 +378,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch1-2" height="28">
+                    <img src="/images/logo_2.png" alt="ch2-1 运放基础" height="28">
                 
                 </a>
                 <p class="is-size-7">
