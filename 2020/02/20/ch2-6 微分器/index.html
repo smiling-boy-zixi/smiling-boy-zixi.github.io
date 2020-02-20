@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch2-4 相减器 - 仰望星空</title>
+<title>ch2-6 微分器 - 仰望星空</title>
 
 
-    <meta name="description" content="相减器目标：使输入的两个信号相减输出$$Uo &#x3D; a Ui1 - b Ui2$$  那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可">
+    <meta name="description" content="people have Dreams">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch2-4 相减器">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/index.html">
+<meta property="og:title" content="ch2-6 微分器">
+<meta property="og:url" content="http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="相减器目标：使输入的两个信号相减输出$$Uo &#x3D; a Ui1 - b Ui2$$  那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可">
+<meta property="og:description" content="people have Dreams">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-19T13:46:17.617Z">
-<meta property="article:modified_time" content="2020-02-20T12:49:59.771Z">
+<meta property="article:published_time" content="2020-02-20T11:27:34.939Z">
+<meta property="article:modified_time" content="2020-02-20T12:13:27.031Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch2-4 相减器" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch2-6 微分器" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch2-4 相减器" height="28">
+                <img src="/images/logo_2.png" alt="ch2-6 微分器" height="28">
             
             </a>
         </div>
@@ -143,13 +143,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-19T13:46:17.617Z">2020-02-19</time>
+                <time class="level-item has-text-grey" datetime="2020-02-20T11:27:34.939Z">2020-02-20</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 996 个字)
+                    几秒 读完 (大约 0 个字)
                 </span>
                 
                 
@@ -158,76 +158,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch2-4 相减器
+                ch2-6 微分器
             
         </h1>
         <div class="content">
-            <h3 id="相减器"><a href="#相减器" class="headerlink" title="相减器"></a>相减器</h3><p>目标：使输入的两个信号相减输出<br>$$Uo = a Ui1 - b Ui2$$</p>
-<blockquote>
-<p>那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可</p>
-</blockquote>
-<a id="more"></a>
-<h4 id="a-b-1"><a href="#a-b-1" class="headerlink" title="$a = b + 1$ :"></a>$a = b + 1$ :</h4><blockquote>
-<p>将Ui1和Ui2分别接地，可得到同相比例和反相比例放大器的 Uo，然后叠加原理，相加即是输出电压</p>
-</blockquote>
-<p>推导一下：</p>
-<blockquote>
-<p>令Ui2 接地,则为同相比例放大器<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1$$<br>令Ui1接地，则为反相比例放大器<br>$$Uo = -\cfrac{Rf}{R2}Ui2$$<br>用叠加定理合起来就是<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p>
-</blockquote>
-<h4 id="a-lt-b-1"><a href="#a-lt-b-1" class="headerlink" title="a &lt; b + 1"></a>a &lt; b + 1</h4><blockquote>
-<p>要减小a，减小同相输入端的电压（分压即可）</p>
-</blockquote>
-<p>在U+处接上一个电阻，这个电阻接地即可<br>$$Uo = (1 + \cfrac{Rf}{R2})(\cfrac{R4}{R1+R4})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p>
-<h4 id="a-gt-b-1"><a href="#a-gt-b-1" class="headerlink" title="a &gt; b + 1"></a>a &gt; b + 1</h4><blockquote>
-<p>同理增加a，减小Ui2的放大倍数就可以了，Rf不变，增加分母上的值即可，即，在R2上面并联一个电阻即可<br>$$Uo = (1+\cfrac{Rf}{R2+R})Ui1-\cfrac{Rf}{R2}Ui2$$<br>由于虚断的原因，在反相比例放大器的情况下，R两端电压都是0，所以R不起作用</p>
-</blockquote>
-<h4 id="a-b-k"><a href="#a-b-k" class="headerlink" title="a = b = k"></a>a = b = k</h4><blockquote>
-<p>常用的模型是使R2 = R1，Rf = R3 ，就可以满足 a = b = k</p>
-</blockquote>
-<p>则：<br>$$Uo = \cfrac{R3}{R2}(Ui1-Ui2) = \cfrac{Rf}{R2}(Ui1-Ui2)$$</p>
-<h4 id="相减器设计实例"><a href="#相减器设计实例" class="headerlink" title="相减器设计实例"></a>相减器设计实例</h4><ol>
-<li>实现：Uo = 5 ( Ui1 - Ui2 )<blockquote>
-<p>放大倍数相同，说明Rf = R4，R1 = R2，……</p>
-</blockquote>
-</li>
-<li>实现：Uo = 5 Ui1 - 8 Ui2<blockquote>
-<p>写出 a &lt; b 的情况（公式）</p>
-</blockquote>
-</li>
-<li>实现：Uo = 8 Ui1 - 5 Ui2</li>
-</ol>
-<h4 id="相减器的应用"><a href="#相减器的应用" class="headerlink" title="相减器的应用"></a>相减器的应用</h4><ol>
-<li>直流电平移位 <blockquote>
-<p>案例里面是将信号接到反相输入端，同相输入端接直流信号，当然这个就反相放大了。同相放大的话就是，将信号接入同相输入端即可</p>
-</blockquote>
-</li>
-<li>抑制共模干扰<blockquote>
-<p>共模干扰——百度百科：共模干扰指的是干扰电压在信号线及其信号地线上的幅度相同。(<strong><em>额？还是觉得哪里不明白</em></strong>)  </p>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p>这里孙老师是举了例子，是把两个相同信号源的输入信号放入相减器中间，使两个相同的noise相减，抵消后输入仪器(<strong><em>妙极了</em></strong>)</p>
-</blockquote>
-<h4 id="简单相减器存在的问题"><a href="#简单相减器存在的问题" class="headerlink" title="简单相减器存在的问题"></a>简单相减器存在的问题</h4><ol>
-<li>如果要求两个输入信号的放大倍数相同的话，那么要求上下对应的电阻阻值相同——————&gt;调节增益困难，要同步调节上下两个电阻</li>
-<li>输入电阻偏小(注意哦，不是放大器内部的输入电阻，是同反相输入端上的电阻)，对两个信号源的影响不同(<strong><em>这个是为什么呢？</em></strong>)</li>
-</ol>
-<h4 id="仪表放大器"><a href="#仪表放大器" class="headerlink" title="仪表放大器"></a>仪表放大器</h4><blockquote>
-<p>你好，放大器一书中把仪表放大器归于功能放大器当中哦~</p>
-</blockquote>
-<blockquote>
-<p>结构就是在简单的相减器的前面增加两个同相比例放大器</p>
-</blockquote>
-<h6 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h6><ol>
-<li>两个同相比例放大器由于放大器内部输入电阻阻值趋于无穷大，所以对信号输入起到了很好的隔绝作用。</li>
-<li>通过调节两个同相比例放大器中间的电阻阻值可以很方便的改变仪表放大器的增益，为啥呢，也比较简单，我推导一下：<blockquote>
-<p>首先由于虚断，同相比例放大器的两个信号输入端无电流(阻值太大嘛~),由于虚端，两个信号输入端的电压相同，即信号相同，则：<br>$$Uo1-Uo2=ix(R+R+Rx)=\cfrac{Ui1-Ui2}{Rx}(2R+Rx)$$<br>其中Rx是两个同相比例放大器之间的电压，Ui1和Ui2是后半部分简单减法器的输入信号端<br>$$Uo=\cfrac{R4}{R3}(Uo1-Uo2)=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx}(Ui1-Ui2)$$<br>$$Au=\cfrac{Uo}{Ui1-Ui2}=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx})$$<br>所以增益可以由Rx改变啦</p>
-</blockquote>
-</li>
-</ol>
-<p>2020.2.20</p>
-
+            
         </div>
         
         
@@ -271,17 +206,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">生不逢时—曾国藩</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/">
-                <span class="level-item">ch2-3 相加器</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/">
+                <span class="level-item">ch2-5 积分器</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -410,57 +338,6 @@
     
         
 
-    <div class="card widget" id="toc">
-        <div class="card-content">
-            <div class="menu">
-                <h3 class="menu-label">
-                    目录
-                </h3>
-                <ul class="menu-list"><li>
-        <a class="is-flex" href="#相减器">
-        <span class="has-mr-6">1</span>
-        <span>相减器</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#a-b-1">
-        <span class="has-mr-6">1.1</span>
-        <span>$a = b + 1$ :</span>
-        </a></li><li>
-        <a class="is-flex" href="#a-lt-b-1">
-        <span class="has-mr-6">1.2</span>
-        <span>a < b + 1</span>
-        </a></li><li>
-        <a class="is-flex" href="#a-gt-b-1">
-        <span class="has-mr-6">1.3</span>
-        <span>a > b + 1</span>
-        </a></li><li>
-        <a class="is-flex" href="#a-b-k">
-        <span class="has-mr-6">1.4</span>
-        <span>a = b = k</span>
-        </a></li><li>
-        <a class="is-flex" href="#相减器设计实例">
-        <span class="has-mr-6">1.5</span>
-        <span>相减器设计实例</span>
-        </a></li><li>
-        <a class="is-flex" href="#相减器的应用">
-        <span class="has-mr-6">1.6</span>
-        <span>相减器的应用</span>
-        </a></li><li>
-        <a class="is-flex" href="#简单相减器存在的问题">
-        <span class="has-mr-6">1.7</span>
-        <span>简单相减器存在的问题</span>
-        </a></li><li>
-        <a class="is-flex" href="#仪表放大器">
-        <span class="has-mr-6">1.8</span>
-        <span>仪表放大器</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#优点：">
-        <span class="has-mr-6">1.8.1</span>
-        <span>优点：</span>
-        </a></li></ul></li></ul></li></ul>
-            </div>
-        </div>
-    </div>
-
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -479,7 +356,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch2-4 相减器" height="28">
+                    <img src="/images/logo_2.png" alt="ch2-6 微分器" height="28">
                 
                 </a>
                 <p class="is-size-7">

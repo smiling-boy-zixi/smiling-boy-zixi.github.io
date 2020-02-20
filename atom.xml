@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-20T09:26:32.019Z</updated>
+  <updated>2020-02-20T12:13:27.031Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ch2-6 微分器</title>
+    <link href="http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/"/>
+    <id>http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/</id>
+    <published>2020-02-20T11:27:34.939Z</published>
+    <updated>2020-02-20T12:13:27.031Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch2-5 积分器</title>
+    <link href="http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/"/>
+    <id>http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/</id>
+    <published>2020-02-20T11:26:55.734Z</published>
+    <updated>2020-02-20T15:42:23.159Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="积分器"><a href="#积分器" class="headerlink" title="积分器"></a>积分器</h3><blockquote><p>目标：$Uo(t)=k\int Ui(t)dt$</p></blockquote><p>即输出与输入的积分成正比</p><h4 id="反相积分电路"><a href="#反相积分电路" class="headerlink" title="反相积分电路"></a>反相积分电路</h4><blockquote><p>就是将反相比例放大器中的 Rf 换成电容</p></blockquote><p>(A)时域分析<br>$$Uo(t)=-Uc(t)=-\cfrac{Q}{C}=-\cfrac{1}{C}\int ic(t)dt$$<br>$$=-\cfrac{1}{C}\int \cfrac{Ui(t)}{R}dt=-\cfrac{1}{RC}\int Ui(t)dt=-\cfrac{1}{\tau}\int Ui(t)dt$$<br>其中 $\tau$ = RC 是积分常数</p><p>(B)频域分析</p><blockquote><p>这里和反相比例放大器是一个分析方法<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-\cfrac{1}{j\omega RC}=-\cfrac{1}{j\omega \tau}$$<br>因为这里有一个$\cfrac{1}{j}=-j$ , 所以：</p></blockquote><ol><li>相位滞后90度，</li><li>增益的模：$|Au(j\omega)|=\cfrac{1}{\omega RC}$</li><li>这里有个结论：频率越高，衰减越大(<strong><em>这里是真的不明白为什么了？？</em></strong>)<h4 id="差分积分器电路"><a href="#差分积分器电路" class="headerlink" title="差分积分器电路"></a>差分积分器电路</h4><blockquote><p>这里和简单减法器是相似，把 Rf 和下面对应的电阻换成电容即是差分积分器啦<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}[Ui1(j\omega)-Ui2(j\omega)]$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int[Ui1(t)-Ui2(t)]dt$$<br>上面一个是频域形式，一个是时域形式啦</p></blockquote><h4 id="同相积分电路"><a href="#同相积分电路" class="headerlink" title="同相积分电路"></a>同相积分电路</h4><blockquote><p>就是将反相输入端接地，Ui2 = 0<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}Ui1(j\omega)$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int Ui1(t)dt$$</p></blockquote><h4 id="积分器设计"><a href="#积分器设计" class="headerlink" title="积分器设计"></a>积分器设计</h4><blockquote><p>这里注意一下设计积分器首先要确定时间常数 $\tau$ ,又因为电容的可选类型比较少，电阻相对要多的多，所以，先确定电容的值，在确定电阻的阻值。</p></blockquote></li></ol><blockquote><p>电容单位 F 换算：1F = 1 * 10^6 $\mu$F(微法)_…………_1 $\mu$F = 1 * 10^3 nF_…………1 $\mu$F = 1 * 10^6 pF</p></blockquote><h4 id="单级积分器电路"><a href="#单级积分器电路" class="headerlink" title="单级积分器电路"></a>单级积分器电路</h4><blockquote><p>由于电容是通交流隔直流的，所以只在负反馈网络加电容，会使直流无法反馈，造成积分器不正常工作，或有噪声的情况，（<strong><em>这里加入的电阻要保证R &gt;&gt;&gt; 10</em>Ri</strong>）,不然对增益会很大的影响。</p></blockquote><h4 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h4><ol><li>方波转换成三角波<blockquote><p>反相输入端输入方波，当输入为高电平，输入端高电位，输出端拉低，反馈回去，电位下降；同理反相端输入为低电平，输出端拉高电位上升，反馈回去。输出端就是三角波了。</p></blockquote></li><li>正弦波和余弦波互相转换（<strong><em>因为相位互相差90度</em></strong>）</li></ol><p>2020.2.20</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;积分器&quot;&gt;&lt;a href=&quot;#积分器&quot; class=&quot;headerlink&quot; title=&quot;积分器&quot;&gt;&lt;/a&gt;积分器&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;目标：$Uo(t)=k\int Ui(t)dt$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即输出与输入的
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>生不逢时—曾国藩</title>
     <link href="http://yoursite.com/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/"/>
     <id>http://yoursite.com/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/</id>
     <published>2020-02-20T07:37:10.015Z</published>
-    <updated>2020-02-20T09:26:32.019Z</updated>
+    <updated>2020-02-20T14:55:55.877Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。</p><a id="more"></a><h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>本书讲诉曾国藩年轻气盛之时，历经回乡守孝，出山创建湘军，官场不顺，三败石达开，至攻克江宁（九弟-曾国荃），平定太平天国，整饬两江，被迫与捻军作战不利，到处理天津教案名声败北，最后开始新办洋务，送幼童出国学习技术，最后在矛盾与怅然中离去。</p><h4 id="时代所限的“晚清名臣”"><a href="#时代所限的“晚清名臣”" class="headerlink" title="时代所限的“晚清名臣”"></a>时代所限的“晚清名臣”</h4><p>曾国藩在晚年多次提及天命，用了比喻，与康福提到，自己和皇上都是棋盘中的棋子，那谁是执子人呢，曾国藩答：天命。这里的天命是什么，是时代命运，清朝末年，妇人垂帘，皇子孱弱，国运衰微，到了什么地步呢，堂堂江宁，汉唐繁盛至极，现今竟然城内屋檐下，饿殍，乞丐随处可见，比起太平天国时期，竟然是比之远远不如，皇室中，恭亲王和西宫太后内斗，内忧外患，西方列强制度先进，技术先进，压迫清政府。用李鸿章的话是“三千年之未有大变局”。</p><p>曾国藩从小受到程朱理学理学，孔孟熏陶，心中把忠于皇室作为立人为本的标杆，自创湘军，希望也是帮助君主，使天下太平，百姓过上好日子，心只是可惜，天命不从，若是汉唐鼎盛时代，曾国藩一定可有所为，流芳百世，可惜时代变化，恰恰是忠于皇室，忠于国运衰微的皇室让他走上了一条错误的道路。</p><p>曾国藩在晚年的时候心病严重，一心希望世间太平，让人民过上好日子，可事与愿违，街头百姓无饭可吃，山头绿林强盗与官府打为一片，官僚腐败彻底，细细一想，自己用了十几年的生涯创立湘军，最后攻下江宁，平定太平天国，又是为了什么呢。书中说曾国藩晚年在与郭嵩焘的交谈中，郭嵩焘大力批评曾国藩居于忠于皇室的“小节”，而不顾民族和中华命运的“大节”，不知道是不是真的有这次交谈，但是相信若有机会与曾国藩对话，这也是作者心中想表达出来的意思吧。</p><p>李鸿章是曾国藩的弟子，在书中，曾国藩知道自己时日不多，在晚年与所有健在的人，一一作了告别，包括他最得意的弟子——李鸿章，此后书中再无李鸿章出现，我感兴趣的是李鸿章是怎么想的呢，众人熟知的是李鸿章也是晚清四大名臣之一，被称作是“中国的俾斯麦”，在曾国藩去世之后，本书已经结束，但历史没有，李鸿章一直作为晚清的执掌大臣，签署了各个辱国条约，李鸿章又是怎样的心理变化呢，还有军事天才，左宗棠，他在面临外忧内患的情况下又做了什么，，思考了什么呢，历史的趣味大概就在这里了。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。</p><a id="more"></a><h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>本书讲诉曾国藩年轻气盛之时，历经回乡守孝，出山创建湘军，官场不顺，三败石达开，至攻克江宁（九弟-曾国荃），平定太平天国，整饬两江，被迫与捻军作战不利，到处理天津教案名声败北，最后开始新办洋务，送幼童出国学习技术，最后在矛盾与怅然中离去。</p><h4 id="时代所限的“晚清名臣”"><a href="#时代所限的“晚清名臣”" class="headerlink" title="时代所限的“晚清名臣”"></a>时代所限的“晚清名臣”</h4><p>曾国藩在晚年多次提及天命，用了比喻，与康福提到，自己和皇上都是棋盘中的棋子，那谁是执子人呢，曾国藩答：天命。这里的天命是什么，是时代命运，清朝末年，妇人垂帘，皇子孱弱，国运衰微，到了什么地步呢，堂堂江宁，汉唐繁盛至极，现今竟然城内屋檐下，饿殍，乞丐随处可见，比起太平天国时期，竟然是比之远远不如，皇室中，恭亲王和西宫太后内斗，内忧外患，西方列强制度先进，技术先进，压迫清政府。用李鸿章的话是“三千年之未有大变局”。</p><p>曾国藩从小受到程朱理学理学，孔孟熏陶，心中把忠于皇室作为立人为本的标杆，自创湘军，希望也是帮助君主，使天下太平，百姓过上好日子，心只是可惜，天命不从，若是汉唐鼎盛时代，曾国藩一定可有所为，流芳百世，可惜时代变化，恰恰是忠于皇室，忠于国运衰微的皇室让他走上了一条错误的道路。</p><p>曾国藩在晚年的时候心病严重，一心希望世间太平，让人民过上好日子，可事与愿违，街头百姓无饭可吃，山头绿林强盗与官府打为一片，官僚腐败彻底，细细一想，自己用了十几年的生涯创立湘军，最后攻下江宁，平定太平天国，又是为了什么呢。书中说曾国藩晚年在与郭嵩焘的交谈中，郭嵩焘大力批评曾国藩居于忠于皇室的“小节”，而不顾民族和中华命运的“大节”，不知道是不是真的有这次交谈，但是相信若有机会与曾国藩对话，这也是作者心中想表达出来的意思吧。</p><p>曾国藩也只是时代轮换下的一个可怜人了。</p><p>李鸿章是曾国藩的弟子，在书中，曾国藩知道自己时日不多，在晚年与所有健在的人，一一作了告别，包括他最得意的弟子——李鸿章，此后书中再无李鸿章出现，我感兴趣的是李鸿章是怎么想的呢，众人熟知的是李鸿章也是晚清四大名臣之一，被称作是“中国的俾斯麦”，在曾国藩去世之后，本书已经结束，但历史没有，李鸿章一直作为晚清的执掌大臣，签署了各个辱国条约，李鸿章又是怎样的心理变化呢，还有军事天才，左宗棠，他在面临外忧内患的情况下又做了什么，，思考了什么呢，历史的趣味大概就在这里了。</p>]]></content>
     
     <summary type="html">
     
@@ -40,9 +80,9 @@
     <link href="http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/</id>
     <published>2020-02-19T13:46:17.617Z</published>
-    <updated>2020-02-20T07:39:45.338Z</updated>
+    <updated>2020-02-20T12:49:59.771Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="相减器"><a href="#相减器" class="headerlink" title="相减器"></a>相减器</h3><p>目标：使输入的两个信号相减输出<br>$$Uo = a Ui1 - b Ui2$$</p><blockquote><p>那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可</p></blockquote><a id="more"></a><h4 id="a-b-1"><a href="#a-b-1" class="headerlink" title="$a = b + 1$ :"></a>$a = b + 1$ :</h4><blockquote><p>将Ui1和Ui2分别接地，可得到同相比例和反相比例放大器的 Uo，然后叠加原理，相加即是输出电压</p></blockquote><p>推导一下：</p><blockquote><p>令Ui2 接地,则为同相比例放大器<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1$$<br>令Ui1接地，则为反相比例放大器<br>$$Uo = -\cfrac{Rf}{R2}Ui2$$<br>用叠加定理合起来就是<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p></blockquote><h4 id="a-lt-b-1"><a href="#a-lt-b-1" class="headerlink" title="a &lt; b + 1"></a>a &lt; b + 1</h4><blockquote><p>要减小a，减小同相输入端的电压（分压即可）</p></blockquote><p>在U+处接上一个电阻，这个电阻接地即可<br>$$Uo = (1 + \cfrac{Rf}{R2})(\cfrac{R4}{R1+R4})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p><h4 id="a-gt-b-1"><a href="#a-gt-b-1" class="headerlink" title="a &gt; b + 1"></a>a &gt; b + 1</h4><blockquote><p>同理增加a，减小Ui2的放大倍数就可以了，Rf不变，增加分母上的值即可，即，在R2上面并联一个电阻即可<br>$$Uo = (1+\cfrac{Rf}{R2+R})Ui1-\cfrac{Rf}{R2}Ui2$$<br>由于虚断的原因，在反相比例放大器的情况下，R两端电压都是0，所以R不起作用</p></blockquote><h4 id="a-b-k"><a href="#a-b-k" class="headerlink" title="a = b = k"></a>a = b = k</h4><blockquote><p>常用的模型是使R2 = R1，Rf = R3 ，就可以满足 a = b = k</p></blockquote><p>则：<br>$$Uo = \cfrac{R3}{R2}(Ui1-Ui2) = \cfrac{Rf}{R2}(Ui1-Ui2)$$</p><h4 id="相减器设计实例"><a href="#相减器设计实例" class="headerlink" title="相减器设计实例"></a>相减器设计实例</h4><ol><li>实现：Uo = 5 ( Ui1 - Ui2 )<blockquote><p>放大倍数相同，说明Rf = R4，R1 = R2，……</p></blockquote></li><li>实现：Uo = 5 Ui1 - 8 Ui2<blockquote><p>写出 a &lt; b 的情况（公式）</p></blockquote></li><li>实现：Uo = 8 Ui1 - 5 Ui2</li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="相减器"><a href="#相减器" class="headerlink" title="相减器"></a>相减器</h3><p>目标：使输入的两个信号相减输出<br>$$Uo = a Ui1 - b Ui2$$</p><blockquote><p>那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可</p></blockquote><a id="more"></a><h4 id="a-b-1"><a href="#a-b-1" class="headerlink" title="$a = b + 1$ :"></a>$a = b + 1$ :</h4><blockquote><p>将Ui1和Ui2分别接地，可得到同相比例和反相比例放大器的 Uo，然后叠加原理，相加即是输出电压</p></blockquote><p>推导一下：</p><blockquote><p>令Ui2 接地,则为同相比例放大器<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1$$<br>令Ui1接地，则为反相比例放大器<br>$$Uo = -\cfrac{Rf}{R2}Ui2$$<br>用叠加定理合起来就是<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p></blockquote><h4 id="a-lt-b-1"><a href="#a-lt-b-1" class="headerlink" title="a &lt; b + 1"></a>a &lt; b + 1</h4><blockquote><p>要减小a，减小同相输入端的电压（分压即可）</p></blockquote><p>在U+处接上一个电阻，这个电阻接地即可<br>$$Uo = (1 + \cfrac{Rf}{R2})(\cfrac{R4}{R1+R4})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p><h4 id="a-gt-b-1"><a href="#a-gt-b-1" class="headerlink" title="a &gt; b + 1"></a>a &gt; b + 1</h4><blockquote><p>同理增加a，减小Ui2的放大倍数就可以了，Rf不变，增加分母上的值即可，即，在R2上面并联一个电阻即可<br>$$Uo = (1+\cfrac{Rf}{R2+R})Ui1-\cfrac{Rf}{R2}Ui2$$<br>由于虚断的原因，在反相比例放大器的情况下，R两端电压都是0，所以R不起作用</p></blockquote><h4 id="a-b-k"><a href="#a-b-k" class="headerlink" title="a = b = k"></a>a = b = k</h4><blockquote><p>常用的模型是使R2 = R1，Rf = R3 ，就可以满足 a = b = k</p></blockquote><p>则：<br>$$Uo = \cfrac{R3}{R2}(Ui1-Ui2) = \cfrac{Rf}{R2}(Ui1-Ui2)$$</p><h4 id="相减器设计实例"><a href="#相减器设计实例" class="headerlink" title="相减器设计实例"></a>相减器设计实例</h4><ol><li>实现：Uo = 5 ( Ui1 - Ui2 )<blockquote><p>放大倍数相同，说明Rf = R4，R1 = R2，……</p></blockquote></li><li>实现：Uo = 5 Ui1 - 8 Ui2<blockquote><p>写出 a &lt; b 的情况（公式）</p></blockquote></li><li>实现：Uo = 8 Ui1 - 5 Ui2</li></ol><h4 id="相减器的应用"><a href="#相减器的应用" class="headerlink" title="相减器的应用"></a>相减器的应用</h4><ol><li>直流电平移位 <blockquote><p>案例里面是将信号接到反相输入端，同相输入端接直流信号，当然这个就反相放大了。同相放大的话就是，将信号接入同相输入端即可</p></blockquote></li><li>抑制共模干扰<blockquote><p>共模干扰——百度百科：共模干扰指的是干扰电压在信号线及其信号地线上的幅度相同。(<strong><em>额？还是觉得哪里不明白</em></strong>)  </p></blockquote></li></ol><blockquote><p>这里孙老师是举了例子，是把两个相同信号源的输入信号放入相减器中间，使两个相同的noise相减，抵消后输入仪器(<strong><em>妙极了</em></strong>)</p></blockquote><h4 id="简单相减器存在的问题"><a href="#简单相减器存在的问题" class="headerlink" title="简单相减器存在的问题"></a>简单相减器存在的问题</h4><ol><li>如果要求两个输入信号的放大倍数相同的话，那么要求上下对应的电阻阻值相同——————&gt;调节增益困难，要同步调节上下两个电阻</li><li>输入电阻偏小(注意哦，不是放大器内部的输入电阻，是同反相输入端上的电阻)，对两个信号源的影响不同(<strong><em>这个是为什么呢？</em></strong>)</li></ol><h4 id="仪表放大器"><a href="#仪表放大器" class="headerlink" title="仪表放大器"></a>仪表放大器</h4><blockquote><p>你好，放大器一书中把仪表放大器归于功能放大器当中哦~</p></blockquote><blockquote><p>结构就是在简单的相减器的前面增加两个同相比例放大器</p></blockquote><h6 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h6><ol><li>两个同相比例放大器由于放大器内部输入电阻阻值趋于无穷大，所以对信号输入起到了很好的隔绝作用。</li><li>通过调节两个同相比例放大器中间的电阻阻值可以很方便的改变仪表放大器的增益，为啥呢，也比较简单，我推导一下：<blockquote><p>首先由于虚断，同相比例放大器的两个信号输入端无电流(阻值太大嘛~),由于虚端，两个信号输入端的电压相同，即信号相同，则：<br>$$Uo1-Uo2=ix(R+R+Rx)=\cfrac{Ui1-Ui2}{Rx}(2R+Rx)$$<br>其中Rx是两个同相比例放大器之间的电压，Ui1和Ui2是后半部分简单减法器的输入信号端<br>$$Uo=\cfrac{R4}{R3}(Uo1-Uo2)=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx}(Ui1-Ui2)$$<br>$$Au=\cfrac{Uo}{Ui1-Ui2}=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx})$$<br>所以增益可以由Rx改变啦</p></blockquote></li></ol><p>2020.2.20</p>]]></content>
     
     <summary type="html">
     
