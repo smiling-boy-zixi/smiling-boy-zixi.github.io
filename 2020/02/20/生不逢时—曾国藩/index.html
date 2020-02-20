@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch2-2 同相以及反相比例放大器 - 仰望星空</title>
+<title>生不逢时—曾国藩 - 仰望星空</title>
 
 
-    <meta name="description" content="同相比例放大器 根据理想运放传输特性，当增益Auo很大时，需要保证运放差模输入电压趋近于0，同相端输入，反相端要进行一个负反馈，使得反相端输入电压随同相端输入电压保持动态平衡，满足运放差模输入电压趋近于0。">
+    <meta name="description" content="前言寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch2-2 同相以及反相比例放大器">
-<meta property="og:url" content="http://yoursite.com/2020/02/18/ch2-2%20%E5%90%8C%E7%9B%B8%E4%BB%A5%E5%8F%8A%E5%8F%8D%E7%9B%B8%E6%AF%94%E4%BE%8B%E6%94%BE%E5%A4%A7%E5%99%A8/index.html">
+<meta property="og:title" content="生不逢时—曾国藩">
+<meta property="og:url" content="http://yoursite.com/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="同相比例放大器 根据理想运放传输特性，当增益Auo很大时，需要保证运放差模输入电压趋近于0，同相端输入，反相端要进行一个负反馈，使得反相端输入电压随同相端输入电压保持动态平衡，满足运放差模输入电压趋近于0。">
+<meta property="og:description" content="前言寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-18T12:24:40.334Z">
-<meta property="article:modified_time" content="2020-02-19T13:51:17.499Z">
+<meta property="article:published_time" content="2020-02-20T07:37:10.015Z">
+<meta property="article:modified_time" content="2020-02-20T09:26:32.019Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch2-2 同相以及反相比例放大器" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="生不逢时—曾国藩" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch2-2 同相以及反相比例放大器" height="28">
+                <img src="/images/logo_2.png" alt="生不逢时—曾国藩" height="28">
             
             </a>
         </div>
@@ -143,13 +143,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-18T12:24:40.334Z">2020-02-18</time>
+                <time class="level-item has-text-grey" datetime="2020-02-20T07:37:10.015Z">2020-02-20</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 603 个字)
+                    7 分钟 读完 (大约 982 个字)
                 </span>
                 
                 
@@ -158,31 +158,17 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch2-2 同相以及反相比例放大器
+                生不逢时—曾国藩
             
         </h1>
         <div class="content">
-            <h4 id="同相比例放大器"><a href="#同相比例放大器" class="headerlink" title="同相比例放大器"></a>同相比例放大器</h4><blockquote>
-<p>根据理想运放传输特性，当增益Auo很大时，需要保证运放差模输入电压趋近于0，同相端输入，反相端要进行一个负反馈，使得反相端输入电压随同相端输入电压保持动态平衡，满足运放差模输入电压趋近于0。</p>
-</blockquote>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。</p>
 <a id="more"></a>
-<blockquote>
-<p>那么为了保证运放差模输入电压趋近于0，同相端电压和反相端电压要相等（<strong><em>虚短路</em></strong>），反相端电压又等于输出端电压的分压（<strong><em>没有图，公式记在脑子里</em></strong>）带入闭环增益（输出电压比上输入的运放差模输入电压），约掉输出电压得到：<br>$$A=\cfrac{Uo}{Ui}=1+\cfrac{R2}{R1}$$<br>注意这里R2是反馈网络的负载，R1是反相输入端口的负载，要注意是，这里反相输入端口也是接地了的。(<strong><em>图记在脑子里啊</em></strong> )</p>
-</blockquote>
-<h4 id="反相比例放大器"><a href="#反相比例放大器" class="headerlink" title="反相比例放大器"></a>反相比例放大器</h4><blockquote>
-<p>和上面相似，同相端接地，反相端输入端。不同的是反馈端接到反相输入端，因为同相端接地，为0，反相端增加，输出电压减小，反馈给反相端口，就趋近于0.(那么这里反相输入端就可以近似看做是地，叫做<strong><em>虚地</em></strong>)</p>
-</blockquote>
-<p>这里上课讲一个分压比，得到反相输入端的电压和运放差模输入电压以及输出电压的关系(<strong><em>这里不理解？？</em></strong>)</p>
-<blockquote>
-<p>由所推出来的式子得到<br>$$Uo=-\cfrac{R2}{R1}Ui$$<br>$$A = \cfrac{Uo}{Ui} = -\cfrac{R2}{R1}$$</p>
-</blockquote>
-<h4 id="反相比例放大器的输入电阻"><a href="#反相比例放大器的输入电阻" class="headerlink" title="反相比例放大器的输入电阻"></a>反相比例放大器的输入电阻</h4><blockquote>
-<p>同相比例放大器的输入电阻是无穷大,反相比例放大器不是这个情况。需要考虑R2（反馈网络上的负载）对输入端的影响，通过密勒原理（<strong><em>不明白，感觉是电路欠下的债？？</em></strong>）在输入端等效出密勒等效电阻，得出密勒等效电阻趋于0（Auo在分母，趋于无穷大，结果趋于0），得出输入电阻趋于R1.</p>
-</blockquote>
-<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>共模输入：大小和相位基本相同，叫做共模信号</p>
-<p>虚短路：$Ui+ = Ui-\not={0}$</p>
-<p>虚断路：$Ui+ = Ui-=0$</p>
-<p>2020.2.18</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>本书讲诉曾国藩年轻气盛之时，历经回乡守孝，出山创建湘军，官场不顺，三败石达开，至攻克江宁（九弟-曾国荃），平定太平天国，整饬两江，被迫与捻军作战不利，到处理天津教案名声败北，最后开始新办洋务，送幼童出国学习技术，最后在矛盾与怅然中离去。</p>
+<h4 id="时代所限的“晚清名臣”"><a href="#时代所限的“晚清名臣”" class="headerlink" title="时代所限的“晚清名臣”"></a>时代所限的“晚清名臣”</h4><p>曾国藩在晚年多次提及天命，用了比喻，与康福提到，自己和皇上都是棋盘中的棋子，那谁是执子人呢，曾国藩答：天命。这里的天命是什么，是时代命运，清朝末年，妇人垂帘，皇子孱弱，国运衰微，到了什么地步呢，堂堂江宁，汉唐繁盛至极，现今竟然城内屋檐下，饿殍，乞丐随处可见，比起太平天国时期，竟然是比之远远不如，皇室中，恭亲王和西宫太后内斗，内忧外患，西方列强制度先进，技术先进，压迫清政府。用李鸿章的话是“三千年之未有大变局”。</p>
+<p>曾国藩从小受到程朱理学理学，孔孟熏陶，心中把忠于皇室作为立人为本的标杆，自创湘军，希望也是帮助君主，使天下太平，百姓过上好日子，心只是可惜，天命不从，若是汉唐鼎盛时代，曾国藩一定可有所为，流芳百世，可惜时代变化，恰恰是忠于皇室，忠于国运衰微的皇室让他走上了一条错误的道路。</p>
+<p>曾国藩在晚年的时候心病严重，一心希望世间太平，让人民过上好日子，可事与愿违，街头百姓无饭可吃，山头绿林强盗与官府打为一片，官僚腐败彻底，细细一想，自己用了十几年的生涯创立湘军，最后攻下江宁，平定太平天国，又是为了什么呢。书中说曾国藩晚年在与郭嵩焘的交谈中，郭嵩焘大力批评曾国藩居于忠于皇室的“小节”，而不顾民族和中华命运的“大节”，不知道是不是真的有这次交谈，但是相信若有机会与曾国藩对话，这也是作者心中想表达出来的意思吧。</p>
+<p>李鸿章是曾国藩的弟子，在书中，曾国藩知道自己时日不多，在晚年与所有健在的人，一一作了告别，包括他最得意的弟子——李鸿章，此后书中再无李鸿章出现，我感兴趣的是李鸿章是怎么想的呢，众人熟知的是李鸿章也是晚清四大名臣之一，被称作是“中国的俾斯麦”，在曾国藩去世之后，本书已经结束，但历史没有，李鸿章一直作为晚清的执掌大臣，签署了各个辱国条约，李鸿章又是怎样的心理变化呢，还有军事天才，左宗棠，他在面临外忧内患的情况下又做了什么，，思考了什么呢，历史的趣味大概就在这里了。</p>
 
         </div>
         
@@ -227,17 +213,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch2-3 相加器</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/18/ch2-1%20%E8%BF%90%E6%94%BE%E5%9F%BA%E7%A1%80/">
-                <span class="level-item">ch2-1 运放基础</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/">
+                <span class="level-item">ch2-4 相减器</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -373,22 +352,18 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#同相比例放大器">
+        <a class="is-flex" href="#前言">
         <span class="has-mr-6">1</span>
-        <span>同相比例放大器</span>
+        <span>前言</span>
         </a></li><li>
-        <a class="is-flex" href="#反相比例放大器">
+        <a class="is-flex" href="#正文">
         <span class="has-mr-6">2</span>
-        <span>反相比例放大器</span>
-        </a></li><li>
-        <a class="is-flex" href="#反相比例放大器的输入电阻">
-        <span class="has-mr-6">3</span>
-        <span>反相比例放大器的输入电阻</span>
-        </a></li><li>
-        <a class="is-flex" href="#补充">
-        <span class="has-mr-6">4</span>
-        <span>补充</span>
-        </a></li></ul>
+        <span>正文</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#时代所限的“晚清名臣”">
+        <span class="has-mr-6">2.1</span>
+        <span>时代所限的“晚清名臣”</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -411,7 +386,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch2-2 同相以及反相比例放大器" height="28">
+                    <img src="/images/logo_2.png" alt="生不逢时—曾国藩" height="28">
                 
                 </a>
                 <p class="is-size-7">
