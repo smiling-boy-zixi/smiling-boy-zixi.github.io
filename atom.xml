@@ -47,7 +47,7 @@
     <link href="http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/</id>
     <published>2020-02-20T11:26:55.734Z</published>
-    <updated>2020-02-21T07:25:57.668Z</updated>
+    <updated>2020-02-21T14:11:44.501Z</updated>
     
     <content type="html"><![CDATA[<h3 id="积分器"><a href="#积分器" class="headerlink" title="积分器"></a>积分器</h3><blockquote><p>目标：$Uo(t)=k\int Ui(t)dt$</p></blockquote><p>即输出与输入的积分成正比</p><a id="more"></a><h4 id="反相积分电路"><a href="#反相积分电路" class="headerlink" title="反相积分电路"></a>反相积分电路</h4><blockquote><p>就是将反相比例放大器中的 Rf 换成电容</p></blockquote><p>(A)时域分析<br>$$Uo(t)=-Uc(t)=-\cfrac{Q}{C}=-\cfrac{1}{C}\int ic(t)dt$$<br>$$=-\cfrac{1}{C}\int \cfrac{Ui(t)}{R}dt=-\cfrac{1}{RC}\int Ui(t)dt=-\cfrac{1}{\tau}\int Ui(t)dt$$<br>其中 $\tau$ = RC 是积分常数</p><p>(B)频域分析</p><blockquote><p>这里和反相比例放大器是一个分析方法<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-\cfrac{1}{j\omega RC}=-\cfrac{1}{j\omega \tau}$$<br>因为这里有一个$\cfrac{1}{j}=-j$ ,又是反相输入端，最外面那个负号抵消，所以：</p></blockquote><ol><li>相位滞后90度，</li><li>增益的模：$|Au(j\omega)|=\cfrac{1}{\omega RC}$</li><li>这里有个结论：频率越高，衰减越大(<strong><em>这里是真的不明白为什么了？？</em></strong>)<h4 id="差分积分器电路"><a href="#差分积分器电路" class="headerlink" title="差分积分器电路"></a>差分积分器电路</h4><blockquote><p>这里和简单减法器是相似，把 Rf 和下面对应的电阻换成电容即是差分积分器啦<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}[Ui1(j\omega)-Ui2(j\omega)]$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int[Ui1(t)-Ui2(t)]dt$$<br>上面一个是频域形式，一个是时域形式啦</p></blockquote><h4 id="同相积分电路"><a href="#同相积分电路" class="headerlink" title="同相积分电路"></a>同相积分电路</h4><blockquote><p>就是将反相输入端接地，Ui2 = 0<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}Ui1(j\omega)$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int Ui1(t)dt$$</p></blockquote><h4 id="积分器设计"><a href="#积分器设计" class="headerlink" title="积分器设计"></a>积分器设计</h4><blockquote><p>这里注意一下设计积分器首先要确定时间常数 $\tau$ ,又因为电容的可选类型比较少，电阻相对要多的多，所以，先确定电容的值，在确定电阻的阻值。</p></blockquote></li></ol><blockquote><p>电容单位 F 换算：1F = 1 * 10^6 $\mu$F(微法)_…………_1 $\mu$F = 1 * 10^3 nF_…………1 $\mu$F = 1 * 10^6 pF</p></blockquote><h4 id="单级积分器电路"><a href="#单级积分器电路" class="headerlink" title="单级积分器电路"></a>单级积分器电路</h4><blockquote><p>由于电容是通交流隔直流的，所以只在负反馈网络加电容，会使直流无法反馈，造成积分器不正常工作，或有噪声的情况，（<strong><em>这里加入的电阻要保证R &gt;&gt;&gt; 10</em>Ri</strong>）,不然对增益会很大的影响。</p></blockquote><h4 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h4><ol><li>方波转换成三角波<blockquote><p>反相输入端输入方波，当输入为高电平，输入端高电位，输出端拉低，反馈回去，电位下降；同理反相端输入为低电平，输出端拉高电位上升，反馈回去。输出端就是三角波了。</p></blockquote></li><li>正弦波和余弦波互相转换（<strong><em>因为相位互相差90度</em></strong>）</li></ol><p>2020.2.20</p>]]></content>
     
@@ -61,6 +61,8 @@
     </summary>
     
     
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -69,7 +71,7 @@
     <link href="http://yoursite.com/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/"/>
     <id>http://yoursite.com/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/</id>
     <published>2020-02-20T07:37:10.015Z</published>
-    <updated>2020-02-20T14:55:55.877Z</updated>
+    <updated>2020-02-21T14:12:19.008Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。</p><a id="more"></a><h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>本书讲诉曾国藩年轻气盛之时，历经回乡守孝，出山创建湘军，官场不顺，三败石达开，至攻克江宁（九弟-曾国荃），平定太平天国，整饬两江，被迫与捻军作战不利，到处理天津教案名声败北，最后开始新办洋务，送幼童出国学习技术，最后在矛盾与怅然中离去。</p><h4 id="时代所限的“晚清名臣”"><a href="#时代所限的“晚清名臣”" class="headerlink" title="时代所限的“晚清名臣”"></a>时代所限的“晚清名臣”</h4><p>曾国藩在晚年多次提及天命，用了比喻，与康福提到，自己和皇上都是棋盘中的棋子，那谁是执子人呢，曾国藩答：天命。这里的天命是什么，是时代命运，清朝末年，妇人垂帘，皇子孱弱，国运衰微，到了什么地步呢，堂堂江宁，汉唐繁盛至极，现今竟然城内屋檐下，饿殍，乞丐随处可见，比起太平天国时期，竟然是比之远远不如，皇室中，恭亲王和西宫太后内斗，内忧外患，西方列强制度先进，技术先进，压迫清政府。用李鸿章的话是“三千年之未有大变局”。</p><p>曾国藩从小受到程朱理学理学，孔孟熏陶，心中把忠于皇室作为立人为本的标杆，自创湘军，希望也是帮助君主，使天下太平，百姓过上好日子，心只是可惜，天命不从，若是汉唐鼎盛时代，曾国藩一定可有所为，流芳百世，可惜时代变化，恰恰是忠于皇室，忠于国运衰微的皇室让他走上了一条错误的道路。</p><p>曾国藩在晚年的时候心病严重，一心希望世间太平，让人民过上好日子，可事与愿违，街头百姓无饭可吃，山头绿林强盗与官府打为一片，官僚腐败彻底，细细一想，自己用了十几年的生涯创立湘军，最后攻下江宁，平定太平天国，又是为了什么呢。书中说曾国藩晚年在与郭嵩焘的交谈中，郭嵩焘大力批评曾国藩居于忠于皇室的“小节”，而不顾民族和中华命运的“大节”，不知道是不是真的有这次交谈，但是相信若有机会与曾国藩对话，这也是作者心中想表达出来的意思吧。</p><p>曾国藩也只是时代轮换下的一个可怜人了。</p><p>李鸿章是曾国藩的弟子，在书中，曾国藩知道自己时日不多，在晚年与所有健在的人，一一作了告别，包括他最得意的弟子——李鸿章，此后书中再无李鸿章出现，我感兴趣的是李鸿章是怎么想的呢，众人熟知的是李鸿章也是晚清四大名臣之一，被称作是“中国的俾斯麦”，在曾国藩去世之后，本书已经结束，但历史没有，李鸿章一直作为晚清的执掌大臣，签署了各个辱国条约，李鸿章又是怎样的心理变化呢，还有军事天才，左宗棠，他在面临外忧内患的情况下又做了什么，，思考了什么呢，历史的趣味大概就在这里了。</p>]]></content>
     
@@ -80,6 +82,8 @@
     </summary>
     
     
+      <category term="生活感想" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/"/>
+    
     
   </entry>
   
@@ -88,7 +92,7 @@
     <link href="http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/</id>
     <published>2020-02-19T13:46:17.617Z</published>
-    <updated>2020-02-20T12:49:59.771Z</updated>
+    <updated>2020-02-21T14:11:43.415Z</updated>
     
     <content type="html"><![CDATA[<h3 id="相减器"><a href="#相减器" class="headerlink" title="相减器"></a>相减器</h3><p>目标：使输入的两个信号相减输出<br>$$Uo = a Ui1 - b Ui2$$</p><blockquote><p>那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可</p></blockquote><a id="more"></a><h4 id="a-b-1"><a href="#a-b-1" class="headerlink" title="$a = b + 1$ :"></a>$a = b + 1$ :</h4><blockquote><p>将Ui1和Ui2分别接地，可得到同相比例和反相比例放大器的 Uo，然后叠加原理，相加即是输出电压</p></blockquote><p>推导一下：</p><blockquote><p>令Ui2 接地,则为同相比例放大器<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1$$<br>令Ui1接地，则为反相比例放大器<br>$$Uo = -\cfrac{Rf}{R2}Ui2$$<br>用叠加定理合起来就是<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p></blockquote><h4 id="a-lt-b-1"><a href="#a-lt-b-1" class="headerlink" title="a &lt; b + 1"></a>a &lt; b + 1</h4><blockquote><p>要减小a，减小同相输入端的电压（分压即可）</p></blockquote><p>在U+处接上一个电阻，这个电阻接地即可<br>$$Uo = (1 + \cfrac{Rf}{R2})(\cfrac{R4}{R1+R4})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p><h4 id="a-gt-b-1"><a href="#a-gt-b-1" class="headerlink" title="a &gt; b + 1"></a>a &gt; b + 1</h4><blockquote><p>同理增加a，减小Ui2的放大倍数就可以了，Rf不变，增加分母上的值即可，即，在R2上面并联一个电阻即可<br>$$Uo = (1+\cfrac{Rf}{R2+R})Ui1-\cfrac{Rf}{R2}Ui2$$<br>由于虚断的原因，在反相比例放大器的情况下，R两端电压都是0，所以R不起作用</p></blockquote><h4 id="a-b-k"><a href="#a-b-k" class="headerlink" title="a = b = k"></a>a = b = k</h4><blockquote><p>常用的模型是使R2 = R1，Rf = R3 ，就可以满足 a = b = k</p></blockquote><p>则：<br>$$Uo = \cfrac{R3}{R2}(Ui1-Ui2) = \cfrac{Rf}{R2}(Ui1-Ui2)$$</p><h4 id="相减器设计实例"><a href="#相减器设计实例" class="headerlink" title="相减器设计实例"></a>相减器设计实例</h4><ol><li>实现：Uo = 5 ( Ui1 - Ui2 )<blockquote><p>放大倍数相同，说明Rf = R4，R1 = R2，……</p></blockquote></li><li>实现：Uo = 5 Ui1 - 8 Ui2<blockquote><p>写出 a &lt; b 的情况（公式）</p></blockquote></li><li>实现：Uo = 8 Ui1 - 5 Ui2</li></ol><h4 id="相减器的应用"><a href="#相减器的应用" class="headerlink" title="相减器的应用"></a>相减器的应用</h4><ol><li>直流电平移位 <blockquote><p>案例里面是将信号接到反相输入端，同相输入端接直流信号，当然这个就反相放大了。同相放大的话就是，将信号接入同相输入端即可</p></blockquote></li><li>抑制共模干扰<blockquote><p>共模干扰——百度百科：共模干扰指的是干扰电压在信号线及其信号地线上的幅度相同。(<strong><em>额？还是觉得哪里不明白</em></strong>)  </p></blockquote></li></ol><blockquote><p>这里孙老师是举了例子，是把两个相同信号源的输入信号放入相减器中间，使两个相同的noise相减，抵消后输入仪器(<strong><em>妙极了</em></strong>)</p></blockquote><h4 id="简单相减器存在的问题"><a href="#简单相减器存在的问题" class="headerlink" title="简单相减器存在的问题"></a>简单相减器存在的问题</h4><ol><li>如果要求两个输入信号的放大倍数相同的话，那么要求上下对应的电阻阻值相同——————&gt;调节增益困难，要同步调节上下两个电阻</li><li>输入电阻偏小(注意哦，不是放大器内部的输入电阻，是同反相输入端上的电阻)，对两个信号源的影响不同(<strong><em>这个是为什么呢？</em></strong>)</li></ol><h4 id="仪表放大器"><a href="#仪表放大器" class="headerlink" title="仪表放大器"></a>仪表放大器</h4><blockquote><p>你好，放大器一书中把仪表放大器归于功能放大器当中哦~</p></blockquote><blockquote><p>结构就是在简单的相减器的前面增加两个同相比例放大器</p></blockquote><h6 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h6><ol><li>两个同相比例放大器由于放大器内部输入电阻阻值趋于无穷大，所以对信号输入起到了很好的隔绝作用。</li><li>通过调节两个同相比例放大器中间的电阻阻值可以很方便的改变仪表放大器的增益，为啥呢，也比较简单，我推导一下：<blockquote><p>首先由于虚断，同相比例放大器的两个信号输入端无电流(阻值太大嘛~),由于虚端，两个信号输入端的电压相同，即信号相同，则：<br>$$Uo1-Uo2=ix(R+R+Rx)=\cfrac{Ui1-Ui2}{Rx}(2R+Rx)$$<br>其中Rx是两个同相比例放大器之间的电压，Ui1和Ui2是后半部分简单减法器的输入信号端<br>$$Uo=\cfrac{R4}{R3}(Uo1-Uo2)=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx}(Ui1-Ui2)$$<br>$$Au=\cfrac{Uo}{Ui1-Ui2}=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx})$$<br>所以增益可以由Rx改变啦</p></blockquote></li></ol><p>2020.2.20</p>]]></content>
     
@@ -102,6 +106,8 @@
     </summary>
     
     
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -110,7 +116,7 @@
     <link href="http://yoursite.com/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/</id>
     <published>2020-02-19T13:46:17.612Z</published>
-    <updated>2020-02-19T13:51:16.191Z</updated>
+    <updated>2020-02-21T14:11:42.356Z</updated>
     
     <content type="html"><![CDATA[<h3 id="由运放构成的相加器"><a href="#由运放构成的相加器" class="headerlink" title="由运放构成的相加器"></a>由运放构成的相加器</h3><h4 id="传统电阻分压"><a href="#传统电阻分压" class="headerlink" title="传统电阻分压"></a>传统电阻分压</h4><blockquote><p>缺点：1. 信号会衰减，无法放大；2. 加上负载的话，分压系数会变化；3. 两端初始的信号源也会互相干扰（可能有电场等相互干扰吧）————&gt;加上运算放大器解决问题</p></blockquote><a id="more"></a><h4 id="同相加法器"><a href="#同相加法器" class="headerlink" title="同相加法器"></a>同相加法器</h4><blockquote><p>运放输入电阻趋近于无穷大，输出电阻趋近于0，起到隔离放大的作用（<strong><em>这里的隔离是指的隔离什么呢？？是输入信号的噪声吗？？？</em></strong>）</p></blockquote><blockquote><p>首先这里是在同相比例放大器的基础上，在输入端加入两个分开的电源以及负载（这里也要记住在脑子里），负载分别是R1和R2，输入电压为U+<br>$$U+=\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2$$<br>这个公式怎么推导的，这里要记住，对Ui1和Ui2分开考虑，当对Ui1考虑时，就把Ui2接地，当对Ui2考虑时就把Ui1接地，分别求出Ui1和Ui2对U+的影响，然后叠加起来即为U+处的电压<br>$$Uo = (1+\cfrac{Rf}{R})U+$$<br>$$Uo = (1+\cfrac{Rf}{R})(\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2)$$<br>若R1 = R2<br>$$Uo = \cfrac{1}{2}(1+\cfrac{Rf}{R})(Ui1 + Ui2)$$<br>缺点：两信号源之间依然会互相影响（接在一起肯定会互相影响）</p></blockquote><h4 id="反相相加器"><a href="#反相相加器" class="headerlink" title="反相相加器"></a>反相相加器</h4><blockquote><p>这里是在反相比例放大器的基础上，将反相输入端接上分别的信号源以及负载(<strong><em>图请记在脑子里，请记得反相输入端是虚地</em></strong>)</p></blockquote><blockquote><p>根据叠加原理，可得：<br>$$Uo = -(\cfrac{Rf}{R1}Ui1+\cfrac{Rf}{R2}Ui2+\cfrac{Rf}{R3}Ui3)$$<br>当R1 = R2 = R3 时<br>$$Uo = -\cfrac{Rf}{R}(Ui1+Ui2+Ui3)$$<br>优点：因为反相端虚地，各电流值由该支路信号源和电阻独立决定，各个信号源之间就不会影响。(<strong><em>这里我就奇怪了，不管是虚地还是啥的，两个连接上的信号源对这个节点就没有影响了？？？</em></strong>)</p></blockquote><h4 id="反相加法器的设计"><a href="#反相加法器的设计" class="headerlink" title="反相加法器的设计"></a>反相加法器的设计</h4><p>(<strong><em>记牢反相比例，同相比例放大器的闭环增益公式很重要</em></strong>)<br>$$Auf = -\cfrac{Rf}{R}$$</p><ol><li>实现：Uo = -6( Ui1 + Ui2 )———要求闭环输入电阻Rif大于等于30k<blockquote><p>注：脑子里算算就行了</p></blockquote></li><li>实现：Uo = - 5<em>Ui1 - 8</em>Ui2 - 3*Ui3<blockquote><p>由于反馈网络负载是固定的，所以先确定Rf，剩下各自算算就行，脑子里过一下</p></blockquote><h4 id="同相加法器的设计"><a href="#同相加法器的设计" class="headerlink" title="同相加法器的设计"></a>同相加法器的设计</h4>(<strong><em>记牢反相比例，同相比例放大器的闭环增益公式很重要</em></strong>)<br>$$Auf = (1 + \cfrac{Rf}{R})$$<br>对于同相加法器，对信号的放大倍数还取决于R1 ，R2<br>$$Uo = (1+\cfrac{Rf}{R})(\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2)$$</li><li>实现：Uo = 9(Ui1 + Ui2)<blockquote><p>对两个信号放大倍数相同，有公式可知，由于增益不变，放大倍数也不变，所以R1 = R2<br>$$Uo = \cfrac{1}{2}(1+\cfrac{Rf}{R})(Ui1 + Ui2)$$<br>剩下参数自己设一下都行</p></blockquote></li><li>实现：Uo = 2 Ui1 + 5 Ui2<br>同相加法器，增益不变嘛，所以放大倍数由R1 ，R2（信号源上的负载决定），所以 R1和R2求比值，剩下参数自己选择代入即可</li></ol>]]></content>
     
@@ -123,6 +129,8 @@
     </summary>
     
     
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -131,7 +139,7 @@
     <link href="http://yoursite.com/2020/02/18/ch2-2%20%E5%90%8C%E7%9B%B8%E4%BB%A5%E5%8F%8A%E5%8F%8D%E7%9B%B8%E6%AF%94%E4%BE%8B%E6%94%BE%E5%A4%A7%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/18/ch2-2%20%E5%90%8C%E7%9B%B8%E4%BB%A5%E5%8F%8A%E5%8F%8D%E7%9B%B8%E6%AF%94%E4%BE%8B%E6%94%BE%E5%A4%A7%E5%99%A8/</id>
     <published>2020-02-18T12:24:40.334Z</published>
-    <updated>2020-02-19T13:51:17.499Z</updated>
+    <updated>2020-02-21T14:11:41.162Z</updated>
     
     <content type="html"><![CDATA[<h4 id="同相比例放大器"><a href="#同相比例放大器" class="headerlink" title="同相比例放大器"></a>同相比例放大器</h4><blockquote><p>根据理想运放传输特性，当增益Auo很大时，需要保证运放差模输入电压趋近于0，同相端输入，反相端要进行一个负反馈，使得反相端输入电压随同相端输入电压保持动态平衡，满足运放差模输入电压趋近于0。</p></blockquote><a id="more"></a><blockquote><p>那么为了保证运放差模输入电压趋近于0，同相端电压和反相端电压要相等（<strong><em>虚短路</em></strong>），反相端电压又等于输出端电压的分压（<strong><em>没有图，公式记在脑子里</em></strong>）带入闭环增益（输出电压比上输入的运放差模输入电压），约掉输出电压得到：<br>$$A=\cfrac{Uo}{Ui}=1+\cfrac{R2}{R1}$$<br>注意这里R2是反馈网络的负载，R1是反相输入端口的负载，要注意是，这里反相输入端口也是接地了的。(<strong><em>图记在脑子里啊</em></strong> )</p></blockquote><h4 id="反相比例放大器"><a href="#反相比例放大器" class="headerlink" title="反相比例放大器"></a>反相比例放大器</h4><blockquote><p>和上面相似，同相端接地，反相端输入端。不同的是反馈端接到反相输入端，因为同相端接地，为0，反相端增加，输出电压减小，反馈给反相端口，就趋近于0.(那么这里反相输入端就可以近似看做是地，叫做<strong><em>虚地</em></strong>)</p></blockquote><p>这里上课讲一个分压比，得到反相输入端的电压和运放差模输入电压以及输出电压的关系(<strong><em>这里不理解？？</em></strong>)</p><blockquote><p>由所推出来的式子得到<br>$$Uo=-\cfrac{R2}{R1}Ui$$<br>$$A = \cfrac{Uo}{Ui} = -\cfrac{R2}{R1}$$</p></blockquote><h4 id="反相比例放大器的输入电阻"><a href="#反相比例放大器的输入电阻" class="headerlink" title="反相比例放大器的输入电阻"></a>反相比例放大器的输入电阻</h4><blockquote><p>同相比例放大器的输入电阻是无穷大,反相比例放大器不是这个情况。需要考虑R2（反馈网络上的负载）对输入端的影响，通过密勒原理（<strong><em>不明白，感觉是电路欠下的债？？</em></strong>）在输入端等效出密勒等效电阻，得出密勒等效电阻趋于0（Auo在分母，趋于无穷大，结果趋于0），得出输入电阻趋于R1.</p></blockquote><h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>共模输入：大小和相位基本相同，叫做共模信号</p><p>虚短路：$Ui+ = Ui-\not={0}$</p><p>虚断路：$Ui+ = Ui-=0$</p><p>2020.2.18</p>]]></content>
     
@@ -144,6 +152,8 @@
     </summary>
     
     
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -152,7 +162,7 @@
     <link href="http://yoursite.com/2020/02/18/ch2-1%20%E8%BF%90%E6%94%BE%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2020/02/18/ch2-1%20%E8%BF%90%E6%94%BE%E5%9F%BA%E7%A1%80/</id>
     <published>2020-02-18T12:24:40.330Z</published>
-    <updated>2020-02-20T07:39:39.311Z</updated>
+    <updated>2020-02-21T14:11:39.654Z</updated>
     
     <content type="html"><![CDATA[<h3 id="集成运算放大器"><a href="#集成运算放大器" class="headerlink" title="集成运算放大器"></a>集成运算放大器</h3><h4 id="符号："><a href="#符号：" class="headerlink" title="符号："></a>符号：</h4><ol><li>三角表示，上下端口–电源</li><li>同相输入端：输入输出信号相位相同</li><li>反相输入端：反之，相位相反</li><li>输出信号和两个输入信号之差成正比：<a id="more"></a><h3 id="模型："><a href="#模型：" class="headerlink" title="模型："></a>模型：</h3></li></ol><h4 id="受控源模型"><a href="#受控源模型" class="headerlink" title="受控源模型"></a>受控源模型</h4><ol><li>上式中的Auo–运放开环放大倍数（开环增益）</li><li>运放差模输入电压：输入端电压之差<h4 id="理想受控源模型"><a href="#理想受控源模型" class="headerlink" title="理想受控源模型"></a>理想受控源模型</h4></li><li>虚断路：输入电阻无限接近于0，输入部分电流也就趋近于0，所以说输入部分“虚断路”</li><li>理想运放条件：输入电阻趋近无穷大（保证全部分压给运放），输入偏流趋近0，输出电阻趋近0，开环增益趋近无穷大，上限频率趋近无穷大……<h3 id="传输特性"><a href="#传输特性" class="headerlink" title="传输特性"></a>传输特性</h3><h4 id="集成运放电压传输特性"><a href="#集成运放电压传输特性" class="headerlink" title="集成运放电压传输特性"></a>集成运放电压传输特性</h4></li><li>由于电源电压有限，所以输出电压随输入电压会有限制，输出电压和输入电压变化关系分成线性区（输入输出电压成线性关系）和限幅区。<h4 id="理想集成运放电压传输特性"><a href="#理想集成运放电压传输特性" class="headerlink" title="理想集成运放电压传输特性"></a>理想集成运放电压传输特性</h4></li><li>因为Auo–&gt;无穷大，所以线性放大区———&gt;0，则同相端电压和反相端电压相等，输出电阻为0（没有电阻，只有导线，自然可视为“虚短路”），开环运放是无法作为线性放大器（<strong><em>开环指的是输出只受输入控制，没有反馈系统</em></strong>）</li></ol><hr><p>差模输入电压这里应该也是可以不为0，只是因为限幅，这个和趋近于0，所产生的输出电压几乎没有区别。</p><hr><h4 id="反相电压传输特性"><a href="#反相电压传输特性" class="headerlink" title="反相电压传输特性"></a>反相电压传输特性</h4><p>只是Auo &lt; 0 。传输特性图像水平翻转。</p><p>2020.2.18</p>]]></content>
     
@@ -167,6 +177,8 @@
     </summary>
     
     
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -175,7 +187,7 @@
     <link href="http://yoursite.com/2020/02/17/ch1-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E4%B8%BB%E8%A6%81%E6%8C%87%E6%A0%87/"/>
     <id>http://yoursite.com/2020/02/17/ch1-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E4%B8%BB%E8%A6%81%E6%8C%87%E6%A0%87/</id>
     <published>2020-02-17T12:18:27.025Z</published>
-    <updated>2020-02-20T07:39:30.491Z</updated>
+    <updated>2020-02-21T14:11:37.670Z</updated>
     
     <content type="html"><![CDATA[<h3 id="什么是放大器？"><a href="#什么是放大器？" class="headerlink" title="什么是放大器？"></a>什么是放大器？</h3><ol><li>概念：功率放大倍数 大于 1 （变压器不是放大器）</li><li>同向放大器：输入输出信号相位相同</li><li>反向放大器：输入输出信号相位相反</li><li>放大器有两正负两极，作用同上，称为同向输入端和反向输入端<a id="more"></a><h4 id="放大器性能指标"><a href="#放大器性能指标" class="headerlink" title="放大器性能指标"></a>放大器性能指标</h4></li><li>可等效为一个有源二端口网络（一个输入端–接信号源，一个输出端–接负载）</li><li>放大器结构是两个电阻（一个输入电阻一个输出电阻），再加上一个受控源（放大倍数）</li><li>放大器参数就是上面的放大倍数A，加上输入输出电阻阻值，以及频率响应与带宽（<strong><em>？？？</em></strong>），总谐波失真系数（非线性失真系数）THD（<strong><em>？？？</em></strong>）</li><li>放大倍数A：（也称增益）输入量和输出量的比值，电压，电流增益（<strong><em>无量纲</em></strong> ），互阻，互导增益</li><li>输入电阻：Ri决定了放大器从电压源处分到的电压值。</li><li>输出电阻：对负载而言，放大器相当于信号源，R0是信号源内阻，则其阻值表达了其的带载能力。</li><li>频率特性:放大器中存在电容（<strong><em>放大器前面是输入输出电阻加上受控源，现在又有电容，所以到底放大器内部是什么结构？？</em></strong>）频率大，容抗小，反之，频率小，容抗就大，那么容抗会对增益有影响（<strong><em>怎么影响是没有说的</em></strong>）</li><li>放大器的截止频率和通频带：频率分低频区，中频区，高频区。频率过高或过低，增益绝对值都会下降。截止频率为0.707增益，高频区为上限截止频率，低频区为下限截止频率。两个截止频率之间为通频带。（记图像）</li><li>失真：相位失真（各波形相位不同，则叠加波形会错位，），频率失真（两个频率不同的波形叠加放大，因为频率不同，所以两个波形增益不一样，那放大后波形就会失真）<blockquote><p>关于相位失真，好奇这个相位怎么样才能移位呢？？？</p></blockquote></li><li>非线性失真系数（THD）：放大器本身是非线性器件晶体管组成，所以，本身输出会产生非线性失真。有个非线性失真系数，不写了。</li><li>放大器的输出动态范围：就是避免放大器的非线性失真，不失真的电压有个范围，最大值叫做放大器的输出动态范围。</li><li>放大器传输特性：随着输入电压的变化，输出电压线性变化叫做线性输入范围，非线性临界点叫做非线性限幅。</li></ol>]]></content>
     
@@ -190,6 +202,8 @@
     </summary>
     
     
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -198,7 +212,7 @@
     <link href="http://yoursite.com/2020/02/17/ch1-1%20%E5%AF%BC%E8%AE%BA/"/>
     <id>http://yoursite.com/2020/02/17/ch1-1%20%E5%AF%BC%E8%AE%BA/</id>
     <published>2020-02-17T12:18:27.021Z</published>
-    <updated>2020-02-20T07:39:24.123Z</updated>
+    <updated>2020-02-21T14:11:35.592Z</updated>
     
     <content type="html"><![CDATA[<h3 id="为什么学？"><a href="#为什么学？" class="headerlink" title="为什么学？"></a>为什么学？</h3><h4 id="模电："><a href="#模电：" class="headerlink" title="模电："></a>模电：</h4><ol><li>发展-&gt;高频/数电/微电子/电力电子</li><li>可直接解决工程问题：（温度……——&gt;传感器——&gt;电信号） /  数字信号——&gt;模拟电路——&gt;模拟信号</li><li>时间和幅度连续变化<a id="more"></a><h3 id="学什么？"><a href="#学什么？" class="headerlink" title="学什么？"></a>学什么？</h3><h4 id="电子器件"><a href="#电子器件" class="headerlink" title="电子器件"></a>电子器件</h4></li><li>电阻：耗能元件 / 电容：储能元件（有损耗） /电感 变压器 / 受控源 /非线性器件……<h4 id="物理非线性器件的探索："><a href="#物理非线性器件的探索：" class="headerlink" title="物理非线性器件的探索："></a>物理非线性器件的探索：</h4></li><li>1904年–伦敦大学–弗莱明–发明电子管（电流电压非线性/有结构脆弱等缺点）</li><li>1947年–贝尔实验室–威廉，肖克利等三位科学家发明–晶体三极管（半导体器件）</li><li>1952年–英国皇家雷达研究所–提出”集成电路”概念</li><li>1958年–美国德州仪器公司–Jack S.Kilby–发明第一片集成电路</li><li>现代–系统集成（SOC）–&gt;集成度高<h4 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h4></li><li>器件：晶体管，场效应管</li><li>放大器：顾名思义，放大小信号 <strong><em>且不失真</em></strong></li><li>滤波器：给输入信号去除噪声</li><li>振荡器：上电即可发出脉冲（如三角波，方波，正弦波……如555振荡器）</li><li>电源：输入交流——&gt;输出稳定直流电<h4 id="模电难点-amp-解决方案"><a href="#模电难点-amp-解决方案" class="headerlink" title="模电难点&amp;解决方案"></a>模电难点&amp;解决方案</h4></li><li>敏感性：器件非线性，RC数值，温度，频率（<strong><em>这里的频率指的是什么频率？只是输入信号吗？</em></strong>），噪声/干扰，电源电压……</li><li>解决方案：1.提高器件性能 2.引入负反馈<blockquote><p>针对负反馈，这里咱多写两句，这里和何凯明同学提出的残差网络（Resnet）很相似（其实何凯明同学也是借鉴了电路中的负反馈）只是神经网络中，他是将输出通过负反馈与前者相比较，取loss的优质带入下一层网络，而这里是将放大器倍数增大，增益只取决于F（反馈）这很有意思，但还有一些不太明白：<strong><em>这里F有些抽象，不明白这是怎么工作的，是什么器件来反馈 ?</em></strong></p></blockquote></li></ol><h4 id="重要思想……（贯彻全书？）"><a href="#重要思想……（贯彻全书？）" class="headerlink" title="重要思想……（贯彻全书？）"></a>重要思想……（贯彻全书？）</h4><p>$\cfrac{A}{1+AF}$ $\thickapprox$ $\cfrac{1}{F}$</p><p> 相减和高倍放大器集成==&gt;运算放大器（operational Amplifier）<br> 所以：运放+反馈 = …………电路</p><p>2020.2.17</p>]]></content>
     
@@ -212,6 +226,8 @@
     </summary>
     
     
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
     
   </entry>
   
@@ -220,14 +236,13 @@
     <link href="http://yoursite.com/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&amp;%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&amp;%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2020-02-16T12:43:29.958Z</published>
-    <updated>2020-02-19T13:51:22.624Z</updated>
+    <updated>2020-02-21T14:17:02.534Z</updated>
     
-    <content type="html"><![CDATA[<p>toc:true</p><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。</p><a id="more"></a><h3 id="git上传代码流程"><a href="#git上传代码流程" class="headerlink" title="git上传代码流程"></a>git上传代码流程</h3><ol><li>$ git clone<br>将github上download处的https地址复制，在电脑本地创建git.文件夹。</li><li>$ git add.<br>将本地文件保存到暂存区</li><li>$ git commit -m<br>文件提交到本地仓库</li><li>$ git push<br>将文件上传到远程仓库</li><li>$ git pull<br>拉取/同步远程仓库的代码到本地，<br>每次开始开发和提交前都要记得pull一下，以免提交发生冲突。<h3 id="git上传遇到的问题"><a href="#git上传遇到的问题" class="headerlink" title="git上传遇到的问题"></a>git上传遇到的问题</h3><h4 id="1-The-remote-end-hung-up-unexpectedly"><a href="#1-The-remote-end-hung-up-unexpectedly" class="headerlink" title="1.The remote end hung up unexpectedly"></a>1.The remote end hung up unexpectedly</h4>这个挺头疼的，在Stack Overflow上面找了几种方法，有人说的网络的问题，有人说是暂缓区不足，有人说是网络的问题，也有说关掉防火墙和杀毒软件会OK，还去调节参数。。。因为时间的原因，我暂时还没有试过每一种方法，目前尝试的几种方法是不成功的。git push完后会等待很长时间然后报错，/呜呜呜。。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。</p><a id="more"></a><h3 id="git上传代码流程"><a href="#git上传代码流程" class="headerlink" title="git上传代码流程"></a>git上传代码流程</h3><ol><li>$ git clone<br>将github上download处的https地址复制，在电脑本地创建git.文件夹。</li><li>$ git add.<br>将本地文件保存到暂存区</li><li>$ git commit -m<br>文件提交到本地仓库</li><li>$ git push<br>将文件上传到远程仓库</li><li>$ git pull<br>拉取/同步远程仓库的代码到本地，<br>每次开始开发和提交前都要记得pull一下，以免提交发生冲突。<h3 id="git上传遇到的问题"><a href="#git上传遇到的问题" class="headerlink" title="git上传遇到的问题"></a>git上传遇到的问题</h3><h4 id="1-The-remote-end-hung-up-unexpectedly"><a href="#1-The-remote-end-hung-up-unexpectedly" class="headerlink" title="1.The remote end hung up unexpectedly"></a>1.The remote end hung up unexpectedly</h4>这个挺头疼的，在Stack Overflow上面找了几种方法，有人说的网络的问题，有人说是暂缓区不足，有人说是网络的问题，也有说关掉防火墙和杀毒软件会OK，还去调节参数。。。因为时间的原因，我暂时还没有试过每一种方法，目前尝试的几种方法是不成功的。git push完后会等待很长时间然后报错，/呜呜呜。。</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;toc:true&lt;/p&gt;
-&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。&lt;/p&gt;
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。&lt;/p&gt;
     
     </summary>
     
@@ -240,7 +255,7 @@
     <link href="http://yoursite.com/2020/02/15/icarus%20%E7%BE%8E%E5%8C%96%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9D%91/"/>
     <id>http://yoursite.com/2020/02/15/icarus%20%E7%BE%8E%E5%8C%96%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9D%91/</id>
     <published>2020-02-15T15:06:21.072Z</published>
-    <updated>2020-02-19T13:51:23.876Z</updated>
+    <updated>2020-02-21T14:14:11.026Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>很羡慕别人做的很精美，简约大方的博客，所以自己也开始捣鼓，在Google和百度上找方法，但有些方法在自己这里不成功，下面我自己总结一下这些坑。</p><a id="more"></a><h3 id="1-鼠标点击爱心效果"><a href="#1-鼠标点击爱心效果" class="headerlink" title="1.鼠标点击爱心效果"></a>1.鼠标点击爱心效果</h3><p>看了几篇文章，都说是在/themes/icarus/sourse/js/src中添加click.js文件，然后复制代码，实际上没有最后的src文件，在/themes/icarus/sourse/js里添加即可。</p>]]></content>
     
@@ -251,6 +266,8 @@
     </summary>
     
     
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
     
   </entry>
   
@@ -259,7 +276,7 @@
     <link href="http://yoursite.com/2020/02/15/hexo%20%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F/"/>
     <id>http://yoursite.com/2020/02/15/hexo%20%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F/</id>
     <published>2020-02-15T09:37:01.435Z</published>
-    <updated>2020-02-15T11:52:50.332Z</updated>
+    <updated>2020-02-21T14:14:04.261Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文针对自己使用hexo中遇到的问题进行总结</p><h3 id="1-instal安装超时，ERROR"><a href="#1-instal安装超时，ERROR" class="headerlink" title="1 instal安装超时，ERROR"></a>1 instal安装超时，ERROR</h3><p>这个用国内的淘宝镜像源进行安装，在安装过cnpm基础之上，每次将命令中的npm修改成cnpm即可。</p><a id="more"></a><h3 id="2-hexo-d-ERROR"><a href="#2-hexo-d-ERROR" class="headerlink" title="2 hexo d ERROR"></a>2 hexo d ERROR</h3><p>hexo d命令报错 ERROR Deployer not found：git<br>这个是因为没有安装hexo-deployer-git插件，安装即可，命令如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h3 id="3-hexo-常用指令"><a href="#3-hexo-常用指令" class="headerlink" title="3 hexo 常用指令"></a>3 hexo 常用指令</h3><p>hexo g ：generate 重新生成改动文件<br>hexo clean ：清除缓存文件和已经生成的静态文件（在更换主题时需要）<br>hexo s：server （也可以理解start）启动本地服务器<br>hexo d：deploy 部署网站（上传远程仓库）</p><h3 id="4-hexo-d-ERROR-Timeout"><a href="#4-hexo-d-ERROR-Timeout" class="headerlink" title="4 hexo d ERROR Timeout"></a>4 hexo d ERROR Timeout</h3><p>上传失败，发现是网络问题，发现如果科学上网的话是没有出现过ERROR Timeout的情况</p>]]></content>
     
@@ -271,6 +288,8 @@
     </summary>
     
     
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
     
   </entry>
   
@@ -279,7 +298,7 @@
     <link href="http://yoursite.com/2020/02/14/CNN%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9CLenet5/"/>
     <id>http://yoursite.com/2020/02/14/CNN%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9CLenet5/</id>
     <published>2020-02-14T13:10:29.088Z</published>
-    <updated>2020-02-19T13:51:20.863Z</updated>
+    <updated>2020-02-21T14:12:39.471Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。</p><h3 id="网络分析"><a href="#网络分析" class="headerlink" title="网络分析"></a>网络分析</h3><p><img src="https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="LeNet5"></p><p>Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。</p><a id="more"></a><h4 id="LeNet-5第一层：卷积层C1"><a href="#LeNet-5第一层：卷积层C1" class="headerlink" title="LeNet-5第一层：卷积层C1"></a>LeNet-5第一层：卷积层C1</h4><p>C1层是卷积层，形成6个特征图谱。卷积的输入区域大小是5x5，每个特征图谱内参数共享，即每个特征图谱内只使用一个共同卷积核，卷积核有5x5个连接参数加上1个偏置共26个参数。卷积区域每次滑动一个像素，这样卷积层形成的每个特征图谱大小是(32-5)/1+1=28x28。C1层共有26x6=156个训练参数，有(5x5+1)x28x28x6=122304个连接。C1层的连接结构如下所示。</p><p><img src="https://img-blog.csdn.net/20171018154917808?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第二层：池化层S2"><a href="#LeNet-5第二层：池化层S2" class="headerlink" title="LeNet-5第二层：池化层S2"></a>LeNet-5第二层：池化层S2</h4><p>S2层是一个下采样层（为什么是下采样？利用图像局部相关性的原理，对图像进行子抽样，可以减少数据处理量同时保留有用信息）。C1层的6个28x28的特征图谱分别进行以2x2为单位的下抽样得到6个14x14（（28-2）/2+1）的图。每个特征图谱使用一个下抽样核。5x14x14x6=5880个连接。S2层的网络连接结构如下图</p><p><img src="https://img-blog.csdn.net/20171018155110551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第三层：卷积层C3"><a href="#LeNet-5第三层：卷积层C3" class="headerlink" title="LeNet-5第三层：卷积层C3"></a>LeNet-5第三层：卷积层C3</h4><p>C3层是一个卷积层，卷积和和C1相同，不同的是C3的每个节点与S2中的多个图相连。C3层有16个10x10（14-5+1）的图，每个图与S2层的连接的方式如下表 所示。C3与S2中前3个图相连的卷积结构见下图.这种不对称的组合连接的方式有利于提取多种组合特征。该层有(5x5x3+1)x6 + (5x5x4 + 1) x 3 + (5x5x4 +1)x6 + (5x5x6+1)x1 = 1516个训练参数，共有1516x10x10=151600个连接。</p><p><img src="https://img-blog.csdn.net/20171018155242912?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第四层：池化层S4"><a href="#LeNet-5第四层：池化层S4" class="headerlink" title="LeNet-5第四层：池化层S4"></a>LeNet-5第四层：池化层S4</h4><p>S4是一个下采样层。C3层的16个10x10的图分别进行以2x2为单位的下抽样得到16个5x5的图。5x5x5x16=2000个连接。连接的方式与S2层类似，如下所示。<br><img src="https://img-blog.csdn.net/20171018155446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第五层：全连接层C5"><a href="#LeNet-5第五层：全连接层C5" class="headerlink" title="LeNet-5第五层：全连接层C5"></a>LeNet-5第五层：全连接层C5</h4><p>C5层是一个全连接层。由于S4层的16个图的大小为5x5，与卷积核的大小相同，所以卷积后形成的图的大小为1x1。这里形成120个卷积结果。每个都与上一层的16个图相连。所以共有(5x5x16+1)x120 = 48120个参数，同样有48120个连接。C5层的网络结构如下所示。<br><img src="https://img-blog.csdn.net/20171018155558086?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第六层：全连接层F6"><a href="#LeNet-5第六层：全连接层F6" class="headerlink" title="LeNet-5第六层：全连接层F6"></a>LeNet-5第六层：全连接层F6</h4><p>F6层是全连接层。F6层有84个节点，对应于一个7x12的比特图，该层的训练参数和连接数都是(120 + 1)x84=10164.<br><img src="https://img-blog.csdn.net/20171018155923735?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第七层：全连接层Output"><a href="#LeNet-5第七层：全连接层Output" class="headerlink" title="LeNet-5第七层：全连接层Output"></a>LeNet-5第七层：全连接层Output</h4><p>略<br><img src="https://img-blog.csdn.net/20171018160214082?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>1.<a href="https://blog.csdn.net/happyorg/article/details/78274066">https://blog.csdn.net/happyorg/article/details/78274066</a></p>]]></content>
     
@@ -291,6 +310,8 @@
     
     </summary>
     
+    
+      <category term="Deep learning" scheme="http://yoursite.com/categories/Deep-learning/"/>
     
     
   </entry>
