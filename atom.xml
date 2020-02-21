@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-20T12:13:27.031Z</updated>
+  <updated>2020-02-21T09:06:21.245Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,18 @@
     <link href="http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/</id>
     <published>2020-02-20T11:27:34.939Z</published>
-    <updated>2020-02-20T12:13:27.031Z</updated>
+    <updated>2020-02-21T09:06:21.245Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="微分器"><a href="#微分器" class="headerlink" title="微分器"></a>微分器</h3><blockquote><p>目标：$Uo(t)=k\cfrac{dui(t)}{dt}$</p></blockquote><blockquote><p>即输出与输入的微分成正比，微分是积分的逆运算。</p></blockquote><a id="more"></a><h4 id="微分器电路"><a href="#微分器电路" class="headerlink" title="微分器电路"></a>微分器电路</h4><p>(A)时域分析</p><blockquote><p>由于微分和积分是互逆的关系，所以把反相输入端的电容和反馈网络中电阻的位置互换即是，微分器电路，分析与积分器相似：<br>$$U_o(t)=-U_R(t)=-i_R(t)R$$<br>$$i_R(t)=i_c(t)=C\cfrac{dUc(t)}{dt}$$<br>$$Uo(t)=-RC\cfrac{dUi(t)}{dt}=-\tau \cfrac{dUi(t)}{dt}$$<br>(B)频域分析<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-j\omega RC=-j\omega\tau$$<br>因为是反相输入端，抵消一个负号，所以是 j，超前90度</p></blockquote><ol><li>相位超前90度</li><li>增益的模 $|Au(j\omega)|=\omega RC$</li><li>有个结论：频率越高增益越大，且有一个90度的超前相移。<h4 id="微分器的高频增益"><a href="#微分器的高频增益" class="headerlink" title="微分器的高频增益"></a>微分器的高频增益</h4><blockquote><p>由于电容是通高频，阻低频，所以，若干反相输入端有高频信号（高频噪声）输入，电容相当于是短路，高频信号会被反相放大，影响正常输出信号。</p></blockquote><h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5></li><li>在反相端电容的前面加一个小电阻$R_2$，要远远小于反馈网络中的负载电阻Rf阻值：<br>$$A_u(j\omega)=\cfrac{U_o(j\omega)}{U_i(j\omega)}=-\cfrac{R}{R_2+\cfrac{1}{j\omega C}}=-\cfrac{j\omega RC}{1+j\omega R_2C}$$<blockquote><p>当$R_2$非常小的时候，可以忽略，就相当于$-j\omega RC$</p></blockquote></li><li>因为高频噪声的原因，所以微分器通常在工程中会被积分器所取代，通过解微分方程就可以，举课上面的例子：<br>$$\cfrac{d^2U_o(t)}{dt^2}+10\cfrac{dU_o(t)}{dt}+2U_o(t)=Ui(t)$$<br>$$\cfrac{dU_o(t)}{dt}=\int[u_i(t)-10\cfrac{dU_o(t)}{dt}-2U_o(t)]dt$$<br>$$U_o(t)=\iint U_i(t)dt-2\iint U_o(t)dt-10\int U_o(t)dt$$<h4 id="微分器实验"><a href="#微分器实验" class="headerlink" title="微分器实验"></a>微分器实验</h4></li><li>三角波方波变化<blockquote><p>微分嘛，三角波下降的时候，斜率不变且小于0，即 $\cfrac{U_i(t)}{dt}&lt;0$,和前面负号抵消，所以是输出高电平，同理，三角波上升时，斜率不变且大于0，即 $\cfrac{U_i(t)}{dt}&gt;0$,前面加一个负号，所以输出低电平，最后输出的是方波。</p></blockquote></li><li>方波变化尖脉冲<blockquote><p>输入方波为高低电平的时候，输入电平没有变化，斜率为0，高低电平直接是突变，斜率变化很大，所以有个尖脉冲。</p></blockquote></li></ol><p>2020.2.21</p>]]></content>
     
     <summary type="html">
+    
+      &lt;h3 id=&quot;微分器&quot;&gt;&lt;a href=&quot;#微分器&quot; class=&quot;headerlink&quot; title=&quot;微分器&quot;&gt;&lt;/a&gt;微分器&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;目标：$Uo(t)=k\cfrac{dui(t)}{dt}$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即输出与输入的微分成正比，微分是积分的逆运算。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -36,19 +45,16 @@
     <link href="http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/</id>
     <published>2020-02-20T11:26:55.734Z</published>
-    <updated>2020-02-20T15:42:23.159Z</updated>
+    <updated>2020-02-21T07:25:57.668Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="积分器"><a href="#积分器" class="headerlink" title="积分器"></a>积分器</h3><blockquote><p>目标：$Uo(t)=k\int Ui(t)dt$</p></blockquote><p>即输出与输入的积分成正比</p><h4 id="反相积分电路"><a href="#反相积分电路" class="headerlink" title="反相积分电路"></a>反相积分电路</h4><blockquote><p>就是将反相比例放大器中的 Rf 换成电容</p></blockquote><p>(A)时域分析<br>$$Uo(t)=-Uc(t)=-\cfrac{Q}{C}=-\cfrac{1}{C}\int ic(t)dt$$<br>$$=-\cfrac{1}{C}\int \cfrac{Ui(t)}{R}dt=-\cfrac{1}{RC}\int Ui(t)dt=-\cfrac{1}{\tau}\int Ui(t)dt$$<br>其中 $\tau$ = RC 是积分常数</p><p>(B)频域分析</p><blockquote><p>这里和反相比例放大器是一个分析方法<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-\cfrac{1}{j\omega RC}=-\cfrac{1}{j\omega \tau}$$<br>因为这里有一个$\cfrac{1}{j}=-j$ , 所以：</p></blockquote><ol><li>相位滞后90度，</li><li>增益的模：$|Au(j\omega)|=\cfrac{1}{\omega RC}$</li><li>这里有个结论：频率越高，衰减越大(<strong><em>这里是真的不明白为什么了？？</em></strong>)<h4 id="差分积分器电路"><a href="#差分积分器电路" class="headerlink" title="差分积分器电路"></a>差分积分器电路</h4><blockquote><p>这里和简单减法器是相似，把 Rf 和下面对应的电阻换成电容即是差分积分器啦<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}[Ui1(j\omega)-Ui2(j\omega)]$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int[Ui1(t)-Ui2(t)]dt$$<br>上面一个是频域形式，一个是时域形式啦</p></blockquote><h4 id="同相积分电路"><a href="#同相积分电路" class="headerlink" title="同相积分电路"></a>同相积分电路</h4><blockquote><p>就是将反相输入端接地，Ui2 = 0<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}Ui1(j\omega)$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int Ui1(t)dt$$</p></blockquote><h4 id="积分器设计"><a href="#积分器设计" class="headerlink" title="积分器设计"></a>积分器设计</h4><blockquote><p>这里注意一下设计积分器首先要确定时间常数 $\tau$ ,又因为电容的可选类型比较少，电阻相对要多的多，所以，先确定电容的值，在确定电阻的阻值。</p></blockquote></li></ol><blockquote><p>电容单位 F 换算：1F = 1 * 10^6 $\mu$F(微法)_…………_1 $\mu$F = 1 * 10^3 nF_…………1 $\mu$F = 1 * 10^6 pF</p></blockquote><h4 id="单级积分器电路"><a href="#单级积分器电路" class="headerlink" title="单级积分器电路"></a>单级积分器电路</h4><blockquote><p>由于电容是通交流隔直流的，所以只在负反馈网络加电容，会使直流无法反馈，造成积分器不正常工作，或有噪声的情况，（<strong><em>这里加入的电阻要保证R &gt;&gt;&gt; 10</em>Ri</strong>）,不然对增益会很大的影响。</p></blockquote><h4 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h4><ol><li>方波转换成三角波<blockquote><p>反相输入端输入方波，当输入为高电平，输入端高电位，输出端拉低，反馈回去，电位下降；同理反相端输入为低电平，输出端拉高电位上升，反馈回去。输出端就是三角波了。</p></blockquote></li><li>正弦波和余弦波互相转换（<strong><em>因为相位互相差90度</em></strong>）</li></ol><p>2020.2.20</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="积分器"><a href="#积分器" class="headerlink" title="积分器"></a>积分器</h3><blockquote><p>目标：$Uo(t)=k\int Ui(t)dt$</p></blockquote><p>即输出与输入的积分成正比</p><a id="more"></a><h4 id="反相积分电路"><a href="#反相积分电路" class="headerlink" title="反相积分电路"></a>反相积分电路</h4><blockquote><p>就是将反相比例放大器中的 Rf 换成电容</p></blockquote><p>(A)时域分析<br>$$Uo(t)=-Uc(t)=-\cfrac{Q}{C}=-\cfrac{1}{C}\int ic(t)dt$$<br>$$=-\cfrac{1}{C}\int \cfrac{Ui(t)}{R}dt=-\cfrac{1}{RC}\int Ui(t)dt=-\cfrac{1}{\tau}\int Ui(t)dt$$<br>其中 $\tau$ = RC 是积分常数</p><p>(B)频域分析</p><blockquote><p>这里和反相比例放大器是一个分析方法<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-\cfrac{1}{j\omega RC}=-\cfrac{1}{j\omega \tau}$$<br>因为这里有一个$\cfrac{1}{j}=-j$ ,又是反相输入端，最外面那个负号抵消，所以：</p></blockquote><ol><li>相位滞后90度，</li><li>增益的模：$|Au(j\omega)|=\cfrac{1}{\omega RC}$</li><li>这里有个结论：频率越高，衰减越大(<strong><em>这里是真的不明白为什么了？？</em></strong>)<h4 id="差分积分器电路"><a href="#差分积分器电路" class="headerlink" title="差分积分器电路"></a>差分积分器电路</h4><blockquote><p>这里和简单减法器是相似，把 Rf 和下面对应的电阻换成电容即是差分积分器啦<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}[Ui1(j\omega)-Ui2(j\omega)]$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int[Ui1(t)-Ui2(t)]dt$$<br>上面一个是频域形式，一个是时域形式啦</p></blockquote><h4 id="同相积分电路"><a href="#同相积分电路" class="headerlink" title="同相积分电路"></a>同相积分电路</h4><blockquote><p>就是将反相输入端接地，Ui2 = 0<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}Ui1(j\omega)$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int Ui1(t)dt$$</p></blockquote><h4 id="积分器设计"><a href="#积分器设计" class="headerlink" title="积分器设计"></a>积分器设计</h4><blockquote><p>这里注意一下设计积分器首先要确定时间常数 $\tau$ ,又因为电容的可选类型比较少，电阻相对要多的多，所以，先确定电容的值，在确定电阻的阻值。</p></blockquote></li></ol><blockquote><p>电容单位 F 换算：1F = 1 * 10^6 $\mu$F(微法)_…………_1 $\mu$F = 1 * 10^3 nF_…………1 $\mu$F = 1 * 10^6 pF</p></blockquote><h4 id="单级积分器电路"><a href="#单级积分器电路" class="headerlink" title="单级积分器电路"></a>单级积分器电路</h4><blockquote><p>由于电容是通交流隔直流的，所以只在负反馈网络加电容，会使直流无法反馈，造成积分器不正常工作，或有噪声的情况，（<strong><em>这里加入的电阻要保证R &gt;&gt;&gt; 10</em>Ri</strong>）,不然对增益会很大的影响。</p></blockquote><h4 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h4><ol><li>方波转换成三角波<blockquote><p>反相输入端输入方波，当输入为高电平，输入端高电位，输出端拉低，反馈回去，电位下降；同理反相端输入为低电平，输出端拉高电位上升，反馈回去。输出端就是三角波了。</p></blockquote></li><li>正弦波和余弦波互相转换（<strong><em>因为相位互相差90度</em></strong>）</li></ol><p>2020.2.20</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h3 id=&quot;积分器&quot;&gt;&lt;a href=&quot;#积分器&quot; class=&quot;headerlink&quot; title=&quot;积分器&quot;&gt;&lt;/a&gt;积分器&lt;/h3&gt;&lt;blockquote&gt;
+      &lt;h3 id=&quot;积分器&quot;&gt;&lt;a href=&quot;#积分器&quot; class=&quot;headerlink&quot; title=&quot;积分器&quot;&gt;&lt;/a&gt;积分器&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;目标：$Uo(t)=k\int Ui(t)dt$&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;即输出与输入的
-      
+&lt;p&gt;即输出与输入的积分成正比&lt;/p&gt;
     
     </summary>
     
