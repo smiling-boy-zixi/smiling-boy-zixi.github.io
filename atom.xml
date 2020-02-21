@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-21T09:06:21.245Z</updated>
+  <updated>2020-02-21T14:08:34.108Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/"/>
     <id>http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/</id>
     <published>2020-02-20T11:27:34.939Z</published>
-    <updated>2020-02-21T09:06:21.245Z</updated>
+    <updated>2020-02-21T14:08:34.108Z</updated>
     
     <content type="html"><![CDATA[<h3 id="微分器"><a href="#微分器" class="headerlink" title="微分器"></a>微分器</h3><blockquote><p>目标：$Uo(t)=k\cfrac{dui(t)}{dt}$</p></blockquote><blockquote><p>即输出与输入的微分成正比，微分是积分的逆运算。</p></blockquote><a id="more"></a><h4 id="微分器电路"><a href="#微分器电路" class="headerlink" title="微分器电路"></a>微分器电路</h4><p>(A)时域分析</p><blockquote><p>由于微分和积分是互逆的关系，所以把反相输入端的电容和反馈网络中电阻的位置互换即是，微分器电路，分析与积分器相似：<br>$$U_o(t)=-U_R(t)=-i_R(t)R$$<br>$$i_R(t)=i_c(t)=C\cfrac{dUc(t)}{dt}$$<br>$$Uo(t)=-RC\cfrac{dUi(t)}{dt}=-\tau \cfrac{dUi(t)}{dt}$$<br>(B)频域分析<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-j\omega RC=-j\omega\tau$$<br>因为是反相输入端，抵消一个负号，所以是 j，超前90度</p></blockquote><ol><li>相位超前90度</li><li>增益的模 $|Au(j\omega)|=\omega RC$</li><li>有个结论：频率越高增益越大，且有一个90度的超前相移。<h4 id="微分器的高频增益"><a href="#微分器的高频增益" class="headerlink" title="微分器的高频增益"></a>微分器的高频增益</h4><blockquote><p>由于电容是通高频，阻低频，所以，若干反相输入端有高频信号（高频噪声）输入，电容相当于是短路，高频信号会被反相放大，影响正常输出信号。</p></blockquote><h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5></li><li>在反相端电容的前面加一个小电阻$R_2$，要远远小于反馈网络中的负载电阻Rf阻值：<br>$$A_u(j\omega)=\cfrac{U_o(j\omega)}{U_i(j\omega)}=-\cfrac{R}{R_2+\cfrac{1}{j\omega C}}=-\cfrac{j\omega RC}{1+j\omega R_2C}$$<blockquote><p>当$R_2$非常小的时候，可以忽略，就相当于$-j\omega RC$</p></blockquote></li><li>因为高频噪声的原因，所以微分器通常在工程中会被积分器所取代，通过解微分方程就可以，举课上面的例子：<br>$$\cfrac{d^2U_o(t)}{dt^2}+10\cfrac{dU_o(t)}{dt}+2U_o(t)=Ui(t)$$<br>$$\cfrac{dU_o(t)}{dt}=\int[u_i(t)-10\cfrac{dU_o(t)}{dt}-2U_o(t)]dt$$<br>$$U_o(t)=\iint U_i(t)dt-2\iint U_o(t)dt-10\int U_o(t)dt$$<h4 id="微分器实验"><a href="#微分器实验" class="headerlink" title="微分器实验"></a>微分器实验</h4></li><li>三角波方波变化<blockquote><p>微分嘛，三角波下降的时候，斜率不变且小于0，即 $\cfrac{U_i(t)}{dt}&lt;0$,和前面负号抵消，所以是输出高电平，同理，三角波上升时，斜率不变且大于0，即 $\cfrac{U_i(t)}{dt}&gt;0$,前面加一个负号，所以输出低电平，最后输出的是方波。</p></blockquote></li><li>方波变化尖脉冲<blockquote><p>输入方波为高低电平的时候，输入电平没有变化，斜率为0，高低电平直接是突变，斜率变化很大，所以有个尖脉冲。</p></blockquote></li></ol><p>2020.2.21</p>]]></content>
     
@@ -36,6 +36,8 @@
     
     </summary>
     
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
