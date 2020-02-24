@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>icarus 美化主题的坑 - 仰望星空</title>
+<title>ch4-2 P--N结 - 仰望星空</title>
 
 
-    <meta name="description" content="前言很羡慕别人做的很精美，简约大方的博客，所以自己也开始捣鼓，在Google和百度上找方法，但有些方法在自己这里不成功，下面我自己总结一下这些坑。">
+    <meta name="description" content="基本概念 PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN接 PN结的形成：由于两边载流子浓度差————&gt;多子扩散（N型半导体–自由电子，P型半导体–空穴）————&gt;交接处复合，显露出正负原子————形成内电场————&gt;阻碍多子扩散，利于少子漂移————&gt;动态平衡，形成PN结 中间形成电场的区域称为耗尽区或势垒区或阻挡区，在掺杂浓度不对称的PN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="icarus 美化主题的坑">
-<meta property="og:url" content="http://yoursite.com/2020/02/15/icarus%20%E7%BE%8E%E5%8C%96%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9D%91/index.html">
+<meta property="og:title" content="ch4-2 P--N结">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/ch4-2%20P--N%E7%BB%93/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="前言很羡慕别人做的很精美，简约大方的博客，所以自己也开始捣鼓，在Google和百度上找方法，但有些方法在自己这里不成功，下面我自己总结一下这些坑。">
+<meta property="og:description" content="基本概念 PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN接 PN结的形成：由于两边载流子浓度差————&gt;多子扩散（N型半导体–自由电子，P型半导体–空穴）————&gt;交接处复合，显露出正负原子————形成内电场————&gt;阻碍多子扩散，利于少子漂移————&gt;动态平衡，形成PN结 中间形成电场的区域称为耗尽区或势垒区或阻挡区，在掺杂浓度不对称的PN">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-15T15:06:21.072Z">
-<meta property="article:modified_time" content="2020-02-21T14:14:11.026Z">
+<meta property="article:published_time" content="2020-02-24T08:51:42.623Z">
+<meta property="article:modified_time" content="2020-02-24T11:28:46.332Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="icarus 美化主题的坑" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch4-2 P--N结" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="icarus 美化主题的坑" height="28">
+                <img src="/images/logo_2.png" alt="ch4-2 P--N结" height="28">
             
             </a>
         </div>
@@ -143,17 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-15T15:06:21.072Z">2020-02-15</time>
+                <time class="level-item has-text-grey" datetime="2020-02-24T08:51:42.623Z">2020-02-24</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 131 个字)
+                    6 分钟 读完 (大约 879 个字)
                 </span>
                 
                 
@@ -162,13 +162,42 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                icarus 美化主题的坑
+                ch4-2 P--N结
             
         </h1>
         <div class="content">
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>很羡慕别人做的很精美，简约大方的博客，所以自己也开始捣鼓，在Google和百度上找方法，但有些方法在自己这里不成功，下面我自己总结一下这些坑。</p>
-<a id="more"></a>
-<h3 id="1-鼠标点击爱心效果"><a href="#1-鼠标点击爱心效果" class="headerlink" title="1.鼠标点击爱心效果"></a>1.鼠标点击爱心效果</h3><p>看了几篇文章，都说是在/themes/icarus/sourse/js/src中添加click.js文件，然后复制代码，实际上没有最后的src文件，在/themes/icarus/sourse/js里添加即可。</p>
+            <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
+<li>PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN接</li>
+<li>PN结的形成：由于两边载流子浓度差————&gt;多子扩散（N型半导体–自由电子，P型半导体–空穴）————&gt;交接处复合，显露出正负原子————形成内电场————&gt;阻碍多子扩散，利于少子漂移————&gt;动态平衡，形成PN结</li>
+<li>中间形成电场的区域称为<strong><em>耗尽区或势垒区或阻挡区</em></strong>，在掺杂浓度不对称的PN结中，掺杂浓度大的地方延伸小，掺杂浓度小的地方，延伸大（因为两边正负电荷数量相等）<h4 id="PN结的导电特性"><a href="#PN结的导电特性" class="headerlink" title="PN结的导电特性"></a>PN结的导电特性</h4></li>
+<li>正向偏置：外部添加P正，N负的电场，与内电场相互抵消，耗尽层变窄，则扩散作用加强，漂移运动减弱，（也就是说N结处的自由电子向浓度低的P结移动，空穴从P向N移动），因此形成正向电流（从P——&gt;N）<blockquote>
+<p>注：电流方向是正电荷移动方向，与负电荷移动方向相反，因为在定义电流方向的时候，还没有发现电子……</p>
+</blockquote>
+</li>
+<li>反向偏置：外部添加N正，P负的电场，产生与内部电场方向相同的电场，则耗尽区变宽，扩散运动减弱，漂移运动加强，反向电流很小（少子提供电流）</li>
+<li>可以认为是（<strong><em>正偏—导通，反偏—截止</em></strong>）<h4 id="PN结的击穿特性"><a href="#PN结的击穿特性" class="headerlink" title="PN结的击穿特性"></a>PN结的击穿特性</h4></li>
+<li>当反向电压超过反向截止电压的时候，反向电流会急剧增大，有两种机理</li>
+<li>雪崩击穿：加反向电压，耗尽区变大，少子漂移时，被加速，动能过大，撞击共价键，使自由电子挣脱束缚，然后蝴蝶效应，一起被加速，到处撞击……反向电流变大</li>
+<li>齐纳击穿：在重掺杂的PN结中，耗尽区很窄，所以较小的反向电压会产生很大的电场，一定的强度就可以将共价键中的价电子直接拉出，产生大量自由电子和空穴对，使反向电流急剧增大。<blockquote>
+<p>一般而言，对于硅材料的PN结，截止电压 &gt; 7V为雪崩击穿，截止电压 &lt; 5V为齐纳击穿；截止电压在 5 ~ 7 V时，两种击穿都有。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>只要限制击穿后的电流，击穿并不损坏 PN 结（可逆性）</p>
+</blockquote>
+<h4 id="PN结的电容特性"><a href="#PN结的电容特性" class="headerlink" title="PN结的电容特性"></a>PN结的电容特性</h4><ol>
+<li>PN结有电容特性，由势垒电容和扩散电容两部分组成</li>
+<li>势垒电容：高阻的耗尽区，与平板电容器相似，正偏电压越大，容值越小<br>$$C_T=\cfrac{\epsilon S}{d}$$<blockquote>
+<p>d 是耗尽区长度，S是耗尽区横截面积</p>
+</blockquote>
+</li>
+<li>扩散电容：正向偏置的PN结，由于多子扩散，会有电容特性<br>$$C_D=\cfrac{\tau I}{U_T}$$<blockquote>
+<p>$C_T$ 和 $C_D$ 都随外加电压的变化而变化，且都非线性，低频时可以忽略，高频时需要考虑……</p>
+</blockquote>
+</li>
+</ol>
+<p>2020.2.24</p>
 
         </div>
         
@@ -213,17 +242,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Git远程管理Github仓库&amp;遇到的问题</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/15/hexo%20%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F/">
-                <span class="level-item">hexo 操作注意</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/24/ch4-1%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/">
+                <span class="level-item">ch4-1 半导体物理基础</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -359,13 +381,21 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#前言">
+        <a class="is-flex" href="#基本概念">
         <span class="has-mr-6">1</span>
-        <span>前言</span>
+        <span>基本概念</span>
         </a></li><li>
-        <a class="is-flex" href="#1-鼠标点击爱心效果">
+        <a class="is-flex" href="#PN结的导电特性">
         <span class="has-mr-6">2</span>
-        <span>1.鼠标点击爱心效果</span>
+        <span>PN结的导电特性</span>
+        </a></li><li>
+        <a class="is-flex" href="#PN结的击穿特性">
+        <span class="has-mr-6">3</span>
+        <span>PN结的击穿特性</span>
+        </a></li><li>
+        <a class="is-flex" href="#PN结的电容特性">
+        <span class="has-mr-6">4</span>
+        <span>PN结的电容特性</span>
         </a></li></ul>
             </div>
         </div>
@@ -389,7 +419,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="icarus 美化主题的坑" height="28">
+                    <img src="/images/logo_2.png" alt="ch4-2 P--N结" height="28">
                 
                 </a>
                 <p class="is-size-7">
