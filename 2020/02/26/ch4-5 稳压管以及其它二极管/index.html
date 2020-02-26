@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch1-2 放大器主要指标 - 仰望星空</title>
+<title>ch4-5 稳压管以及其它二极管 - 仰望星空</title>
 
 
-    <meta name="description" content="什么是放大器？ 概念：功率放大倍数 大于 1 （变压器不是放大器） 同向放大器：输入输出信号相位相同 反向放大器：输入输出信号相位相反 放大器有两正负两极，作用同上，称为同向输入端和反向输入端">
+    <meta name="description" content="稳压二极管 符号：在二级管的符号上加一个小弯 稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压 额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定 稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch1-2 放大器主要指标">
-<meta property="og:url" content="http://yoursite.com/2020/02/17/ch1-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E4%B8%BB%E8%A6%81%E6%8C%87%E6%A0%87/index.html">
+<meta property="og:title" content="ch4-5 稳压管以及其它二极管">
+<meta property="og:url" content="http://yoursite.com/2020/02/26/ch4-5%20%E7%A8%B3%E5%8E%8B%E7%AE%A1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E4%BA%8C%E6%9E%81%E7%AE%A1/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="什么是放大器？ 概念：功率放大倍数 大于 1 （变压器不是放大器） 同向放大器：输入输出信号相位相同 反向放大器：输入输出信号相位相反 放大器有两正负两极，作用同上，称为同向输入端和反向输入端">
+<meta property="og:description" content="稳压二极管 符号：在二级管的符号上加一个小弯 稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压 额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定 稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-17T12:18:27.025Z">
-<meta property="article:modified_time" content="2020-02-21T14:11:37.670Z">
+<meta property="article:published_time" content="2020-02-26T04:43:24.185Z">
+<meta property="article:modified_time" content="2020-02-26T06:17:46.060Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch1-2 放大器主要指标" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch4-5 稳压管以及其它二极管" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch1-2 放大器主要指标" height="28">
+                <img src="/images/logo_2.png" alt="ch4-5 稳压管以及其它二极管" height="28">
             
             </a>
         </div>
@@ -143,7 +143,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-17T12:18:27.025Z">2020-02-17</time>
+                <time class="level-item has-text-grey" datetime="2020-02-26T04:43:24.185Z">2020-02-26</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 792 个字)
+                    4 分钟 读完 (大约 646 个字)
                 </span>
                 
                 
@@ -162,32 +162,34 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch1-2 放大器主要指标
+                ch4-5 稳压管以及其它二极管
             
         </h1>
         <div class="content">
-            <h3 id="什么是放大器？"><a href="#什么是放大器？" class="headerlink" title="什么是放大器？"></a>什么是放大器？</h3><ol>
-<li>概念：功率放大倍数 大于 1 （变压器不是放大器）</li>
-<li>同向放大器：输入输出信号相位相同</li>
-<li>反向放大器：输入输出信号相位相反</li>
-<li>放大器有两正负两极，作用同上，称为同向输入端和反向输入端<a id="more"></a>
-<h4 id="放大器性能指标"><a href="#放大器性能指标" class="headerlink" title="放大器性能指标"></a>放大器性能指标</h4></li>
-<li>可等效为一个有源二端口网络（一个输入端–接信号源，一个输出端–接负载）</li>
-<li>放大器结构是两个电阻（一个输入电阻一个输出电阻），再加上一个受控源（放大倍数）</li>
-<li>放大器参数就是上面的放大倍数A，加上输入输出电阻阻值，以及频率响应与带宽（<strong><em>？？？</em></strong>），总谐波失真系数（非线性失真系数）THD（<strong><em>？？？</em></strong>）</li>
-<li>放大倍数A：（也称增益）输入量和输出量的比值，电压，电流增益（<strong><em>无量纲</em></strong> ），互阻，互导增益</li>
-<li>输入电阻：Ri决定了放大器从电压源处分到的电压值。</li>
-<li>输出电阻：对负载而言，放大器相当于信号源，R0是信号源内阻，则其阻值表达了其的带载能力。</li>
-<li>频率特性:放大器中存在电容（<strong><em>放大器前面是输入输出电阻加上受控源，现在又有电容，所以到底放大器内部是什么结构？？</em></strong>）频率大，容抗小，反之，频率小，容抗就大，那么容抗会对增益有影响（<strong><em>怎么影响是没有说的</em></strong>）</li>
-<li>放大器的截止频率和通频带：频率分低频区，中频区，高频区。频率过高或过低，增益绝对值都会下降。截止频率为0.707增益，高频区为上限截止频率，低频区为下限截止频率。两个截止频率之间为通频带。（记图像）</li>
-<li>失真：相位失真（各波形相位不同，则叠加波形会错位，），频率失真（两个频率不同的波形叠加放大，因为频率不同，所以两个波形增益不一样，那放大后波形就会失真）<blockquote>
-<p>关于相位失真，好奇这个相位怎么样才能移位呢？？？</p>
+            <h4 id="稳压二极管"><a href="#稳压二极管" class="headerlink" title="稳压二极管"></a>稳压二极管</h4><ol>
+<li>符号：在二级管的符号上加一个小弯</li>
+<li>稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压</li>
+<li>额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定</li>
+<li>稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏<a id="more"></a>
+$$I_Z=\cfrac{U_Z}{I_Z}$$</li>
+<li>动态电阻（$r_Z$）：一般在几欧姆到十几欧姆<br>$$r_Z=\cfrac{\Delta U_Z}{\Delta I_Z}$$</li>
+<li>温度系数：稳定电压较高（十几伏）一般为雪崩击穿，稳定电压在6伏以下，一般为齐纳击穿，所以稳定电压一般在（5–7V）的稳压管兼有两种击穿，温度稳定性比较好</li>
+<li>有温度补偿的稳压管：将两稳压管相互对接即可，利用一个工作在正向导通（负温度系数），一个工作在反向导通（正温度系数）即可相互补偿，改善温度稳定性。<br>$$U=\pm(U_Z+U_D)$$<blockquote>
+<p>其中$U_D$是正向导通电压</p>
 </blockquote>
 </li>
-<li>非线性失真系数（THD）：放大器本身是非线性器件晶体管组成，所以，本身输出会产生非线性失真。有个非线性失真系数，不写了。</li>
-<li>放大器的输出动态范围：就是避免放大器的非线性失真，不失真的电压有个范围，最大值叫做放大器的输出动态范围。</li>
-<li>放大器传输特性：随着输入电压的变化，输出电压线性变化叫做线性输入范围，非线性临界点叫做非线性限幅。</li>
+<li>如果计算带有稳压二极管的电路，首先要判断稳压二极管能否被击穿，方法是先假设稳压管断开，看 $U_O$ 是否大于 $U_Z$ .<blockquote>
+<p>具体题目翻一下MOOC，这里不记录了</p>
+</blockquote>
+</li>
+<li>稳压电路限流电阻R的选择：就是要保证电流在稳压电流区工作，公式比较长不写了，遇到具体问题再翻书补充</li>
+<li>由稳压二极管构成的限幅电路（单向，双向）：和二极管构成的限幅电路是相似的，但是由于正向导通特性，单向限幅的时候，负端会有0.7V的电压（硅管）<h4 id="其他二极管"><a href="#其他二极管" class="headerlink" title="其他二极管"></a>其他二极管</h4></li>
+<li>变容二极管：利用了二极管的电容特性，具体在高频时候用的比较多，遇到在做深入了解</li>
+<li>光电二极管：被光线照射后产生一个电流</li>
+<li>发光二极管：……</li>
+<li>肖特基二极管：结构是金属和N型材料掺杂，特点是速度快，常用在高频，遇到再深入了解</li>
 </ol>
+<p>2020.2.26</p>
 
         </div>
         
@@ -233,16 +235,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/18/ch2-1%20%E8%BF%90%E6%94%BE%E5%9F%BA%E7%A1%80/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/26/ch4-6%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E4%B8%89%E7%AE%A1%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch2-1 运放基础</span>
+                <span class="level-item">ch4-6 双极型晶体三管工作原理</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/17/ch1-1%20%E5%AF%BC%E8%AE%BA/">
-                <span class="level-item">ch1-1 导论</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/25/ch4-4%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8/">
+                <span class="level-item">ch4-4 晶体二极管应用</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -378,14 +380,14 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#什么是放大器？">
+        <a class="is-flex" href="#稳压二极管">
         <span class="has-mr-6">1</span>
-        <span>什么是放大器？</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#放大器性能指标">
-        <span class="has-mr-6">1.1</span>
-        <span>放大器性能指标</span>
-        </a></li></ul></li></ul>
+        <span>稳压二极管</span>
+        </a></li><li>
+        <a class="is-flex" href="#其他二极管">
+        <span class="has-mr-6">2</span>
+        <span>其他二极管</span>
+        </a></li></ul>
             </div>
         </div>
     </div>
@@ -408,7 +410,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch1-2 放大器主要指标" height="28">
+                    <img src="/images/logo_2.png" alt="ch4-5 稳压管以及其它二极管" height="28">
                 
                 </a>
                 <p class="is-size-7">

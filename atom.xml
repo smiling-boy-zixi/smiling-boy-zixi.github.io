@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-24T11:28:46.332Z</updated>
+  <updated>2020-02-26T08:37:13.978Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,22 +17,117 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ch4-6 双极型晶体三管工作原理</title>
+    <link href="http://yoursite.com/2020/02/26/ch4-6%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E4%B8%89%E7%AE%A1%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2020/02/26/ch4-6%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E4%B8%89%E7%AE%A1%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</id>
+    <published>2020-02-26T04:44:16.054Z</published>
+    <updated>2020-02-26T08:37:13.978Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="晶体管的结构以及符号"><a href="#晶体管的结构以及符号" class="headerlink" title="晶体管的结构以及符号"></a>晶体管的结构以及符号</h4><ol><li><p>结构：发射区（e，emitter）集电区（c，collector），基区（b，basic）</p><blockquote><p>发射区重掺杂，基区轻掺杂，集电区面积大</p></blockquote></li><li><p>符号：箭头：从P区指向N区</p><a id="more"></a><h4 id="晶体管工作原理"><a href="#晶体管工作原理" class="headerlink" title="晶体管工作原理"></a>晶体管工作原理</h4><p>看图比较好理解，这里我不放图了，简单叙述一下工作过程</p><blockquote><p>在晶体管在发射结正偏，集电结反偏的情况下：</p></blockquote></li><li><p>发射结电子因为发射结正偏，扩散运动——&gt;基区，其中少部分电子和基结的空穴复合</p></li><li><p>由于基区轻掺杂，扩散运动过来的自由电子只有少部分在基区和空穴复合</p></li><li><p>由于集电区反偏，形成强大电场，产生漂移运动，基区大部分电子漂移到集电区</p></li><li><p>因为集电区反偏，所以基区和集电区的少子相互漂移，形成反向饱和电流（很小，和温度关系很大，与之前PN结的情况是一样的）</p><blockquote><p>在晶体三极管中在基区的作用下，把电子从发射区几乎全部传到了集电区，这是放大功能的体现（<strong><em>这哪里体现了放大？？睁眼说瞎</em></strong>）</p></blockquote><h4 id="比例系数-beta-alpha"><a href="#比例系数-beta-alpha" class="headerlink" title="比例系数 $\beta \alpha$"></a>比例系数 $\beta \alpha$</h4></li><li><p>$\overline{\beta}$:共发射极直流电流放大系数。忽略集电区和基区的空穴和自由电子的漂移运动产生的电流（因为电流很小嘛）所以可以近似看作：<br>$$\overline{\beta}=\cfrac{I_C}{I_B}$$</p><blockquote><p>当$I_B=0$时，$I_C$中仍有电流，我们称为穿透电流（是之前忽略的一小部分来的）<br>$$\overline{\beta}=\cfrac{I_C}{I_B}$$<br>$$I_C=\overline{\beta}I_B$$<br>$$I_E=(1+\overline{\beta})I_B$$<br>上式公式牢记</p></blockquote></li><li><p>$\overline{\alpha}$:共基极直流电流放大系数。同样忽略集电区和基区的空穴和自由电子的漂移运动产生的电流，所以可以近似看作：<br>$$\overline{\alpha}=\cfrac{I_C}{I_E}$$</p></li><li><p>$\overline{\alpha}$和$\overline{\beta}$的关系<br>$$\overline{\beta}=\cfrac{\overline{\alpha}}{1-\overline{\alpha}}$$<br>$$\overline{\alpha}=\cfrac{\overline{\beta}}{1+\overline{\beta}}$$</p></li></ol><p>2020.2.26</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;晶体管的结构以及符号&quot;&gt;&lt;a href=&quot;#晶体管的结构以及符号&quot; class=&quot;headerlink&quot; title=&quot;晶体管的结构以及符号&quot;&gt;&lt;/a&gt;晶体管的结构以及符号&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;结构：发射区（e，emitter）集电区（c，collector），基区（b，basic）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;发射区重掺杂，基区轻掺杂，集电区面积大&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;符号：箭头：从P区指向N区&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch4-5 稳压管以及其它二极管</title>
+    <link href="http://yoursite.com/2020/02/26/ch4-5%20%E7%A8%B3%E5%8E%8B%E7%AE%A1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E4%BA%8C%E6%9E%81%E7%AE%A1/"/>
+    <id>http://yoursite.com/2020/02/26/ch4-5%20%E7%A8%B3%E5%8E%8B%E7%AE%A1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E4%BA%8C%E6%9E%81%E7%AE%A1/</id>
+    <published>2020-02-26T04:43:24.185Z</published>
+    <updated>2020-02-26T06:17:46.060Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="稳压二极管"><a href="#稳压二极管" class="headerlink" title="稳压二极管"></a>稳压二极管</h4><ol><li>符号：在二级管的符号上加一个小弯</li><li>稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压</li><li>额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定</li><li>稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏<a id="more"></a>$$I_Z=\cfrac{U_Z}{I_Z}$$</li><li>动态电阻（$r_Z$）：一般在几欧姆到十几欧姆<br>$$r_Z=\cfrac{\Delta U_Z}{\Delta I_Z}$$</li><li>温度系数：稳定电压较高（十几伏）一般为雪崩击穿，稳定电压在6伏以下，一般为齐纳击穿，所以稳定电压一般在（5–7V）的稳压管兼有两种击穿，温度稳定性比较好</li><li>有温度补偿的稳压管：将两稳压管相互对接即可，利用一个工作在正向导通（负温度系数），一个工作在反向导通（正温度系数）即可相互补偿，改善温度稳定性。<br>$$U=\pm(U_Z+U_D)$$<blockquote><p>其中$U_D$是正向导通电压</p></blockquote></li><li>如果计算带有稳压二极管的电路，首先要判断稳压二极管能否被击穿，方法是先假设稳压管断开，看 $U_O$ 是否大于 $U_Z$ .<blockquote><p>具体题目翻一下MOOC，这里不记录了</p></blockquote></li><li>稳压电路限流电阻R的选择：就是要保证电流在稳压电流区工作，公式比较长不写了，遇到具体问题再翻书补充</li><li>由稳压二极管构成的限幅电路（单向，双向）：和二极管构成的限幅电路是相似的，但是由于正向导通特性，单向限幅的时候，负端会有0.7V的电压（硅管）<h4 id="其他二极管"><a href="#其他二极管" class="headerlink" title="其他二极管"></a>其他二极管</h4></li><li>变容二极管：利用了二极管的电容特性，具体在高频时候用的比较多，遇到在做深入了解</li><li>光电二极管：被光线照射后产生一个电流</li><li>发光二极管：……</li><li>肖特基二极管：结构是金属和N型材料掺杂，特点是速度快，常用在高频，遇到再深入了解</li></ol><p>2020.2.26</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;稳压二极管&quot;&gt;&lt;a href=&quot;#稳压二极管&quot; class=&quot;headerlink&quot; title=&quot;稳压二极管&quot;&gt;&lt;/a&gt;稳压二极管&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;符号：在二级管的符号上加一个小弯&lt;/li&gt;
+&lt;li&gt;稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压&lt;/li&gt;
+&lt;li&gt;额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定&lt;/li&gt;
+&lt;li&gt;稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch4-4 晶体二极管应用</title>
+    <link href="http://yoursite.com/2020/02/25/ch4-4%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2020/02/25/ch4-4%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8/</id>
+    <published>2020-02-25T13:56:18.113Z</published>
+    <updated>2020-02-26T04:40:54.035Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="整流电路"><a href="#整流电路" class="headerlink" title="整流电路"></a>整流电路</h4><blockquote><p>这里最好有电路图，但是懒得加了，咱们就脑子里回忆吧，哈哈哈</p></blockquote><a id="more"></a><ol><li>二极管加负载<blockquote><p>利用二极管单向导电性，如果输入电压大于0.7V，就输出电压=输入电压，如果输入电压小于0.7V，则二极管截止，输出电压为0.</p></blockquote></li><li>整流桥电路(又称绝对值电路)<br>$$U_o=|U_i|$$<h4 id="限幅电路"><a href="#限幅电路" class="headerlink" title="限幅电路"></a>限幅电路</h4></li><li>上限幅电路</li><li>双向限幅电路<blockquote><p>当输入电压大于二极管和电压源，Uo即二极管管压降和电压源压降之和，当输入电压小于二极管和电压源，$U_o=U_i$</p></blockquote></li></ol><p>2020.2.25</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;整流电路&quot;&gt;&lt;a href=&quot;#整流电路&quot; class=&quot;headerlink&quot; title=&quot;整流电路&quot;&gt;&lt;/a&gt;整流电路&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;这里最好有电路图，但是懒得加了，咱们就脑子里回忆吧，哈哈哈&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch4-3 晶体二极管的特性及参数</title>
+    <link href="http://yoursite.com/2020/02/25/ch4-3%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%9A%84%E7%89%B9%E6%80%A7%E5%8F%8A%E5%8F%82%E6%95%B0/"/>
+    <id>http://yoursite.com/2020/02/25/ch4-3%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%9A%84%E7%89%B9%E6%80%A7%E5%8F%8A%E5%8F%82%E6%95%B0/</id>
+    <published>2020-02-25T13:55:27.788Z</published>
+    <updated>2020-02-25T14:38:58.286Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="二极管的伏安特性–指数特性"><a href="#二极管的伏安特性–指数特性" class="headerlink" title="二极管的伏安特性–指数特性"></a>二极管的伏安特性–指数特性</h4><p>$$i_D=I_S(e^\cfrac{U_D}{U_T}-1)$$</p><blockquote><p>注：其中 $I_S$ 为反向饱和电流，$U_T$为热电压，$U_D$为导通电压，$i_D$为正向导通电流</p></blockquote><a id="more"></a><ol><li>正向特性：<blockquote><p>死区电压（门限电压）：正向加电压的过程中，一开始电流很小，然后突然指数级的增加。在电流很小的区间，电压及是死区电压。</p></blockquote></li></ol><blockquote><p>死区电压：室温（27°C）下，硅管：0.5-0.7V，锗管：0.1-0.3V</p></blockquote><p>管压降：工业上–硅管：0.7V，锗管–0.3V<br>2. 反向特性:<br>电流很小，硅管：一般小于0.1uA，锗管小于几十微安</p><h4 id="二极管参数"><a href="#二极管参数" class="headerlink" title="二极管参数"></a>二极管参数</h4><ol><li>直流电阻<br>$$R_D=\cfrac{U_D}{I_D}$$<blockquote><p>正向电阻越小，反向电阻越大，二极管的导电性能越好</p></blockquote></li><li>交流电阻<br>$$r_D=\cfrac{\Delta U_D}{\Delta i_D}$$<blockquote><p>$r_D &lt;&lt; R_D$</p></blockquote></li><li>温度特性<blockquote><p>温度T增大:<br>反向饱和电流增大，死区电压减小<br>雪崩击穿电压增大（温度增加）<br>齐纳击穿电压减小（温度减小）</p></blockquote></li><li>最大整流电流<blockquote><p>二极管允许通过的最大正向平均电流</p></blockquote></li><li>最大反向工作电压</li><li>反向电流<blockquote><p>越小越好，通常反向电流与温度密切相关</p></blockquote></li><li>最高工作频率<br>超过该工作频率，二极管单向导电性能变坏<h4 id="二级管电路模型"><a href="#二级管电路模型" class="headerlink" title="二级管电路模型"></a>二级管电路模型</h4>通常看做，P端正，N端负，硅管的管压降为0.7V，锗管的管压降为0.3V即可。</li></ol><p>2020.2.25</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;二极管的伏安特性–指数特性&quot;&gt;&lt;a href=&quot;#二极管的伏安特性–指数特性&quot; class=&quot;headerlink&quot; title=&quot;二极管的伏安特性–指数特性&quot;&gt;&lt;/a&gt;二极管的伏安特性–指数特性&lt;/h4&gt;&lt;p&gt;$$i_D=I_S(e^\cfrac{U_D}{U_T}-1)$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：其中 $I_S$ 为反向饱和电流，$U_T$为热电压，$U_D$为导通电压，$i_D$为正向导通电流&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ch4-2 P--N结</title>
     <link href="http://yoursite.com/2020/02/24/ch4-2%20P--N%E7%BB%93/"/>
     <id>http://yoursite.com/2020/02/24/ch4-2%20P--N%E7%BB%93/</id>
     <published>2020-02-24T08:51:42.623Z</published>
-    <updated>2020-02-24T11:28:46.332Z</updated>
+    <updated>2020-02-25T13:52:47.678Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol><li>PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN接</li><li>PN结的形成：由于两边载流子浓度差————&gt;多子扩散（N型半导体–自由电子，P型半导体–空穴）————&gt;交接处复合，显露出正负原子————形成内电场————&gt;阻碍多子扩散，利于少子漂移————&gt;动态平衡，形成PN结</li><li>中间形成电场的区域称为<strong><em>耗尽区或势垒区或阻挡区</em></strong>，在掺杂浓度不对称的PN结中，掺杂浓度大的地方延伸小，掺杂浓度小的地方，延伸大（因为两边正负电荷数量相等）<h4 id="PN结的导电特性"><a href="#PN结的导电特性" class="headerlink" title="PN结的导电特性"></a>PN结的导电特性</h4></li><li>正向偏置：外部添加P正，N负的电场，与内电场相互抵消，耗尽层变窄，则扩散作用加强，漂移运动减弱，（也就是说N结处的自由电子向浓度低的P结移动，空穴从P向N移动），因此形成正向电流（从P——&gt;N）<blockquote><p>注：电流方向是正电荷移动方向，与负电荷移动方向相反，因为在定义电流方向的时候，还没有发现电子……</p></blockquote></li><li>反向偏置：外部添加N正，P负的电场，产生与内部电场方向相同的电场，则耗尽区变宽，扩散运动减弱，漂移运动加强，反向电流很小（少子提供电流）</li><li>可以认为是（<strong><em>正偏—导通，反偏—截止</em></strong>）<h4 id="PN结的击穿特性"><a href="#PN结的击穿特性" class="headerlink" title="PN结的击穿特性"></a>PN结的击穿特性</h4></li><li>当反向电压超过反向截止电压的时候，反向电流会急剧增大，有两种机理</li><li>雪崩击穿：加反向电压，耗尽区变大，少子漂移时，被加速，动能过大，撞击共价键，使自由电子挣脱束缚，然后蝴蝶效应，一起被加速，到处撞击……反向电流变大</li><li>齐纳击穿：在重掺杂的PN结中，耗尽区很窄，所以较小的反向电压会产生很大的电场，一定的强度就可以将共价键中的价电子直接拉出，产生大量自由电子和空穴对，使反向电流急剧增大。<blockquote><p>一般而言，对于硅材料的PN结，截止电压 &gt; 7V为雪崩击穿，截止电压 &lt; 5V为齐纳击穿；截止电压在 5 ~ 7 V时，两种击穿都有。</p></blockquote></li></ol><blockquote><p>只要限制击穿后的电流，击穿并不损坏 PN 结（可逆性）</p></blockquote><h4 id="PN结的电容特性"><a href="#PN结的电容特性" class="headerlink" title="PN结的电容特性"></a>PN结的电容特性</h4><ol><li>PN结有电容特性，由势垒电容和扩散电容两部分组成</li><li>势垒电容：高阻的耗尽区，与平板电容器相似，正偏电压越大，容值越小<br>$$C_T=\cfrac{\epsilon S}{d}$$<blockquote><p>d 是耗尽区长度，S是耗尽区横截面积</p></blockquote></li><li>扩散电容：正向偏置的PN结，由于多子扩散，会有电容特性<br>$$C_D=\cfrac{\tau I}{U_T}$$<blockquote><p>$C_T$ 和 $C_D$ 都随外加电压的变化而变化，且都非线性，低频时可以忽略，高频时需要考虑……</p></blockquote></li></ol><p>2020.2.24</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol><li>PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN结<a id="more"></a></li><li>PN结的形成：由于两边载流子浓度差————&gt;多子扩散（N型半导体–自由电子，P型半导体–空穴）————&gt;交接处复合，显露出正负原子————形成内电场————&gt;阻碍多子扩散，利于少子漂移————&gt;动态平衡，形成PN结</li><li>中间形成电场的区域称为<strong><em>耗尽区或势垒区或阻挡区</em></strong>，在掺杂浓度不对称的PN结中，掺杂浓度大的地方延伸小，掺杂浓度小的地方，延伸大（因为两边正负电荷数量相等）<h4 id="PN结的导电特性"><a href="#PN结的导电特性" class="headerlink" title="PN结的导电特性"></a>PN结的导电特性</h4></li><li>正向偏置：外部添加P正，N负的电场，与内电场相互抵消，耗尽层变窄，则扩散作用加强，漂移运动减弱，（也就是说N结处的自由电子向浓度低的P结移动，空穴从P向N移动），因此形成正向电流（从P——&gt;N）<blockquote><p>注：电流方向是正电荷移动方向，与负电荷移动方向相反，因为在定义电流方向的时候，还没有发现电子……</p></blockquote></li><li>反向偏置：外部添加N正，P负的电场，产生与内部电场方向相同的电场，则耗尽区变宽，扩散运动减弱，漂移运动加强，反向电流很小（少子提供电流）</li><li>可以认为是（<strong><em>正偏—导通，反偏—截止</em></strong>）<h4 id="PN结的击穿特性"><a href="#PN结的击穿特性" class="headerlink" title="PN结的击穿特性"></a>PN结的击穿特性</h4></li><li>当反向电压超过反向截止电压的时候，反向电流会急剧增大，有两种机理</li><li>雪崩击穿：加反向电压，耗尽区变大，少子漂移时，被加速，动能过大，撞击共价键，使自由电子挣脱束缚，然后蝴蝶效应，一起被加速，到处撞击……反向电流变大</li><li>齐纳击穿：在重掺杂的PN结中，耗尽区很窄，所以较小的反向电压会产生很大的电场，一定的强度就可以将共价键中的价电子直接拉出，产生大量自由电子和空穴对，使反向电流急剧增大。<blockquote><p>一般而言，对于硅材料的PN结，截止电压 &gt; 7V为雪崩击穿，截止电压 &lt; 5V为齐纳击穿；截止电压在 5 ~ 7 V时，两种击穿都有。</p></blockquote></li></ol><blockquote><p>只要限制击穿后的电流，击穿并不损坏 PN 结（可逆性）</p></blockquote><h4 id="PN结的电容特性"><a href="#PN结的电容特性" class="headerlink" title="PN结的电容特性"></a>PN结的电容特性</h4><ol><li>PN结有电容特性，由势垒电容和扩散电容两部分组成</li><li>势垒电容：高阻的耗尽区，与平板电容器相似，正偏电压越大，容值越小<br>$$C_T=\cfrac{\epsilon S}{d}$$<blockquote><p>d 是耗尽区长度，S是耗尽区横截面积</p></blockquote></li><li>扩散电容：正向偏置的PN结，由于多子扩散，会有电容特性<br>$$C_D=\cfrac{\tau I}{U_T}$$<blockquote><p>$C_T$ 和 $C_D$ 都随外加电压的变化而变化，且都非线性，低频时可以忽略，高频时需要考虑……</p></blockquote></li></ol><p>2020.2.24</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN接&lt;/li&gt;
-&lt;li&gt;PN结的形成
-      
+      &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN结
     
     </summary>
     
@@ -47,17 +142,14 @@
     <link href="http://yoursite.com/2020/02/24/ch4-1%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2020/02/24/ch4-1%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</id>
     <published>2020-02-24T06:15:33.978Z</published>
-    <updated>2020-02-24T08:51:38.029Z</updated>
+    <updated>2020-02-25T13:52:45.505Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol><li>物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）</li><li>本征半导体：纯净的硅和锗单晶体是本征半导体，硅和锗的最外层电子都是4个，则4个最外层电子又称作价电子（物理，化学性质主要取决于最外层电子）。</li><li>本征激发：价电子获得足够大的能力（即外界因素干扰），挣脱共价键的束缚，成为自由电子，产生了自由电子以及空穴，本征激发产生的空穴和自由电子的数目相等。</li><li>载流子：带负电的自由电子和带正电的空穴，都可以导电，统称为载流子。</li><li>复合：是激发的逆过程，即自由电子填入空穴，释放能量，从而消失一对载流子的过程</li><li>硅的温度温度性比锗要好，所以集成电路多用硅（因为硅的电子挣脱共价键的束缚需要的能力大于锗，硅1.21eV，锗0.78eV）<h4 id="N型半导体和P型半导体"><a href="#N型半导体和P型半导体" class="headerlink" title="N型半导体和P型半导体"></a>N型半导体和P型半导体</h4>由于本征半导体的导电能力比较弱，掺杂一些元素的原子可以提高半导体的导电能力，杂质半导体分为N型半导体和P型半导体。</li><li>N型半导体：在本征半导体中掺入5价原子，即N型半导体。提供自由电子（称为<strong><em>施主电离</em></strong>），其中多数载流子—自由电子，少数载流子—空穴，半导体仍然保持中性（自由电子为负，原子即表示正性，抵消）</li><li>多子：多数载流子，少子–少数载流子</li><li>少子浓度和温度关系很大，多子与温度关系不大</li><li>P型半导体：在本征半导体中掺入3价原子，即P型半导体。提供空穴（称为<strong><em>受主电离</em></strong>），其中多数载流子—空穴，少数载流子—自由电子，半导体仍然保持中性（空穴显正性，原子显负，抵消）<h4 id="漂移电流和扩散电流"><a href="#漂移电流和扩散电流" class="headerlink" title="漂移电流和扩散电流"></a>漂移电流和扩散电流</h4></li><li>半导体电流：即自由电子形成的电流加上空穴形成的电流。</li><li>漂移电流：在电场的作用下，自由电子逆电场方向漂移，空穴顺着电场方向漂移，这样产生的电流称为漂移电流（受到<strong><em>载流子浓度，迁移率，电场强度</em></strong>的影响）</li><li>迁移率：单位电场的作用下，自由电子的移动速度比空穴快</li><li>扩散电流：半导体中浓度不均匀分布的时候，载流子会从高浓度区域向低浓度区域扩散，从而形成扩散电流，（受到<strong><em>载流子的浓度差或者叫浓度梯度</em></strong>的影响）</li></ol><p>2020.2.24</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol><li>物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）<a id="more"></a></li><li>本征半导体：纯净的硅和锗单晶体是本征半导体，硅和锗的最外层电子都是4个，则4个最外层电子又称作价电子（物理，化学性质主要取决于最外层电子）。</li><li>本征激发：价电子获得足够大的能力（即外界因素干扰），挣脱共价键的束缚，成为自由电子，产生了自由电子以及空穴，本征激发产生的空穴和自由电子的数目相等。</li><li>载流子：带负电的自由电子和带正电的空穴，都可以导电，统称为载流子。</li><li>复合：是激发的逆过程，即自由电子填入空穴，释放能量，从而消失一对载流子的过程</li><li>硅的温度温度性比锗要好，所以集成电路多用硅（因为硅的电子挣脱共价键的束缚需要的能力大于锗，硅1.21eV，锗0.78eV）<h4 id="N型半导体和P型半导体"><a href="#N型半导体和P型半导体" class="headerlink" title="N型半导体和P型半导体"></a>N型半导体和P型半导体</h4>由于本征半导体的导电能力比较弱，掺杂一些元素的原子可以提高半导体的导电能力，杂质半导体分为N型半导体和P型半导体。</li><li>N型半导体：在本征半导体中掺入5价原子，即N型半导体。提供自由电子（称为<strong><em>施主电离</em></strong>），其中多数载流子—自由电子，少数载流子—空穴，半导体仍然保持中性（自由电子为负，原子即表示正性，抵消）</li><li>多子：多数载流子，少子–少数载流子</li><li>少子浓度和温度关系很大，多子与温度关系不大</li><li>P型半导体：在本征半导体中掺入3价原子，即P型半导体。提供空穴（称为<strong><em>受主电离</em></strong>），其中多数载流子—空穴，少数载流子—自由电子，半导体仍然保持中性（空穴显正性，原子显负，抵消）<h4 id="漂移电流和扩散电流"><a href="#漂移电流和扩散电流" class="headerlink" title="漂移电流和扩散电流"></a>漂移电流和扩散电流</h4></li><li>半导体电流：即自由电子形成的电流加上空穴形成的电流。</li><li>漂移电流：在电场的作用下，自由电子逆电场方向漂移，空穴顺着电场方向漂移，这样产生的电流称为漂移电流（受到<strong><em>载流子浓度，迁移率，电场强度</em></strong>的影响）</li><li>迁移率：单位电场的作用下，自由电子的移动速度比空穴快</li><li>扩散电流：半导体中浓度不均匀分布的时候，载流子会从高浓度区域向低浓度区域扩散，从而形成扩散电流，（受到<strong><em>载流子的浓度差或者叫浓度梯度</em></strong>的影响）</li></ol><p>2020.2.24</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）&lt;/
-      
+      &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）
     
     </summary>
     
