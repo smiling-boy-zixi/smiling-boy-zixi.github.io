@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-27T07:33:34.937Z</updated>
+  <updated>2020-03-10T08:33:50.825Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,95 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ch4-10 MOS场效应管的工作原理和特性参数</title>
+    <link href="http://yoursite.com/2020/02/28/ch4-10%20MOS%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/"/>
+    <id>http://yoursite.com/2020/02/28/ch4-10%20MOS%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/</id>
+    <published>2020-02-28T08:27:34.810Z</published>
+    <updated>2020-03-10T08:33:50.825Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol><li>绝缘栅场效应管由金属-氧化物-半导体构成(Metal-Oxide-Semiconductor),简称MOSFET(MOS管)<a id="more"></a></li><li>结构：栅极有二氧化硅(绝缘材料)和下方衬底隔开，所以栅极电流为0，</li><li>MOS管类型和符号：<br><img src="https://img-blog.csdn.net/20180302103833471" alt=""><blockquote><p>注:MOS管分为增强型和耗尽型，右侧竖线表示导电沟道，平时增强型MOS管导电沟道断开，而耗尽型平时导电沟道是接通的。其中箭头表示PN结的方向.N沟道表示导电沟道为N型，P沟道同上。</p></blockquote><h4 id="导通原理"><a href="#导通原理" class="headerlink" title="导通原理"></a>导通原理</h4><h5 id="栅源电压Ugs对导电沟道的作用"><a href="#栅源电压Ugs对导电沟道的作用" class="headerlink" title="栅源电压Ugs对导电沟道的作用"></a>栅源电压Ugs对导电沟道的作用</h5>通常衬底和栅极连接，通过施加栅源电压，产生纵向的电子和空穴的移动，当形成导电沟道时的栅源电压称为开启电压，通过对栅源电压的控制可以使沟道均匀的变宽窄<h5 id="漏源电压Uds对导电沟道的控制作用"><a href="#漏源电压Uds对导电沟道的控制作用" class="headerlink" title="漏源电压Uds对导电沟道的控制作用"></a>漏源电压Uds对导电沟道的控制作用</h5>当栅源电压大于开启电压的时候(导电沟道形成)，改变漏源电压可以使沟道不均匀变窄，直到预夹断为止(预夹断还是在电场的作用下有电流产生)<h4 id="增强型MOS管伏安特性曲线"><a href="#增强型MOS管伏安特性曲线" class="headerlink" title="增强型MOS管伏安特性曲线"></a>增强型MOS管伏安特性曲线</h4>由于栅极无电流，所以无输入特性曲线<h5 id="输出特性曲线"><a href="#输出特性曲线" class="headerlink" title="输出特性曲线"></a>输出特性曲线</h5>$$I_D=f(Uds)$$<br>和结型场效应管相似，图的话看书吧<h5 id="转移特性"><a href="#转移特性" class="headerlink" title="转移特性"></a>转移特性</h5>$$I_D=f(Ugs)$$<br>i和Ugs成平方性的关系<blockquote><p>公式比较长，这里不写了，复习的话看书吧</p></blockquote></li></ol><p>平方率关系方程中，和沟道长宽，电子迁移速率，以及单位面积栅极电容有关系<br>(<strong><em>和电容有什么关系呢?</em></strong>)<br>Ugs越大，Rds越小(Ugs越大，沟道越宽，阻值自然就小了)</p><h4 id="耗尽型MOS管伏安特性曲线"><a href="#耗尽型MOS管伏安特性曲线" class="headerlink" title="耗尽型MOS管伏安特性曲线"></a>耗尽型MOS管伏安特性曲线</h4><p>由于耗尽型MOS管本身就有导电沟道，所以，有反向电压截止，其他区别不大，复习看书吧<br>(输出特性+转移特性)</p><p>2020.3.10</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;绝缘栅场效应管由金属-氧化物-半导体构成(Metal-Oxide-Semiconductor),简称MOSFET(MOS管)
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch4-9 结型场效应管的工作原理和特性参数</title>
+    <link href="http://yoursite.com/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/"/>
+    <id>http://yoursite.com/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/</id>
+    <published>2020-02-28T08:26:22.009Z</published>
+    <updated>2020-03-10T08:33:54.664Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="JFET基本概念"><a href="#JFET基本概念" class="headerlink" title="JFET基本概念"></a>JFET基本概念</h3><ol><li>结型场效应管(Junction field effect tube —— JFET)，栅极(Grid)，漏极(Drain)，源极(Source)</li><li>结构：长方体两侧连接栅极，中间沟道连接漏极和源极<a id="more"></a></li><li>N沟道JFET：中间的沟道材料为N型材料，两侧是P型材料。符号上是G——&gt;S，箭头代表P——&gt;N(材料)</li><li>P沟道JFET：中间的沟道材料为P型材料，两侧是N型材料。符号上是G&lt;——S，箭头代表P——&gt;N(材料)<h4 id="JFET基本控制原理"><a href="#JFET基本控制原理" class="headerlink" title="JFET基本控制原理"></a>JFET基本控制原理</h4>$$I_D=\cfrac{Uds}{Rds}$$<br>$$Rds=\rho \cfrac{L}{S}$$<blockquote><p>沟道越长，阻力越大，横截面积越大，阻力越小。</p></blockquote></li></ol><p>PN结反偏，栅极无电流，栅极电压控制导电沟道宽度，漏极电流为多子漂移电流。比如D+，S-，电子从S——&gt;D，就是从D——&gt;S的电流了。</p><h4 id="JFET的工作原理"><a href="#JFET的工作原理" class="headerlink" title="JFET的工作原理"></a>JFET的工作原理</h4><h5 id="栅源电压对导电沟道的控制"><a href="#栅源电压对导电沟道的控制" class="headerlink" title="栅源电压对导电沟道的控制"></a>栅源电压对导电沟道的控制</h5><p>栅源电压控制中间沟道的宽窄，当沟道宽度为0时，称为( <strong><em>夹断电压</em></strong> )</p><blockquote><p>比如说，栅源电压反相增大，PN结变宽，那沟道就变窄了</p></blockquote><h5 id="漏源电压对导电沟道的控制"><a href="#漏源电压对导电沟道的控制" class="headerlink" title="漏源电压对导电沟道的控制"></a>漏源电压对导电沟道的控制</h5><p>当漏源电压增大会改变沟道靠近正端的宽窄(因为电压高的话，反偏程度更大一点)，当沟道在漏端被夹断的时候称为( <strong><em>预夹断</em></strong> )</p><blockquote><p>预夹断之后还是可以导电，因为沟道还导通大部分，在最后一小部分，尽管被夹断，但是由于电场的作用电子还是会流通。</p></blockquote><h3 id="JFET的特性曲线"><a href="#JFET的特性曲线" class="headerlink" title="JFET的特性曲线"></a>JFET的特性曲线</h3><p>以共源极为例，由于PN结反偏，所以栅极输入端无电流，无输入特性曲线</p><h4 id="输出特性"><a href="#输出特性" class="headerlink" title="输出特性"></a>输出特性</h4><p>$$Id=F(Uds)$$</p><p><img src="https://www.dgzj.com/uploads/allimg/180320/1ZJ423L-1.jpg" alt=""></p><blockquote><p>nice啊，这张图看的很清楚</p></blockquote><h5 id="恒流区"><a href="#恒流区" class="headerlink" title="恒流区"></a>恒流区</h5><ol><li>条件：<br>$$Ugs&gt;Ugsoff$$<br>$$Uds&gt;=Ugs - Ugsoff$$<blockquote><p>就是使沟道处在预夹断状态和但没有完全夹断</p></blockquote></li><li>特点：<br>$Uds$增大时，$i_D$也会变大一点，因为长度变小，阻值变小，所以电流变大一点，因为增大很小所以可以看做恒流。<h5 id="可变电阻区"><a href="#可变电阻区" class="headerlink" title="可变电阻区"></a>可变电阻区</h5></li><li>条件：<br>$$Ugs&gt;Ugsoff$$<br>$$Uds&lt;Ugs - Ugsoff$$</li><li>特点<blockquote><p>处于预夹断状态之前，Ugs增大，电流id会近似线性增大，变化的斜率受到栅源电压的控制，等效为漏极和源极直接接了一个电阻</p></blockquote></li></ol><blockquote><p>实际上这个电阻是沟道的阻值</p></blockquote><h5 id="截止区"><a href="#截止区" class="headerlink" title="截止区"></a>截止区</h5><ol><li>条件：<br>$$Ugs&lt;=Ugsoff$$ <blockquote><p>就是使沟道完全夹断</p></blockquote></li><li>特点：<blockquote><p>沟道夹断，漏极和源极之间断开</p></blockquote><h5 id="击穿区"><a href="#击穿区" class="headerlink" title="击穿区"></a>击穿区</h5>$Uds$大到一定程度就会击穿，实际中要避免这个情况<h4 id="转移特性"><a href="#转移特性" class="headerlink" title="转移特性"></a>转移特性</h4>$$Id=F(Ugs)$$</li></ol><blockquote><p>和上图相似，两者成平方性的关系</p></blockquote><p>2020.3.6</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;JFET基本概念&quot;&gt;&lt;a href=&quot;#JFET基本概念&quot; class=&quot;headerlink&quot; title=&quot;JFET基本概念&quot;&gt;&lt;/a&gt;JFET基本概念&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;结型场效应管(Junction field effect tube —— JFET)，栅极(Grid)，漏极(Drain)，源极(Source)&lt;/li&gt;
+&lt;li&gt;结构：长方体两侧连接栅极，中间沟道连接漏极和源极
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch4-8 双极型晶体管极限参数和工作状态判别举例</title>
+    <link href="http://yoursite.com/2020/02/27/ch4-8%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E6%9E%81%E9%99%90%E5%8F%82%E6%95%B0%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%88%A4%E5%88%AB%E4%B8%BE%E4%BE%8B/"/>
+    <id>http://yoursite.com/2020/02/27/ch4-8%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E6%9E%81%E9%99%90%E5%8F%82%E6%95%B0%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%88%A4%E5%88%AB%E4%B8%BE%E4%BE%8B/</id>
+    <published>2020-02-27T07:50:32.149Z</published>
+    <updated>2020-02-28T08:25:27.993Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="晶体管的极限参数"><a href="#晶体管的极限参数" class="headerlink" title="晶体管的极限参数"></a>晶体管的极限参数</h4><ol><li>击穿电压：因为有三个极，所以有三个反向击穿电压。</li><li>集电极最大允许电流$Icm$：随着$I_C$的增大，$\beta$会减小，当$\beta_0=\cfrac{2}{3}\beta$时候的电流称作$Icm$(最大允许电流)，集电极电流超过此值的时候，放大倍数会减小(因为$\beta$明显减小)<a id="more"></a></li><li>集电极最大允许耗散功率$Pcm$:当管子超过该功率的时候，会性能下降或者被烧坏<br>$$P_C=I_C*Uce$$</li><li>在上述的三个限制条件下，即是晶体三极管的安全工作区，使用管子的时候，尽量在此安全工作区下使用<h4 id="温度对晶体管参数的影响"><a href="#温度对晶体管参数的影响" class="headerlink" title="温度对晶体管参数的影响"></a>温度对晶体管参数的影响</h4>温度升高，$Ube$减小，$Icbo$增大，$\beta$增大，在输出特性曲线表示为，温度升高，曲线上移的间隔变大<h4 id="典型题目"><a href="#典型题目" class="headerlink" title="典型题目"></a>典型题目</h4></li><li>判断晶体管工作状态<blockquote><p>看两极是正偏还是反偏</p></blockquote></li><li>晶体管在放大状态下，判别管型和电机<blockquote><p>规律：<strong>NPN管：电流从e极流出，从b,c极流入；PNP管：电流从e极流入，从b,c极流出</strong></p></blockquote></li><li>根据晶体管的电位判别电极，管型和材料<blockquote><p>规律：<strong>e结电压为0.7V–硅管，0.3V–锗管；c极电位最高，e极电位最低，则为NPN管；e极电位最高，c极电位最低，则为PNP管；</strong></p></blockquote></li></ol><p>2020.2.28</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;晶体管的极限参数&quot;&gt;&lt;a href=&quot;#晶体管的极限参数&quot; class=&quot;headerlink&quot; title=&quot;晶体管的极限参数&quot;&gt;&lt;/a&gt;晶体管的极限参数&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;击穿电压：因为有三个极，所以有三个反向击穿电压。&lt;/li&gt;
+&lt;li&gt;集电极最大允许电流$Icm$：随着$I_C$的增大，$\beta$会减小，当$\beta_0=\cfrac{2}{3}\beta$时候的电流称作$Icm$(最大允许电流)，集电极电流超过此值的时候，放大倍数会减小(因为$\beta$明显减小)
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch4-7 双极型晶体管特性曲线</title>
+    <link href="http://yoursite.com/2020/02/27/ch4-7%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF/"/>
+    <id>http://yoursite.com/2020/02/27/ch4-7%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF/</id>
+    <published>2020-02-27T07:49:34.709Z</published>
+    <updated>2020-02-28T06:30:34.428Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="共发射极输出特性曲线–输出电流和输出电压的关系"><a href="#共发射极输出特性曲线–输出电流和输出电压的关系" class="headerlink" title="共发射极输出特性曲线–输出电流和输出电压的关系"></a>共发射极输出特性曲线–输出电流和输出电压的关系</h4><a id="more"></a><p><img src="https://player.slidesplayer.com/101/17390235/slides/slide_2.jpg" alt=""></p><blockquote><p>如上图所示，输出特性曲线分成，放大区，截止区，饱和区。</p></blockquote><h5 id="放大区"><a href="#放大区" class="headerlink" title="放大区"></a>放大区</h5><blockquote><p>条件：e结正偏( $I_B&gt;0$ )，c结反偏（ $Uce&gt;=Ube$ ）</p></blockquote><p>特点：</p><ol><li>由图可见$I_B$对$I_C$有很强的控制力，当 $I_B$ 变化一点的时候，$I_C$就会有比较大的变化量,因此我们定义了共发射极交流电流放大倍数：<br>$$\beta=\cfrac{\Delta I_C}{\Delta I_B}$$<blockquote><p>当$Uce$为常数时候，上式成立。在特性曲线上反映是两条不同的$I_B$之间的间隔</p></blockquote></li><li>$Uce$ 对 $I_C$ 的影响很小，<strong><em>$I_C$略有上升，末尾不是平的，还是向上倾斜的。</em></strong><blockquote><p>原因：基区宽度调制效应，当 $Uce$ 变大后，集电区PN结的内电场变宽，所以基区变窄，基区复合的电流会少一点，但是由于 $I_B$ 不变，复合的电流很少</p></blockquote><h5 id="饱和区"><a href="#饱和区" class="headerlink" title="饱和区"></a>饱和区</h5><blockquote><p>条件：e结正偏，c结正偏，( Uce&lt; Ube) 即临界饱和线的左侧</p></blockquote></li></ol><p>特点：</p><ol><li>$I_C$不受到$I_B$的控制</li><li>$Uce$一定而$I_B$增大时，$I_C$基本不变，因此$\beta$趋近于0</li><li>$I_B$一定时，$I_C$的数值比放大时小<h5 id="截止区"><a href="#截止区" class="headerlink" title="截止区"></a>截止区</h5><blockquote><p>条件：e结和c结均处于反偏</p></blockquote></li></ol><p>特点：</p><ol><li>三个电极上的电流均为反向电流，即极间开路<blockquote><p>当$I_B=0$时，$I_C=Iceo$，小功率管$Iceo$很小，可以视$I_C=0$，当大功率管时，$Iceo$很大，则必须保证e结反偏</p></blockquote><h4 id="共发射极输入特性曲线–输入电流和输入电压的关系"><a href="#共发射极输入特性曲线–输入电流和输入电压的关系" class="headerlink" title="共发射极输入特性曲线–输入电流和输入电压的关系"></a>共发射极输入特性曲线–输入电流和输入电压的关系</h4><blockquote><p>随着$Uce$的增大，$I_B$也增大，类似二极管特性曲线，当$Ube&lt;0$时，晶体管截止，超过某值，e结也会反向击穿。</p></blockquote></li></ol><blockquote><p>同样有死区电压，硅管：$Ube:$ 0.6–0.7V,锗管$Ube:$ 0.1–0.3V</p></blockquote><h4 id="转移特性（输出电流-I-C-和输入电压-Ube-的关系）"><a href="#转移特性（输出电流-I-C-和输入电压-Ube-的关系）" class="headerlink" title="转移特性（输出电流$I_C$和输入电压$Ube$的关系）"></a>转移特性（输出电流$I_C$和输入电压$Ube$的关系）</h4><p><img src="https://player.slidesplayer.com/101/17390235/slides/slide_8.jpg" alt=""></p><p>2020.2.28</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;共发射极输出特性曲线–输出电流和输出电压的关系&quot;&gt;&lt;a href=&quot;#共发射极输出特性曲线–输出电流和输出电压的关系&quot; class=&quot;headerlink&quot; title=&quot;共发射极输出特性曲线–输出电流和输出电压的关系&quot;&gt;&lt;/a&gt;共发射极输出特性曲线–输出电流和输出电压的关系&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>ResNet-18</title>
@@ -392,91 +481,6 @@
     
     
       <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Git远程管理Github仓库&amp;遇到的问题</title>
-    <link href="http://yoursite.com/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&amp;%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&amp;%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</id>
-    <published>2020-02-16T12:43:29.958Z</published>
-    <updated>2020-02-21T14:17:02.534Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。</p><a id="more"></a><h3 id="git上传代码流程"><a href="#git上传代码流程" class="headerlink" title="git上传代码流程"></a>git上传代码流程</h3><ol><li>$ git clone<br>将github上download处的https地址复制，在电脑本地创建git.文件夹。</li><li>$ git add.<br>将本地文件保存到暂存区</li><li>$ git commit -m<br>文件提交到本地仓库</li><li>$ git push<br>将文件上传到远程仓库</li><li>$ git pull<br>拉取/同步远程仓库的代码到本地，<br>每次开始开发和提交前都要记得pull一下，以免提交发生冲突。<h3 id="git上传遇到的问题"><a href="#git上传遇到的问题" class="headerlink" title="git上传遇到的问题"></a>git上传遇到的问题</h3><h4 id="1-The-remote-end-hung-up-unexpectedly"><a href="#1-The-remote-end-hung-up-unexpectedly" class="headerlink" title="1.The remote end hung up unexpectedly"></a>1.The remote end hung up unexpectedly</h4>这个挺头疼的，在Stack Overflow上面找了几种方法，有人说的网络的问题，有人说是暂缓区不足，有人说是网络的问题，也有说关掉防火墙和杀毒软件会OK，还去调节参数。。。因为时间的原因，我暂时还没有试过每一种方法，目前尝试的几种方法是不成功的。git push完后会等待很长时间然后报错，/呜呜呜。。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>icarus 美化主题的坑</title>
-    <link href="http://yoursite.com/2020/02/15/icarus%20%E7%BE%8E%E5%8C%96%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9D%91/"/>
-    <id>http://yoursite.com/2020/02/15/icarus%20%E7%BE%8E%E5%8C%96%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9D%91/</id>
-    <published>2020-02-15T15:06:21.072Z</published>
-    <updated>2020-02-21T14:14:11.026Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>很羡慕别人做的很精美，简约大方的博客，所以自己也开始捣鼓，在Google和百度上找方法，但有些方法在自己这里不成功，下面我自己总结一下这些坑。</p><a id="more"></a><h3 id="1-鼠标点击爱心效果"><a href="#1-鼠标点击爱心效果" class="headerlink" title="1.鼠标点击爱心效果"></a>1.鼠标点击爱心效果</h3><p>看了几篇文章，都说是在/themes/icarus/sourse/js/src中添加click.js文件，然后复制代码，实际上没有最后的src文件，在/themes/icarus/sourse/js里添加即可。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;很羡慕别人做的很精美，简约大方的博客，所以自己也开始捣鼓，在Google和百度上找方法，但有些方法在自己这里不成功，下面我自己总结一下这些坑。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 操作注意</title>
-    <link href="http://yoursite.com/2020/02/15/hexo%20%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F/"/>
-    <id>http://yoursite.com/2020/02/15/hexo%20%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F/</id>
-    <published>2020-02-15T09:37:01.435Z</published>
-    <updated>2020-02-21T14:14:04.261Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文针对自己使用hexo中遇到的问题进行总结</p><h3 id="1-instal安装超时，ERROR"><a href="#1-instal安装超时，ERROR" class="headerlink" title="1 instal安装超时，ERROR"></a>1 instal安装超时，ERROR</h3><p>这个用国内的淘宝镜像源进行安装，在安装过cnpm基础之上，每次将命令中的npm修改成cnpm即可。</p><a id="more"></a><h3 id="2-hexo-d-ERROR"><a href="#2-hexo-d-ERROR" class="headerlink" title="2 hexo d ERROR"></a>2 hexo d ERROR</h3><p>hexo d命令报错 ERROR Deployer not found：git<br>这个是因为没有安装hexo-deployer-git插件，安装即可，命令如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h3 id="3-hexo-常用指令"><a href="#3-hexo-常用指令" class="headerlink" title="3 hexo 常用指令"></a>3 hexo 常用指令</h3><p>hexo g ：generate 重新生成改动文件<br>hexo clean ：清除缓存文件和已经生成的静态文件（在更换主题时需要）<br>hexo s：server （也可以理解start）启动本地服务器<br>hexo d：deploy 部署网站（上传远程仓库）</p><h3 id="4-hexo-d-ERROR-Timeout"><a href="#4-hexo-d-ERROR-Timeout" class="headerlink" title="4 hexo d ERROR Timeout"></a>4 hexo d ERROR Timeout</h3><p>上传失败，发现是网络问题，发现如果科学上网的话是没有出现过ERROR Timeout的情况</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;本文针对自己使用hexo中遇到的问题进行总结&lt;/p&gt;
-&lt;h3 id=&quot;1-instal安装超时，ERROR&quot;&gt;&lt;a href=&quot;#1-instal安装超时，ERROR&quot; class=&quot;headerlink&quot; title=&quot;1 instal安装超时，ERROR&quot;&gt;&lt;/a&gt;1 instal安装超时，ERROR&lt;/h3&gt;&lt;p&gt;这个用国内的淘宝镜像源进行安装，在安装过cnpm基础之上，每次将命令中的npm修改成cnpm即可。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CNN经典网络Lenet5</title>
-    <link href="http://yoursite.com/2020/02/14/CNN%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9CLenet5/"/>
-    <id>http://yoursite.com/2020/02/14/CNN%E7%BB%8F%E5%85%B8%E7%BD%91%E7%BB%9CLenet5/</id>
-    <published>2020-02-14T13:10:29.088Z</published>
-    <updated>2020-02-27T03:54:24.583Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。</p><h3 id="网络分析"><a href="#网络分析" class="headerlink" title="网络分析"></a>网络分析</h3><p><img src="https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="LeNet5"></p><p>Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。</p><a id="more"></a><h4 id="LeNet-5第一层：卷积层C1"><a href="#LeNet-5第一层：卷积层C1" class="headerlink" title="LeNet-5第一层：卷积层C1"></a>LeNet-5第一层：卷积层C1</h4><p>C1层是卷积层，形成6个特征图谱。卷积的输入区域大小是5x5，每个特征图谱内参数共享，即每个特征图谱内只使用一个共同卷积核，卷积核有5x5个连接参数加上1个偏置共26个参数。卷积区域每次滑动一个像素，这样卷积层形成的每个特征图谱大小是(32-5)/1+1=28x28。C1层共有26x6=156个训练参数，有(5x5+1)x28x28x6=122304个连接。C1层的连接结构如下所示。</p><p><img src="https://img-blog.csdn.net/20171018154917808?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第二层：池化层S2"><a href="#LeNet-5第二层：池化层S2" class="headerlink" title="LeNet-5第二层：池化层S2"></a>LeNet-5第二层：池化层S2</h4><p>S2层是一个下采样层（为什么是下采样？利用图像局部相关性的原理，对图像进行子抽样，可以减少数据处理量同时保留有用信息）。C1层的6个28x28的特征图谱分别进行以2x2为单位的下抽样得到6个14x14（（28-2）/2+1）的图。每个特征图谱使用一个下抽样核。5x14x14x6=5880个连接。S2层的网络连接结构如下图</p><p><img src="https://img-blog.csdn.net/20171018155110551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第三层：卷积层C3"><a href="#LeNet-5第三层：卷积层C3" class="headerlink" title="LeNet-5第三层：卷积层C3"></a>LeNet-5第三层：卷积层C3</h4><p>C3层是一个卷积层，卷积和和C1相同，不同的是C3的每个节点与S2中的多个图相连。C3层有16个10x10（14-5+1）的图，每个图与S2层的连接的方式如下表 所示。C3与S2中前3个图相连的卷积结构见下图.这种不对称的组合连接的方式有利于提取多种组合特征。该层有(5x5x3+1)x6 + (5x5x4 + 1) x 3 + (5x5x4 +1)x6 + (5x5x6+1)x1 = 1516个训练参数，共有1516x10x10=151600个连接。</p><p><img src="https://img-blog.csdn.net/20171018155242912?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第四层：池化层S4"><a href="#LeNet-5第四层：池化层S4" class="headerlink" title="LeNet-5第四层：池化层S4"></a>LeNet-5第四层：池化层S4</h4><p>S4是一个下采样层。C3层的16个10x10的图分别进行以2x2为单位的下抽样得到16个5x5的图。5x5x5x16=2000个连接。连接的方式与S2层类似，如下所示。<br><img src="https://img-blog.csdn.net/20171018155446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第五层：全连接层C5"><a href="#LeNet-5第五层：全连接层C5" class="headerlink" title="LeNet-5第五层：全连接层C5"></a>LeNet-5第五层：全连接层C5</h4><p>C5层是一个全连接层。由于S4层的16个图的大小为5x5，与卷积核的大小相同，所以卷积后形成的图的大小为1x1。这里形成120个卷积结果。每个都与上一层的16个图相连。所以共有(5x5x16+1)x120 = 48120个参数，同样有48120个连接。C5层的网络结构如下所示。<br><img src="https://img-blog.csdn.net/20171018155558086?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第六层：全连接层F6"><a href="#LeNet-5第六层：全连接层F6" class="headerlink" title="LeNet-5第六层：全连接层F6"></a>LeNet-5第六层：全连接层F6</h4><p>F6层是全连接层。F6层有84个节点，对应于一个7x12的比特图，该层的训练参数和连接数都是(120 + 1)x84=10164.<br><img src="https://img-blog.csdn.net/20171018155923735?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h4 id="LeNet-5第七层：全连接层Output"><a href="#LeNet-5第七层：全连接层Output" class="headerlink" title="LeNet-5第七层：全连接层Output"></a>LeNet-5第七层：全连接层Output</h4><p>略<br><img src="https://img-blog.csdn.net/20171018160214082?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>1.<a href="https://blog.csdn.net/happyorg/article/details/78274066">https://blog.csdn.net/happyorg/article/details/78274066</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;在跟着老师学习写第一个CNN（卷积神经网络）的时候，很多地方感到困惑，对此，我决定把卷积神经网络中的经典案例进行简单的分析，这个是1998年LeCun所提出的LeNet 5，是卷积神经网络的鼻祖，也是卷积神经网络的“Hello，world”。&lt;/p&gt;
-&lt;h3 id=&quot;网络分析&quot;&gt;&lt;a href=&quot;#网络分析&quot; class=&quot;headerlink&quot; title=&quot;网络分析&quot;&gt;&lt;/a&gt;网络分析&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://img-blog.csdn.net/20171018154341615?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaGFwcHlvcmc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast&quot; alt=&quot;LeNet5&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Lenet 5 一共有2个卷积层，2个池化层，3个全连接层。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="machine learning" scheme="http://yoursite.com/categories/machine-learning/"/>
     
     
   </entry>

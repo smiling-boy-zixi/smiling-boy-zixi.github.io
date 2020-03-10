@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch4-1 半导体物理基础 - 仰望星空</title>
+<title>ch4-9 结型场效应管的工作原理和特性参数 - 仰望星空</title>
 
 
-    <meta name="description" content="基本概念 物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）">
+    <meta name="description" content="JFET基本概念 结型场效应管(Junction field effect tube —— JFET)，栅极(Grid)，漏极(Drain)，源极(Source) 结构：长方体两侧连接栅极，中间沟道连接漏极和源极">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch4-1 半导体物理基础">
-<meta property="og:url" content="http://yoursite.com/2020/02/24/ch4-1%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="ch4-9 结型场效应管的工作原理和特性参数">
+<meta property="og:url" content="http://yoursite.com/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="基本概念 物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）">
+<meta property="og:description" content="JFET基本概念 结型场效应管(Junction field effect tube —— JFET)，栅极(Grid)，漏极(Drain)，源极(Source) 结构：长方体两侧连接栅极，中间沟道连接漏极和源极">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-24T06:15:33.978Z">
-<meta property="article:modified_time" content="2020-02-25T13:52:45.505Z">
+<meta property="article:published_time" content="2020-02-28T08:26:22.009Z">
+<meta property="article:modified_time" content="2020-03-10T08:33:54.664Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch4-1 半导体物理基础" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch4-9 结型场效应管的工作原理和特性参数" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch4-1 半导体物理基础" height="28">
+                <img src="/images/logo_2.png" alt="ch4-9 结型场效应管的工作原理和特性参数" height="28">
             
             </a>
         </div>
@@ -143,7 +143,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-24T06:15:33.978Z">2020-02-24</time>
+                <time class="level-item has-text-grey" datetime="2020-02-28T08:26:22.009Z">2020-02-28</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 800 个字)
+                    5 分钟 读完 (大约 746 个字)
                 </span>
                 
                 
@@ -162,27 +162,63 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch4-1 半导体物理基础
+                ch4-9 结型场效应管的工作原理和特性参数
             
         </h1>
         <div class="content">
-            <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
-<li>物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）<a id="more"></a></li>
-<li>本征半导体：纯净的硅和锗单晶体是本征半导体，硅和锗的最外层电子都是4个，则4个最外层电子又称作价电子（物理，化学性质主要取决于最外层电子）。</li>
-<li>本征激发：价电子获得足够大的能力（即外界因素干扰），挣脱共价键的束缚，成为自由电子，产生了自由电子以及空穴，本征激发产生的空穴和自由电子的数目相等。</li>
-<li>载流子：带负电的自由电子和带正电的空穴，都可以导电，统称为载流子。</li>
-<li>复合：是激发的逆过程，即自由电子填入空穴，释放能量，从而消失一对载流子的过程</li>
-<li>硅的温度温度性比锗要好，所以集成电路多用硅（因为硅的电子挣脱共价键的束缚需要的能力大于锗，硅1.21eV，锗0.78eV）<h4 id="N型半导体和P型半导体"><a href="#N型半导体和P型半导体" class="headerlink" title="N型半导体和P型半导体"></a>N型半导体和P型半导体</h4>由于本征半导体的导电能力比较弱，掺杂一些元素的原子可以提高半导体的导电能力，杂质半导体分为N型半导体和P型半导体。</li>
-<li>N型半导体：在本征半导体中掺入5价原子，即N型半导体。提供自由电子（称为<strong><em>施主电离</em></strong>），其中多数载流子—自由电子，少数载流子—空穴，半导体仍然保持中性（自由电子为负，原子即表示正性，抵消）</li>
-<li>多子：多数载流子，少子–少数载流子</li>
-<li>少子浓度和温度关系很大，多子与温度关系不大</li>
-<li>P型半导体：在本征半导体中掺入3价原子，即P型半导体。提供空穴（称为<strong><em>受主电离</em></strong>），其中多数载流子—空穴，少数载流子—自由电子，半导体仍然保持中性（空穴显正性，原子显负，抵消）<h4 id="漂移电流和扩散电流"><a href="#漂移电流和扩散电流" class="headerlink" title="漂移电流和扩散电流"></a>漂移电流和扩散电流</h4></li>
-<li>半导体电流：即自由电子形成的电流加上空穴形成的电流。</li>
-<li>漂移电流：在电场的作用下，自由电子逆电场方向漂移，空穴顺着电场方向漂移，这样产生的电流称为漂移电流（受到<strong><em>载流子浓度，迁移率，电场强度</em></strong>的影响）</li>
-<li>迁移率：单位电场的作用下，自由电子的移动速度比空穴快</li>
-<li>扩散电流：半导体中浓度不均匀分布的时候，载流子会从高浓度区域向低浓度区域扩散，从而形成扩散电流，（受到<strong><em>载流子的浓度差或者叫浓度梯度</em></strong>的影响）</li>
+            <h3 id="JFET基本概念"><a href="#JFET基本概念" class="headerlink" title="JFET基本概念"></a>JFET基本概念</h3><ol>
+<li>结型场效应管(Junction field effect tube —— JFET)，栅极(Grid)，漏极(Drain)，源极(Source)</li>
+<li>结构：长方体两侧连接栅极，中间沟道连接漏极和源极<a id="more"></a></li>
+<li>N沟道JFET：中间的沟道材料为N型材料，两侧是P型材料。符号上是G——&gt;S，箭头代表P——&gt;N(材料)</li>
+<li>P沟道JFET：中间的沟道材料为P型材料，两侧是N型材料。符号上是G&lt;——S，箭头代表P——&gt;N(材料)<h4 id="JFET基本控制原理"><a href="#JFET基本控制原理" class="headerlink" title="JFET基本控制原理"></a>JFET基本控制原理</h4>$$I_D=\cfrac{Uds}{Rds}$$<br>$$Rds=\rho \cfrac{L}{S}$$<blockquote>
+<p>沟道越长，阻力越大，横截面积越大，阻力越小。</p>
+</blockquote>
+</li>
 </ol>
-<p>2020.2.24</p>
+<p>PN结反偏，栅极无电流，栅极电压控制导电沟道宽度，漏极电流为多子漂移电流。比如D+，S-，电子从S——&gt;D，就是从D——&gt;S的电流了。</p>
+<h4 id="JFET的工作原理"><a href="#JFET的工作原理" class="headerlink" title="JFET的工作原理"></a>JFET的工作原理</h4><h5 id="栅源电压对导电沟道的控制"><a href="#栅源电压对导电沟道的控制" class="headerlink" title="栅源电压对导电沟道的控制"></a>栅源电压对导电沟道的控制</h5><p>栅源电压控制中间沟道的宽窄，当沟道宽度为0时，称为( <strong><em>夹断电压</em></strong> )</p>
+<blockquote>
+<p>比如说，栅源电压反相增大，PN结变宽，那沟道就变窄了</p>
+</blockquote>
+<h5 id="漏源电压对导电沟道的控制"><a href="#漏源电压对导电沟道的控制" class="headerlink" title="漏源电压对导电沟道的控制"></a>漏源电压对导电沟道的控制</h5><p>当漏源电压增大会改变沟道靠近正端的宽窄(因为电压高的话，反偏程度更大一点)，当沟道在漏端被夹断的时候称为( <strong><em>预夹断</em></strong> )</p>
+<blockquote>
+<p>预夹断之后还是可以导电，因为沟道还导通大部分，在最后一小部分，尽管被夹断，但是由于电场的作用电子还是会流通。</p>
+</blockquote>
+<h3 id="JFET的特性曲线"><a href="#JFET的特性曲线" class="headerlink" title="JFET的特性曲线"></a>JFET的特性曲线</h3><p>以共源极为例，由于PN结反偏，所以栅极输入端无电流，无输入特性曲线</p>
+<h4 id="输出特性"><a href="#输出特性" class="headerlink" title="输出特性"></a>输出特性</h4><p>$$Id=F(Uds)$$</p>
+<p><img src="https://www.dgzj.com/uploads/allimg/180320/1ZJ423L-1.jpg" alt=""></p>
+<blockquote>
+<p>nice啊，这张图看的很清楚</p>
+</blockquote>
+<h5 id="恒流区"><a href="#恒流区" class="headerlink" title="恒流区"></a>恒流区</h5><ol>
+<li>条件：<br>$$Ugs&gt;Ugsoff$$<br>$$Uds&gt;=Ugs - Ugsoff$$<blockquote>
+<p>就是使沟道处在预夹断状态和但没有完全夹断</p>
+</blockquote>
+</li>
+<li>特点：<br>$Uds$增大时，$i_D$也会变大一点，因为长度变小，阻值变小，所以电流变大一点，因为增大很小所以可以看做恒流。<h5 id="可变电阻区"><a href="#可变电阻区" class="headerlink" title="可变电阻区"></a>可变电阻区</h5></li>
+<li>条件：<br>$$Ugs&gt;Ugsoff$$<br>$$Uds&lt;Ugs - Ugsoff$$</li>
+<li>特点<blockquote>
+<p>处于预夹断状态之前，Ugs增大，电流id会近似线性增大，变化的斜率受到栅源电压的控制，等效为漏极和源极直接接了一个电阻</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>实际上这个电阻是沟道的阻值</p>
+</blockquote>
+<h5 id="截止区"><a href="#截止区" class="headerlink" title="截止区"></a>截止区</h5><ol>
+<li>条件：<br>$$Ugs&lt;=Ugsoff$$ <blockquote>
+<p>就是使沟道完全夹断</p>
+</blockquote>
+</li>
+<li>特点：<blockquote>
+<p>沟道夹断，漏极和源极之间断开</p>
+</blockquote>
+<h5 id="击穿区"><a href="#击穿区" class="headerlink" title="击穿区"></a>击穿区</h5>$Uds$大到一定程度就会击穿，实际中要避免这个情况<h4 id="转移特性"><a href="#转移特性" class="headerlink" title="转移特性"></a>转移特性</h4>$$Id=F(Ugs)$$</li>
+</ol>
+<blockquote>
+<p>和上图相似，两者成平方性的关系</p>
+</blockquote>
+<p>2020.3.6</p>
 
         </div>
         
@@ -228,16 +264,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/24/ch4-2%20P--N%E7%BB%93/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/28/ch4-10%20MOS%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch4-2 P--N结</span>
+                <span class="level-item">ch4-10 MOS场效应管的工作原理和特性参数</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/">
-                <span class="level-item">ch2-6 微分器</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/27/ch4-8%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E6%9E%81%E9%99%90%E5%8F%82%E6%95%B0%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%88%A4%E5%88%AB%E4%B8%BE%E4%BE%8B/">
+                <span class="level-item">ch4-8 双极型晶体管极限参数和工作状态判别举例</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -373,18 +409,54 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#基本概念">
+        <a class="is-flex" href="#JFET基本概念">
         <span class="has-mr-6">1</span>
-        <span>基本概念</span>
+        <span>JFET基本概念</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#JFET基本控制原理">
+        <span class="has-mr-6">1.1</span>
+        <span>JFET基本控制原理</span>
         </a></li><li>
-        <a class="is-flex" href="#N型半导体和P型半导体">
+        <a class="is-flex" href="#JFET的工作原理">
+        <span class="has-mr-6">1.2</span>
+        <span>JFET的工作原理</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#栅源电压对导电沟道的控制">
+        <span class="has-mr-6">1.2.1</span>
+        <span>栅源电压对导电沟道的控制</span>
+        </a></li><li>
+        <a class="is-flex" href="#漏源电压对导电沟道的控制">
+        <span class="has-mr-6">1.2.2</span>
+        <span>漏源电压对导电沟道的控制</span>
+        </a></li></ul></li></ul></li><li>
+        <a class="is-flex" href="#JFET的特性曲线">
         <span class="has-mr-6">2</span>
-        <span>N型半导体和P型半导体</span>
+        <span>JFET的特性曲线</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#输出特性">
+        <span class="has-mr-6">2.1</span>
+        <span>输出特性</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#恒流区">
+        <span class="has-mr-6">2.1.1</span>
+        <span>恒流区</span>
         </a></li><li>
-        <a class="is-flex" href="#漂移电流和扩散电流">
-        <span class="has-mr-6">3</span>
-        <span>漂移电流和扩散电流</span>
-        </a></li></ul>
+        <a class="is-flex" href="#可变电阻区">
+        <span class="has-mr-6">2.1.2</span>
+        <span>可变电阻区</span>
+        </a></li><li>
+        <a class="is-flex" href="#截止区">
+        <span class="has-mr-6">2.1.3</span>
+        <span>截止区</span>
+        </a></li><li>
+        <a class="is-flex" href="#击穿区">
+        <span class="has-mr-6">2.1.4</span>
+        <span>击穿区</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#转移特性">
+        <span class="has-mr-6">2.2</span>
+        <span>转移特性</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -407,7 +479,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch4-1 半导体物理基础" height="28">
+                    <img src="/images/logo_2.png" alt="ch4-9 结型场效应管的工作原理和特性参数" height="28">
                 
                 </a>
                 <p class="is-size-7">
