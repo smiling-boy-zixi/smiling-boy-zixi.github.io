@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Git远程管理Github仓库&amp;遇到的问题 - 仰望星空</title>
+<title>ch5-2 放大器的偏置电路和直流工作点的判断 - 仰望星空</title>
 
 
-    <meta name="description" content="前言一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。">
+    <meta name="description" content="前言晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工作点太靠前的话工作在非线性区，就会失真) 对偏置电路的要求 在更换过管子或者温度变化之后，偏置的静态工作点也要力求稳定，即保持Icq和Uceq稳定 电路形式尽量简单，如采用单一电源，尽可能少使用电阻等 对信号和直流能量的损耗要尽量小，如减小信号中的分压分流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git远程管理Github仓库&amp;遇到的问题">
-<meta property="og:url" content="http://yoursite.com/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="ch5-2 放大器的偏置电路和直流工作点的判断">
+<meta property="og:url" content="http://yoursite.com/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="前言一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。">
+<meta property="og:description" content="前言晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工作点太靠前的话工作在非线性区，就会失真) 对偏置电路的要求 在更换过管子或者温度变化之后，偏置的静态工作点也要力求稳定，即保持Icq和Uceq稳定 电路形式尽量简单，如采用单一电源，尽可能少使用电阻等 对信号和直流能量的损耗要尽量小，如减小信号中的分压分流">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-16T12:43:29.958Z">
-<meta property="article:modified_time" content="2020-02-21T14:17:02.534Z">
+<meta property="article:published_time" content="2020-03-11T09:18:42.227Z">
+<meta property="article:modified_time" content="2020-03-11T17:17:14.498Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="Git远程管理Github仓库&amp;遇到的问题" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch5-2 放大器的偏置电路和直流工作点的判断" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="Git远程管理Github仓库&amp;遇到的问题" height="28">
+                <img src="/images/logo_2.png" alt="ch5-2 放大器的偏置电路和直流工作点的判断" height="28">
             
             </a>
         </div>
@@ -119,6 +119,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -139,13 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-16T12:43:29.958Z">2020-02-16</time>
+                <time class="level-item has-text-grey" datetime="2020-03-11T09:18:42.227Z">2020-03-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 312 个字)
+                    3 分钟 读完 (大约 375 个字)
                 </span>
                 
                 
@@ -154,20 +162,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Git远程管理Github仓库&amp;遇到的问题
+                ch5-2 放大器的偏置电路和直流工作点的判断
             
         </h1>
         <div class="content">
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>一直在网络上看到很多从业好多年的后端开发人员推荐使用Git来进行代码的管理，这次在学习中简单总结一下。</p>
-<a id="more"></a>
-<h3 id="git上传代码流程"><a href="#git上传代码流程" class="headerlink" title="git上传代码流程"></a>git上传代码流程</h3><ol>
-<li>$ git clone<br>将github上download处的https地址复制，在电脑本地创建git.文件夹。</li>
-<li>$ git add.<br>将本地文件保存到暂存区</li>
-<li>$ git commit -m<br>文件提交到本地仓库</li>
-<li>$ git push<br>将文件上传到远程仓库</li>
-<li>$ git pull<br>拉取/同步远程仓库的代码到本地，<br>每次开始开发和提交前都要记得pull一下，以免提交发生冲突。<h3 id="git上传遇到的问题"><a href="#git上传遇到的问题" class="headerlink" title="git上传遇到的问题"></a>git上传遇到的问题</h3><h4 id="1-The-remote-end-hung-up-unexpectedly"><a href="#1-The-remote-end-hung-up-unexpectedly" class="headerlink" title="1.The remote end hung up unexpectedly"></a>1.The remote end hung up unexpectedly</h4>这个挺头疼的，在Stack Overflow上面找了几种方法，有人说的网络的问题，有人说是暂缓区不足，有人说是网络的问题，也有说关掉防火墙和杀毒软件会OK，还去调节参数。。。因为时间的原因，我暂时还没有试过每一种方法，目前尝试的几种方法是不成功的。git push完后会等待很长时间然后报错，/呜呜呜。。</li>
+            <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工作点太靠前的话工作在非线性区，就会失真)</p>
+<h4 id="对偏置电路的要求"><a href="#对偏置电路的要求" class="headerlink" title="对偏置电路的要求"></a>对偏置电路的要求</h4><ol>
+<li>在更换过管子或者温度变化之后，偏置的静态工作点也要力求稳定，即保持Icq和Uceq稳定</li>
+<li>电路形式尽量简单，如采用单一电源，尽可能少使用电阻等</li>
+<li>对信号和直流能量的损耗要尽量小，如减小信号中的分压分流损耗等<h4 id="常见偏置电路"><a href="#常见偏置电路" class="headerlink" title="常见偏置电路"></a>常见偏置电路</h4><h5 id="固定偏流电路"><a href="#固定偏流电路" class="headerlink" title="固定偏流电路"></a>固定偏流电路</h5>没有图，自己看PDF回顾(就是一个电源，集电极($R_B$)和基极($R_C$)各添加一个电阻)，其中：<br>$$I_C=\beta I_B$$<br>$$Uce=Ucc-I_C*R_C$$<blockquote>
+<p>由于温度变化或者更换管子引起$\beta$和Iceo的变化，该电路不稳定</p>
+</blockquote>
+<h5 id="电流负反馈型偏置电路"><a href="#电流负反馈型偏置电路" class="headerlink" title="电流负反馈型偏置电路"></a>电流负反馈型偏置电路</h5>在上面电路的基础上，在管子的发射极串联电阻即可，形成负反馈效果,可以形成自我调节<blockquote>
+<p>原理：Ic变大——&gt;Ie变大——&gt;Ue变大——&gt;Ube减小——&gt;Ib减小——&gt;Ic减小</p>
+</blockquote>
+</li>
 </ol>
-
+<p>$R_E$的阻值选取，自己看PDF</p>
+<h4 id="分压式偏置电路"><a href="#分压式偏置电路" class="headerlink" title="分压式偏置电路"></a>分压式偏置电路</h4>
         </div>
         
         
@@ -212,16 +224,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/17/ch1-1%20%E5%AF%BC%E8%AE%BA/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch1-1 导论</span>
+                <span class="level-item">电机选型以及驱动电路</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/15/icarus%20%E7%BE%8E%E5%8C%96%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9D%91/">
-                <span class="level-item">icarus 美化主题的坑</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/11/ch5-1%20%E5%85%B8%E5%9E%8B%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9-%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%94%B5%E8%B7%AF/">
+                <span class="level-item">ch5-1 典型放大电路结构特点-三种组态放大器电路</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -349,6 +361,42 @@
 </div>
     
         
+
+    <div class="card widget" id="toc">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    目录
+                </h3>
+                <ul class="menu-list"><li>
+        <a class="is-flex" href="#前言">
+        <span class="has-mr-6">1</span>
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#对偏置电路的要求">
+        <span class="has-mr-6">2</span>
+        <span>对偏置电路的要求</span>
+        </a></li><li>
+        <a class="is-flex" href="#常见偏置电路">
+        <span class="has-mr-6">3</span>
+        <span>常见偏置电路</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#固定偏流电路">
+        <span class="has-mr-6">3.1</span>
+        <span>固定偏流电路</span>
+        </a></li><li>
+        <a class="is-flex" href="#电流负反馈型偏置电路">
+        <span class="has-mr-6">3.2</span>
+        <span>电流负反馈型偏置电路</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#分压式偏置电路">
+        <span class="has-mr-6">4</span>
+        <span>分压式偏置电路</span>
+        </a></li></ul>
+            </div>
+        </div>
+    </div>
+
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -367,7 +415,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="Git远程管理Github仓库&amp;遇到的问题" height="28">
+                    <img src="/images/logo_2.png" alt="ch5-2 放大器的偏置电路和直流工作点的判断" height="28">
                 
                 </a>
                 <p class="is-size-7">

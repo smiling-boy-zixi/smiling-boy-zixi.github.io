@@ -138,6 +138,223 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-11T17:16:43.983Z">2020-03-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/">NXP智能车</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 906 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/">电机选型以及驱动电路</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>智能车制作新手上路，现在开始准备画整车的电路板，电路板一般分成4个模块：电源部分，驱动部分，主控部分，信号部分，这篇文章简单总结一下电机的选择和对应驱动电路的选择</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-11T09:18:42.227Z">2020-03-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 375 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/">ch5-2 放大器的偏置电路和直流工作点的判断</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工作点太靠前的话工作在非线性区，就会失真)</p>
+<h4 id="对偏置电路的要求"><a href="#对偏置电路的要求" class="headerlink" title="对偏置电路的要求"></a>对偏置电路的要求</h4><ol>
+<li>在更换过管子或者温度变化之后，偏置的静态工作点也要力求稳定，即保持Icq和Uceq稳定</li>
+<li>电路形式尽量简单，如采用单一电源，尽可能少使用电阻等</li>
+<li>对信号和直流能量的损耗要尽量小，如减小信号中的分压分流损耗等<h4 id="常见偏置电路"><a href="#常见偏置电路" class="headerlink" title="常见偏置电路"></a>常见偏置电路</h4><h5 id="固定偏流电路"><a href="#固定偏流电路" class="headerlink" title="固定偏流电路"></a>固定偏流电路</h5>没有图，自己看PDF回顾(就是一个电源，集电极($R_B$)和基极($R_C$)各添加一个电阻)，其中：<br>$$I_C=\beta I_B$$<br>$$Uce=Ucc-I_C*R_C$$<blockquote>
+<p>由于温度变化或者更换管子引起$\beta$和Iceo的变化，该电路不稳定</p>
+</blockquote>
+<h5 id="电流负反馈型偏置电路"><a href="#电流负反馈型偏置电路" class="headerlink" title="电流负反馈型偏置电路"></a>电流负反馈型偏置电路</h5>在上面电路的基础上，在管子的发射极串联电阻即可，形成负反馈效果,可以形成自我调节<blockquote>
+<p>原理：Ic变大——&gt;Ie变大——&gt;Ue变大——&gt;Ube减小——&gt;Ib减小——&gt;Ic减小</p>
+</blockquote>
+</li>
+</ol>
+<p>$R_E$的阻值选取，自己看PDF</p>
+<h4 id="分压式偏置电路"><a href="#分压式偏置电路" class="headerlink" title="分压式偏置电路"></a>分压式偏置电路</h4>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-11T08:15:16.522Z">2020-03-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 326 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/11/ch5-1%20%E5%85%B8%E5%9E%8B%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9-%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%94%B5%E8%B7%AF/">ch5-1 典型放大电路结构特点-三种组态放大器电路</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="基本放大器组成原则"><a href="#基本放大器组成原则" class="headerlink" title="基本放大器组成原则"></a>基本放大器组成原则</h4><p>基本放大器通常是指的由一个晶体管或场效应管构成的单级放大电路</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/11/ch5-1%20%E5%85%B8%E5%9E%8B%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9-%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%94%B5%E8%B7%AF/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-10T10:02:20.972Z">2020-03-10</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 181 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/10/ch4-11%20%E6%99%B6%E4%BD%93%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E4%BD%8E%E9%A2%91%E5%B0%8F%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B(%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF)/">ch4-11 晶体管和场效应管低频小信号模型(等效电路)</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>晶体三极管模型在静态工作点附近可以近似看做线性变化，其中变化的部分看做交流分量，线性部分看做直流分量。(本章很多地方听的不明白，后期学习再补回来)</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/10/ch4-11%20%E6%99%B6%E4%BD%93%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E4%BD%8E%E9%A2%91%E5%B0%8F%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B(%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF)/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-02-28T08:27:34.810Z">2020-02-28</time>
                 
                 <div class="level-item">
@@ -461,228 +678,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-26T04:43:24.185Z">2020-02-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 646 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/02/26/ch4-5%20%E7%A8%B3%E5%8E%8B%E7%AE%A1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E4%BA%8C%E6%9E%81%E7%AE%A1/">ch4-5 稳压管以及其它二极管</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="稳压二极管"><a href="#稳压二极管" class="headerlink" title="稳压二极管"></a>稳压二极管</h4><ol>
-<li>符号：在二级管的符号上加一个小弯</li>
-<li>稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压</li>
-<li>额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定</li>
-<li>稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/02/26/ch4-5%20%E7%A8%B3%E5%8E%8B%E7%AE%A1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E4%BA%8C%E6%9E%81%E7%AE%A1/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-25T13:56:18.113Z">2020-02-25</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 175 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/02/25/ch4-4%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8/">ch4-4 晶体二极管应用</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="整流电路"><a href="#整流电路" class="headerlink" title="整流电路"></a>整流电路</h4><blockquote>
-<p>这里最好有电路图，但是懒得加了，咱们就脑子里回忆吧，哈哈哈</p>
-</blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/02/25/ch4-4%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-25T13:55:27.788Z">2020-02-25</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 412 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/02/25/ch4-3%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%9A%84%E7%89%B9%E6%80%A7%E5%8F%8A%E5%8F%82%E6%95%B0/">ch4-3 晶体二极管的特性及参数</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="二极管的伏安特性–指数特性"><a href="#二极管的伏安特性–指数特性" class="headerlink" title="二极管的伏安特性–指数特性"></a>二极管的伏安特性–指数特性</h4><p>$$i_D=I_S(e^\cfrac{U_D}{U_T}-1)$$</p>
-<blockquote>
-<p>注：其中 $I_S$ 为反向饱和电流，$U_T$为热电压，$U_D$为导通电压，$i_D$为正向导通电流</p>
-</blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/02/25/ch4-3%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%9A%84%E7%89%B9%E6%80%A7%E5%8F%8A%E5%8F%82%E6%95%B0/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-24T08:51:42.623Z">2020-02-24</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6 分钟 读完 (大约 880 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/02/24/ch4-2%20P--N%E7%BB%93/">ch4-2 P--N结</a>
-            
-        </h1>
-        <div class="content">
-            <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
-<li>PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN结
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/02/24/ch4-2%20P--N%E7%BB%93/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -749,7 +744,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            25
+                            29
                         </p>
                     </a>
                 </div>
@@ -761,7 +756,7 @@
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            4
+                            5
                         </p>
                     </a>
                 </div>
@@ -869,6 +864,14 @@
             </h3>
             <ul class="menu-list">
             <li>
+        <a class="level is-marginless" href="/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/">
+            <span class="level-start">
+                <span class="level-item">NXP智能车</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/hexo/">
             <span class="level-start">
                 <span class="level-item">hexo</span>
@@ -890,7 +893,7 @@
                 <span class="level-item">模电笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">18</span>
+                <span class="level-item tag">21</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/">
@@ -919,6 +922,82 @@
         
         <article class="media">
             
+            <a href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="电机选型以及驱动电路">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T17:16:43.983Z">2020-03-12</time></div>
+                    <a href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">电机选型以及驱动电路</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/">NXP智能车</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch5-2 放大器的偏置电路和直流工作点的判断">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T09:18:42.227Z">2020-03-11</time></div>
+                    <a href="/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch5-2 放大器的偏置电路和直流工作点的判断</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/11/ch5-1%20%E5%85%B8%E5%9E%8B%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9-%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%94%B5%E8%B7%AF/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch5-1 典型放大电路结构特点-三种组态放大器电路">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T08:15:16.522Z">2020-03-11</time></div>
+                    <a href="/2020/03/11/ch5-1%20%E5%85%B8%E5%9E%8B%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9-%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%94%B5%E8%B7%AF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch5-1 典型放大电路结构特点-三种组态放大器电路</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/10/ch4-11%20%E6%99%B6%E4%BD%93%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E4%BD%8E%E9%A2%91%E5%B0%8F%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B(%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF)/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-11 晶体管和场效应管低频小信号模型(等效电路)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-10T10:02:20.972Z">2020-03-10</time></div>
+                    <a href="/2020/03/10/ch4-11%20%E6%99%B6%E4%BD%93%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E4%BD%8E%E9%A2%91%E5%B0%8F%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B(%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-11 晶体管和场效应管低频小信号模型(等效电路)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/28/ch4-10%20MOS%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-10 MOS场效应管的工作原理和特性参数">
@@ -936,82 +1015,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-9 结型场效应管的工作原理和特性参数">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-28T08:26:22.009Z">2020-02-28</time></div>
-                    <a href="/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-9 结型场效应管的工作原理和特性参数</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/27/ch4-8%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E6%9E%81%E9%99%90%E5%8F%82%E6%95%B0%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%88%A4%E5%88%AB%E4%B8%BE%E4%BE%8B/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-8 双极型晶体管极限参数和工作状态判别举例">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T07:50:32.149Z">2020-02-27</time></div>
-                    <a href="/2020/02/27/ch4-8%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E6%9E%81%E9%99%90%E5%8F%82%E6%95%B0%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%88%A4%E5%88%AB%E4%B8%BE%E4%BE%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-8 双极型晶体管极限参数和工作状态判别举例</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/27/ch4-7%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-7 双极型晶体管特性曲线">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T07:49:34.709Z">2020-02-27</time></div>
-                    <a href="/2020/02/27/ch4-7%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-7 双极型晶体管特性曲线</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/27/ResNet-18/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ResNet-18">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T03:54:50.026Z">2020-02-27</time></div>
-                    <a href="/2020/02/27/ResNet-18/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ResNet-18</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/machine-learning/">machine learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1022,6 +1025,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/02/">
@@ -1071,6 +1085,82 @@
         
         <article class="media">
             
+            <a href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="电机选型以及驱动电路">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T17:16:43.983Z">2020-03-12</time></div>
+                    <a href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">电机选型以及驱动电路</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/">NXP智能车</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch5-2 放大器的偏置电路和直流工作点的判断">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T09:18:42.227Z">2020-03-11</time></div>
+                    <a href="/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch5-2 放大器的偏置电路和直流工作点的判断</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/11/ch5-1%20%E5%85%B8%E5%9E%8B%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9-%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%94%B5%E8%B7%AF/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch5-1 典型放大电路结构特点-三种组态放大器电路">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T08:15:16.522Z">2020-03-11</time></div>
+                    <a href="/2020/03/11/ch5-1%20%E5%85%B8%E5%9E%8B%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84%E7%89%B9%E7%82%B9-%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E6%94%BE%E5%A4%A7%E5%99%A8%E7%94%B5%E8%B7%AF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch5-1 典型放大电路结构特点-三种组态放大器电路</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/10/ch4-11%20%E6%99%B6%E4%BD%93%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E4%BD%8E%E9%A2%91%E5%B0%8F%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B(%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF)/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-11 晶体管和场效应管低频小信号模型(等效电路)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-10T10:02:20.972Z">2020-03-10</time></div>
+                    <a href="/2020/03/10/ch4-11%20%E6%99%B6%E4%BD%93%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E4%BD%8E%E9%A2%91%E5%B0%8F%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B(%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF)/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-11 晶体管和场效应管低频小信号模型(等效电路)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/28/ch4-10%20MOS%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-10 MOS场效应管的工作原理和特性参数">
@@ -1088,82 +1178,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-9 结型场效应管的工作原理和特性参数">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-28T08:26:22.009Z">2020-02-28</time></div>
-                    <a href="/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-9 结型场效应管的工作原理和特性参数</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/27/ch4-8%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E6%9E%81%E9%99%90%E5%8F%82%E6%95%B0%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%88%A4%E5%88%AB%E4%B8%BE%E4%BE%8B/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-8 双极型晶体管极限参数和工作状态判别举例">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T07:50:32.149Z">2020-02-27</time></div>
-                    <a href="/2020/02/27/ch4-8%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E6%9E%81%E9%99%90%E5%8F%82%E6%95%B0%E5%92%8C%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E5%88%A4%E5%88%AB%E4%B8%BE%E4%BE%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-8 双极型晶体管极限参数和工作状态判别举例</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/27/ch4-7%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ch4-7 双极型晶体管特性曲线">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T07:49:34.709Z">2020-02-27</time></div>
-                    <a href="/2020/02/27/ch4-7%20%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ch4-7 双极型晶体管特性曲线</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/27/ResNet-18/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ResNet-18">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-27T03:54:50.026Z">2020-02-27</time></div>
-                    <a href="/2020/02/27/ResNet-18/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ResNet-18</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/machine-learning/">machine learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1174,6 +1188,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/02/">
