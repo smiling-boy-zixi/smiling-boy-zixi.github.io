@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch4-1 半导体物理基础 - 仰望星空</title>
+<title>ch5-4 带电流负反馈的共射放大器性能分析 - 仰望星空</title>
 
 
-    <meta name="description" content="基本概念 物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）">
+    <meta name="description" content="前言在前面共射放大电路的基础上，将共射极电阻的旁路电容去电或者再加一个电阻，分析一下这个对电路的交流参数有什么影响。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch4-1 半导体物理基础">
-<meta property="og:url" content="http://yoursite.com/2020/02/24/ch4-1%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="ch5-4 带电流负反馈的共射放大器性能分析">
+<meta property="og:url" content="http://yoursite.com/2020/03/13/ch5-4%20%E5%B8%A6%E7%94%B5%E6%B5%81%E8%B4%9F%E5%8F%8D%E9%A6%88%E7%9A%84%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="基本概念 物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）">
+<meta property="og:description" content="前言在前面共射放大电路的基础上，将共射极电阻的旁路电容去电或者再加一个电阻，分析一下这个对电路的交流参数有什么影响。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-24T06:15:33.978Z">
-<meta property="article:modified_time" content="2020-02-25T13:52:45.505Z">
+<meta property="article:published_time" content="2020-03-13T08:29:14.916Z">
+<meta property="article:modified_time" content="2020-03-13T09:12:29.922Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch4-1 半导体物理基础" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="ch5-4 带电流负反馈的共射放大器性能分析" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch4-1 半导体物理基础" height="28">
+                <img src="/images/logo_2.png" alt="ch5-4 带电流负反馈的共射放大器性能分析" height="28">
             
             </a>
         </div>
@@ -143,7 +143,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-24T06:15:33.978Z">2020-02-24</time>
+                <time class="level-item has-text-grey" datetime="2020-03-13T08:29:14.916Z">2020-03-13</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 800 个字)
+                    1 分钟 读完 (大约 162 个字)
                 </span>
                 
                 
@@ -162,27 +162,19 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch4-1 半导体物理基础
+                ch5-4 带电流负反馈的共射放大器性能分析
             
         </h1>
         <div class="content">
-            <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
-<li>物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）<a id="more"></a></li>
-<li>本征半导体：纯净的硅和锗单晶体是本征半导体，硅和锗的最外层电子都是4个，则4个最外层电子又称作价电子（物理，化学性质主要取决于最外层电子）。</li>
-<li>本征激发：价电子获得足够大的能力（即外界因素干扰），挣脱共价键的束缚，成为自由电子，产生了自由电子以及空穴，本征激发产生的空穴和自由电子的数目相等。</li>
-<li>载流子：带负电的自由电子和带正电的空穴，都可以导电，统称为载流子。</li>
-<li>复合：是激发的逆过程，即自由电子填入空穴，释放能量，从而消失一对载流子的过程</li>
-<li>硅的温度温度性比锗要好，所以集成电路多用硅（因为硅的电子挣脱共价键的束缚需要的能力大于锗，硅1.21eV，锗0.78eV）<h4 id="N型半导体和P型半导体"><a href="#N型半导体和P型半导体" class="headerlink" title="N型半导体和P型半导体"></a>N型半导体和P型半导体</h4>由于本征半导体的导电能力比较弱，掺杂一些元素的原子可以提高半导体的导电能力，杂质半导体分为N型半导体和P型半导体。</li>
-<li>N型半导体：在本征半导体中掺入5价原子，即N型半导体。提供自由电子（称为<strong><em>施主电离</em></strong>），其中多数载流子—自由电子，少数载流子—空穴，半导体仍然保持中性（自由电子为负，原子即表示正性，抵消）</li>
-<li>多子：多数载流子，少子–少数载流子</li>
-<li>少子浓度和温度关系很大，多子与温度关系不大</li>
-<li>P型半导体：在本征半导体中掺入3价原子，即P型半导体。提供空穴（称为<strong><em>受主电离</em></strong>），其中多数载流子—空穴，少数载流子—自由电子，半导体仍然保持中性（空穴显正性，原子显负，抵消）<h4 id="漂移电流和扩散电流"><a href="#漂移电流和扩散电流" class="headerlink" title="漂移电流和扩散电流"></a>漂移电流和扩散电流</h4></li>
-<li>半导体电流：即自由电子形成的电流加上空穴形成的电流。</li>
-<li>漂移电流：在电场的作用下，自由电子逆电场方向漂移，空穴顺着电场方向漂移，这样产生的电流称为漂移电流（受到<strong><em>载流子浓度，迁移率，电场强度</em></strong>的影响）</li>
-<li>迁移率：单位电场的作用下，自由电子的移动速度比空穴快</li>
-<li>扩散电流：半导体中浓度不均匀分布的时候，载流子会从高浓度区域向低浓度区域扩散，从而形成扩散电流，（受到<strong><em>载流子的浓度差或者叫浓度梯度</em></strong>的影响）</li>
-</ol>
-<p>2020.2.24</p>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前面共射放大电路的基础上，将共射极电阻的旁路电容去电或者再加一个电阻，分析一下这个对电路的交流参数有什么影响。</p>
+<a id="more"></a>
+<h3 id="对交流参数的影响"><a href="#对交流参数的影响" class="headerlink" title="对交流参数的影响"></a>对交流参数的影响</h3><h4 id="A-u-对电压放大倍数的影响"><a href="#A-u-对电压放大倍数的影响" class="headerlink" title="$A_u$对电压放大倍数的影响"></a>$A_u$对电压放大倍数的影响</h4><p>$$A_u=\cfrac{U_o}{U_i}=-\cfrac{\beta I_b(R_C||R_L)}{[Rbe+(1+\beta)R_E]I_b}=-\cfrac{\beta I_bR_L`}{Rbe+(1+\beta)R_E}$$</p>
+<blockquote>
+<p>if满足<br>$$(1+\beta)R_E&gt;&gt;Rbe,则A_u\approx-\cfrac{R_L`}{R_E}$$</p>
+</blockquote>
+<h4 id="R-i-输入电阻"><a href="#R-i-输入电阻" class="headerlink" title="$R_i$输入电阻"></a>$R_i$输入电阻</h4><p>$$R_i=Rb1 || Rb2||[Rbe+(1+\beta)R_E]$$</p>
+<h4 id="R-o-输出电阻"><a href="#R-o-输出电阻" class="headerlink" title="$R_o$输出电阻"></a>$R_o$输出电阻</h4><p>没变化，因为$R_o`&gt;&gt;R_C$,所以$R_o\approx R_C$</p>
+<p>2020.3.13</p>
 
         </div>
         
@@ -228,16 +220,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/24/ch4-2%20P--N%E7%BB%93/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/13/ch5-5%20%E5%85%B1%E9%9B%86%E7%94%B5%E6%9E%81%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch4-2 P--N结</span>
+                <span class="level-item">ch5-5 共集电极放大电路分析</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/">
-                <span class="level-item">ch2-6 微分器</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/13/ch5-3%20%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/">
+                <span class="level-item">ch5-3 共射放大器性能分析</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -373,18 +365,26 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#基本概念">
+        <a class="is-flex" href="#前言">
         <span class="has-mr-6">1</span>
-        <span>基本概念</span>
+        <span>前言</span>
         </a></li><li>
-        <a class="is-flex" href="#N型半导体和P型半导体">
+        <a class="is-flex" href="#对交流参数的影响">
         <span class="has-mr-6">2</span>
-        <span>N型半导体和P型半导体</span>
+        <span>对交流参数的影响</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#A-u-对电压放大倍数的影响">
+        <span class="has-mr-6">2.1</span>
+        <span>$A_u$对电压放大倍数的影响</span>
         </a></li><li>
-        <a class="is-flex" href="#漂移电流和扩散电流">
-        <span class="has-mr-6">3</span>
-        <span>漂移电流和扩散电流</span>
-        </a></li></ul>
+        <a class="is-flex" href="#R-i-输入电阻">
+        <span class="has-mr-6">2.2</span>
+        <span>$R_i$输入电阻</span>
+        </a></li><li>
+        <a class="is-flex" href="#R-o-输出电阻">
+        <span class="has-mr-6">2.3</span>
+        <span>$R_o$输出电阻</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -407,7 +407,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch4-1 半导体物理基础" height="28">
+                    <img src="/images/logo_2.png" alt="ch5-4 带电流负反馈的共射放大器性能分析" height="28">
                 
                 </a>
                 <p class="is-size-7">

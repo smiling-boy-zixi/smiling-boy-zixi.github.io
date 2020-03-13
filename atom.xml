@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-13T06:04:55.922Z</updated>
+  <updated>2020-03-13T14:52:09.161Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,107 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在AD18新建工程</title>
+    <link href="http://yoursite.com/2020/03/13/%E5%A6%82%E4%BD%95%E5%9C%A8AD18%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://yoursite.com/2020/03/13/%E5%A6%82%E4%BD%95%E5%9C%A8AD18%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/</id>
+    <published>2020-03-13T14:33:08.833Z</published>
+    <updated>2020-03-13T14:52:09.161Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在2020年一月份学的AD18，过了两个月重新上手画板子，真的是忘的一干二净了，雕刻机的操作步骤也忘记了，方便雕刻，好像板子要反着画？？到时候是又要请教春哥和钱哥了，先来总结一下AD18新建工程的步骤。</p><a id="more"></a><h3 id="新建步骤"><a href="#新建步骤" class="headerlink" title="新建步骤"></a>新建步骤</h3><ol><li>先在需要的地方新建文件夹，重命名</li><li>打开AD18，点击文件，新的，项目，(使用默认模式Default)选择好新建路径，创建，ok</li><li>然后右击左栏产生的new Project，分别创建新的原理图，PCB，元件库，封装库即可</li></ol><p>2020.3.13</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;在2020年一月份学的AD18，过了两个月重新上手画板子，真的是忘的一干二净了，雕刻机的操作步骤也忘记了，方便雕刻，好像板子要反着画？？到时候是又要请教春哥和钱哥了，先来总结一下AD18新建工程的步骤。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="NXP智能车" scheme="http://yoursite.com/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch5-6 共基极放大器以及三种组态对比</title>
+    <link href="http://yoursite.com/2020/03/13/ch5-6%20%E5%85%B1%E5%9F%BA%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E4%BB%A5%E5%8F%8A%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E5%AF%B9%E6%AF%94/"/>
+    <id>http://yoursite.com/2020/03/13/ch5-6%20%E5%85%B1%E5%9F%BA%E6%9E%81%E6%94%BE%E5%A4%A7%E5%99%A8%E4%BB%A5%E5%8F%8A%E4%B8%89%E7%A7%8D%E7%BB%84%E6%80%81%E5%AF%B9%E6%AF%94/</id>
+    <published>2020-03-13T09:42:10.552Z</published>
+    <updated>2020-03-13T13:24:45.439Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch5-5 共集电极放大电路分析</title>
+    <link href="http://yoursite.com/2020/03/13/ch5-5%20%E5%85%B1%E9%9B%86%E7%94%B5%E6%9E%81%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2020/03/13/ch5-5%20%E5%85%B1%E9%9B%86%E7%94%B5%E6%9E%81%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/</id>
+    <published>2020-03-13T09:12:59.628Z</published>
+    <updated>2020-03-13T13:24:42.511Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>就是输入电阻大，输出电阻小，适合放置在其它的部分是电路分析，公式有需要，后期再补上。</p><a id="more"></a><p>2020.3.13</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;就是输入电阻大，输出电阻小，适合放置在其它的部分是电路分析，公式有需要，后期再补上。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch5-4 带电流负反馈的共射放大器性能分析</title>
+    <link href="http://yoursite.com/2020/03/13/ch5-4%20%E5%B8%A6%E7%94%B5%E6%B5%81%E8%B4%9F%E5%8F%8D%E9%A6%88%E7%9A%84%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2020/03/13/ch5-4%20%E5%B8%A6%E7%94%B5%E6%B5%81%E8%B4%9F%E5%8F%8D%E9%A6%88%E7%9A%84%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/</id>
+    <published>2020-03-13T08:29:14.916Z</published>
+    <updated>2020-03-13T09:12:29.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前面共射放大电路的基础上，将共射极电阻的旁路电容去电或者再加一个电阻，分析一下这个对电路的交流参数有什么影响。</p><a id="more"></a><h3 id="对交流参数的影响"><a href="#对交流参数的影响" class="headerlink" title="对交流参数的影响"></a>对交流参数的影响</h3><h4 id="A-u-对电压放大倍数的影响"><a href="#A-u-对电压放大倍数的影响" class="headerlink" title="$A_u$对电压放大倍数的影响"></a>$A_u$对电压放大倍数的影响</h4><p>$$A_u=\cfrac{U_o}{U_i}=-\cfrac{\beta I_b(R_C||R_L)}{[Rbe+(1+\beta)R_E]I_b}=-\cfrac{\beta I_bR_L`}{Rbe+(1+\beta)R_E}$$</p><blockquote><p>if满足<br>$$(1+\beta)R_E&gt;&gt;Rbe,则A_u\approx-\cfrac{R_L`}{R_E}$$</p></blockquote><h4 id="R-i-输入电阻"><a href="#R-i-输入电阻" class="headerlink" title="$R_i$输入电阻"></a>$R_i$输入电阻</h4><p>$$R_i=Rb1 || Rb2||[Rbe+(1+\beta)R_E]$$</p><h4 id="R-o-输出电阻"><a href="#R-o-输出电阻" class="headerlink" title="$R_o$输出电阻"></a>$R_o$输出电阻</h4><p>没变化，因为$R_o`&gt;&gt;R_C$,所以$R_o\approx R_C$</p><p>2020.3.13</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;在前面共射放大电路的基础上，将共射极电阻的旁路电容去电或者再加一个电阻，分析一下这个对电路的交流参数有什么影响。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ch5-3 共射放大器性能分析</title>
+    <link href="http://yoursite.com/2020/03/13/ch5-3%20%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2020/03/13/ch5-3%20%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/</id>
+    <published>2020-03-13T07:15:58.642Z</published>
+    <updated>2020-03-13T08:28:31.416Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前晚上做练习的时候(就是黄老师慕课堂上网课)，有的题目实在看不明白，也不知道同学们都是咋写出来的？所以没有提交，这回mooc上面看过网课了，才明白，这里总结一下</p><a id="more"></a><h3 id="分析步骤"><a href="#分析步骤" class="headerlink" title="分析步骤"></a>分析步骤</h3><p>这个分析方法的全称：共射极放大器的交流等效电路分析法</p><ol><li>画出直流通路，估算直流静态参数<blockquote><p>画直流通路就是，电容开路，交流电源短路，直流静态参数：$I_B I_C Ube Uce$</p></blockquote></li><li>在直流通路的基础上画出交流通路，估算交流参数<blockquote><p>画交流通路，就是电容短路，直流电源接地，为什么接地呢，因为对于交流信号而言，直流信号是平的(不考虑噪声，理论上是这样的)，交流分量就是0，所以和接地没有区别，所以就一起接地啦。交流参数：$A_u A_i R_i R_o Aus$</p></blockquote><h3 id="交流参数说明"><a href="#交流参数说明" class="headerlink" title="交流参数说明"></a>交流参数说明</h3></li><li>$A_u$ :电压放大倍数，怎么求记在脑子里</li><li>$A_i$:电流放大倍数，由于前后电阻都很大，所以可以看做微变等效模型前后电流之比，近似$\beta$</li><li>$R_i$:输入电阻,输入的几个电阻并联就可以了<blockquote><p>这里说明一下由于一般来说，Rb&gt;&gt;Rbe,所以，Rbe近似Ri，在微变等效模型中$Rbe=R`+(1+\beta)\cfrac{26mV}{I_CmA}$,所以$\beta$ 越大，输入电阻越大</p></blockquote></li><li>$R_o$:输出电阻，负载电阻不算，往里看，剩下电阻并联即可，因为Rce比较大，所以输出电阻$R_o近似=R_C$</li><li>$Aus$:源电压放大倍数，就是输出电压和信号源电压的比值，注意信号源电压和输入电压的区别是，输入电压在信号源上的内阻分压了。分压求解即可</li></ol><p>2020.3.13</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;之前晚上做练习的时候(就是黄老师慕课堂上网课)，有的题目实在看不明白，也不知道同学们都是咋写出来的？所以没有提交，这回mooc上面看过网课了，才明白，这里总结一下&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>电解电容与滤波电容</title>
@@ -63,16 +164,13 @@
     <link href="http://yoursite.com/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/"/>
     <id>http://yoursite.com/2020/03/11/ch5-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%81%8F%E7%BD%AE%E7%94%B5%E8%B7%AF%E5%92%8C%E7%9B%B4%E6%B5%81%E5%B7%A5%E4%BD%9C%E7%82%B9%E7%9A%84%E5%88%A4%E6%96%AD/</id>
     <published>2020-03-11T09:18:42.227Z</published>
-    <updated>2020-03-11T17:17:14.498Z</updated>
+    <updated>2020-03-13T07:15:12.404Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工作点太靠前的话工作在非线性区，就会失真)</p><h4 id="对偏置电路的要求"><a href="#对偏置电路的要求" class="headerlink" title="对偏置电路的要求"></a>对偏置电路的要求</h4><ol><li>在更换过管子或者温度变化之后，偏置的静态工作点也要力求稳定，即保持Icq和Uceq稳定</li><li>电路形式尽量简单，如采用单一电源，尽可能少使用电阻等</li><li>对信号和直流能量的损耗要尽量小，如减小信号中的分压分流损耗等<h4 id="常见偏置电路"><a href="#常见偏置电路" class="headerlink" title="常见偏置电路"></a>常见偏置电路</h4><h5 id="固定偏流电路"><a href="#固定偏流电路" class="headerlink" title="固定偏流电路"></a>固定偏流电路</h5>没有图，自己看PDF回顾(就是一个电源，集电极($R_B$)和基极($R_C$)各添加一个电阻)，其中：<br>$$I_C=\beta I_B$$<br>$$Uce=Ucc-I_C*R_C$$<blockquote><p>由于温度变化或者更换管子引起$\beta$和Iceo的变化，该电路不稳定</p></blockquote><h5 id="电流负反馈型偏置电路"><a href="#电流负反馈型偏置电路" class="headerlink" title="电流负反馈型偏置电路"></a>电流负反馈型偏置电路</h5>在上面电路的基础上，在管子的发射极串联电阻即可，形成负反馈效果,可以形成自我调节<blockquote><p>原理：Ic变大——&gt;Ie变大——&gt;Ue变大——&gt;Ube减小——&gt;Ib减小——&gt;Ic减小</p></blockquote></li></ol><p>$R_E$的阻值选取，自己看PDF</p><h4 id="分压式偏置电路"><a href="#分压式偏置电路" class="headerlink" title="分压式偏置电路"></a>分压式偏置电路</h4>]]></content>
+    <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工作点太靠前的话工作在非线性区，就会失真)</p><a id="more"></a><h4 id="对偏置电路的要求"><a href="#对偏置电路的要求" class="headerlink" title="对偏置电路的要求"></a>对偏置电路的要求</h4><ol><li>在更换过管子或者温度变化之后，偏置的静态工作点也要力求稳定，即保持Icq和Uceq稳定</li><li>电路形式尽量简单，如采用单一电源，尽可能少使用电阻等</li><li>对信号和直流能量的损耗要尽量小，如减小信号中的分压分流损耗等<h4 id="常见偏置电路"><a href="#常见偏置电路" class="headerlink" title="常见偏置电路"></a>常见偏置电路</h4><h5 id="固定偏流电路"><a href="#固定偏流电路" class="headerlink" title="固定偏流电路"></a>固定偏流电路</h5>没有图，自己看PDF回顾(就是一个电源，集电极($R_B$)和基极($R_C$)各添加一个电阻)，其中：<br>$$I_C=\beta I_B$$<br>$$Uce=Ucc-I_C*R_C$$<blockquote><p>由于温度变化或者更换管子引起$\beta$和Iceo的变化，该电路不稳定</p></blockquote><h5 id="电流负反馈型偏置电路"><a href="#电流负反馈型偏置电路" class="headerlink" title="电流负反馈型偏置电路"></a>电流负反馈型偏置电路</h5>在上面电路的基础上，在管子的发射极串联电阻即可，形成负反馈效果,可以形成自我调节<blockquote><p>原理：Ic变大——&gt;Ie变大——&gt;Ue变大——&gt;Ube减小——&gt;Ib减小——&gt;Ic减小</p></blockquote></li></ol><p>$R_E$的阻值选取，自己看PDF</p><h4 id="分压式偏置电路"><a href="#分压式偏置电路" class="headerlink" title="分压式偏置电路"></a>分压式偏置电路</h4><p>就是在基极的上下两侧都加上电阻，起到分压的作用，保证基极电位$U_B$固定，这样$I_C$就通过Ube对$U_E$直接产生影响，增强了Ube对$I_C$的控制</p><p>2020.3.13</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工
-      
+      &lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;晶体管在放大应用的时候，要求外电路将晶体管偏置在放大区(若是NPN管就是发射结正偏，集电结反偏)，使得信号在放大的时候不产生线性失真(静态工作点太靠前的话工作在非线性区，就会失真)&lt;/p&gt;
     
     </summary>
     
@@ -347,123 +445,6 @@
     
       &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN结
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch4-1 半导体物理基础</title>
-    <link href="http://yoursite.com/2020/02/24/ch4-1%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2020/02/24/ch4-1%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/</id>
-    <published>2020-02-24T06:15:33.978Z</published>
-    <updated>2020-02-25T13:52:45.505Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol><li>物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）<a id="more"></a></li><li>本征半导体：纯净的硅和锗单晶体是本征半导体，硅和锗的最外层电子都是4个，则4个最外层电子又称作价电子（物理，化学性质主要取决于最外层电子）。</li><li>本征激发：价电子获得足够大的能力（即外界因素干扰），挣脱共价键的束缚，成为自由电子，产生了自由电子以及空穴，本征激发产生的空穴和自由电子的数目相等。</li><li>载流子：带负电的自由电子和带正电的空穴，都可以导电，统称为载流子。</li><li>复合：是激发的逆过程，即自由电子填入空穴，释放能量，从而消失一对载流子的过程</li><li>硅的温度温度性比锗要好，所以集成电路多用硅（因为硅的电子挣脱共价键的束缚需要的能力大于锗，硅1.21eV，锗0.78eV）<h4 id="N型半导体和P型半导体"><a href="#N型半导体和P型半导体" class="headerlink" title="N型半导体和P型半导体"></a>N型半导体和P型半导体</h4>由于本征半导体的导电能力比较弱，掺杂一些元素的原子可以提高半导体的导电能力，杂质半导体分为N型半导体和P型半导体。</li><li>N型半导体：在本征半导体中掺入5价原子，即N型半导体。提供自由电子（称为<strong><em>施主电离</em></strong>），其中多数载流子—自由电子，少数载流子—空穴，半导体仍然保持中性（自由电子为负，原子即表示正性，抵消）</li><li>多子：多数载流子，少子–少数载流子</li><li>少子浓度和温度关系很大，多子与温度关系不大</li><li>P型半导体：在本征半导体中掺入3价原子，即P型半导体。提供空穴（称为<strong><em>受主电离</em></strong>），其中多数载流子—空穴，少数载流子—自由电子，半导体仍然保持中性（空穴显正性，原子显负，抵消）<h4 id="漂移电流和扩散电流"><a href="#漂移电流和扩散电流" class="headerlink" title="漂移电流和扩散电流"></a>漂移电流和扩散电流</h4></li><li>半导体电流：即自由电子形成的电流加上空穴形成的电流。</li><li>漂移电流：在电场的作用下，自由电子逆电场方向漂移，空穴顺着电场方向漂移，这样产生的电流称为漂移电流（受到<strong><em>载流子浓度，迁移率，电场强度</em></strong>的影响）</li><li>迁移率：单位电场的作用下，自由电子的移动速度比空穴快</li><li>扩散电流：半导体中浓度不均匀分布的时候，载流子会从高浓度区域向低浓度区域扩散，从而形成扩散电流，（受到<strong><em>载流子的浓度差或者叫浓度梯度</em></strong>的影响）</li></ol><p>2020.2.24</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;物体分为：导体，半导体，绝缘体。其中半导体的导电能力随着温度，光照，掺杂等外界因素所改变（价带，禁带，导带）
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch2-6 微分器</title>
-    <link href="http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/"/>
-    <id>http://yoursite.com/2020/02/20/ch2-6%20%E5%BE%AE%E5%88%86%E5%99%A8/</id>
-    <published>2020-02-20T11:27:34.939Z</published>
-    <updated>2020-02-21T14:08:34.108Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="微分器"><a href="#微分器" class="headerlink" title="微分器"></a>微分器</h3><blockquote><p>目标：$Uo(t)=k\cfrac{dui(t)}{dt}$</p></blockquote><blockquote><p>即输出与输入的微分成正比，微分是积分的逆运算。</p></blockquote><a id="more"></a><h4 id="微分器电路"><a href="#微分器电路" class="headerlink" title="微分器电路"></a>微分器电路</h4><p>(A)时域分析</p><blockquote><p>由于微分和积分是互逆的关系，所以把反相输入端的电容和反馈网络中电阻的位置互换即是，微分器电路，分析与积分器相似：<br>$$U_o(t)=-U_R(t)=-i_R(t)R$$<br>$$i_R(t)=i_c(t)=C\cfrac{dUc(t)}{dt}$$<br>$$Uo(t)=-RC\cfrac{dUi(t)}{dt}=-\tau \cfrac{dUi(t)}{dt}$$<br>(B)频域分析<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-j\omega RC=-j\omega\tau$$<br>因为是反相输入端，抵消一个负号，所以是 j，超前90度</p></blockquote><ol><li>相位超前90度</li><li>增益的模 $|Au(j\omega)|=\omega RC$</li><li>有个结论：频率越高增益越大，且有一个90度的超前相移。<h4 id="微分器的高频增益"><a href="#微分器的高频增益" class="headerlink" title="微分器的高频增益"></a>微分器的高频增益</h4><blockquote><p>由于电容是通高频，阻低频，所以，若干反相输入端有高频信号（高频噪声）输入，电容相当于是短路，高频信号会被反相放大，影响正常输出信号。</p></blockquote><h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5></li><li>在反相端电容的前面加一个小电阻$R_2$，要远远小于反馈网络中的负载电阻Rf阻值：<br>$$A_u(j\omega)=\cfrac{U_o(j\omega)}{U_i(j\omega)}=-\cfrac{R}{R_2+\cfrac{1}{j\omega C}}=-\cfrac{j\omega RC}{1+j\omega R_2C}$$<blockquote><p>当$R_2$非常小的时候，可以忽略，就相当于$-j\omega RC$</p></blockquote></li><li>因为高频噪声的原因，所以微分器通常在工程中会被积分器所取代，通过解微分方程就可以，举课上面的例子：<br>$$\cfrac{d^2U_o(t)}{dt^2}+10\cfrac{dU_o(t)}{dt}+2U_o(t)=Ui(t)$$<br>$$\cfrac{dU_o(t)}{dt}=\int[u_i(t)-10\cfrac{dU_o(t)}{dt}-2U_o(t)]dt$$<br>$$U_o(t)=\iint U_i(t)dt-2\iint U_o(t)dt-10\int U_o(t)dt$$<h4 id="微分器实验"><a href="#微分器实验" class="headerlink" title="微分器实验"></a>微分器实验</h4></li><li>三角波方波变化<blockquote><p>微分嘛，三角波下降的时候，斜率不变且小于0，即 $\cfrac{U_i(t)}{dt}&lt;0$,和前面负号抵消，所以是输出高电平，同理，三角波上升时，斜率不变且大于0，即 $\cfrac{U_i(t)}{dt}&gt;0$,前面加一个负号，所以输出低电平，最后输出的是方波。</p></blockquote></li><li>方波变化尖脉冲<blockquote><p>输入方波为高低电平的时候，输入电平没有变化，斜率为0，高低电平直接是突变，斜率变化很大，所以有个尖脉冲。</p></blockquote></li></ol><p>2020.2.21</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;微分器&quot;&gt;&lt;a href=&quot;#微分器&quot; class=&quot;headerlink&quot; title=&quot;微分器&quot;&gt;&lt;/a&gt;微分器&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;目标：$Uo(t)=k\cfrac{dui(t)}{dt}$&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;即输出与输入的微分成正比，微分是积分的逆运算。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch2-5 积分器</title>
-    <link href="http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/"/>
-    <id>http://yoursite.com/2020/02/20/ch2-5%20%E7%A7%AF%E5%88%86%E5%99%A8/</id>
-    <published>2020-02-20T11:26:55.734Z</published>
-    <updated>2020-02-21T14:11:44.501Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="积分器"><a href="#积分器" class="headerlink" title="积分器"></a>积分器</h3><blockquote><p>目标：$Uo(t)=k\int Ui(t)dt$</p></blockquote><p>即输出与输入的积分成正比</p><a id="more"></a><h4 id="反相积分电路"><a href="#反相积分电路" class="headerlink" title="反相积分电路"></a>反相积分电路</h4><blockquote><p>就是将反相比例放大器中的 Rf 换成电容</p></blockquote><p>(A)时域分析<br>$$Uo(t)=-Uc(t)=-\cfrac{Q}{C}=-\cfrac{1}{C}\int ic(t)dt$$<br>$$=-\cfrac{1}{C}\int \cfrac{Ui(t)}{R}dt=-\cfrac{1}{RC}\int Ui(t)dt=-\cfrac{1}{\tau}\int Ui(t)dt$$<br>其中 $\tau$ = RC 是积分常数</p><p>(B)频域分析</p><blockquote><p>这里和反相比例放大器是一个分析方法<br>$$Au(j\omega)=\cfrac{Uo(j\omega)}{Ui(j\omega)}=-\cfrac{1}{j\omega RC}=-\cfrac{1}{j\omega \tau}$$<br>因为这里有一个$\cfrac{1}{j}=-j$ ,又是反相输入端，最外面那个负号抵消，所以：</p></blockquote><ol><li>相位滞后90度，</li><li>增益的模：$|Au(j\omega)|=\cfrac{1}{\omega RC}$</li><li>这里有个结论：频率越高，衰减越大(<strong><em>这里是真的不明白为什么了？？</em></strong>)<h4 id="差分积分器电路"><a href="#差分积分器电路" class="headerlink" title="差分积分器电路"></a>差分积分器电路</h4><blockquote><p>这里和简单减法器是相似，把 Rf 和下面对应的电阻换成电容即是差分积分器啦<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}[Ui1(j\omega)-Ui2(j\omega)]$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int[Ui1(t)-Ui2(t)]dt$$<br>上面一个是频域形式，一个是时域形式啦</p></blockquote><h4 id="同相积分电路"><a href="#同相积分电路" class="headerlink" title="同相积分电路"></a>同相积分电路</h4><blockquote><p>就是将反相输入端接地，Ui2 = 0<br>$$Uo(j\omega)=\cfrac{1}{j\omega RC}Ui1(j\omega)$$<br>$$Uo(j\omega)=\cfrac{1}{RC}\int Ui1(t)dt$$</p></blockquote><h4 id="积分器设计"><a href="#积分器设计" class="headerlink" title="积分器设计"></a>积分器设计</h4><blockquote><p>这里注意一下设计积分器首先要确定时间常数 $\tau$ ,又因为电容的可选类型比较少，电阻相对要多的多，所以，先确定电容的值，在确定电阻的阻值。</p></blockquote></li></ol><blockquote><p>电容单位 F 换算：1F = 1 * 10^6 $\mu$F(微法)_…………_1 $\mu$F = 1 * 10^3 nF_…………1 $\mu$F = 1 * 10^6 pF</p></blockquote><h4 id="单级积分器电路"><a href="#单级积分器电路" class="headerlink" title="单级积分器电路"></a>单级积分器电路</h4><blockquote><p>由于电容是通交流隔直流的，所以只在负反馈网络加电容，会使直流无法反馈，造成积分器不正常工作，或有噪声的情况，（<strong><em>这里加入的电阻要保证R &gt;&gt;&gt; 10</em>Ri</strong>）,不然对增益会很大的影响。</p></blockquote><h4 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h4><ol><li>方波转换成三角波<blockquote><p>反相输入端输入方波，当输入为高电平，输入端高电位，输出端拉低，反馈回去，电位下降；同理反相端输入为低电平，输出端拉高电位上升，反馈回去。输出端就是三角波了。</p></blockquote></li><li>正弦波和余弦波互相转换（<strong><em>因为相位互相差90度</em></strong>）</li></ol><p>2020.2.20</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;积分器&quot;&gt;&lt;a href=&quot;#积分器&quot; class=&quot;headerlink&quot; title=&quot;积分器&quot;&gt;&lt;/a&gt;积分器&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;目标：$Uo(t)=k\int Ui(t)dt$&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;即输出与输入的积分成正比&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>生不逢时—曾国藩</title>
-    <link href="http://yoursite.com/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/"/>
-    <id>http://yoursite.com/2020/02/20/%E7%94%9F%E4%B8%8D%E9%80%A2%E6%97%B6%E2%80%94%E6%9B%BE%E5%9B%BD%E8%97%A9/</id>
-    <published>2020-02-20T07:37:10.015Z</published>
-    <updated>2020-02-21T14:12:19.008Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。</p><a id="more"></a><h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>本书讲诉曾国藩年轻气盛之时，历经回乡守孝，出山创建湘军，官场不顺，三败石达开，至攻克江宁（九弟-曾国荃），平定太平天国，整饬两江，被迫与捻军作战不利，到处理天津教案名声败北，最后开始新办洋务，送幼童出国学习技术，最后在矛盾与怅然中离去。</p><h4 id="时代所限的“晚清名臣”"><a href="#时代所限的“晚清名臣”" class="headerlink" title="时代所限的“晚清名臣”"></a>时代所限的“晚清名臣”</h4><p>曾国藩在晚年多次提及天命，用了比喻，与康福提到，自己和皇上都是棋盘中的棋子，那谁是执子人呢，曾国藩答：天命。这里的天命是什么，是时代命运，清朝末年，妇人垂帘，皇子孱弱，国运衰微，到了什么地步呢，堂堂江宁，汉唐繁盛至极，现今竟然城内屋檐下，饿殍，乞丐随处可见，比起太平天国时期，竟然是比之远远不如，皇室中，恭亲王和西宫太后内斗，内忧外患，西方列强制度先进，技术先进，压迫清政府。用李鸿章的话是“三千年之未有大变局”。</p><p>曾国藩从小受到程朱理学理学，孔孟熏陶，心中把忠于皇室作为立人为本的标杆，自创湘军，希望也是帮助君主，使天下太平，百姓过上好日子，心只是可惜，天命不从，若是汉唐鼎盛时代，曾国藩一定可有所为，流芳百世，可惜时代变化，恰恰是忠于皇室，忠于国运衰微的皇室让他走上了一条错误的道路。</p><p>曾国藩在晚年的时候心病严重，一心希望世间太平，让人民过上好日子，可事与愿违，街头百姓无饭可吃，山头绿林强盗与官府打为一片，官僚腐败彻底，细细一想，自己用了十几年的生涯创立湘军，最后攻下江宁，平定太平天国，又是为了什么呢。书中说曾国藩晚年在与郭嵩焘的交谈中，郭嵩焘大力批评曾国藩居于忠于皇室的“小节”，而不顾民族和中华命运的“大节”，不知道是不是真的有这次交谈，但是相信若有机会与曾国藩对话，这也是作者心中想表达出来的意思吧。</p><p>曾国藩也只是时代轮换下的一个可怜人了。</p><p>李鸿章是曾国藩的弟子，在书中，曾国藩知道自己时日不多，在晚年与所有健在的人，一一作了告别，包括他最得意的弟子——李鸿章，此后书中再无李鸿章出现，我感兴趣的是李鸿章是怎么想的呢，众人熟知的是李鸿章也是晚清四大名臣之一，被称作是“中国的俾斯麦”，在曾国藩去世之后，本书已经结束，但历史没有，李鸿章一直作为晚清的执掌大臣，签署了各个辱国条约，李鸿章又是怎样的心理变化呢，还有军事天才，左宗棠，他在面临外忧内患的情况下又做了什么，，思考了什么呢，历史的趣味大概就在这里了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;寒假时间转瞬即逝，为数不多的收获之一是在受到白岩松的启发后，将《曾国藩》全书（一共上中下三册）看完，略有启发，这里记录下来。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="生活感想" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch2-4 相减器</title>
-    <link href="http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/"/>
-    <id>http://yoursite.com/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/</id>
-    <published>2020-02-19T13:46:17.617Z</published>
-    <updated>2020-02-21T14:11:43.415Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="相减器"><a href="#相减器" class="headerlink" title="相减器"></a>相减器</h3><p>目标：使输入的两个信号相减输出<br>$$Uo = a Ui1 - b Ui2$$</p><blockquote><p>那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可</p></blockquote><a id="more"></a><h4 id="a-b-1"><a href="#a-b-1" class="headerlink" title="$a = b + 1$ :"></a>$a = b + 1$ :</h4><blockquote><p>将Ui1和Ui2分别接地，可得到同相比例和反相比例放大器的 Uo，然后叠加原理，相加即是输出电压</p></blockquote><p>推导一下：</p><blockquote><p>令Ui2 接地,则为同相比例放大器<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1$$<br>令Ui1接地，则为反相比例放大器<br>$$Uo = -\cfrac{Rf}{R2}Ui2$$<br>用叠加定理合起来就是<br>$$Uo = (1 + \cfrac{Rf}{R2})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p></blockquote><h4 id="a-lt-b-1"><a href="#a-lt-b-1" class="headerlink" title="a &lt; b + 1"></a>a &lt; b + 1</h4><blockquote><p>要减小a，减小同相输入端的电压（分压即可）</p></blockquote><p>在U+处接上一个电阻，这个电阻接地即可<br>$$Uo = (1 + \cfrac{Rf}{R2})(\cfrac{R4}{R1+R4})Ui1 -\cfrac{Rf}{R2}Ui2 $$</p><h4 id="a-gt-b-1"><a href="#a-gt-b-1" class="headerlink" title="a &gt; b + 1"></a>a &gt; b + 1</h4><blockquote><p>同理增加a，减小Ui2的放大倍数就可以了，Rf不变，增加分母上的值即可，即，在R2上面并联一个电阻即可<br>$$Uo = (1+\cfrac{Rf}{R2+R})Ui1-\cfrac{Rf}{R2}Ui2$$<br>由于虚断的原因，在反相比例放大器的情况下，R两端电压都是0，所以R不起作用</p></blockquote><h4 id="a-b-k"><a href="#a-b-k" class="headerlink" title="a = b = k"></a>a = b = k</h4><blockquote><p>常用的模型是使R2 = R1，Rf = R3 ，就可以满足 a = b = k</p></blockquote><p>则：<br>$$Uo = \cfrac{R3}{R2}(Ui1-Ui2) = \cfrac{Rf}{R2}(Ui1-Ui2)$$</p><h4 id="相减器设计实例"><a href="#相减器设计实例" class="headerlink" title="相减器设计实例"></a>相减器设计实例</h4><ol><li>实现：Uo = 5 ( Ui1 - Ui2 )<blockquote><p>放大倍数相同，说明Rf = R4，R1 = R2，……</p></blockquote></li><li>实现：Uo = 5 Ui1 - 8 Ui2<blockquote><p>写出 a &lt; b 的情况（公式）</p></blockquote></li><li>实现：Uo = 8 Ui1 - 5 Ui2</li></ol><h4 id="相减器的应用"><a href="#相减器的应用" class="headerlink" title="相减器的应用"></a>相减器的应用</h4><ol><li>直流电平移位 <blockquote><p>案例里面是将信号接到反相输入端，同相输入端接直流信号，当然这个就反相放大了。同相放大的话就是，将信号接入同相输入端即可</p></blockquote></li><li>抑制共模干扰<blockquote><p>共模干扰——百度百科：共模干扰指的是干扰电压在信号线及其信号地线上的幅度相同。(<strong><em>额？还是觉得哪里不明白</em></strong>)  </p></blockquote></li></ol><blockquote><p>这里孙老师是举了例子，是把两个相同信号源的输入信号放入相减器中间，使两个相同的noise相减，抵消后输入仪器(<strong><em>妙极了</em></strong>)</p></blockquote><h4 id="简单相减器存在的问题"><a href="#简单相减器存在的问题" class="headerlink" title="简单相减器存在的问题"></a>简单相减器存在的问题</h4><ol><li>如果要求两个输入信号的放大倍数相同的话，那么要求上下对应的电阻阻值相同——————&gt;调节增益困难，要同步调节上下两个电阻</li><li>输入电阻偏小(注意哦，不是放大器内部的输入电阻，是同反相输入端上的电阻)，对两个信号源的影响不同(<strong><em>这个是为什么呢？</em></strong>)</li></ol><h4 id="仪表放大器"><a href="#仪表放大器" class="headerlink" title="仪表放大器"></a>仪表放大器</h4><blockquote><p>你好，放大器一书中把仪表放大器归于功能放大器当中哦~</p></blockquote><blockquote><p>结构就是在简单的相减器的前面增加两个同相比例放大器</p></blockquote><h6 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h6><ol><li>两个同相比例放大器由于放大器内部输入电阻阻值趋于无穷大，所以对信号输入起到了很好的隔绝作用。</li><li>通过调节两个同相比例放大器中间的电阻阻值可以很方便的改变仪表放大器的增益，为啥呢，也比较简单，我推导一下：<blockquote><p>首先由于虚断，同相比例放大器的两个信号输入端无电流(阻值太大嘛~),由于虚端，两个信号输入端的电压相同，即信号相同，则：<br>$$Uo1-Uo2=ix(R+R+Rx)=\cfrac{Ui1-Ui2}{Rx}(2R+Rx)$$<br>其中Rx是两个同相比例放大器之间的电压，Ui1和Ui2是后半部分简单减法器的输入信号端<br>$$Uo=\cfrac{R4}{R3}(Uo1-Uo2)=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx}(Ui1-Ui2)$$<br>$$Au=\cfrac{Uo}{Ui1-Ui2}=\cfrac{R4}{R3}(1+\cfrac{2R}{Rx})$$<br>所以增益可以由Rx改变啦</p></blockquote></li></ol><p>2020.2.20</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;相减器&quot;&gt;&lt;a href=&quot;#相减器&quot; class=&quot;headerlink&quot; title=&quot;相减器&quot;&gt;&lt;/a&gt;相减器&lt;/h3&gt;&lt;p&gt;目标：使输入的两个信号相减输出&lt;br&gt;$$Uo = a Ui1 - b Ui2$$&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可&lt;/p&gt;
-&lt;/blockquote&gt;
     
     </summary>
     
