@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-11T17:56:08.458Z</updated>
+  <updated>2020-03-13T06:04:55.922Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电解电容与滤波电容</title>
+    <link href="http://yoursite.com/2020/03/12/%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9%E4%B8%8E%E6%BB%A4%E6%B3%A2%E7%94%B5%E5%AE%B9/"/>
+    <id>http://yoursite.com/2020/03/12/%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9%E4%B8%8E%E6%BB%A4%E6%B3%A2%E7%94%B5%E5%AE%B9/</id>
+    <published>2020-03-12T15:07:33.833Z</published>
+    <updated>2020-03-13T06:04:55.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今天在研究电源部分的降压模块，其中的线性电源模块(TPS768xx)输入端接了两个电容，一个普通电解电容，一个是滤波电容，那么有两个问题产生了：为什么要接两个电容滤波呢，一个不够么？电解电容和滤波电容的区别？</p><a id="more"></a><h3 id="电解电容和滤波电容的区别以及滤波工作原理"><a href="#电解电容和滤波电容的区别以及滤波工作原理" class="headerlink" title="电解电容和滤波电容的区别以及滤波工作原理"></a>电解电容和滤波电容的区别以及滤波工作原理</h3><p>首先，电解电容和滤波电容一样也具有滤波的作用，不过他们的用处和材料有所不同，同为滤波，工作原理很简单，电容是起到一个充电再放电的过程，电容作为电能的储存容器和储水容器一样，当有水流入的时候就把阀门打开，存储水量，到存储上限了以后再放出来，这其中把水放入和将水放出都需要一定的时间。因此在通过电容以后，电压是无法突变的！因此电容实际上是对电压做了一次平滑处理。</p><h3 id="为什么接两个电容滤波呢"><a href="#为什么接两个电容滤波呢" class="headerlink" title="为什么接两个电容滤波呢"></a>为什么接两个电容滤波呢</h3><p>原因很简单，因为不同容值的电容对不同频率的纹波(噪声)进行滤波，一般0.1uf是高频滤波，可以提高芯片的高频性能，10uf是一般滤波。一般都是一个大容量的电容和小容量的电容并联接在输入端口，可以起到一般滤波加上高频滤波的作用。</p><blockquote><p>在百度百科上查阅有搭配是大电容(1000uf),小电容(0.01uf)，在用TPS786xx时(线性电源降压模块)，数据手册上建议是大电容(10uf)，小电容(0.1uf)</p></blockquote><h3 id="为什么会有高频噪声呢"><a href="#为什么会有高频噪声呢" class="headerlink" title="为什么会有高频噪声呢"></a>为什么会有高频噪声呢</h3><ol><li>当刚开始上电的时候会有负载瞬态响应，电流很大，响应很大，会产生高频噪声</li><li>此外，在高功耗电路上，尤其是电源模块，其中的功率线(<strong><em>有大电流通过的线，不是信号线</em></strong>)上，由于输出功率的变化，会导致电源电压不稳定，从而产生自激现象，产生部分高频噪声</li></ol><p>2020.3.13</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;今天在研究电源部分的降压模块，其中的线性电源模块(TPS768xx)输入端接了两个电容，一个普通电解电容，一个是滤波电容，那么有两个问题产生了：为什么要接两个电容滤波呢，一个不够么？电解电容和滤波电容的区别？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="NXP智能车" scheme="http://yoursite.com/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>电机选型以及驱动电路</title>
@@ -442,29 +463,6 @@
       &lt;h3 id=&quot;相减器&quot;&gt;&lt;a href=&quot;#相减器&quot; class=&quot;headerlink&quot; title=&quot;相减器&quot;&gt;&lt;/a&gt;相减器&lt;/h3&gt;&lt;p&gt;目标：使输入的两个信号相减输出&lt;br&gt;$$Uo = a Ui1 - b Ui2$$&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;那么令同相端为被减数（Ui1），反相端为减数（Ui2），即可&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch2-3 相加器</title>
-    <link href="http://yoursite.com/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/"/>
-    <id>http://yoursite.com/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/</id>
-    <published>2020-02-19T13:46:17.612Z</published>
-    <updated>2020-02-21T14:11:42.356Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="由运放构成的相加器"><a href="#由运放构成的相加器" class="headerlink" title="由运放构成的相加器"></a>由运放构成的相加器</h3><h4 id="传统电阻分压"><a href="#传统电阻分压" class="headerlink" title="传统电阻分压"></a>传统电阻分压</h4><blockquote><p>缺点：1. 信号会衰减，无法放大；2. 加上负载的话，分压系数会变化；3. 两端初始的信号源也会互相干扰（可能有电场等相互干扰吧）————&gt;加上运算放大器解决问题</p></blockquote><a id="more"></a><h4 id="同相加法器"><a href="#同相加法器" class="headerlink" title="同相加法器"></a>同相加法器</h4><blockquote><p>运放输入电阻趋近于无穷大，输出电阻趋近于0，起到隔离放大的作用（<strong><em>这里的隔离是指的隔离什么呢？？是输入信号的噪声吗？？？</em></strong>）</p></blockquote><blockquote><p>首先这里是在同相比例放大器的基础上，在输入端加入两个分开的电源以及负载（这里也要记住在脑子里），负载分别是R1和R2，输入电压为U+<br>$$U+=\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2$$<br>这个公式怎么推导的，这里要记住，对Ui1和Ui2分开考虑，当对Ui1考虑时，就把Ui2接地，当对Ui2考虑时就把Ui1接地，分别求出Ui1和Ui2对U+的影响，然后叠加起来即为U+处的电压<br>$$Uo = (1+\cfrac{Rf}{R})U+$$<br>$$Uo = (1+\cfrac{Rf}{R})(\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2)$$<br>若R1 = R2<br>$$Uo = \cfrac{1}{2}(1+\cfrac{Rf}{R})(Ui1 + Ui2)$$<br>缺点：两信号源之间依然会互相影响（接在一起肯定会互相影响）</p></blockquote><h4 id="反相相加器"><a href="#反相相加器" class="headerlink" title="反相相加器"></a>反相相加器</h4><blockquote><p>这里是在反相比例放大器的基础上，将反相输入端接上分别的信号源以及负载(<strong><em>图请记在脑子里，请记得反相输入端是虚地</em></strong>)</p></blockquote><blockquote><p>根据叠加原理，可得：<br>$$Uo = -(\cfrac{Rf}{R1}Ui1+\cfrac{Rf}{R2}Ui2+\cfrac{Rf}{R3}Ui3)$$<br>当R1 = R2 = R3 时<br>$$Uo = -\cfrac{Rf}{R}(Ui1+Ui2+Ui3)$$<br>优点：因为反相端虚地，各电流值由该支路信号源和电阻独立决定，各个信号源之间就不会影响。(<strong><em>这里我就奇怪了，不管是虚地还是啥的，两个连接上的信号源对这个节点就没有影响了？？？</em></strong>)</p></blockquote><h4 id="反相加法器的设计"><a href="#反相加法器的设计" class="headerlink" title="反相加法器的设计"></a>反相加法器的设计</h4><p>(<strong><em>记牢反相比例，同相比例放大器的闭环增益公式很重要</em></strong>)<br>$$Auf = -\cfrac{Rf}{R}$$</p><ol><li>实现：Uo = -6( Ui1 + Ui2 )———要求闭环输入电阻Rif大于等于30k<blockquote><p>注：脑子里算算就行了</p></blockquote></li><li>实现：Uo = - 5<em>Ui1 - 8</em>Ui2 - 3*Ui3<blockquote><p>由于反馈网络负载是固定的，所以先确定Rf，剩下各自算算就行，脑子里过一下</p></blockquote><h4 id="同相加法器的设计"><a href="#同相加法器的设计" class="headerlink" title="同相加法器的设计"></a>同相加法器的设计</h4>(<strong><em>记牢反相比例，同相比例放大器的闭环增益公式很重要</em></strong>)<br>$$Auf = (1 + \cfrac{Rf}{R})$$<br>对于同相加法器，对信号的放大倍数还取决于R1 ，R2<br>$$Uo = (1+\cfrac{Rf}{R})(\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2)$$</li><li>实现：Uo = 9(Ui1 + Ui2)<blockquote><p>对两个信号放大倍数相同，有公式可知，由于增益不变，放大倍数也不变，所以R1 = R2<br>$$Uo = \cfrac{1}{2}(1+\cfrac{Rf}{R})(Ui1 + Ui2)$$<br>剩下参数自己设一下都行</p></blockquote></li><li>实现：Uo = 2 Ui1 + 5 Ui2<br>同相加法器，增益不变嘛，所以放大倍数由R1 ，R2（信号源上的负载决定），所以 R1和R2求比值，剩下参数自己选择代入即可</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;由运放构成的相加器&quot;&gt;&lt;a href=&quot;#由运放构成的相加器&quot; class=&quot;headerlink&quot; title=&quot;由运放构成的相加器&quot;&gt;&lt;/a&gt;由运放构成的相加器&lt;/h3&gt;&lt;h4 id=&quot;传统电阻分压&quot;&gt;&lt;a href=&quot;#传统电阻分压&quot; class=&quot;headerlink&quot; title=&quot;传统电阻分压&quot;&gt;&lt;/a&gt;传统电阻分压&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;缺点：1. 信号会衰减，无法放大；2. 加上负载的话，分压系数会变化；3. 两端初始的信号源也会互相干扰（可能有电场等相互干扰吧）————&amp;gt;加上运算放大器解决问题&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>

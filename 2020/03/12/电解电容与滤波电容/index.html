@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch1-1 导论 - 仰望星空</title>
+<title>电解电容与滤波电容 - 仰望星空</title>
 
 
-    <meta name="description" content="为什么学？模电： 发展-&gt;高频&#x2F;数电&#x2F;微电子&#x2F;电力电子 可直接解决工程问题：（温度……——&gt;传感器——&gt;电信号） &#x2F;  数字信号——&gt;模拟电路——&gt;模拟信号 时间和幅度连续变化">
+    <meta name="description" content="前言今天在研究电源部分的降压模块，其中的线性电源模块(TPS768xx)输入端接了两个电容，一个普通电解电容，一个是滤波电容，那么有两个问题产生了：为什么要接两个电容滤波呢，一个不够么？电解电容和滤波电容的区别？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch1-1 导论">
-<meta property="og:url" content="http://yoursite.com/2020/02/17/ch1-1%20%E5%AF%BC%E8%AE%BA/index.html">
+<meta property="og:title" content="电解电容与滤波电容">
+<meta property="og:url" content="http://yoursite.com/2020/03/12/%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9%E4%B8%8E%E6%BB%A4%E6%B3%A2%E7%94%B5%E5%AE%B9/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="为什么学？模电： 发展-&gt;高频&#x2F;数电&#x2F;微电子&#x2F;电力电子 可直接解决工程问题：（温度……——&gt;传感器——&gt;电信号） &#x2F;  数字信号——&gt;模拟电路——&gt;模拟信号 时间和幅度连续变化">
+<meta property="og:description" content="前言今天在研究电源部分的降压模块，其中的线性电源模块(TPS768xx)输入端接了两个电容，一个普通电解电容，一个是滤波电容，那么有两个问题产生了：为什么要接两个电容滤波呢，一个不够么？电解电容和滤波电容的区别？">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-17T12:18:27.021Z">
-<meta property="article:modified_time" content="2020-02-21T14:11:35.592Z">
+<meta property="article:published_time" content="2020-03-12T15:07:33.833Z">
+<meta property="article:modified_time" content="2020-03-13T06:04:55.922Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch1-1 导论" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="电解电容与滤波电容" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch1-1 导论" height="28">
+                <img src="/images/logo_2.png" alt="电解电容与滤波电容" height="28">
             
             </a>
         </div>
@@ -143,17 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-17T12:18:27.021Z">2020-02-17</time>
+                <time class="level-item has-text-grey" datetime="2020-03-12T15:07:33.833Z">2020-03-12</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                <a class="has-link-grey -link" href="/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/">NXP智能车</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 621 个字)
+                    4 分钟 读完 (大约 589 个字)
                 </span>
                 
                 
@@ -162,35 +162,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch1-1 导论
+                电解电容与滤波电容
             
         </h1>
         <div class="content">
-            <h3 id="为什么学？"><a href="#为什么学？" class="headerlink" title="为什么学？"></a>为什么学？</h3><h4 id="模电："><a href="#模电：" class="headerlink" title="模电："></a>模电：</h4><ol>
-<li>发展-&gt;高频/数电/微电子/电力电子</li>
-<li>可直接解决工程问题：（温度……——&gt;传感器——&gt;电信号） /  数字信号——&gt;模拟电路——&gt;模拟信号</li>
-<li>时间和幅度连续变化<a id="more"></a>
-<h3 id="学什么？"><a href="#学什么？" class="headerlink" title="学什么？"></a>学什么？</h3><h4 id="电子器件"><a href="#电子器件" class="headerlink" title="电子器件"></a>电子器件</h4></li>
-<li>电阻：耗能元件 / 电容：储能元件（有损耗） /电感 变压器 / 受控源 /非线性器件……<h4 id="物理非线性器件的探索："><a href="#物理非线性器件的探索：" class="headerlink" title="物理非线性器件的探索："></a>物理非线性器件的探索：</h4></li>
-<li>1904年–伦敦大学–弗莱明–发明电子管（电流电压非线性/有结构脆弱等缺点）</li>
-<li>1947年–贝尔实验室–威廉，肖克利等三位科学家发明–晶体三极管（半导体器件）</li>
-<li>1952年–英国皇家雷达研究所–提出”集成电路”概念</li>
-<li>1958年–美国德州仪器公司–Jack S.Kilby–发明第一片集成电路</li>
-<li>现代–系统集成（SOC）–&gt;集成度高<h4 id="课程"><a href="#课程" class="headerlink" title="课程"></a>课程</h4></li>
-<li>器件：晶体管，场效应管</li>
-<li>放大器：顾名思义，放大小信号 <strong><em>且不失真</em></strong></li>
-<li>滤波器：给输入信号去除噪声</li>
-<li>振荡器：上电即可发出脉冲（如三角波，方波，正弦波……如555振荡器）</li>
-<li>电源：输入交流——&gt;输出稳定直流电<h4 id="模电难点-amp-解决方案"><a href="#模电难点-amp-解决方案" class="headerlink" title="模电难点&amp;解决方案"></a>模电难点&amp;解决方案</h4></li>
-<li>敏感性：器件非线性，RC数值，温度，频率（<strong><em>这里的频率指的是什么频率？只是输入信号吗？</em></strong>），噪声/干扰，电源电压……</li>
-<li>解决方案：1.提高器件性能 2.引入负反馈<blockquote>
-<p>针对负反馈，这里咱多写两句，这里和何凯明同学提出的残差网络（Resnet）很相似（其实何凯明同学也是借鉴了电路中的负反馈）只是神经网络中，他是将输出通过负反馈与前者相比较，取loss的优质带入下一层网络，而这里是将放大器倍数增大，增益只取决于F（反馈）这很有意思，但还有一些不太明白：<strong><em>这里F有些抽象，不明白这是怎么工作的，是什么器件来反馈 ?</em></strong></p>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今天在研究电源部分的降压模块，其中的线性电源模块(TPS768xx)输入端接了两个电容，一个普通电解电容，一个是滤波电容，那么有两个问题产生了：为什么要接两个电容滤波呢，一个不够么？电解电容和滤波电容的区别？</p>
+<a id="more"></a>
+<h3 id="电解电容和滤波电容的区别以及滤波工作原理"><a href="#电解电容和滤波电容的区别以及滤波工作原理" class="headerlink" title="电解电容和滤波电容的区别以及滤波工作原理"></a>电解电容和滤波电容的区别以及滤波工作原理</h3><p>首先，电解电容和滤波电容一样也具有滤波的作用，不过他们的用处和材料有所不同，同为滤波，工作原理很简单，电容是起到一个充电再放电的过程，电容作为电能的储存容器和储水容器一样，当有水流入的时候就把阀门打开，存储水量，到存储上限了以后再放出来，这其中把水放入和将水放出都需要一定的时间。因此在通过电容以后，电压是无法突变的！因此电容实际上是对电压做了一次平滑处理。</p>
+<h3 id="为什么接两个电容滤波呢"><a href="#为什么接两个电容滤波呢" class="headerlink" title="为什么接两个电容滤波呢"></a>为什么接两个电容滤波呢</h3><p>原因很简单，因为不同容值的电容对不同频率的纹波(噪声)进行滤波，一般0.1uf是高频滤波，可以提高芯片的高频性能，10uf是一般滤波。一般都是一个大容量的电容和小容量的电容并联接在输入端口，可以起到一般滤波加上高频滤波的作用。</p>
+<blockquote>
+<p>在百度百科上查阅有搭配是大电容(1000uf),小电容(0.01uf)，在用TPS786xx时(线性电源降压模块)，数据手册上建议是大电容(10uf)，小电容(0.1uf)</p>
 </blockquote>
-</li>
+<h3 id="为什么会有高频噪声呢"><a href="#为什么会有高频噪声呢" class="headerlink" title="为什么会有高频噪声呢"></a>为什么会有高频噪声呢</h3><ol>
+<li>当刚开始上电的时候会有负载瞬态响应，电流很大，响应很大，会产生高频噪声</li>
+<li>此外，在高功耗电路上，尤其是电源模块，其中的功率线(<strong><em>有大电流通过的线，不是信号线</em></strong>)上，由于输出功率的变化，会导致电源电压不稳定，从而产生自激现象，产生部分高频噪声</li>
 </ol>
-<h4 id="重要思想……（贯彻全书？）"><a href="#重要思想……（贯彻全书？）" class="headerlink" title="重要思想……（贯彻全书？）"></a>重要思想……（贯彻全书？）</h4><p>$\cfrac{A}{1+AF}$ $\thickapprox$ $\cfrac{1}{F}$</p>
-<p> 相减和高倍放大器集成==&gt;运算放大器（operational Amplifier）<br> 所以：运放+反馈 = …………电路</p>
-<p>2020.2.17</p>
+<p>2020.3.13</p>
 
         </div>
         
@@ -235,17 +222,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/17/ch1-2%20%E6%94%BE%E5%A4%A7%E5%99%A8%E4%B8%BB%E8%A6%81%E6%8C%87%E6%A0%87/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch1-2 放大器主要指标</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/16/Git%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86Github%E4%BB%93%E5%BA%93&%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
-                <span class="level-item">Git远程管理Github仓库&amp;遇到的问题</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/">
+                <span class="level-item">电机选型以及驱动电路</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -381,38 +361,22 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#为什么学？">
+        <a class="is-flex" href="#前言">
         <span class="has-mr-6">1</span>
-        <span>为什么学？</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#模电：">
-        <span class="has-mr-6">1.1</span>
-        <span>模电：</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#学什么？">
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#电解电容和滤波电容的区别以及滤波工作原理">
         <span class="has-mr-6">2</span>
-        <span>学什么？</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#电子器件">
-        <span class="has-mr-6">2.1</span>
-        <span>电子器件</span>
+        <span>电解电容和滤波电容的区别以及滤波工作原理</span>
         </a></li><li>
-        <a class="is-flex" href="#物理非线性器件的探索：">
-        <span class="has-mr-6">2.2</span>
-        <span>物理非线性器件的探索：</span>
+        <a class="is-flex" href="#为什么接两个电容滤波呢">
+        <span class="has-mr-6">3</span>
+        <span>为什么接两个电容滤波呢</span>
         </a></li><li>
-        <a class="is-flex" href="#课程">
-        <span class="has-mr-6">2.3</span>
-        <span>课程</span>
-        </a></li><li>
-        <a class="is-flex" href="#模电难点-amp-解决方案">
-        <span class="has-mr-6">2.4</span>
-        <span>模电难点&解决方案</span>
-        </a></li><li>
-        <a class="is-flex" href="#重要思想……（贯彻全书？）">
-        <span class="has-mr-6">2.5</span>
-        <span>重要思想……（贯彻全书？）</span>
-        </a></li></ul></li></ul>
+        <a class="is-flex" href="#为什么会有高频噪声呢">
+        <span class="has-mr-6">4</span>
+        <span>为什么会有高频噪声呢</span>
+        </a></li></ul>
             </div>
         </div>
     </div>
@@ -435,7 +399,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch1-1 导论" height="28">
+                    <img src="/images/logo_2.png" alt="电解电容与滤波电容" height="28">
                 
                 </a>
                 <p class="is-size-7">
