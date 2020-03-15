@@ -20,7 +20,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta property="article:published_time" content="2020-03-15T10:23:34.488Z">
-<meta property="article:modified_time" content="2020-03-15T12:35:04.106Z">
+<meta property="article:modified_time" content="2020-03-15T12:41:06.063Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 935 个字)
+                    6 分钟 读完 (大约 936 个字)
                 </span>
                 
                 
@@ -177,7 +177,7 @@
 </blockquote>
 <h3 id="visdom的使用"><a href="#visdom的使用" class="headerlink" title="visdom的使用"></a>visdom的使用</h3><p>打开cmd或者git bash(终端)，输入：</p>
 <blockquote>
-<p>-m visdom.server</p>
+<p>python -m visdom.server</p>
 </blockquote>
 <p><strong><em>注：上面窗口不要关掉，后台继续运行</em></strong><br>可以得到一个浏览器地址，将该地址在浏览器中打开即可</p>
 <h3 id="visdom语法"><a href="#visdom语法" class="headerlink" title="visdom语法"></a>visdom语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> visdom <span class="keyword">import</span> Visdom</span><br><span class="line">viz = visdom()</span><br><span class="line"></span><br><span class="line">viz.line([<span class="number">0.</span>], [<span class="number">0.</span>], win=<span class="string">'train_loss'</span>, opts=dict(title=<span class="string">'train loss'</span>)) <span class="comment">#新建一个窗口(图像)，初始化变量，第一个[0.]是Y，第二个[0.]是X，其中win是Window的缩写，title是图像的名字</span></span><br><span class="line"></span><br><span class="line">viz.line([[<span class="number">0.0</span>, <span class="number">0.0</span>]], [<span class="number">0.</span>], win=<span class="string">'test'</span>, opts=dict(title=<span class="string">'test loss&amp;acc.'</span>, legend=[<span class="string">'loss'</span>, <span class="string">'acc.'</span>]))</span><br><span class="line"><span class="comment">#新建一个窗口(图像)，两个变量，第一个[0.0，0.0]代表两个Y变量，第二个[0.]代表X</span></span><br><span class="line"></span><br><span class="line">viz.line([[test_loss, correct / len(test_loader.dataset)]],</span><br><span class="line">[global_step], win=<span class="string">'test'</span>, update=<span class="string">'append'</span>)</span><br><span class="line"><span class="comment">#初始化完毕，就带入变量，其中update='append'指的是数据实时更新</span></span><br><span class="line"></span><br><span class="line">viz.images(data.view(<span class="number">-1</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>), win=<span class="string">'x'</span>)</span><br><span class="line"><span class="comment">#载入MNSIT的图片</span></span><br><span class="line"></span><br><span class="line">viz.text(str(pred.detach().cpu().numpy()), win=<span class="string">'pred'</span>,</span><br><span class="line">opts=dict(title=<span class="string">'pred'</span>))</span><br><span class="line"><span class="comment">#载入MNSIT的predict数字，最终网络根据图片预测出来的数字。</span></span><br></pre></td></tr></table></figure>
