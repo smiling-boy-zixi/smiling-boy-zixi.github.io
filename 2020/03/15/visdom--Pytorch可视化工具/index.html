@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch2-3 相加器 - 仰望星空</title>
+<title>visdom--Pytorch可视化工具 - 仰望星空</title>
 
 
-    <meta name="description" content="由运放构成的相加器传统电阻分压 缺点：1. 信号会衰减，无法放大；2. 加上负载的话，分压系数会变化；3. 两端初始的信号源也会互相干扰（可能有电场等相互干扰吧）————&gt;加上运算放大器解决问题">
+    <meta name="description" content="前言从安装visdom到我现在写这篇博客已经有至少半个月了吧，实际上使用visdom的次数可能也就2，3次，上次使用visdom是学习MNSIT的时候，这次学习迁移学习-自定义数据集操作的时候，再一次用到，我一下子也想不起来，但是数据可视化十分重要，包括数据和模型的调试，科研论文的撰写，这都是离不开的，所以这里就做一个简单的总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch2-3 相加器">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/ch2-3%20%E7%9B%B8%E5%8A%A0%E5%99%A8/index.html">
+<meta property="og:title" content="visdom--Pytorch可视化工具">
+<meta property="og:url" content="http://yoursite.com/2020/03/15/visdom--Pytorch%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="由运放构成的相加器传统电阻分压 缺点：1. 信号会衰减，无法放大；2. 加上负载的话，分压系数会变化；3. 两端初始的信号源也会互相干扰（可能有电场等相互干扰吧）————&gt;加上运算放大器解决问题">
+<meta property="og:description" content="前言从安装visdom到我现在写这篇博客已经有至少半个月了吧，实际上使用visdom的次数可能也就2，3次，上次使用visdom是学习MNSIT的时候，这次学习迁移学习-自定义数据集操作的时候，再一次用到，我一下子也想不起来，但是数据可视化十分重要，包括数据和模型的调试，科研论文的撰写，这都是离不开的，所以这里就做一个简单的总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-19T13:46:17.612Z">
-<meta property="article:modified_time" content="2020-02-21T14:11:42.356Z">
+<meta property="article:published_time" content="2020-03-15T10:23:34.488Z">
+<meta property="article:modified_time" content="2020-03-15T12:35:04.106Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch2-3 相加器" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="visdom--Pytorch可视化工具" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch2-3 相加器" height="28">
+                <img src="/images/logo_2.png" alt="visdom--Pytorch可视化工具" height="28">
             
             </a>
         </div>
@@ -143,17 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-19T13:46:17.612Z">2020-02-19</time>
+                <time class="level-item has-text-grey" datetime="2020-03-15T10:23:34.488Z">2020-03-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                <a class="has-link-grey -link" href="/categories/machine-learning/">machine learning</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 842 个字)
+                    6 分钟 读完 (大约 935 个字)
                 </span>
                 
                 
@@ -162,42 +162,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch2-3 相加器
+                visdom--Pytorch可视化工具
             
         </h1>
         <div class="content">
-            <h3 id="由运放构成的相加器"><a href="#由运放构成的相加器" class="headerlink" title="由运放构成的相加器"></a>由运放构成的相加器</h3><h4 id="传统电阻分压"><a href="#传统电阻分压" class="headerlink" title="传统电阻分压"></a>传统电阻分压</h4><blockquote>
-<p>缺点：1. 信号会衰减，无法放大；2. 加上负载的话，分压系数会变化；3. 两端初始的信号源也会互相干扰（可能有电场等相互干扰吧）————&gt;加上运算放大器解决问题</p>
-</blockquote>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>从安装visdom到我现在写这篇博客已经有至少半个月了吧，实际上使用visdom的次数可能也就2，3次，上次使用visdom是学习MNSIT的时候，这次学习迁移学习-自定义数据集操作的时候，再一次用到，我一下子也想不起来，但是数据可视化十分重要，包括数据和模型的调试，科研论文的撰写，这都是离不开的，所以这里就做一个简单的总结</p>
 <a id="more"></a>
-<h4 id="同相加法器"><a href="#同相加法器" class="headerlink" title="同相加法器"></a>同相加法器</h4><blockquote>
-<p>运放输入电阻趋近于无穷大，输出电阻趋近于0，起到隔离放大的作用（<strong><em>这里的隔离是指的隔离什么呢？？是输入信号的噪声吗？？？</em></strong>）</p>
-</blockquote>
+<h3 id="什么是可视化工具"><a href="#什么是可视化工具" class="headerlink" title="什么是可视化工具"></a>什么是可视化工具</h3><p>这里的可视化就是将，data中的数据，比如说image，或者学习参数，test_acc等用图表等形式显示出来。</p>
+<p>现在TensorFlow用的是TensorBoard，对应的pytorch有一个TensorBoardX，和visdom，两个都是可视化工具，但是有所不同，TensorBoardX在绘制图像等时会产生文件夹，如果数据很大，就会存储大量的文件，导致运行很卡；另外，在代码方面TensorBoardX不能直接支持tensor变量，需要再代码中将其转换成numpy数据类型，绘制图像帧数在30s更新一次。</p>
+<p>相比较而言，visdom不会产生文件夹，而且可以直接支持Tensor变量，当然最后绘制图像都是使用的numpy数据类型，但是visdom在内部进行了Tensor——&gt;numpy数据类型的一个转换，因此在代码里可以省去变量类型转换的步骤，最重要的是visdom的数据更新速度是5s更新一次数据点。</p>
+<h3 id="visdom的安装"><a href="#visdom的安装" class="headerlink" title="visdom的安装"></a>visdom的安装</h3><p>这里主要参考网易云课堂上龙龙老师的讲解，但是实际安装时遇到了一些别的困难，导致，没有办法像视频演示一样安装，网上查询资料说是可能因为pip 安装源来自于墙外网站，所以部分下载文件被过滤(删除)了，然后我科学上网以后，下载完毕还是一样的缺失文件，在网络上大部分是Linux的操作，对于Windows的解决方法如下：</p>
 <blockquote>
-<p>首先这里是在同相比例放大器的基础上，在输入端加入两个分开的电源以及负载（这里也要记住在脑子里），负载分别是R1和R2，输入电压为U+<br>$$U+=\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2$$<br>这个公式怎么推导的，这里要记住，对Ui1和Ui2分开考虑，当对Ui1考虑时，就把Ui2接地，当对Ui2考虑时就把Ui1接地，分别求出Ui1和Ui2对U+的影响，然后叠加起来即为U+处的电压<br>$$Uo = (1+\cfrac{Rf}{R})U+$$<br>$$Uo = (1+\cfrac{Rf}{R})(\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2)$$<br>若R1 = R2<br>$$Uo = \cfrac{1}{2}(1+\cfrac{Rf}{R})(Ui1 + Ui2)$$<br>缺点：两信号源之间依然会互相影响（接在一起肯定会互相影响）</p>
+<p>在CSDN上下载一个static文件(淘宝1.2)，里面有别人下载好的json等文件，将原来文件中static替换掉即可成功运行。</p>
 </blockquote>
-<h4 id="反相相加器"><a href="#反相相加器" class="headerlink" title="反相相加器"></a>反相相加器</h4><blockquote>
-<p>这里是在反相比例放大器的基础上，将反相输入端接上分别的信号源以及负载(<strong><em>图请记在脑子里，请记得反相输入端是虚地</em></strong>)</p>
-</blockquote>
+<h3 id="visdom的使用"><a href="#visdom的使用" class="headerlink" title="visdom的使用"></a>visdom的使用</h3><p>打开cmd或者git bash(终端)，输入：</p>
 <blockquote>
-<p>根据叠加原理，可得：<br>$$Uo = -(\cfrac{Rf}{R1}Ui1+\cfrac{Rf}{R2}Ui2+\cfrac{Rf}{R3}Ui3)$$<br>当R1 = R2 = R3 时<br>$$Uo = -\cfrac{Rf}{R}(Ui1+Ui2+Ui3)$$<br>优点：因为反相端虚地，各电流值由该支路信号源和电阻独立决定，各个信号源之间就不会影响。(<strong><em>这里我就奇怪了，不管是虚地还是啥的，两个连接上的信号源对这个节点就没有影响了？？？</em></strong>)</p>
+<p>-m visdom.server</p>
 </blockquote>
-<h4 id="反相加法器的设计"><a href="#反相加法器的设计" class="headerlink" title="反相加法器的设计"></a>反相加法器的设计</h4><p>(<strong><em>记牢反相比例，同相比例放大器的闭环增益公式很重要</em></strong>)<br>$$Auf = -\cfrac{Rf}{R}$$</p>
-<ol>
-<li>实现：Uo = -6( Ui1 + Ui2 )———要求闭环输入电阻Rif大于等于30k<blockquote>
-<p>注：脑子里算算就行了</p>
-</blockquote>
-</li>
-<li>实现：Uo = - 5<em>Ui1 - 8</em>Ui2 - 3*Ui3<blockquote>
-<p>由于反馈网络负载是固定的，所以先确定Rf，剩下各自算算就行，脑子里过一下</p>
-</blockquote>
-<h4 id="同相加法器的设计"><a href="#同相加法器的设计" class="headerlink" title="同相加法器的设计"></a>同相加法器的设计</h4>(<strong><em>记牢反相比例，同相比例放大器的闭环增益公式很重要</em></strong>)<br>$$Auf = (1 + \cfrac{Rf}{R})$$<br>对于同相加法器，对信号的放大倍数还取决于R1 ，R2<br>$$Uo = (1+\cfrac{Rf}{R})(\cfrac{R2}{R1+R2}Ui1+\cfrac{R1}{R1+R2}Ui2)$$</li>
-<li>实现：Uo = 9(Ui1 + Ui2)<blockquote>
-<p>对两个信号放大倍数相同，有公式可知，由于增益不变，放大倍数也不变，所以R1 = R2<br>$$Uo = \cfrac{1}{2}(1+\cfrac{Rf}{R})(Ui1 + Ui2)$$<br>剩下参数自己设一下都行</p>
-</blockquote>
-</li>
-<li>实现：Uo = 2 Ui1 + 5 Ui2<br>同相加法器，增益不变嘛，所以放大倍数由R1 ，R2（信号源上的负载决定），所以 R1和R2求比值，剩下参数自己选择代入即可</li>
-</ol>
+<p><strong><em>注：上面窗口不要关掉，后台继续运行</em></strong><br>可以得到一个浏览器地址，将该地址在浏览器中打开即可</p>
+<h3 id="visdom语法"><a href="#visdom语法" class="headerlink" title="visdom语法"></a>visdom语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> visdom <span class="keyword">import</span> Visdom</span><br><span class="line">viz = visdom()</span><br><span class="line"></span><br><span class="line">viz.line([<span class="number">0.</span>], [<span class="number">0.</span>], win=<span class="string">'train_loss'</span>, opts=dict(title=<span class="string">'train loss'</span>)) <span class="comment">#新建一个窗口(图像)，初始化变量，第一个[0.]是Y，第二个[0.]是X，其中win是Window的缩写，title是图像的名字</span></span><br><span class="line"></span><br><span class="line">viz.line([[<span class="number">0.0</span>, <span class="number">0.0</span>]], [<span class="number">0.</span>], win=<span class="string">'test'</span>, opts=dict(title=<span class="string">'test loss&amp;acc.'</span>, legend=[<span class="string">'loss'</span>, <span class="string">'acc.'</span>]))</span><br><span class="line"><span class="comment">#新建一个窗口(图像)，两个变量，第一个[0.0，0.0]代表两个Y变量，第二个[0.]代表X</span></span><br><span class="line"></span><br><span class="line">viz.line([[test_loss, correct / len(test_loader.dataset)]],</span><br><span class="line">[global_step], win=<span class="string">'test'</span>, update=<span class="string">'append'</span>)</span><br><span class="line"><span class="comment">#初始化完毕，就带入变量，其中update='append'指的是数据实时更新</span></span><br><span class="line"></span><br><span class="line">viz.images(data.view(<span class="number">-1</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>), win=<span class="string">'x'</span>)</span><br><span class="line"><span class="comment">#载入MNSIT的图片</span></span><br><span class="line"></span><br><span class="line">viz.text(str(pred.detach().cpu().numpy()), win=<span class="string">'pred'</span>,</span><br><span class="line">opts=dict(title=<span class="string">'pred'</span>))</span><br><span class="line"><span class="comment">#载入MNSIT的predict数字，最终网络根据图片预测出来的数字。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上面代码中列举了几个最简单的，绘制曲线，载入图片，text文案的方法，以后如果又忘记了，就有可以复习的资料了，加油~</p>
 
         </div>
         
@@ -242,17 +227,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/19/ch2-4%20%E7%9B%B8%E5%87%8F%E5%99%A8/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch2-4 相减器</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/18/ch2-2%20%E5%90%8C%E7%9B%B8%E4%BB%A5%E5%8F%8A%E5%8F%8D%E7%9B%B8%E6%AF%94%E4%BE%8B%E6%94%BE%E5%A4%A7%E5%99%A8/">
-                <span class="level-item">ch2-2 同相以及反相比例放大器</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/13/%E5%A6%82%E4%BD%95%E5%9C%A8AD18%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/">
+                <span class="level-item">如何在AD18新建工程</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -388,30 +366,30 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#由运放构成的相加器">
+        <a class="is-flex" href="#前言">
         <span class="has-mr-6">1</span>
-        <span>由运放构成的相加器</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#传统电阻分压">
-        <span class="has-mr-6">1.1</span>
-        <span>传统电阻分压</span>
+        <span>前言</span>
         </a></li><li>
-        <a class="is-flex" href="#同相加法器">
-        <span class="has-mr-6">1.2</span>
-        <span>同相加法器</span>
+        <a class="is-flex" href="#什么是可视化工具">
+        <span class="has-mr-6">2</span>
+        <span>什么是可视化工具</span>
         </a></li><li>
-        <a class="is-flex" href="#反相相加器">
-        <span class="has-mr-6">1.3</span>
-        <span>反相相加器</span>
+        <a class="is-flex" href="#visdom的安装">
+        <span class="has-mr-6">3</span>
+        <span>visdom的安装</span>
         </a></li><li>
-        <a class="is-flex" href="#反相加法器的设计">
-        <span class="has-mr-6">1.4</span>
-        <span>反相加法器的设计</span>
+        <a class="is-flex" href="#visdom的使用">
+        <span class="has-mr-6">4</span>
+        <span>visdom的使用</span>
         </a></li><li>
-        <a class="is-flex" href="#同相加法器的设计">
-        <span class="has-mr-6">1.5</span>
-        <span>同相加法器的设计</span>
-        </a></li></ul></li></ul>
+        <a class="is-flex" href="#visdom语法">
+        <span class="has-mr-6">5</span>
+        <span>visdom语法</span>
+        </a></li><li>
+        <a class="is-flex" href="#总结">
+        <span class="has-mr-6">6</span>
+        <span>总结</span>
+        </a></li></ul>
             </div>
         </div>
     </div>
@@ -434,7 +412,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch2-3 相加器" height="28">
+                    <img src="/images/logo_2.png" alt="visdom--Pytorch可视化工具" height="28">
                 
                 </a>
                 <p class="is-size-7">

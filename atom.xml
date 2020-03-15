@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-13T14:52:09.161Z</updated>
+  <updated>2020-03-15T12:35:04.106Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>visdom--Pytorch可视化工具</title>
+    <link href="http://yoursite.com/2020/03/15/visdom--Pytorch%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+    <id>http://yoursite.com/2020/03/15/visdom--Pytorch%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7/</id>
+    <published>2020-03-15T10:23:34.488Z</published>
+    <updated>2020-03-15T12:35:04.106Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>从安装visdom到我现在写这篇博客已经有至少半个月了吧，实际上使用visdom的次数可能也就2，3次，上次使用visdom是学习MNSIT的时候，这次学习迁移学习-自定义数据集操作的时候，再一次用到，我一下子也想不起来，但是数据可视化十分重要，包括数据和模型的调试，科研论文的撰写，这都是离不开的，所以这里就做一个简单的总结</p><a id="more"></a><h3 id="什么是可视化工具"><a href="#什么是可视化工具" class="headerlink" title="什么是可视化工具"></a>什么是可视化工具</h3><p>这里的可视化就是将，data中的数据，比如说image，或者学习参数，test_acc等用图表等形式显示出来。</p><p>现在TensorFlow用的是TensorBoard，对应的pytorch有一个TensorBoardX，和visdom，两个都是可视化工具，但是有所不同，TensorBoardX在绘制图像等时会产生文件夹，如果数据很大，就会存储大量的文件，导致运行很卡；另外，在代码方面TensorBoardX不能直接支持tensor变量，需要再代码中将其转换成numpy数据类型，绘制图像帧数在30s更新一次。</p><p>相比较而言，visdom不会产生文件夹，而且可以直接支持Tensor变量，当然最后绘制图像都是使用的numpy数据类型，但是visdom在内部进行了Tensor——&gt;numpy数据类型的一个转换，因此在代码里可以省去变量类型转换的步骤，最重要的是visdom的数据更新速度是5s更新一次数据点。</p><h3 id="visdom的安装"><a href="#visdom的安装" class="headerlink" title="visdom的安装"></a>visdom的安装</h3><p>这里主要参考网易云课堂上龙龙老师的讲解，但是实际安装时遇到了一些别的困难，导致，没有办法像视频演示一样安装，网上查询资料说是可能因为pip 安装源来自于墙外网站，所以部分下载文件被过滤(删除)了，然后我科学上网以后，下载完毕还是一样的缺失文件，在网络上大部分是Linux的操作，对于Windows的解决方法如下：</p><blockquote><p>在CSDN上下载一个static文件(淘宝1.2)，里面有别人下载好的json等文件，将原来文件中static替换掉即可成功运行。</p></blockquote><h3 id="visdom的使用"><a href="#visdom的使用" class="headerlink" title="visdom的使用"></a>visdom的使用</h3><p>打开cmd或者git bash(终端)，输入：</p><blockquote><p>-m visdom.server</p></blockquote><p><strong><em>注：上面窗口不要关掉，后台继续运行</em></strong><br>可以得到一个浏览器地址，将该地址在浏览器中打开即可</p><h3 id="visdom语法"><a href="#visdom语法" class="headerlink" title="visdom语法"></a>visdom语法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> visdom <span class="keyword">import</span> Visdom</span><br><span class="line">viz = visdom()</span><br><span class="line"></span><br><span class="line">viz.line([<span class="number">0.</span>], [<span class="number">0.</span>], win=<span class="string">'train_loss'</span>, opts=dict(title=<span class="string">'train loss'</span>)) <span class="comment">#新建一个窗口(图像)，初始化变量，第一个[0.]是Y，第二个[0.]是X，其中win是Window的缩写，title是图像的名字</span></span><br><span class="line"></span><br><span class="line">viz.line([[<span class="number">0.0</span>, <span class="number">0.0</span>]], [<span class="number">0.</span>], win=<span class="string">'test'</span>, opts=dict(title=<span class="string">'test loss&amp;acc.'</span>, legend=[<span class="string">'loss'</span>, <span class="string">'acc.'</span>]))</span><br><span class="line"><span class="comment">#新建一个窗口(图像)，两个变量，第一个[0.0，0.0]代表两个Y变量，第二个[0.]代表X</span></span><br><span class="line"></span><br><span class="line">viz.line([[test_loss, correct / len(test_loader.dataset)]],</span><br><span class="line">[global_step], win=<span class="string">'test'</span>, update=<span class="string">'append'</span>)</span><br><span class="line"><span class="comment">#初始化完毕，就带入变量，其中update='append'指的是数据实时更新</span></span><br><span class="line"></span><br><span class="line">viz.images(data.view(<span class="number">-1</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>), win=<span class="string">'x'</span>)</span><br><span class="line"><span class="comment">#载入MNSIT的图片</span></span><br><span class="line"></span><br><span class="line">viz.text(str(pred.detach().cpu().numpy()), win=<span class="string">'pred'</span>,</span><br><span class="line">opts=dict(title=<span class="string">'pred'</span>))</span><br><span class="line"><span class="comment">#载入MNSIT的predict数字，最终网络根据图片预测出来的数字。</span></span><br></pre></td></tr></table></figure><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上面代码中列举了几个最简单的，绘制曲线，载入图片，text文案的方法，以后如果又忘记了，就有可以复习的资料了，加油~</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;从安装visdom到我现在写这篇博客已经有至少半个月了吧，实际上使用visdom的次数可能也就2，3次，上次使用visdom是学习MNSIT的时候，这次学习迁移学习-自定义数据集操作的时候，再一次用到，我一下子也想不起来，但是数据可视化十分重要，包括数据和模型的调试，科研论文的撰写，这都是离不开的，所以这里就做一个简单的总结&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://yoursite.com/categories/machine-learning/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>如何在AD18新建工程</title>
@@ -423,28 +444,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;注：其中 $I_S$ 为反向饱和电流，$U_T$为热电压，$U_D$为导通电压，$i_D$为正向导通电流&lt;/p&gt;
 &lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch4-2 P--N结</title>
-    <link href="http://yoursite.com/2020/02/24/ch4-2%20P--N%E7%BB%93/"/>
-    <id>http://yoursite.com/2020/02/24/ch4-2%20P--N%E7%BB%93/</id>
-    <published>2020-02-24T08:51:42.623Z</published>
-    <updated>2020-02-25T13:52:47.678Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol><li>PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN结<a id="more"></a></li><li>PN结的形成：由于两边载流子浓度差————&gt;多子扩散（N型半导体–自由电子，P型半导体–空穴）————&gt;交接处复合，显露出正负原子————形成内电场————&gt;阻碍多子扩散，利于少子漂移————&gt;动态平衡，形成PN结</li><li>中间形成电场的区域称为<strong><em>耗尽区或势垒区或阻挡区</em></strong>，在掺杂浓度不对称的PN结中，掺杂浓度大的地方延伸小，掺杂浓度小的地方，延伸大（因为两边正负电荷数量相等）<h4 id="PN结的导电特性"><a href="#PN结的导电特性" class="headerlink" title="PN结的导电特性"></a>PN结的导电特性</h4></li><li>正向偏置：外部添加P正，N负的电场，与内电场相互抵消，耗尽层变窄，则扩散作用加强，漂移运动减弱，（也就是说N结处的自由电子向浓度低的P结移动，空穴从P向N移动），因此形成正向电流（从P——&gt;N）<blockquote><p>注：电流方向是正电荷移动方向，与负电荷移动方向相反，因为在定义电流方向的时候，还没有发现电子……</p></blockquote></li><li>反向偏置：外部添加N正，P负的电场，产生与内部电场方向相同的电场，则耗尽区变宽，扩散运动减弱，漂移运动加强，反向电流很小（少子提供电流）</li><li>可以认为是（<strong><em>正偏—导通，反偏—截止</em></strong>）<h4 id="PN结的击穿特性"><a href="#PN结的击穿特性" class="headerlink" title="PN结的击穿特性"></a>PN结的击穿特性</h4></li><li>当反向电压超过反向截止电压的时候，反向电流会急剧增大，有两种机理</li><li>雪崩击穿：加反向电压，耗尽区变大，少子漂移时，被加速，动能过大，撞击共价键，使自由电子挣脱束缚，然后蝴蝶效应，一起被加速，到处撞击……反向电流变大</li><li>齐纳击穿：在重掺杂的PN结中，耗尽区很窄，所以较小的反向电压会产生很大的电场，一定的强度就可以将共价键中的价电子直接拉出，产生大量自由电子和空穴对，使反向电流急剧增大。<blockquote><p>一般而言，对于硅材料的PN结，截止电压 &gt; 7V为雪崩击穿，截止电压 &lt; 5V为齐纳击穿；截止电压在 5 ~ 7 V时，两种击穿都有。</p></blockquote></li></ol><blockquote><p>只要限制击穿后的电流，击穿并不损坏 PN 结（可逆性）</p></blockquote><h4 id="PN结的电容特性"><a href="#PN结的电容特性" class="headerlink" title="PN结的电容特性"></a>PN结的电容特性</h4><ol><li>PN结有电容特性，由势垒电容和扩散电容两部分组成</li><li>势垒电容：高阻的耗尽区，与平板电容器相似，正偏电压越大，容值越小<br>$$C_T=\cfrac{\epsilon S}{d}$$<blockquote><p>d 是耗尽区长度，S是耗尽区横截面积</p></blockquote></li><li>扩散电容：正向偏置的PN结，由于多子扩散，会有电容特性<br>$$C_D=\cfrac{\tau I}{U_T}$$<blockquote><p>$C_T$ 和 $C_D$ 都随外加电压的变化而变化，且都非线性，低频时可以忽略，高频时需要考虑……</p></blockquote></li></ol><p>2020.2.24</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;PN结：P型半导体和N型半导体交接面处会形成一个有特殊物理性质的薄层，称为PN结
     
     </summary>
     
