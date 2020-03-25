@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-15T12:41:06.063Z</updated>
+  <updated>2020-03-25T06:41:53.908Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手写笔记和markdown记笔记的想法</title>
+    <link href="http://yoursite.com/2020/03/25/%E6%89%8B%E5%86%99%E7%AC%94%E8%AE%B0%E5%92%8Cmarkdown%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%83%B3%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/03/25/%E6%89%8B%E5%86%99%E7%AC%94%E8%AE%B0%E5%92%8Cmarkdown%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%83%B3%E6%B3%95/</id>
+    <published>2020-03-25T04:57:42.222Z</published>
+    <updated>2020-03-25T06:41:53.908Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以前看到过说在电脑上用印象笔记做笔记会很快，所以我尝试了一下在模电课中使用markdown做笔记的过程，下面谈谈我在实际使用中对这个md做笔记和手写笔记的感受</p><a id="more"></a><h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>markdown打字速度快，但是图片的粘贴和数学符号的书写不是很方便，适合纯文本或者少量符号图片的文案撰写。在模电笔记的撰写中，数学符号的书写和大量的电路图片花费了很多的时间，效率很低。听说如果是读书笔记(不需要大量的图片说明，纯文本较多)，用markdown来做会很好。此外markdown做笔记可以上传博客，在线查看会非常方便。如果是较大的项目通过markdown书写，虽然过程比较麻烦，但是以后复习还是会很方便(有网络就可以看到)。</p><p>手写笔记更加灵活，无论是数学符号还是思维导图，真的非常方便，而且最重要的是真的对加深印象有很大的帮助，通过在笔记本上用手写的方式记录笔记也方便日后查看(保存好笔记本即可)。如果有大量的数学符号和图片，手写笔记会相比较markdown高效的多，这里还和记笔记的方法有关系，下面分享</p><h3 id="手写笔记方法"><a href="#手写笔记方法" class="headerlink" title="手写笔记方法"></a>手写笔记方法</h3><blockquote><p>这里我主要是从上老师授课得到的经验，也可以向读书笔记和其他方面推广</p></blockquote><ol><li>老师上课过程中，在笔记本(或者其他也可以)上记录下关键词，达到课后可以重复老师上课的知识点流程，可以把上课目标(主要知识点)罗列一遍</li><li>课后通过上课ppt或者课本等资料，将上课的知识点通过关键词(上课流程等)的顺序梳理一遍，就是把这些知识点全部整理一遍，在整理的时候问几个为什么(上课的时候，老师语速很快，来不及想的话，课后时间可以静下来思考知识点的背后推导或者来源，以及课外拓展等)，在梳理的边上进行补充。</li><li>经过几个单元的学习或者一个阶段的学习，需要把之前的内容进行一个总和的整理，最后学习完毕还要在总和复习一遍呢<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3>方法不是固定，可以根据个人习惯进行延伸和改变，比如说觉得记录关键词可以换成思维导图等，或者上课都记得住，那不记录也可以(嘻嘻，反正我是记不住，，)，以上是我最近试验将近一个月网课，带来的感受，果然老师教授的课还是手写笔记好，怪不得ipad都推崇手写笔记app，清华微信号还宣扬自己学生上完课的手写笔记，效果确实nice，哈哈</li></ol><p>2020.3.25</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;以前看到过说在电脑上用印象笔记做笔记会很快，所以我尝试了一下在模电课中使用markdown做笔记的过程，下面谈谈我在实际使用中对这个md做笔记和手写笔记的感受&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="生活感想" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%83%B3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>visdom--Pytorch可视化工具</title>
@@ -419,30 +440,6 @@
     
       &lt;h4 id=&quot;整流电路&quot;&gt;&lt;a href=&quot;#整流电路&quot; class=&quot;headerlink&quot; title=&quot;整流电路&quot;&gt;&lt;/a&gt;整流电路&lt;/h4&gt;&lt;blockquote&gt;
 &lt;p&gt;这里最好有电路图，但是懒得加了，咱们就脑子里回忆吧，哈哈哈&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch4-3 晶体二极管的特性及参数</title>
-    <link href="http://yoursite.com/2020/02/25/ch4-3%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%9A%84%E7%89%B9%E6%80%A7%E5%8F%8A%E5%8F%82%E6%95%B0/"/>
-    <id>http://yoursite.com/2020/02/25/ch4-3%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%9A%84%E7%89%B9%E6%80%A7%E5%8F%8A%E5%8F%82%E6%95%B0/</id>
-    <published>2020-02-25T13:55:27.788Z</published>
-    <updated>2020-02-25T14:38:58.286Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="二极管的伏安特性–指数特性"><a href="#二极管的伏安特性–指数特性" class="headerlink" title="二极管的伏安特性–指数特性"></a>二极管的伏安特性–指数特性</h4><p>$$i_D=I_S(e^\cfrac{U_D}{U_T}-1)$$</p><blockquote><p>注：其中 $I_S$ 为反向饱和电流，$U_T$为热电压，$U_D$为导通电压，$i_D$为正向导通电流</p></blockquote><a id="more"></a><ol><li>正向特性：<blockquote><p>死区电压（门限电压）：正向加电压的过程中，一开始电流很小，然后突然指数级的增加。在电流很小的区间，电压及是死区电压。</p></blockquote></li></ol><blockquote><p>死区电压：室温（27°C）下，硅管：0.5-0.7V，锗管：0.1-0.3V</p></blockquote><p>管压降：工业上–硅管：0.7V，锗管–0.3V<br>2. 反向特性:<br>电流很小，硅管：一般小于0.1uA，锗管小于几十微安</p><h4 id="二极管参数"><a href="#二极管参数" class="headerlink" title="二极管参数"></a>二极管参数</h4><ol><li>直流电阻<br>$$R_D=\cfrac{U_D}{I_D}$$<blockquote><p>正向电阻越小，反向电阻越大，二极管的导电性能越好</p></blockquote></li><li>交流电阻<br>$$r_D=\cfrac{\Delta U_D}{\Delta i_D}$$<blockquote><p>$r_D &lt;&lt; R_D$</p></blockquote></li><li>温度特性<blockquote><p>温度T增大:<br>反向饱和电流增大，死区电压减小<br>雪崩击穿电压增大（温度增加）<br>齐纳击穿电压减小（温度减小）</p></blockquote></li><li>最大整流电流<blockquote><p>二极管允许通过的最大正向平均电流</p></blockquote></li><li>最大反向工作电压</li><li>反向电流<blockquote><p>越小越好，通常反向电流与温度密切相关</p></blockquote></li><li>最高工作频率<br>超过该工作频率，二极管单向导电性能变坏<h4 id="二级管电路模型"><a href="#二级管电路模型" class="headerlink" title="二级管电路模型"></a>二级管电路模型</h4>通常看做，P端正，N端负，硅管的管压降为0.7V，锗管的管压降为0.3V即可。</li></ol><p>2020.2.25</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;二极管的伏安特性–指数特性&quot;&gt;&lt;a href=&quot;#二极管的伏安特性–指数特性&quot; class=&quot;headerlink&quot; title=&quot;二极管的伏安特性–指数特性&quot;&gt;&lt;/a&gt;二极管的伏安特性–指数特性&lt;/h4&gt;&lt;p&gt;$$i_D=I_S(e^\cfrac{U_D}{U_T}-1)$$&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注：其中 $I_S$ 为反向饱和电流，$U_T$为热电压，$U_D$为导通电压，$i_D$为正向导通电流&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
