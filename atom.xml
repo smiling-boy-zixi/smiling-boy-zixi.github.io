@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-25T06:41:53.908Z</updated>
+  <updated>2020-03-31T09:13:33.043Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>初识LDO</title>
+    <link href="http://yoursite.com/2020/03/31/%E5%88%9D%E8%AF%86LDO/"/>
+    <id>http://yoursite.com/2020/03/31/%E5%88%9D%E8%AF%86LDO/</id>
+    <published>2020-03-31T07:26:06.341Z</published>
+    <updated>2020-03-31T09:13:33.043Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>做车子，因而学习电源部分，对于LDO部分做一个整理</p><a id="more"></a><h3 id="常见电阻分压可以作为降压电路代替电源嘛？"><a href="#常见电阻分压可以作为降压电路代替电源嘛？" class="headerlink" title="常见电阻分压可以作为降压电路代替电源嘛？"></a>常见电阻分压可以作为降压电路代替电源嘛？</h3><blockquote><p>比如说输入电压12V或7.2V，需要提供给电机或者单片机供电(3.3V, 5V)</p></blockquote><p>不可以，因为分压电阻通常比较大，那么分压OK，电流就会很小，会大大减弱电源的带载能力。那么用很小的电阻来进行分压可以嘛? 不行，因为效率很低，在分压电阻中小电阻上电流比较大，大电阻上电流就会很小，电流不同，会影响效率，即是负载不通电，电路也会有很大的电流通过，大大的消耗了功率。</p><h3 id="电源转换技术"><a href="#电源转换技术" class="headerlink" title="电源转换技术"></a>电源转换技术</h3><p>电源转换技术主要分成两类———线性稳压器(LDO)和开关稳压器(DC/DC),其中开关电源分成电容变化(电动泵)和电感变化。</p><h4 id="线性稳压器-LDO"><a href="#线性稳压器-LDO" class="headerlink" title="线性稳压器(LDO)"></a>线性稳压器(LDO)</h4><ol><li>只能降压( Vo &lt; Vi )</li><li>低噪声，快速瞬态响应(开关电源在开关的时候有个时钟周期，这时候电压会有瞬态的变化，电容会进行补充(过充和欠压)，那LDO没有开关器件，所以所以补充电压的速度要比开关器件快很多)，简单易用</li><li>不能升压，发热是个大问题！(注意散热，散热片，橡胶片，风扇)<h4 id="开关稳压器-DC-DC-———电容变换-电荷泵"><a href="#开关稳压器-DC-DC-———电容变换-电荷泵" class="headerlink" title="开关稳压器(DC/DC)———电容变换(电荷泵)"></a>开关稳压器(DC/DC)———电容变换(电荷泵)</h4></li><li>原理是通过串并联电容来实现升压过程，所以通常两，三倍的升压很常见。</li><li>常用于升压，降压很少见，有时也可以(反极性)负压输出</li><li>有着比LDO更高的转换效率(尤其是2，3倍的升压电路)</li><li>设计简单，只需要电容变化即可</li><li>通常标准电荷泵不带调压，因为是靠串并联电容来实现的升压或者降压；带有调压功能的电荷泵通常会有较高的损耗</li><li>电压的输入输出，电流的输出都有很有限的范围<h4 id="开关稳压器-DC-DC-———电感变化"><a href="#开关稳压器-DC-DC-———电感变化" class="headerlink" title="开关稳压器(DC/DC)———电感变化"></a>开关稳压器(DC/DC)———电感变化</h4></li><li>多拓扑结构，Boost，Buck，Buck-Boost，负压输出(反极性)</li><li>能够达到最高的效率，实现隔离变换，设计方案比较复杂</li><li>引入电感(电感磁能变换，电容滤波)，会产生磁场变化，还有不可避免的开关噪声</li><li>输入输出范围大，可以满足更多的设计要求<h3 id="LDO"><a href="#LDO" class="headerlink" title="LDO"></a>LDO</h3><h4 id="LDO历史"><a href="#LDO历史" class="headerlink" title="LDO历史"></a>LDO历史</h4>1970s，Robert Dobkin 和 Bob Widlar 设计LM317(LDO)，推向市场。</li></ol><p>LDO全称低压差调节器(LOW Dropout Regulator)。</p><h4 id="LDO原理"><a href="#LDO原理" class="headerlink" title="LDO原理"></a>LDO原理</h4><p>输入电压通过三极管(工作在线性区)集电极进入，发射极接输出和反馈回路，反馈回路分压经过运放作为基准电压导入三极管基极，调整静态工作点，进行实时调整</p><blockquote><p>因为这里三极管相当于是一个可调电阻被放置在了输入与输出之间，勉强承受着两个节点之间的电压降</p></blockquote><h4 id="LDO电压降"><a href="#LDO电压降" class="headerlink" title="LDO电压降"></a>LDO电压降</h4><p>压差(VDO/Dropout Voltage)：输入与输出之间能维持正常工作的最小压差</p><p>因为压差的存在，且电路中的电流是恒定的，所以电路中就会产生额外的功耗，发热，发热是很大的问题</p><p>参数：</p><ol><li>最大损耗功率 P_D : P_D =(输入电压-输出电压)*输出电流</li><li>结温(T_J):LDO器件能承受的最大温度 </li><li>器件当前温度 = 实验室温度(一般是25°C) + 当前功率*每一瓦功率提升的温度</li><li>ESR:(内阻)，一般选用ESR小的电容，因为电流也会在ESR上产生电压，降低电容的滤波性能，所以通常ESR是越小越好啦，但是有的时候，芯片会对电容的ESR有要求，要注意查看datasheet。<h4 id="输入输出电容的选择"><a href="#输入输出电容的选择" class="headerlink" title="输入输出电容的选择"></a>输入输出电容的选择</h4></li><li>适当大小的电容可以防止稳压器在瞬态突变负载时进入跌落状态</li><li>一般来说，较大电容值的电容可以更好的改善瞬态响应</li><li>不同电容的并联组合也可以改善暂态响应(这个不清楚原理)</li><li>选择电容时，不能只看datasheet中的典型电路，还要关注一些说明，会对电容的选项有限制或者推荐。<h4 id="低噪声LDO"><a href="#低噪声LDO" class="headerlink" title="低噪声LDO"></a>低噪声LDO</h4>LDO一般噪声可以控制在20uV左右，而开关稳压器噪声则要达到20mV~80mV左右。</li></ol><p>应用：通讯设备，网络，音频，仪器仪表</p><h4 id="散热工作"><a href="#散热工作" class="headerlink" title="散热工作"></a>散热工作</h4><p>因为发热严重，所以做好散热十分重要</p><ol><li>不要将LDO放在密闭空间中，没有空气流动，即使加上散热片，散热效果还是很小，因为热量还是会不断堆积</li><li>可以选用大一点的散热片，在散热片和LDO器件之间添加橡胶片，减小器件和散热片之间的热阻</li><li>通风，通风，通风!!加快空气的流动可以大幅降增加散热的速度，保证器件的正常工作。</li><li>选用体积大的封装也可以加快散热，datasheet里面会详细写，每一瓦功耗提升的温度会相比较封装小一点的LDO小很多。</li></ol><p>2020.3.31</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;做车子，因而学习电源部分，对于LDO部分做一个整理&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="电子" scheme="http://yoursite.com/categories/%E7%94%B5%E5%AD%90/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>手写笔记和markdown记笔记的想法</title>
     <link href="http://yoursite.com/2020/03/25/%E6%89%8B%E5%86%99%E7%AC%94%E8%AE%B0%E5%92%8Cmarkdown%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%83%B3%E6%B3%95/"/>
     <id>http://yoursite.com/2020/03/25/%E6%89%8B%E5%86%99%E7%AC%94%E8%AE%B0%E5%92%8Cmarkdown%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%83%B3%E6%B3%95/</id>
     <published>2020-03-25T04:57:42.222Z</published>
-    <updated>2020-03-25T06:41:53.908Z</updated>
+    <updated>2020-03-31T07:26:00.485Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以前看到过说在电脑上用印象笔记做笔记会很快，所以我尝试了一下在模电课中使用markdown做笔记的过程，下面谈谈我在实际使用中对这个md做笔记和手写笔记的感受</p><a id="more"></a><h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>markdown打字速度快，但是图片的粘贴和数学符号的书写不是很方便，适合纯文本或者少量符号图片的文案撰写。在模电笔记的撰写中，数学符号的书写和大量的电路图片花费了很多的时间，效率很低。听说如果是读书笔记(不需要大量的图片说明，纯文本较多)，用markdown来做会很好。此外markdown做笔记可以上传博客，在线查看会非常方便。如果是较大的项目通过markdown书写，虽然过程比较麻烦，但是以后复习还是会很方便(有网络就可以看到)。</p><p>手写笔记更加灵活，无论是数学符号还是思维导图，真的非常方便，而且最重要的是真的对加深印象有很大的帮助，通过在笔记本上用手写的方式记录笔记也方便日后查看(保存好笔记本即可)。如果有大量的数学符号和图片，手写笔记会相比较markdown高效的多，这里还和记笔记的方法有关系，下面分享</p><h3 id="手写笔记方法"><a href="#手写笔记方法" class="headerlink" title="手写笔记方法"></a>手写笔记方法</h3><blockquote><p>这里我主要是从上老师授课得到的经验，也可以向读书笔记和其他方面推广</p></blockquote><ol><li>老师上课过程中，在笔记本(或者其他也可以)上记录下关键词，达到课后可以重复老师上课的知识点流程，可以把上课目标(主要知识点)罗列一遍</li><li>课后通过上课ppt或者课本等资料，将上课的知识点通过关键词(上课流程等)的顺序梳理一遍，就是把这些知识点全部整理一遍，在整理的时候问几个为什么(上课的时候，老师语速很快，来不及想的话，课后时间可以静下来思考知识点的背后推导或者来源，以及课外拓展等)，在梳理的边上进行补充。</li><li>经过几个单元的学习或者一个阶段的学习，需要把之前的内容进行一个总和的整理，最后学习完毕还要在总和复习一遍呢<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3>方法不是固定，可以根据个人习惯进行延伸和改变，比如说觉得记录关键词可以换成思维导图等，或者上课都记得住，那不记录也可以(嘻嘻，反正我是记不住，，)，以上是我最近试验将近一个月网课，带来的感受，果然老师教授的课还是手写笔记好，怪不得ipad都推崇手写笔记app，清华微信号还宣扬自己学生上完课的手写笔记，效果确实nice，哈哈</li></ol><p>2020.3.25</p>]]></content>
     
@@ -63,7 +84,7 @@
     <link href="http://yoursite.com/2020/03/13/%E5%A6%82%E4%BD%95%E5%9C%A8AD18%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/"/>
     <id>http://yoursite.com/2020/03/13/%E5%A6%82%E4%BD%95%E5%9C%A8AD18%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B/</id>
     <published>2020-03-13T14:33:08.833Z</published>
-    <updated>2020-03-13T14:52:09.161Z</updated>
+    <updated>2020-03-31T07:26:46.426Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在2020年一月份学的AD18，过了两个月重新上手画板子，真的是忘的一干二净了，雕刻机的操作步骤也忘记了，方便雕刻，好像板子要反着画？？到时候是又要请教春哥和钱哥了，先来总结一下AD18新建工程的步骤。</p><a id="more"></a><h3 id="新建步骤"><a href="#新建步骤" class="headerlink" title="新建步骤"></a>新建步骤</h3><ol><li>先在需要的地方新建文件夹，重命名</li><li>打开AD18，点击文件，新的，项目，(使用默认模式Default)选择好新建路径，创建，ok</li><li>然后右击左栏产生的new Project，分别创建新的原理图，PCB，元件库，封装库即可</li></ol><p>2020.3.13</p>]]></content>
     
@@ -74,7 +95,7 @@
     </summary>
     
     
-      <category term="NXP智能车" scheme="http://yoursite.com/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/"/>
+      <category term="电子" scheme="http://yoursite.com/categories/%E7%94%B5%E5%AD%90/"/>
     
     
   </entry>
@@ -164,7 +185,7 @@
     <link href="http://yoursite.com/2020/03/12/%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9%E4%B8%8E%E6%BB%A4%E6%B3%A2%E7%94%B5%E5%AE%B9/"/>
     <id>http://yoursite.com/2020/03/12/%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9%E4%B8%8E%E6%BB%A4%E6%B3%A2%E7%94%B5%E5%AE%B9/</id>
     <published>2020-03-12T15:07:33.833Z</published>
-    <updated>2020-03-13T06:04:55.922Z</updated>
+    <updated>2020-03-31T07:26:40.982Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今天在研究电源部分的降压模块，其中的线性电源模块(TPS768xx)输入端接了两个电容，一个普通电解电容，一个是滤波电容，那么有两个问题产生了：为什么要接两个电容滤波呢，一个不够么？电解电容和滤波电容的区别？</p><a id="more"></a><h3 id="电解电容和滤波电容的区别以及滤波工作原理"><a href="#电解电容和滤波电容的区别以及滤波工作原理" class="headerlink" title="电解电容和滤波电容的区别以及滤波工作原理"></a>电解电容和滤波电容的区别以及滤波工作原理</h3><p>首先，电解电容和滤波电容一样也具有滤波的作用，不过他们的用处和材料有所不同，同为滤波，工作原理很简单，电容是起到一个充电再放电的过程，电容作为电能的储存容器和储水容器一样，当有水流入的时候就把阀门打开，存储水量，到存储上限了以后再放出来，这其中把水放入和将水放出都需要一定的时间。因此在通过电容以后，电压是无法突变的！因此电容实际上是对电压做了一次平滑处理。</p><h3 id="为什么接两个电容滤波呢"><a href="#为什么接两个电容滤波呢" class="headerlink" title="为什么接两个电容滤波呢"></a>为什么接两个电容滤波呢</h3><p>原因很简单，因为不同容值的电容对不同频率的纹波(噪声)进行滤波，一般0.1uf是高频滤波，可以提高芯片的高频性能，10uf是一般滤波。一般都是一个大容量的电容和小容量的电容并联接在输入端口，可以起到一般滤波加上高频滤波的作用。</p><blockquote><p>在百度百科上查阅有搭配是大电容(1000uf),小电容(0.01uf)，在用TPS786xx时(线性电源降压模块)，数据手册上建议是大电容(10uf)，小电容(0.1uf)</p></blockquote><h3 id="为什么会有高频噪声呢"><a href="#为什么会有高频噪声呢" class="headerlink" title="为什么会有高频噪声呢"></a>为什么会有高频噪声呢</h3><ol><li>当刚开始上电的时候会有负载瞬态响应，电流很大，响应很大，会产生高频噪声</li><li>此外，在高功耗电路上，尤其是电源模块，其中的功率线(<strong><em>有大电流通过的线，不是信号线</em></strong>)上，由于输出功率的变化，会导致电源电压不稳定，从而产生自激现象，产生部分高频噪声</li></ol><p>2020.3.13</p>]]></content>
     
@@ -175,7 +196,7 @@
     </summary>
     
     
-      <category term="NXP智能车" scheme="http://yoursite.com/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/"/>
+      <category term="电子" scheme="http://yoursite.com/categories/%E7%94%B5%E5%AD%90/"/>
     
     
   </entry>
@@ -185,7 +206,7 @@
     <link href="http://yoursite.com/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/"/>
     <id>http://yoursite.com/2020/03/12/%E7%94%B5%E6%9C%BA%E9%80%89%E5%9E%8B%E4%BB%A5%E5%8F%8A%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF/</id>
     <published>2020-03-11T17:16:43.983Z</published>
-    <updated>2020-03-11T17:56:08.458Z</updated>
+    <updated>2020-03-31T07:27:02.154Z</updated>
     
     <content type="html"><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>智能车制作新手上路，现在开始准备画整车的电路板，电路板一般分成4个模块：电源部分，驱动部分，主控部分，信号部分，这篇文章简单总结一下电机的选择和对应驱动电路的选择</p><a id="more"></a><h4 id="电机"><a href="#电机" class="headerlink" title="电机"></a>电机</h4><h5 id="电机分类："><a href="#电机分类：" class="headerlink" title="电机分类："></a>电机分类：</h5><p>无刷电机和有刷电机，相对而言，无刷电机更好，它没有损耗，而且支持静音，那么有刷电机就会有损耗，寿命有限，且会有声音。无刷电机的缺点是比较贵，少则几百，多则上千，那么有刷电机价格则从十几到几百不等。</p><blockquote><p>其中无刷电机又分为带霍尔元件和不带霍尔元件两种，霍尔元件的作用是测速，不带霍尔元件测速的话需要测量电机产生的反电动势，通常电机的转速都在几万转每秒，所以智能车转速需求较小，采用带霍尔测速好，对于无人机等需要高转速的应用，高转速会产生较大的反电动势，更容易测量，所以适合不带霍尔元件的无刷电机</p></blockquote><h5 id="减速箱"><a href="#减速箱" class="headerlink" title="减速箱"></a>减速箱</h5><p>由于电机每秒转速通常上万，智能车电机不需要这么大的转速，所以一般会在电机上加减速箱，同时减速箱也有增加扭矩的功能</p><h5 id="扭矩的测量"><a href="#扭矩的测量" class="headerlink" title="扭矩的测量"></a>扭矩的测量</h5><p>通常测量方法是测量电机的抖转电流和空载电流(主要是测抖转电流)，空载电流是电机不带负载的工作电流，抖转电流是电机被动停转时的工作电流，那么抖转电流越大，说明电机的带载能力越强</p><blockquote><p>测量方法是给电机加上轮子，通电开始转动，然后将轮子捏住，使其不转动，然后测量电机的电流</p></blockquote><h4 id="驱动电路"><a href="#驱动电路" class="headerlink" title="驱动电路"></a>驱动电路</h4><p>理论上，有刷电机的两端接上单片机的两个引脚，一端接3.3V，一端接0V，电机就可以动了，但是实际上不可能，因为单片机提供电流太小了，通常单片机的引脚电流不超过20mA，而小电机的驱动电流都多达160mA左右，所以需要再单片机和电机之间添加驱动电路</p><h5 id="H桥电路和集成芯片"><a href="#H桥电路和集成芯片" class="headerlink" title="H桥电路和集成芯片"></a>H桥电路和集成芯片</h5><p>最常见的驱动电路就是H桥电路了，由二极管组成(不贴图了，感兴趣且忘记了的话，自己再网上再搜一搜)，很麻烦，而且可以加载十几A的电流，我们小车用不到这么多，所以可以使用集成芯片，在芯片的周围会添加一些电容和电阻，所有方案可以在淘宝上参考产品级别的模块原理图或者是智能车的技术手册</p><blockquote><p>这里有几个小技巧：</p></blockquote><ol><li>在单片机的引脚输入端上加300Ω(这个阻值是经验值)的电阻，目的是保护电路。</li><li>在单片机的两个引脚输入端分别下拉电阻，也是保证在每有接到单片机引脚高电平的时候，一直强制要求两个输入端保持低电平</li><li>在电机的两个输入端口接上电容，起到滤波的作用</li></ol><p>2020.3.12</p>]]></content>
     
@@ -196,7 +217,7 @@
     </summary>
     
     
-      <category term="NXP智能车" scheme="http://yoursite.com/categories/NXP%E6%99%BA%E8%83%BD%E8%BD%A6/"/>
+      <category term="电子" scheme="http://yoursite.com/categories/%E7%94%B5%E5%AD%90/"/>
     
     
   </entry>
@@ -418,29 +439,6 @@
 &lt;li&gt;稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压&lt;/li&gt;
 &lt;li&gt;额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定&lt;/li&gt;
 &lt;li&gt;稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch4-4 晶体二极管应用</title>
-    <link href="http://yoursite.com/2020/02/25/ch4-4%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8/"/>
-    <id>http://yoursite.com/2020/02/25/ch4-4%20%E6%99%B6%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%BA%94%E7%94%A8/</id>
-    <published>2020-02-25T13:56:18.113Z</published>
-    <updated>2020-02-26T04:40:54.035Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="整流电路"><a href="#整流电路" class="headerlink" title="整流电路"></a>整流电路</h4><blockquote><p>这里最好有电路图，但是懒得加了，咱们就脑子里回忆吧，哈哈哈</p></blockquote><a id="more"></a><ol><li>二极管加负载<blockquote><p>利用二极管单向导电性，如果输入电压大于0.7V，就输出电压=输入电压，如果输入电压小于0.7V，则二极管截止，输出电压为0.</p></blockquote></li><li>整流桥电路(又称绝对值电路)<br>$$U_o=|U_i|$$<h4 id="限幅电路"><a href="#限幅电路" class="headerlink" title="限幅电路"></a>限幅电路</h4></li><li>上限幅电路</li><li>双向限幅电路<blockquote><p>当输入电压大于二极管和电压源，Uo即二极管管压降和电压源压降之和，当输入电压小于二极管和电压源，$U_o=U_i$</p></blockquote></li></ol><p>2020.2.25</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;整流电路&quot;&gt;&lt;a href=&quot;#整流电路&quot; class=&quot;headerlink&quot; title=&quot;整流电路&quot;&gt;&lt;/a&gt;整流电路&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;这里最好有电路图，但是懒得加了，咱们就脑子里回忆吧，哈哈哈&lt;/p&gt;
-&lt;/blockquote&gt;
     
     </summary>
     

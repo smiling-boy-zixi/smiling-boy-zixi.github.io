@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch4-10 MOS场效应管的工作原理和特性参数 - 仰望星空</title>
+<title>初识LDO - 仰望星空</title>
 
 
-    <meta name="description" content="基本概念 绝缘栅场效应管由金属-氧化物-半导体构成(Metal-Oxide-Semiconductor),简称MOSFET(MOS管)">
+    <meta name="description" content="前言做车子，因而学习电源部分，对于LDO部分做一个整理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch4-10 MOS场效应管的工作原理和特性参数">
-<meta property="og:url" content="http://yoursite.com/2020/02/28/ch4-10%20MOS%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/index.html">
+<meta property="og:title" content="初识LDO">
+<meta property="og:url" content="http://yoursite.com/2020/03/31/%E5%88%9D%E8%AF%86LDO/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="基本概念 绝缘栅场效应管由金属-氧化物-半导体构成(Metal-Oxide-Semiconductor),简称MOSFET(MOS管)">
+<meta property="og:description" content="前言做车子，因而学习电源部分，对于LDO部分做一个整理">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-28T08:27:34.810Z">
-<meta property="article:modified_time" content="2020-03-10T08:33:50.825Z">
+<meta property="article:published_time" content="2020-03-31T07:26:06.341Z">
+<meta property="article:modified_time" content="2020-03-31T09:13:33.043Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch4-10 MOS场效应管的工作原理和特性参数" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="初识LDO" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch4-10 MOS场效应管的工作原理和特性参数" height="28">
+                <img src="/images/logo_2.png" alt="初识LDO" height="28">
             
             </a>
         </div>
@@ -143,17 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-28T08:27:34.810Z">2020-02-28</time>
+                <time class="level-item has-text-grey" datetime="2020-03-31T07:26:06.341Z">2020-03-31</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                <a class="has-link-grey -link" href="/categories/%E7%94%B5%E5%AD%90/">电子</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 541 个字)
+                    10 分钟 读完 (大约 1436 个字)
                 </span>
                 
                 
@@ -162,24 +162,59 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch4-10 MOS场效应管的工作原理和特性参数
+                初识LDO
             
         </h1>
         <div class="content">
-            <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><ol>
-<li>绝缘栅场效应管由金属-氧化物-半导体构成(Metal-Oxide-Semiconductor),简称MOSFET(MOS管)<a id="more"></a></li>
-<li>结构：栅极有二氧化硅(绝缘材料)和下方衬底隔开，所以栅极电流为0，</li>
-<li>MOS管类型和符号：<br><img src="https://img-blog.csdn.net/20180302103833471" alt=""><blockquote>
-<p>注:MOS管分为增强型和耗尽型，右侧竖线表示导电沟道，平时增强型MOS管导电沟道断开，而耗尽型平时导电沟道是接通的。其中箭头表示PN结的方向.N沟道表示导电沟道为N型，P沟道同上。</p>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>做车子，因而学习电源部分，对于LDO部分做一个整理</p>
+<a id="more"></a>
+<h3 id="常见电阻分压可以作为降压电路代替电源嘛？"><a href="#常见电阻分压可以作为降压电路代替电源嘛？" class="headerlink" title="常见电阻分压可以作为降压电路代替电源嘛？"></a>常见电阻分压可以作为降压电路代替电源嘛？</h3><blockquote>
+<p>比如说输入电压12V或7.2V，需要提供给电机或者单片机供电(3.3V, 5V)</p>
 </blockquote>
-<h4 id="导通原理"><a href="#导通原理" class="headerlink" title="导通原理"></a>导通原理</h4><h5 id="栅源电压Ugs对导电沟道的作用"><a href="#栅源电压Ugs对导电沟道的作用" class="headerlink" title="栅源电压Ugs对导电沟道的作用"></a>栅源电压Ugs对导电沟道的作用</h5>通常衬底和栅极连接，通过施加栅源电压，产生纵向的电子和空穴的移动，当形成导电沟道时的栅源电压称为开启电压，通过对栅源电压的控制可以使沟道均匀的变宽窄<h5 id="漏源电压Uds对导电沟道的控制作用"><a href="#漏源电压Uds对导电沟道的控制作用" class="headerlink" title="漏源电压Uds对导电沟道的控制作用"></a>漏源电压Uds对导电沟道的控制作用</h5>当栅源电压大于开启电压的时候(导电沟道形成)，改变漏源电压可以使沟道不均匀变窄，直到预夹断为止(预夹断还是在电场的作用下有电流产生)<h4 id="增强型MOS管伏安特性曲线"><a href="#增强型MOS管伏安特性曲线" class="headerlink" title="增强型MOS管伏安特性曲线"></a>增强型MOS管伏安特性曲线</h4>由于栅极无电流，所以无输入特性曲线<h5 id="输出特性曲线"><a href="#输出特性曲线" class="headerlink" title="输出特性曲线"></a>输出特性曲线</h5>$$I_D=f(Uds)$$<br>和结型场效应管相似，图的话看书吧<h5 id="转移特性"><a href="#转移特性" class="headerlink" title="转移特性"></a>转移特性</h5>$$I_D=f(Ugs)$$<br>i和Ugs成平方性的关系<blockquote>
-<p>公式比较长，这里不写了，复习的话看书吧</p>
-</blockquote>
-</li>
+<p>不可以，因为分压电阻通常比较大，那么分压OK，电流就会很小，会大大减弱电源的带载能力。那么用很小的电阻来进行分压可以嘛? 不行，因为效率很低，在分压电阻中小电阻上电流比较大，大电阻上电流就会很小，电流不同，会影响效率，即是负载不通电，电路也会有很大的电流通过，大大的消耗了功率。</p>
+<h3 id="电源转换技术"><a href="#电源转换技术" class="headerlink" title="电源转换技术"></a>电源转换技术</h3><p>电源转换技术主要分成两类———线性稳压器(LDO)和开关稳压器(DC/DC),其中开关电源分成电容变化(电动泵)和电感变化。</p>
+<h4 id="线性稳压器-LDO"><a href="#线性稳压器-LDO" class="headerlink" title="线性稳压器(LDO)"></a>线性稳压器(LDO)</h4><ol>
+<li>只能降压( Vo &lt; Vi )</li>
+<li>低噪声，快速瞬态响应(开关电源在开关的时候有个时钟周期，这时候电压会有瞬态的变化，电容会进行补充(过充和欠压)，那LDO没有开关器件，所以所以补充电压的速度要比开关器件快很多)，简单易用</li>
+<li>不能升压，发热是个大问题！(注意散热，散热片，橡胶片，风扇)<h4 id="开关稳压器-DC-DC-———电容变换-电荷泵"><a href="#开关稳压器-DC-DC-———电容变换-电荷泵" class="headerlink" title="开关稳压器(DC/DC)———电容变换(电荷泵)"></a>开关稳压器(DC/DC)———电容变换(电荷泵)</h4></li>
+<li>原理是通过串并联电容来实现升压过程，所以通常两，三倍的升压很常见。</li>
+<li>常用于升压，降压很少见，有时也可以(反极性)负压输出</li>
+<li>有着比LDO更高的转换效率(尤其是2，3倍的升压电路)</li>
+<li>设计简单，只需要电容变化即可</li>
+<li>通常标准电荷泵不带调压，因为是靠串并联电容来实现的升压或者降压；带有调压功能的电荷泵通常会有较高的损耗</li>
+<li>电压的输入输出，电流的输出都有很有限的范围<h4 id="开关稳压器-DC-DC-———电感变化"><a href="#开关稳压器-DC-DC-———电感变化" class="headerlink" title="开关稳压器(DC/DC)———电感变化"></a>开关稳压器(DC/DC)———电感变化</h4></li>
+<li>多拓扑结构，Boost，Buck，Buck-Boost，负压输出(反极性)</li>
+<li>能够达到最高的效率，实现隔离变换，设计方案比较复杂</li>
+<li>引入电感(电感磁能变换，电容滤波)，会产生磁场变化，还有不可避免的开关噪声</li>
+<li>输入输出范围大，可以满足更多的设计要求<h3 id="LDO"><a href="#LDO" class="headerlink" title="LDO"></a>LDO</h3><h4 id="LDO历史"><a href="#LDO历史" class="headerlink" title="LDO历史"></a>LDO历史</h4>1970s，Robert Dobkin 和 Bob Widlar 设计LM317(LDO)，推向市场。</li>
 </ol>
-<p>平方率关系方程中，和沟道长宽，电子迁移速率，以及单位面积栅极电容有关系<br>(<strong><em>和电容有什么关系呢?</em></strong>)<br>Ugs越大，Rds越小(Ugs越大，沟道越宽，阻值自然就小了)</p>
-<h4 id="耗尽型MOS管伏安特性曲线"><a href="#耗尽型MOS管伏安特性曲线" class="headerlink" title="耗尽型MOS管伏安特性曲线"></a>耗尽型MOS管伏安特性曲线</h4><p>由于耗尽型MOS管本身就有导电沟道，所以，有反向电压截止，其他区别不大，复习看书吧<br>(输出特性+转移特性)</p>
-<p>2020.3.10</p>
+<p>LDO全称低压差调节器(LOW Dropout Regulator)。</p>
+<h4 id="LDO原理"><a href="#LDO原理" class="headerlink" title="LDO原理"></a>LDO原理</h4><p>输入电压通过三极管(工作在线性区)集电极进入，发射极接输出和反馈回路，反馈回路分压经过运放作为基准电压导入三极管基极，调整静态工作点，进行实时调整</p>
+<blockquote>
+<p>因为这里三极管相当于是一个可调电阻被放置在了输入与输出之间，勉强承受着两个节点之间的电压降</p>
+</blockquote>
+<h4 id="LDO电压降"><a href="#LDO电压降" class="headerlink" title="LDO电压降"></a>LDO电压降</h4><p>压差(VDO/Dropout Voltage)：输入与输出之间能维持正常工作的最小压差</p>
+<p>因为压差的存在，且电路中的电流是恒定的，所以电路中就会产生额外的功耗，发热，发热是很大的问题</p>
+<p>参数：</p>
+<ol>
+<li>最大损耗功率 P_D : P_D =(输入电压-输出电压)*输出电流</li>
+<li>结温(T_J):LDO器件能承受的最大温度 </li>
+<li>器件当前温度 = 实验室温度(一般是25°C) + 当前功率*每一瓦功率提升的温度</li>
+<li>ESR:(内阻)，一般选用ESR小的电容，因为电流也会在ESR上产生电压，降低电容的滤波性能，所以通常ESR是越小越好啦，但是有的时候，芯片会对电容的ESR有要求，要注意查看datasheet。<h4 id="输入输出电容的选择"><a href="#输入输出电容的选择" class="headerlink" title="输入输出电容的选择"></a>输入输出电容的选择</h4></li>
+<li>适当大小的电容可以防止稳压器在瞬态突变负载时进入跌落状态</li>
+<li>一般来说，较大电容值的电容可以更好的改善瞬态响应</li>
+<li>不同电容的并联组合也可以改善暂态响应(这个不清楚原理)</li>
+<li>选择电容时，不能只看datasheet中的典型电路，还要关注一些说明，会对电容的选项有限制或者推荐。<h4 id="低噪声LDO"><a href="#低噪声LDO" class="headerlink" title="低噪声LDO"></a>低噪声LDO</h4>LDO一般噪声可以控制在20uV左右，而开关稳压器噪声则要达到20mV~80mV左右。</li>
+</ol>
+<p>应用：通讯设备，网络，音频，仪器仪表</p>
+<h4 id="散热工作"><a href="#散热工作" class="headerlink" title="散热工作"></a>散热工作</h4><p>因为发热严重，所以做好散热十分重要</p>
+<ol>
+<li>不要将LDO放在密闭空间中，没有空气流动，即使加上散热片，散热效果还是很小，因为热量还是会不断堆积</li>
+<li>可以选用大一点的散热片，在散热片和LDO器件之间添加橡胶片，减小器件和散热片之间的热阻</li>
+<li>通风，通风，通风!!加快空气的流动可以大幅降增加散热的速度，保证器件的正常工作。</li>
+<li>选用体积大的封装也可以加快散热，datasheet里面会详细写，每一瓦功耗提升的温度会相比较封装小一点的LDO小很多。</li>
+</ol>
+<p>2020.3.31</p>
 
         </div>
         
@@ -224,17 +259,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/10/ch4-11%20%E6%99%B6%E4%BD%93%E7%AE%A1%E5%92%8C%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E4%BD%8E%E9%A2%91%E5%B0%8F%E4%BF%A1%E5%8F%B7%E6%A8%A1%E5%9E%8B(%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF)/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch4-11 晶体管和场效应管低频小信号模型(等效电路)</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/28/ch4-9%20%E7%BB%93%E5%9E%8B%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%92%8C%E7%89%B9%E6%80%A7%E5%8F%82%E6%95%B0/">
-                <span class="level-item">ch4-9 结型场效应管的工作原理和特性参数</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/25/%E6%89%8B%E5%86%99%E7%AC%94%E8%AE%B0%E5%92%8Cmarkdown%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%83%B3%E6%B3%95/">
+                <span class="level-item">手写笔记和markdown记笔记的想法</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -370,38 +398,58 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#基本概念">
+        <a class="is-flex" href="#前言">
         <span class="has-mr-6">1</span>
-        <span>基本概念</span>
+        <span>前言</span>
         </a></li><li>
-        <a class="is-flex" href="#导通原理">
+        <a class="is-flex" href="#常见电阻分压可以作为降压电路代替电源嘛？">
         <span class="has-mr-6">2</span>
-        <span>导通原理</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#栅源电压Ugs对导电沟道的作用">
-        <span class="has-mr-6">2.1</span>
-        <span>栅源电压Ugs对导电沟道的作用</span>
+        <span>常见电阻分压可以作为降压电路代替电源嘛？</span>
         </a></li><li>
-        <a class="is-flex" href="#漏源电压Uds对导电沟道的控制作用">
-        <span class="has-mr-6">2.2</span>
-        <span>漏源电压Uds对导电沟道的控制作用</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#增强型MOS管伏安特性曲线">
+        <a class="is-flex" href="#电源转换技术">
         <span class="has-mr-6">3</span>
-        <span>增强型MOS管伏安特性曲线</span>
+        <span>电源转换技术</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#输出特性曲线">
+        <a class="is-flex" href="#线性稳压器-LDO">
         <span class="has-mr-6">3.1</span>
-        <span>输出特性曲线</span>
+        <span>线性稳压器(LDO)</span>
         </a></li><li>
-        <a class="is-flex" href="#转移特性">
+        <a class="is-flex" href="#开关稳压器-DC-DC-———电容变换-电荷泵">
         <span class="has-mr-6">3.2</span>
-        <span>转移特性</span>
+        <span>开关稳压器(DC/DC)———电容变换(电荷泵)</span>
+        </a></li><li>
+        <a class="is-flex" href="#开关稳压器-DC-DC-———电感变化">
+        <span class="has-mr-6">3.3</span>
+        <span>开关稳压器(DC/DC)———电感变化</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#耗尽型MOS管伏安特性曲线">
+        <a class="is-flex" href="#LDO">
         <span class="has-mr-6">4</span>
-        <span>耗尽型MOS管伏安特性曲线</span>
-        </a></li></ul>
+        <span>LDO</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#LDO历史">
+        <span class="has-mr-6">4.1</span>
+        <span>LDO历史</span>
+        </a></li><li>
+        <a class="is-flex" href="#LDO原理">
+        <span class="has-mr-6">4.2</span>
+        <span>LDO原理</span>
+        </a></li><li>
+        <a class="is-flex" href="#LDO电压降">
+        <span class="has-mr-6">4.3</span>
+        <span>LDO电压降</span>
+        </a></li><li>
+        <a class="is-flex" href="#输入输出电容的选择">
+        <span class="has-mr-6">4.4</span>
+        <span>输入输出电容的选择</span>
+        </a></li><li>
+        <a class="is-flex" href="#低噪声LDO">
+        <span class="has-mr-6">4.5</span>
+        <span>低噪声LDO</span>
+        </a></li><li>
+        <a class="is-flex" href="#散热工作">
+        <span class="has-mr-6">4.6</span>
+        <span>散热工作</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -424,7 +472,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch4-10 MOS场效应管的工作原理和特性参数" height="28">
+                    <img src="/images/logo_2.png" alt="初识LDO" height="28">
                 
                 </a>
                 <p class="is-size-7">
