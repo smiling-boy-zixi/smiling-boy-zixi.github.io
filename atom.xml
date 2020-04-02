@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-31T09:13:33.043Z</updated>
+  <updated>2020-04-02T07:59:13.687Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开关电源的拓扑结构</title>
+    <link href="http://yoursite.com/2020/04/02/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E7%9A%84%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2020/04/02/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E7%9A%84%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84/</id>
+    <published>2020-04-02T07:08:18.608Z</published>
+    <updated>2020-04-02T07:59:13.687Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>家用电源通常是先AD/DC,然后12V直流电进入板上电源进行电压的细分处理(adapter)，这里简单了解常见板上开关电源的拓扑结构。</p><a id="more"></a><h2 id="板上电源常见非隔离拓扑结构"><a href="#板上电源常见非隔离拓扑结构" class="headerlink" title="板上电源常见非隔离拓扑结构"></a>板上电源常见非隔离拓扑结构</h2><p>隔离拓扑结构也是从常见非隔离拓扑延伸而来。</p><h3 id="BUCK"><a href="#BUCK" class="headerlink" title="BUCK"></a>BUCK</h3><h4 id="同步vs-非同步BUCK"><a href="#同步vs-非同步BUCK" class="headerlink" title="同步vs.非同步BUCK"></a>同步vs.非同步BUCK</h4><p>当开关管的上下使用high mos和low mos的时候，我们称作同步BUCK；low mos被替换为二极管的时候，被称作非同步BUCK(<strong><em>这里我在网络上暂时没有搜索到准确的表述，可能这里定义有误，后期学到再做修正</em></strong>)</p><p>两者最大的区别是当BUCK工作在满载的状态下，同步BUCK效率高于非同步BUCK，因为low mos的压降远小于二极管压降</p><h4 id="BUCK工作原理"><a href="#BUCK工作原理" class="headerlink" title="BUCK工作原理"></a>BUCK工作原理</h4><p>开关管中间夹一个电容，输出加一个滤波电容</p><p>当上管导通，下管断开时，电感电流上升，输出高压；上管断开，下管续流，电感电流减小，输出低压，相当输出一个PWM，降压，和pwm控制电机速度很相似。<br>$$Vout =(V_i - V_o)D*T$$<br>DT是一个周期内的导通时间</p><blockquote><p>输出纹波：输入电压越大，电感输出纹波越大，所以设计时候要考虑最大输入电压时的纹波消除</p></blockquote><h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p>$$Vout = V_i/(1-D)$$<br>$$D = 1 - V_i/Vout$$</p><h3 id="BUCK-Boost"><a href="#BUCK-Boost" class="headerlink" title="BUCK-Boost"></a>BUCK-Boost</h3><p>升压和降压电路对半开，根据需要选择需要的电路完成升降压的过程，比如说，锂电池电压使用范围在2.8v~4.8v，需要产生稳定3.3v的电压，那么就需要BUCK-Boost电路</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>关于拓扑的知识还有太多，只是简单介绍一下，后面随着学习的推进，会越来越全面</p><p>2020.4.2</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;家用电源通常是先AD/DC,然后12V直流电进入板上电源进行电压的细分处理(adapter)，这里简单了解常见板上开关电源的拓扑结构。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="电子" scheme="http://yoursite.com/categories/%E7%94%B5%E5%AD%90/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>初识LDO</title>
@@ -414,31 +435,6 @@
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;符号：箭头：从P区指向N区&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="模电笔记" scheme="http://yoursite.com/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ch4-5 稳压管以及其它二极管</title>
-    <link href="http://yoursite.com/2020/02/26/ch4-5%20%E7%A8%B3%E5%8E%8B%E7%AE%A1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E4%BA%8C%E6%9E%81%E7%AE%A1/"/>
-    <id>http://yoursite.com/2020/02/26/ch4-5%20%E7%A8%B3%E5%8E%8B%E7%AE%A1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E4%BA%8C%E6%9E%81%E7%AE%A1/</id>
-    <published>2020-02-26T04:43:24.185Z</published>
-    <updated>2020-02-26T06:17:46.060Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="稳压二极管"><a href="#稳压二极管" class="headerlink" title="稳压二极管"></a>稳压二极管</h4><ol><li>符号：在二级管的符号上加一个小弯</li><li>稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压</li><li>额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定</li><li>稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏<a id="more"></a>$$I_Z=\cfrac{U_Z}{I_Z}$$</li><li>动态电阻（$r_Z$）：一般在几欧姆到十几欧姆<br>$$r_Z=\cfrac{\Delta U_Z}{\Delta I_Z}$$</li><li>温度系数：稳定电压较高（十几伏）一般为雪崩击穿，稳定电压在6伏以下，一般为齐纳击穿，所以稳定电压一般在（5–7V）的稳压管兼有两种击穿，温度稳定性比较好</li><li>有温度补偿的稳压管：将两稳压管相互对接即可，利用一个工作在正向导通（负温度系数），一个工作在反向导通（正温度系数）即可相互补偿，改善温度稳定性。<br>$$U=\pm(U_Z+U_D)$$<blockquote><p>其中$U_D$是正向导通电压</p></blockquote></li><li>如果计算带有稳压二极管的电路，首先要判断稳压二极管能否被击穿，方法是先假设稳压管断开，看 $U_O$ 是否大于 $U_Z$ .<blockquote><p>具体题目翻一下MOOC，这里不记录了</p></blockquote></li><li>稳压电路限流电阻R的选择：就是要保证电流在稳压电流区工作，公式比较长不写了，遇到具体问题再翻书补充</li><li>由稳压二极管构成的限幅电路（单向，双向）：和二极管构成的限幅电路是相似的，但是由于正向导通特性，单向限幅的时候，负端会有0.7V的电压（硅管）<h4 id="其他二极管"><a href="#其他二极管" class="headerlink" title="其他二极管"></a>其他二极管</h4></li><li>变容二极管：利用了二极管的电容特性，具体在高频时候用的比较多，遇到在做深入了解</li><li>光电二极管：被光线照射后产生一个电流</li><li>发光二极管：……</li><li>肖特基二极管：结构是金属和N型材料掺杂，特点是速度快，常用在高频，遇到再深入了解</li></ol><p>2020.2.26</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;稳压二极管&quot;&gt;&lt;a href=&quot;#稳压二极管&quot; class=&quot;headerlink&quot; title=&quot;稳压二极管&quot;&gt;&lt;/a&gt;稳压二极管&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;符号：在二级管的符号上加一个小弯&lt;/li&gt;
-&lt;li&gt;稳定电压（$U_Z$）：工作在反向击穿状态时的稳定电压即稳定电压&lt;/li&gt;
-&lt;li&gt;额定功耗（$P_Z$）：使用时功耗不超过这个标准，这个功耗由管子本身的属性决定&lt;/li&gt;
-&lt;li&gt;稳压电流（$I_Z$）：稳压二极管工作时候有最大电流和最小电流，在这个范围区间的就是稳压电流，小于该值，管子失去稳压作用，大于此值，管子会烧坏
     
     </summary>
     

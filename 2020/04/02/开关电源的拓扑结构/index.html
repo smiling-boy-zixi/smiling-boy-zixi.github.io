@@ -8,19 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>ch5-3 共射放大器性能分析 - 仰望星空</title>
+<title>开关电源的拓扑结构 - 仰望星空</title>
 
 
-    <meta name="description" content="前言之前晚上做练习的时候(就是黄老师慕课堂上网课)，有的题目实在看不明白，也不知道同学们都是咋写出来的？所以没有提交，这回mooc上面看过网课了，才明白，这里总结一下">
+    <meta name="description" content="前言家用电源通常是先AD&#x2F;DC,然后12V直流电进入板上电源进行电压的细分处理(adapter)，这里简单了解常见板上开关电源的拓扑结构。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ch5-3 共射放大器性能分析">
-<meta property="og:url" content="http://yoursite.com/2020/03/13/ch5-3%20%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/index.html">
+<meta property="og:title" content="开关电源的拓扑结构">
+<meta property="og:url" content="http://yoursite.com/2020/04/02/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E7%9A%84%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="仰望星空">
-<meta property="og:description" content="前言之前晚上做练习的时候(就是黄老师慕课堂上网课)，有的题目实在看不明白，也不知道同学们都是咋写出来的？所以没有提交，这回mooc上面看过网课了，才明白，这里总结一下">
+<meta property="og:description" content="前言家用电源通常是先AD&#x2F;DC,然后12V直流电进入板上电源进行电压的细分处理(adapter)，这里简单了解常见板上开关电源的拓扑结构。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-03-13T07:15:58.642Z">
-<meta property="article:modified_time" content="2020-03-13T08:28:31.416Z">
+<meta property="article:published_time" content="2020-04-02T07:08:18.608Z">
+<meta property="article:modified_time" content="2020-04-02T07:59:13.687Z">
 <meta property="article:author" content="王子晰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="alternative" href="/atom.xml" title="ch5-3 共射放大器性能分析" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="开关电源的拓扑结构" type="application/atom+xml">
 
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo_2.png" alt="ch5-3 共射放大器性能分析" height="28">
+                <img src="/images/logo_2.png" alt="开关电源的拓扑结构" height="28">
             
             </a>
         </div>
@@ -143,17 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-13T07:15:58.642Z">2020-03-13</time>
+                <time class="level-item has-text-grey" datetime="2020-04-02T07:08:18.608Z">2020-04-02</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E6%A8%A1%E7%94%B5%E7%AC%94%E8%AE%B0/">模电笔记</a>
+                <a class="has-link-grey -link" href="/categories/%E7%94%B5%E5%AD%90/">电子</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 521 个字)
+                    3 分钟 读完 (大约 501 个字)
                 </span>
                 
                 
@@ -162,32 +162,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                ch5-3 共射放大器性能分析
+                开关电源的拓扑结构
             
         </h1>
         <div class="content">
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前晚上做练习的时候(就是黄老师慕课堂上网课)，有的题目实在看不明白，也不知道同学们都是咋写出来的？所以没有提交，这回mooc上面看过网课了，才明白，这里总结一下</p>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>家用电源通常是先AD/DC,然后12V直流电进入板上电源进行电压的细分处理(adapter)，这里简单了解常见板上开关电源的拓扑结构。</p>
 <a id="more"></a>
-<h3 id="分析步骤"><a href="#分析步骤" class="headerlink" title="分析步骤"></a>分析步骤</h3><p>这个分析方法的全称：共射极放大器的交流等效电路分析法</p>
-<ol>
-<li>画出直流通路，估算直流静态参数<blockquote>
-<p>画直流通路就是，电容开路，交流电源短路，直流静态参数：$I_B I_C Ube Uce$</p>
+<h2 id="板上电源常见非隔离拓扑结构"><a href="#板上电源常见非隔离拓扑结构" class="headerlink" title="板上电源常见非隔离拓扑结构"></a>板上电源常见非隔离拓扑结构</h2><p>隔离拓扑结构也是从常见非隔离拓扑延伸而来。</p>
+<h3 id="BUCK"><a href="#BUCK" class="headerlink" title="BUCK"></a>BUCK</h3><h4 id="同步vs-非同步BUCK"><a href="#同步vs-非同步BUCK" class="headerlink" title="同步vs.非同步BUCK"></a>同步vs.非同步BUCK</h4><p>当开关管的上下使用high mos和low mos的时候，我们称作同步BUCK；low mos被替换为二极管的时候，被称作非同步BUCK(<strong><em>这里我在网络上暂时没有搜索到准确的表述，可能这里定义有误，后期学到再做修正</em></strong>)</p>
+<p>两者最大的区别是当BUCK工作在满载的状态下，同步BUCK效率高于非同步BUCK，因为low mos的压降远小于二极管压降</p>
+<h4 id="BUCK工作原理"><a href="#BUCK工作原理" class="headerlink" title="BUCK工作原理"></a>BUCK工作原理</h4><p>开关管中间夹一个电容，输出加一个滤波电容</p>
+<p>当上管导通，下管断开时，电感电流上升，输出高压；上管断开，下管续流，电感电流减小，输出低压，相当输出一个PWM，降压，和pwm控制电机速度很相似。<br>$$Vout =(V_i - V_o)D*T$$<br>DT是一个周期内的导通时间</p>
+<blockquote>
+<p>输出纹波：输入电压越大，电感输出纹波越大，所以设计时候要考虑最大输入电压时的纹波消除</p>
 </blockquote>
-</li>
-<li>在直流通路的基础上画出交流通路，估算交流参数<blockquote>
-<p>画交流通路，就是电容短路，直流电源接地，为什么接地呢，因为对于交流信号而言，直流信号是平的(不考虑噪声，理论上是这样的)，交流分量就是0，所以和接地没有区别，所以就一起接地啦。交流参数：$A_u A_i R_i R_o Aus$</p>
-</blockquote>
-<h3 id="交流参数说明"><a href="#交流参数说明" class="headerlink" title="交流参数说明"></a>交流参数说明</h3></li>
-<li>$A_u$ :电压放大倍数，怎么求记在脑子里</li>
-<li>$A_i$:电流放大倍数，由于前后电阻都很大，所以可以看做微变等效模型前后电流之比，近似$\beta$</li>
-<li>$R_i$:输入电阻,输入的几个电阻并联就可以了<blockquote>
-<p>这里说明一下由于一般来说，Rb&gt;&gt;Rbe,所以，Rbe近似Ri，在微变等效模型中$Rbe=R`+(1+\beta)\cfrac{26mV}{I_CmA}$,所以$\beta$ 越大，输入电阻越大</p>
-</blockquote>
-</li>
-<li>$R_o$:输出电阻，负载电阻不算，往里看，剩下电阻并联即可，因为Rce比较大，所以输出电阻$R_o近似=R_C$</li>
-<li>$Aus$:源电压放大倍数，就是输出电压和信号源电压的比值，注意信号源电压和输入电压的区别是，输入电压在信号源上的内阻分压了。分压求解即可</li>
-</ol>
-<p>2020.3.13</p>
+<h3 id="Boost"><a href="#Boost" class="headerlink" title="Boost"></a>Boost</h3><p>$$Vout = V_i/(1-D)$$<br>$$D = 1 - V_i/Vout$$</p>
+<h3 id="BUCK-Boost"><a href="#BUCK-Boost" class="headerlink" title="BUCK-Boost"></a>BUCK-Boost</h3><p>升压和降压电路对半开，根据需要选择需要的电路完成升降压的过程，比如说，锂电池电压使用范围在2.8v~4.8v，需要产生稳定3.3v的电压，那么就需要BUCK-Boost电路</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>关于拓扑的知识还有太多，只是简单介绍一下，后面随着学习的推进，会越来越全面</p>
+<p>2020.4.2</p>
 
         </div>
         
@@ -232,17 +224,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/13/ch5-4%20%E5%B8%A6%E7%94%B5%E6%B5%81%E8%B4%9F%E5%8F%8D%E9%A6%88%E7%9A%84%E5%85%B1%E5%B0%84%E6%94%BE%E5%A4%A7%E5%99%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">ch5-4 带电流负反馈的共射放大器性能分析</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/12/%E7%94%B5%E8%A7%A3%E7%94%B5%E5%AE%B9%E4%B8%8E%E6%BB%A4%E6%B3%A2%E7%94%B5%E5%AE%B9/">
-                <span class="level-item">电解电容与滤波电容</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/31/%E5%88%9D%E8%AF%86LDO/">
+                <span class="level-item">初识LDO</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -377,19 +362,39 @@
                 <h3 class="menu-label">
                     目录
                 </h3>
-                <ul class="menu-list"><li>
+                <ul class="menu-list"><ul class="menu-list"><li>
         <a class="is-flex" href="#前言">
-        <span class="has-mr-6">1</span>
+        <span class="has-mr-6">1.1</span>
         <span>前言</span>
-        </a></li><li>
-        <a class="is-flex" href="#分析步骤">
+        </a></li></ul><li>
+        <a class="is-flex" href="#板上电源常见非隔离拓扑结构">
         <span class="has-mr-6">2</span>
-        <span>分析步骤</span>
+        <span>板上电源常见非隔离拓扑结构</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#BUCK">
+        <span class="has-mr-6">2.1</span>
+        <span>BUCK</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#同步vs-非同步BUCK">
+        <span class="has-mr-6">2.1.1</span>
+        <span>同步vs.非同步BUCK</span>
         </a></li><li>
-        <a class="is-flex" href="#交流参数说明">
-        <span class="has-mr-6">3</span>
-        <span>交流参数说明</span>
-        </a></li></ul>
+        <a class="is-flex" href="#BUCK工作原理">
+        <span class="has-mr-6">2.1.2</span>
+        <span>BUCK工作原理</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Boost">
+        <span class="has-mr-6">2.2</span>
+        <span>Boost</span>
+        </a></li><li>
+        <a class="is-flex" href="#BUCK-Boost">
+        <span class="has-mr-6">2.3</span>
+        <span>BUCK-Boost</span>
+        </a></li><li>
+        <a class="is-flex" href="#总结">
+        <span class="has-mr-6">2.4</span>
+        <span>总结</span>
+        </a></li></ul></li></ul>
             </div>
         </div>
     </div>
@@ -412,7 +417,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo_2.png" alt="ch5-3 共射放大器性能分析" height="28">
+                    <img src="/images/logo_2.png" alt="开关电源的拓扑结构" height="28">
                 
                 </a>
                 <p class="is-size-7">
